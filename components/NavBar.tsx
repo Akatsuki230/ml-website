@@ -30,6 +30,7 @@ export default function NavBar(props: {
     return (
         <nav className="bg-black text-white">
             <span className="text-2xl p-4">MLDKYT's website</span>
+            <span className="text-sm relative -top-3 -left-3">beta</span>
             {renderHome()}
             {renderMeshsave()}
         </nav>
