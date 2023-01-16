@@ -2,11 +2,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type VideoRes = {
-    id: string
+    id: string,
+    error: string
 }
 
 type YoutubeSearchResponse = {
-    items: Array<YoutubeSearchItem>
+    items: Array<YoutubeSearchItem>,
+    error: YoutubeError
 }
 
 type YoutubeSearchItem = {
@@ -15,6 +17,11 @@ type YoutubeSearchItem = {
 
 type YoutubeSearchItemId = {
     videoId: string
+}
+
+type YoutubeError = {
+    code: number,
+    message: string
 }
 
 export default async (
@@ -27,9 +34,14 @@ export default async (
             'Accept': 'application/json'
         }
     })
-    let channel: YoutubeSearchResponse = await channelReq.json()
+    let response = await channelReq.json()
+    console.log(response)
+    let channel = <YoutubeSearchResponse> response
     
-    res.send({
-        id: channel.items[0].id.videoId
-    })
+    if (channel.error != null && channel.error.message != "") {
+        res.status(500).json({ error: channel.error.message, id: ''})
+    }
+    else {
+        res.status(200).json({ id: channel.items[0].id.videoId, error: ''})
+    }
 }

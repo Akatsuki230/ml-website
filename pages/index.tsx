@@ -5,14 +5,25 @@ import NavBar from '../components/NavBar'
 
 const Home: NextPage = () => {
   const [video, setVideo] = useState('')
+  const [videoError, setVideoError] = useState(false)
+  const [videoErrorMessage, setVideoErrorMessage] = useState('')
 
   function render_newest_video() {
-    if (video == "") {
-      return (<p>Loading...</p>)
+    if (videoError) {
+      return (
+        <p>Error while loading: {videoErrorMessage}</p>
+      )
+    }
+    else if (video == "") {
+      return (
+        <p>Loading...</p>
+      )
     }
     else {
       return (
-        <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <span>
+          <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </span>
       )
     }
   }
@@ -21,7 +32,14 @@ const Home: NextPage = () => {
     (async () => {
       const channel = await fetch('/api/videos/newest')
       const json = await channel.json()
-      setVideo(json['id'])
+      if (json['error'] == "") {
+        setVideo(json['id'])
+      }
+      else {
+        setVideo("")
+        setVideoError(true)
+        setVideoErrorMessage(json['error'])
+      }
     })()
   })
 
