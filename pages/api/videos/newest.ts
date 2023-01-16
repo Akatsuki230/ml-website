@@ -5,20 +5,31 @@ type VideoRes = {
     id: string
 }
 
+type YoutubeSearchResponse = {
+    items: Array<YoutubeSearchItem>
+}
+
+type YoutubeSearchItem = {
+    id: YoutubeSearchItemId
+}
+
+type YoutubeSearchItemId = {
+    videoId: string
+}
+
 export default async (
   req: NextApiRequest,
   res: NextApiResponse<VideoRes>
 ) => {
     const key = 'AIzaSyDUqFkmq3nu27P0fJCpNHXA1jBSgjxIFZo'
-    let channel = await fetch(`https://www.googleapis.com/youtube/v3/search?part=id&channelId=UC7JMha1kjOS7gsJXwNtosNw&order=date&maxResults=1&key=${key}`, {
+    let channelReq = await fetch(`https://www.googleapis.com/youtube/v3/search?part=id&channelId=UC7JMha1kjOS7gsJXwNtosNw&order=date&maxResults=1&key=${key}`, {
         headers: {
             'Accept': 'application/json'
         }
     })
-    channel = await channel.json()
-    channel = channel['items'][0]['id']['videoId']
+    let channel: YoutubeSearchResponse = await channelReq.json()
     
     res.send({
-        id: channel.toString()
+        id: channel.items[0].id.videoId
     })
 }
