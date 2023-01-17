@@ -10,9 +10,17 @@ export default function Social() {
             </Head>
             <NavBar selected="" />
 
-            <div className="bg-gray-900 text-white h-screen">
+            <div className="bg-gray-900 text-white min-h-screen">
                 <h1 className="px-4 text-5xl">Social links</h1>
                 <p className="mx-8">Welcome to the social links page! Here you can find all of my social links.</p>
+
+                <div className="border-4 border-gray-600 rounded-3xl m-4">
+                    <h3 className="text-4xl m-2">Discord</h3>
+                    <p className="m-2 mx-8">My Discord server is where I post updates and you chat.</p>
+                    <a href="https://discord.gg/3TvJFJMZrf">
+                        <button className="bg-blue-500 hover:bg-blue-800 transition-all p-4 px-8 rounded-xl m-4">Discord</button>
+                    </a>
+                </div>
 
                 <div className="border-4 border-gray-600 rounded-3xl m-4">
                     <h3 className="text-4xl m-2">YouTube</h3>
@@ -45,6 +53,24 @@ export default function Social() {
                         <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">NexusMods</button>
                     </a>
                 </div>
+
+                <div className="grid grid-cols-2">
+                    <div className="border-4 border-gray-600 rounded-3xl m-4">
+                        <h3 className="text-4xl m-2">Subreddit</h3>
+                        <p className="m-2 mx-8">This is my subreddit on Reddit.</p>
+                        <a href="https://www.reddit.com/r/mldkyt">
+                            <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">Subreddit</button>
+                        </a>
+                    </div>
+                    <div className="border-4 border-gray-600 rounded-3xl m-4">
+                        <h3 className="text-4xl m-2">User</h3>
+                        <p className="m-2 mx-8">This is my user page on Reddit.</p>
+                        <a href="https://www.reddit.com/user/mldkyt">
+                            <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">User</button>
+                        </a>
+                    </div>
+                </div>
+                <br/>
             </div>
         </>
     )
