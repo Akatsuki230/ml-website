@@ -1,38 +1,23 @@
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import { Inter } from "@next/font/google";
+import { useRouter } from "next/router";
 import React from "react";
 
-export default function NavBar(props: {
+const inter = Inter({subsets: ["latin"]});
+
+export default function 
+NavBar(props: {
     selected: string
 }) {
-    function renderHome() {
-        if (props.selected === "home") {
-            return (
-                <span className="text-1xl p-2">Home</span>
-            )
-        }
-        
-        return (
-            <a href="/" className="text-1xl p-2">Home</a>
-        )
-    }
-
-    function renderMeshsave() {
-        if (props.selected === "meshsave") {
-            return (
-                <span className="text-1xl p-2">MSC meshsave</span>
-            )
-        }
-
-        return (
-            <a href="/meshsave" className="text-1xl p-2">MSC meshsave</a>
-        )
-    }
+    const router = useRouter();
 
     return (
-        <nav className="bg-black text-white">
-            <span className="text-2xl p-4">MLDKYT's website</span>
-            <span className="text-sm relative -top-3 -left-3">beta</span>
-            {renderHome()}
-            {renderMeshsave()}
-        </nav>
+        <AppBar position="static">
+            <Toolbar>
+                <Typography className={inter.className}>MLDKYT's website</Typography>
+                <Button onClick={_ => router.push('/')} sx={{marginLeft: '1rem', color: 'white'}}>Home</Button>
+                <Button onClick={_ => router.push('/meshsave')} sx={{color: 'white'}}>Meshsave</Button>
+            </Toolbar> 
+        </AppBar>
     )
 }
