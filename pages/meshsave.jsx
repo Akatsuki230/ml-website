@@ -4,6 +4,24 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
 
+export async function getServerSideProps(ctx) {
+    const { dl } = ctx.query;
+    if (dl && dl === '1') {
+        return {
+            redirect: {
+                destination: 'https://cdn.discordapp.com/attachments/768887055438053476/1074257043759841321/meshsave.txt',
+                permanent: false
+            }
+        }
+    }
+
+    return {
+        props: {
+
+        }
+    }
+}
+
 export default function Meshsave() {
     const router = useRouter();
     const [imgWidth, setImgWidth] = useState(0);
@@ -15,6 +33,10 @@ export default function Meshsave() {
         })
         setImgWidth(window.innerWidth - 60);
     });
+
+    function dl() {
+        location.href = '/meshsave?dl=1'
+    }
 
     return (
         <>
@@ -36,7 +58,7 @@ export default function Meshsave() {
                 </AccordionDetails>
             </Accordion>
             <p></p>
-            <Button variant='contained' onClick={_ => router.push('/api/meshsave')}>Download meshsave</Button>
+            <Button variant='contained' onClick={dl}>Download meshsave</Button>
         </>
     );
 }

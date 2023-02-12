@@ -3,26 +3,27 @@ import NavBar from '../components/NavBar'
 import {Button, Link, Stack, Typography} from "@mui/material";
 import {Inter} from '@next/font/google';
 import { useRouter } from 'next/router';
-import { State } from './api/_State';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 
 const inter = Inter({subsets: ['latin']});
 
-export async function getServerSideProps(ctx) {
-  let client = await State.getInstance();
-  let webdata = client.db("Cluster0").collection("webdata");
-  let visits = await webdata.findOne({});
-  await webdata.findOneAndUpdate({}, {$set: {visits: visits.visits + 1}});
-  await client.close();
-
-  return {
-    props: {
-      visits: visits.visits
-    }
-  }
-}
-
 const Home = (props) => {
   const router = useRouter();
+  const [visits, setVisits] = useState('loading ');
+  const hasLoaded = useRef(false);
+
+  useEffect(() => {
+    if (!hasLoaded.current) {
+      fetch('/api/visits')
+      .then(res => res.json())
+      .then(data => {
+        setVisits(data.visits);
+      });
+      hasLoaded.current = true;
+    }
+  }, [])
   
   return (
     <div className={inter.className}>
@@ -32,7 +33,7 @@ const Home = (props) => {
       <NavBar selected="home" />
       <Stack spacing={1}>
         <Typography variant='h3'>Welcome to my website!</Typography>
-        <Typography variant='body2'>{props.visits} visits</Typography>
+        <Typography variant='body2'>{visits} visits</Typography>
         <Link href='/social'>Social links</Link>
         <div>
           <Typography variant='h4'>Who is MLDKYT</Typography>

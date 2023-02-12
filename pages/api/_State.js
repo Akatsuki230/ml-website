@@ -5,7 +5,7 @@ export class State {
 
     static async getInstance() {
         if (!State.instance) {
-            State.instance = new MongoClient('mongodb+srv://mldkyt:Ix2s5Vr1HknaToXB@cluster0.nhsmboe.mongodb.net/Cluster0?retryWrites=true&w=majority');
+            State.instance = new MongoClient('mongodb+srv://mldkyt:A7L9jkRmohTTlpAF@cluster0.9awq2ww.mongodb.net/?retryWrites=true&w=majority');
         }
         await State.instance.connect();
         return State.instance;
