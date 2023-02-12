@@ -1,8 +1,8 @@
-import { MongoClient } from "mongodb";
 import { statSync, createReadStream } from "fs";
+import { State } from "./_State";
 
 export default async function handler(req, res) {
-    const client = new MongoClient('mongodb+srv://mldkyt:Ix2s5Vr1HknaToXB@cluster0.nhsmboe.mongodb.net/Cluster0?retryWrites=true&w=majority');
+    const client = await State.getInstance();
     const webdata = client.db('Cluster0').collection('webdata');
     const data = await webdata.findOne({name: 'meshsavestat'});
     if (data == null) {

@@ -1,15 +1,14 @@
 import Head from 'next/head'
-import { useState } from 'react'
 import NavBar from '../components/NavBar'
-import {Accordion, AccordionDetails, AccordionSummary, Badge, Button, Link, Paper, Stack, Typography} from "@mui/material";
+import {Button, Link, Stack, Typography} from "@mui/material";
 import {Inter} from '@next/font/google';
 import { useRouter } from 'next/router';
-import { MongoClient } from 'mongodb';
+import { State } from './api/_State';
 
 const inter = Inter({subsets: ['latin']});
 
 export async function getServerSideProps(ctx) {
-  let client = new MongoClient("mongodb+srv://mldkyt:Ix2s5Vr1HknaToXB@cluster0.nhsmboe.mongodb.net/Cluster0?retryWrites=true&w=majority");
+  let client = await State.getInstance();
   let webdata = client.db("Cluster0").collection("webdata");
   let visits = await webdata.findOne({});
   await webdata.findOneAndUpdate({}, {$set: {visits: visits.visits + 1}});
