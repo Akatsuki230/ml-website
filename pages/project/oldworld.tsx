@@ -12,7 +12,7 @@ export default function OldTruckSounds() {
             <Head>
                 <title>Old World | mldkyt.com</title>
             </Head>
-            <NavBar />
+            <NavBar selected={""} />
             <Typography variant="h3">Old World</Typography>
             <p></p>
             <Typography>

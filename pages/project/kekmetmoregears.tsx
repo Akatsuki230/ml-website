@@ -12,7 +12,7 @@ export default function KekmetMoreGears() {
             <Head>
                 <title>Kekmet more gears | mldkyt.com</title>
             </Head>
-            <NavBar />
+            <NavBar selected={""} />
             <Typography variant="h3">Kekmet more gears</Typography>
             <p></p>
             <Typography>

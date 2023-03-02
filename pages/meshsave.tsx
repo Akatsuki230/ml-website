@@ -1,10 +1,11 @@
 import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material'
+import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const { dl } = ctx.query;
     if (dl && dl === '1') {
         return {

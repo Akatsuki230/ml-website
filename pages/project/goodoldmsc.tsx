@@ -9,7 +9,7 @@ export default function GoodOldMSC() {
             <Head>
                 <title>GoodOldMSC | mldkyt.com</title>
             </Head>
-            <NavBar />
+            <NavBar selected={""} />
             <Typography variant="h3">GoodOldMSC</Typography>
             <p></p>
             <Typography variant="h5">Features (as of now):</Typography>

@@ -1,3 +1,4 @@
+import { Button, Paper, Stack, Typography } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 import NavBar from '../components/NavBar';
@@ -10,68 +11,45 @@ export default function Social() {
             </Head>
             <NavBar selected="" />
 
-            <div className="bg-gray-900 text-white min-h-screen">
-                <h1 className="px-4 text-5xl">Social links</h1>
-                <p className="mx-8">Welcome to the social links page! Here you can find all of my social links.</p>
-
-                <div className="border-4 border-gray-600 rounded-3xl m-4">
-                    <h3 className="text-4xl m-2">Discord</h3>
-                    <p className="m-2 mx-8">My Discord server is where I post updates and you chat.</p>
-                    <a href="https://discord.gg/3TvJFJMZrf">
-                        <button className="bg-blue-500 hover:bg-blue-800 transition-all p-4 px-8 rounded-xl m-4">Discord</button>
-                    </a>
-                </div>
-
-                <div className="border-4 border-gray-600 rounded-3xl m-4">
-                    <h3 className="text-4xl m-2">YouTube</h3>
-                    <p className="m-2 mx-8">My YouTube channel is where I upload my videos.</p>
-                    <a href="https://www.youtube.com/@mldkyt">
-                        <button className="bg-red-500 hover:bg-red-800 transition-all p-4 px-8 rounded-xl m-4">YouTube</button>
-                    </a>
-                </div>
-
-                <div className="border-4 border-gray-600 rounded-3xl m-4">
-                    <h3 className="text-4xl m-2">Twitch</h3>
-                    <p className="m-2 mx-8">My Twitch channel is where I (rarely) stream.</p>
-                    <a href="https://www.twitch.tv/mldkyt">
-                        <button className="bg-purple-500 hover:bg-purple-800 transition-all p-4 px-8 rounded-xl m-4">Twitch</button>
-                    </a>
-                </div>
-
-                <div className="border-4 border-gray-600 rounded-3xl m-4">
-                    <h3 className="text-4xl m-2">Twitter</h3>
-                    <p className="m-2 mx-8">My Twitter channel is where I (rarely) post stream notifications and (never) post YouTube releases.</p>
-                    <a href="https://www.twitter.com/@mldkyt">
-                        <button className="bg-blue-400 hover:bg-blue-500 transition-all p-4 px-8 rounded-xl m-4">Twitter</button>
-                    </a>
-                </div>
-                
-                <div className="border-4 border-gray-600 rounded-3xl m-4">
-                    <h3 className="text-4xl m-2">NexusMods</h3>
-                    <p className="m-2 mx-8">This is my mod publishing profile.</p>
-                    <a href="https://www.nexusmods.com/users/57424716">
-                        <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">NexusMods</button>
-                    </a>
-                </div>
-
-                <div className="grid grid-cols-2">
-                    <div className="border-4 border-gray-600 rounded-3xl m-4">
-                        <h3 className="text-4xl m-2">Subreddit</h3>
-                        <p className="m-2 mx-8">This is my subreddit on Reddit.</p>
-                        <a href="https://www.reddit.com/r/mldkyt">
-                            <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">Subreddit</button>
-                        </a>
-                    </div>
-                    <div className="border-4 border-gray-600 rounded-3xl m-4">
-                        <h3 className="text-4xl m-2">User</h3>
-                        <p className="m-2 mx-8">This is my user page on Reddit.</p>
-                        <a href="https://www.reddit.com/user/mldkyt">
-                            <button className="bg-orange-500 hover:bg-orange-600 transition-all p-4 px-8 rounded-xl m-4">User</button>
-                        </a>
-                    </div>
-                </div>
-                <br/>
-            </div>
+            <Stack spacing={1}>
+                <Typography variant="h4">Social links</Typography>
+                <Typography variant="h6">Welcome to the social links page! Here you can find all of my social links.</Typography>
+                <Paper elevation={3} sx={{padding: '1rem'}}>
+                    <Typography variant="h5">Discord</Typography>
+                    <Typography>My Discord server is where I post updates and you can chat.</Typography>
+                    <Button href="https://discord.gg/3TvJFJMZrf" variant="contained">Join</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">YouTube</Typography>
+                    <Typography>My YouTube channel is where I upload my videos.</Typography>
+                    <Button href="https://youtube.com/@mldkyt" variant="contained">Subscribe</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">Twitch</Typography>
+                    <Typography>My Twitch channel is where I (rarely) stream.</Typography>
+                    <Button href="https://twitch.tv/mldkyt" variant="contained">Follow</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">Twitter</Typography>
+                    <Typography>My Twitter channel is where I (rarely) post stream notifications and (never) post YouTube releases.</Typography>
+                    <Button href="https://twitter.com/mldkyt" variant="contained">Follow</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">NexusMods</Typography>
+                    <Typography>This is my mod publishing profile.</Typography>
+                    <Button href="https://www.nexusmods.com/users/57424716" variant="contained">Profile</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">Subreddit</Typography>
+                    <Typography>This is my subreddit on Reddit.</Typography>
+                    <Button href="https://reddit.com/r/mldkyt" variant="contained">Join</Button>
+                </Paper>
+                <Paper elevation={3} sx={{padding: '1rem', marginTop: '1rem'}}>
+                    <Typography variant="h5">Reddit profile</Typography>
+                    <Typography>This is my user page on Reddit.</Typography>
+                    <Button href="https://reddit.com/u/mldkyt" variant="contained">Follow</Button>
+                </Paper>
+            </Stack>
         </>
     )
 }

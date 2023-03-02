@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar";
 import InfoIcon from '@mui/icons-material/Info';
 import { useRouter } from "next/router";
 
-export default function KekmetMoreGears() {
+export default function KekmetSpeedometer() {
     const router = useRouter();
 
     return (
@@ -12,7 +12,7 @@ export default function KekmetMoreGears() {
             <Head>
                 <title>Kekmet speedometer | mldkyt.com</title>
             </Head>
-            <NavBar />
+            <NavBar selected={""} />
             <Typography variant="h3">Kekmet speedometer</Typography>
             <p></p>
             <Typography>
