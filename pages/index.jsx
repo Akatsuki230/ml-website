@@ -38,7 +38,7 @@ const Home = (props) => {
         <div>
           <Typography variant='h4'>Who is MLDKYT</Typography>
           <Typography variant='body1'>MLDKYT (mldkyt) is a YouTuber, programmer and a modder.</Typography>
-          <Typography variant='body1'>Most of his mods are for a game called <Link>My Summer Car</Link>.</Typography>  
+          <Typography variant='body1'>Most of his mods are for a game called <Link href='https://store.steampowered.com/app/516750/My_Summer_Car/'>My Summer Car</Link>.</Typography>  
           <Typography variant='h4'>My projects</Typography>
           <br />
           <Button variant='contained' onClick={_ => router.push('/projects')}>View my projects</Button>
