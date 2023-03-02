@@ -36,7 +36,7 @@ const Home = () => {
         <Typography variant='h3'>Welcome to mldkyt's website!</Typography>
         <Alert color="error" icon={<PriorityHigh />}>
           <Typography>I have released a Discord bot.</Typography>
-          <Button href="bot.mldkyt.com">See more</Button>
+          <Button href="https://bot.mldkyt.com">See more</Button>
         </Alert>
         <Typography variant='body2'>{visits} visits</Typography>
         <Typography variant='h4'>About MLDKYT</Typography>
