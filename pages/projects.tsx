@@ -94,7 +94,16 @@ export default function Mods() {
                     <Typography>Other projects</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography variant="h6">It's currently empty here...</Typography>
+                    {/* IRL Simulator, link "/project/irlsimulator" */}
+                    <Paper elevation={3} sx={{padding: '1rem'}}>
+                        <Typography variant="h6">
+                            IRL Simulator
+                        </Typography>
+                        <Typography variant="body2">
+                            IRL Simulator is a game where you simulate your life.
+                        </Typography>
+                        <Button variant="contained" onClick={_ => router.push('/project/irlsimulator')}>Visit project's page</Button>
+                    </Paper>
                 </AccordionDetails>
             </Accordion>
         </>
