@@ -1,5 +1,5 @@
 import { Typography, Alert, Button } from "@mui/material";
-import { Head } from "next/document";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
 
