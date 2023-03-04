@@ -22,6 +22,16 @@ export default function Mods() {
                 <AccordionDetails>
                     <Typography variant="h6">I have a couple My Summer Car mods.</Typography>
                     <p></p>
+                    <Paper elevation={3} sx={{padding: '1rem'}}>
+                        <Typography variant="h6">
+                            Asphalt Roads
+                        </Typography>
+                        <Typography variant="body2">
+                            Changes dirt roads to asphalt roads. Also changes the feel of the roads.
+                        </Typography>
+                        <Button variant="contained" onClick={_ => router.push('/project/asphaltroads')}>Visit project's page</Button>
+                    </Paper>
+                    <p></p>
                     <Paper elevation={3}  sx={{padding: '1rem'}}>
                         <Typography variant="h6">GoodOldMSC</Typography>
                         <Typography variant="body2">This is a mod that combines most of the mods below and makes it into 1 big mod.</Typography>
