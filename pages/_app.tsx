@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin='anonymous'></script>
       <Component {...pageProps} />
       <Analytics />
     </ThemeProvider>
