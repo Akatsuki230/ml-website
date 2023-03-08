@@ -32,18 +32,12 @@ export default function Mods() {
                         <Button variant="contained" onClick={_ => router.push('/project/asphaltroads')}>Visit project's page</Button>
                     </Paper>
                     <p></p>
-                    <Paper elevation={3}  sx={{padding: '1rem'}}>
-                        <Typography variant="h6">GoodOldMSC</Typography>
-                        <Typography variant="body2">This is a mod that combines most of the mods below and makes it into 1 big mod.</Typography>
-                        <Button onClick={_ => router.push('/project/goodoldmsc')} variant="contained">Visit project's page</Button>
-                    </Paper>
-                    <p></p>
                     <Paper elevation={3} sx={{padding: '1rem'}}>
                         <Typography variant="h6">
                             OldCarSounds
                         </Typography>
                         <Typography variant="body2">
-                            OldCarSounds is a now deprecated mod that used to get the Satsuma to the old state.
+                            OldCarSounds is a mod that changed the Satsuma to the old state.
                         </Typography>
                         <Button variant="contained" onClick={_ => router.push('/project/oldcarsounds')}>Visit project's page</Button>
                     </Paper>

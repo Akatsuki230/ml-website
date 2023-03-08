@@ -60,7 +60,7 @@ const Home = () => {
           One of my most popular mods is Asphalt roads, which replaces the standard dirt roads in the game with smooth, realistic asphalt roads. This mod not only adds a new level of realism to the game but also makes driving smoother and more enjoyable.
         </Typography>
         <Typography>
-          Another popular mod of mine is GoodOldMSC, which brings back the classic look and feel of the game from its earlier versions. This mod includes a variety of tweaks and changes to the game's graphics and interface, offering a nostalgic trip down memory lane for long-time fans of the game.
+          Another popular mod of mine is OldCarSounds, which brings back the classic look and feel of the Satsuma from its earlier versions. This mod includes a variety of tweaks and changes to the Satsuma's graphics and interface, offering a nostalgic trip down memory lane for long-time fans of the game.
         </Typography>
         <Typography>
           For players who enjoy driving the kekmet vehicle in My Summer Car, I've created several mods to enhance their experience. Kekmet speedometer and kekmet more gears offer new options for monitoring speed and shifting gears, respectively, making driving the kekmet even more fun and challenging.
