@@ -1,14 +1,22 @@
 import { Button, Chip, CircularProgress, Dialog, Skeleton, TextField, Typography } from '@mui/material'
+import { MongoClient } from 'mongodb'
 import { MuiColorInput } from 'mui-color-input'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { CSSProperties, useEffect, useRef, useState } from 'react'
+import tinycolor from 'tinycolor2'
 import NavBar from '../components/NavBar'
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const { dl } = ctx.query;
     if (dl && dl === '1') {
+        const mongoDB = new MongoClient(process.env.MONGODB_URI || "mongodb+srv://vercel-admin-user:S7pZrZm64HNVcLXo@cluster0.9awq2ww.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        await mongoDB.connect();
+        const db = mongoDB.db('MeshsaveData');
+        const collection = db.collection('Data');
+        await collection.updateOne({ type: 'downloads'} , { $inc: { downloads: 1 } });
+        await mongoDB.close();
         return {
             redirect: {
                 destination: 'https://cdn.discordapp.com/attachments/768887055438053476/1074257043759841321/meshsave.txt',
@@ -115,8 +123,11 @@ export default function Meshsave() {
                 </div>
             )}
             {peopleLiked.map((like) => {
+                // if the color is dark, make the text white
+                const color = tinycolor(like.color);
+                const textColor = color.isDark() ? '#ffffff' : '#000000';
                 return (
-                    <Chip label={like.name} sx={{backgroundColor: like.color}} />
+                    <Chip label={like.name} sx={{backgroundColor: like.color, color: textColor}} />
                 );
             })}
             <br/>
