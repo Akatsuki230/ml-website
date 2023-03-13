@@ -33,16 +33,16 @@ const Home = () => {
       </Head>
       <NavBar selected="home" />
       <Stack spacing={1} alignContent='center'>
-        <Typography variant='h3'>Welcome to mldkyt's website!</Typography>
-        <Alert color="error" icon={<PriorityHigh />}>
-          <Typography>I have a Discord bot.</Typography>
+        <Alert color="info" icon={<PriorityHigh />}>
+          <Typography>DISCORD BOT WAS RELEASED!</Typography>
           <Button href="https://bot.mldkyt.com">See more</Button>
         </Alert>
-        <Typography variant='body2'>{visits} visits</Typography>
-        <Typography variant='h4'>My projects</Typography>
-        <Button variant='contained' onClick={_ => router.push('/projects')}>View my projects</Button>
-        <Typography variant='h4'>My social links</Typography>
-        <Button onClick={_ => router.push('/social')} variant='contained'>Go to my social links</Button>
+        <Typography variant='h3'>Welcome to mldkyt's website!</Typography>
+        <Typography>{visits} visits</Typography>
+        <Typography variant='h6'>My projects</Typography>
+        <Button variant='contained' onClick={_ => router.push('/projects')} sx={{width: '16rem'}}>View my projects</Button>
+        <Typography variant='h6'>My social links</Typography>
+        <Button onClick={_ => router.push('/social')} variant='contained' sx={{width: '16rem'}}>Go to my social links</Button>
         
         <Typography variant='h4'>About me</Typography>
         <Typography>

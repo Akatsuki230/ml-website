@@ -1,4 +1,4 @@
-import { Button, Chip, CircularProgress, Dialog, Skeleton, TextField, Typography } from '@mui/material'
+import { Button, Chip, CircularProgress, Dialog, Skeleton, Snackbar, SnackbarContent, TextField, Typography } from '@mui/material'
 import { MongoClient } from 'mongodb'
 import { MuiColorInput } from 'mui-color-input'
 import { GetServerSidePropsContext } from 'next'
@@ -56,6 +56,8 @@ export default function Meshsave() {
     const [likeFormColor, setLikeFormColor] = useState('#ff0000');
     const [likeFormLoading, setLikeFormLoading] = useState(false);
 
+    const [likeFormError, setLikeFormError] = useState('');
+
     const hasRan = useRef(false);
     
     useEffect(() => {
@@ -91,8 +93,13 @@ export default function Meshsave() {
                 color: likeFormColor
             })
         }).then(res => res.json()).then(data => {
-            // reload
-            location.reload();
+            if (data.success) {
+                location.reload();
+            }
+            else {
+                setLikeFormError(data.reason);
+                setLikeFormLoading(false);
+            }
         });
     }
 
@@ -162,6 +169,12 @@ export default function Meshsave() {
                     <Button sx={{marginLeft: '1rem'}} variant='contained' color='error' disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)}>Close</Button>
                 </div>
             </Dialog>
+
+            <Snackbar 
+                autoHideDuration={1000} 
+                open={likeFormError != ''} 
+                onClose={_ => setLikeFormError('')} 
+                message={`Error: ${likeFormError}`} />
         </>
     );
 }
