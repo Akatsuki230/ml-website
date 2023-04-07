@@ -1,0 +1,1 @@
+export const MONGODB_CONN_STRING = "mongodb+srv://mldkyt-mc:M4xwyF2lIOV9OyBM@cluster0.9awq2ww.mongodb.net/?retryWrites=true&w=majority";

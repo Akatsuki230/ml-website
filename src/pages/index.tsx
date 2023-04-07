@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
-import { Button, Link, Stack, Typography, Alert } from "@mui/material";
+import { Button, Stack, Typography, Alert } from "@mui/material";
 import { Inter } from '@next/font/google';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
