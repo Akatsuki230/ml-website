@@ -42,7 +42,7 @@ function selectFormatAndRender(format: string, time: Dayjs) {
         case 't':
             return time.format('h:mm A');
         case 'T':
-            return time.format('h:mm:SS A');
+            return time.format('h:mm:ss A');
         case 'd':
             return time.format('DD/MM/YYYY');
         case 'D':
@@ -92,7 +92,7 @@ export default function DiscordTimestampGenerator() {
                     <Typography>Format: </Typography>
                     <Select value={format} onChange={(x) => setFormat(x.target.value)}>
                         <MenuItem value="t">{time.format('h:mm A')}</MenuItem>
-                        <MenuItem value="T">{time.format('h:mm:SS A')}</MenuItem>
+                        <MenuItem value="T">{time.format('h:mm:ss A')}</MenuItem>
                         <MenuItem value="d">{time.format('DD/MM/YYYY')}</MenuItem>
                         <MenuItem value="D">{time.format('DD MMMM YYYY')}</MenuItem>
                         <MenuItem value="f">{time.format('DD MMMM YYYY h:mm A')}</MenuItem>
