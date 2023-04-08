@@ -1,4 +1,3 @@
-import Info from "@mui/icons-material/Info";
 import { Typography, Alert, Button } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -29,7 +28,7 @@ export default function OldTruckSounds() {
             <Typography>&bull; Easy to install and use with MSCLoader.</Typography>
             <Typography>&bull; Hosted on NexusMods for easy access and download.</Typography>
             <p></p>
-            <Alert color="info" icon={<Info />}>
+            <Alert color="info">
                 <Typography>This mod is not compatible with any other mods that affect the Hayosiko van. Please make sure to remove any conflicting mods before using this mod.</Typography>
             </Alert>
             <p></p>

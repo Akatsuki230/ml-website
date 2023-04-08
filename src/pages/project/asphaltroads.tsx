@@ -1,4 +1,4 @@
-import { Typography, Alert, Button } from "@mui/material";
+import { Typography, Button, Alert } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
@@ -35,6 +35,9 @@ export default function AsphaltRoads() {
             <Typography>&bull; Improved performance.</Typography>
             <Typography variant="h6">v1.0</Typography>
             <Typography>&bull; Initial release.</Typography>
+            <Alert color="info">
+                <Typography>This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</Typography>
+            </Alert>
             <p></p>
             <Button variant="contained" onClick={goToNexus}>Go to NexusMods</Button>
         </>

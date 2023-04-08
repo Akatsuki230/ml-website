@@ -111,6 +111,22 @@ export default function Mods() {
                     </Paper>
                 </AccordionDetails>
             </Accordion>
+            <Accordion expanded={openAccordion === 3} onChange={(_, x) => x ? setOpenAccordion(3) : setOpenAccordion(0)}>
+                <AccordionSummary>
+                    <Typography>Online utilities</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Paper elevation={3} sx={{padding: '1rem'}}>
+                        <Typography variant="h6">
+                            Discord Timestamp Generator
+                        </Typography>
+                        <Typography variant="body2">
+                            Allows you to generate timestamps for Discord.
+                        </Typography>
+                        <Button variant="contained" onClick={_ => router.push('/util/discord/timestamp-generator')}>Visit utility's page</Button>
+                    </Paper>
+                </AccordionDetails>
+            </Accordion>
             <Watermark />
         </>
     )

@@ -1,7 +1,6 @@
 import { Typography, Alert, Button } from "@mui/material";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
-import InfoIcon from '@mui/icons-material/Info';
 import { useRouter } from "next/router";
 
 export default function KekmetSpeedometer() {
@@ -29,7 +28,7 @@ export default function KekmetSpeedometer() {
             <Typography>&bull; Easy to install and use with MSCLoader.</Typography>
             <Typography>&bull; Hosted on NexusMods for easy access and download.</Typography>
             <p></p>
-            <Alert color="info" icon={<InfoIcon />}>
+            <Alert color="info">
                 <Typography>This mod is not compatible with any other mods that affect the Kekmet's tachometer. Please make sure to remove any conflicting mods before using this mod.</Typography>
             </Alert>
             <p></p>

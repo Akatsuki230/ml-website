@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import { PriorityHigh } from '@mui/icons-material';
 import Watermark from '@/components/Watermark';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -34,7 +33,7 @@ const Home = () => {
       </Head>
       <NavBar selected="home" />
       <Stack spacing={1} alignContent='center'>
-        <Alert color="info" icon={<PriorityHigh />}>
+        <Alert color="info">
           <Typography>DISCORD BOT WAS RELEASED!</Typography>
           <Button href="https://bot.mldkyt.com">See more</Button>
         </Alert>

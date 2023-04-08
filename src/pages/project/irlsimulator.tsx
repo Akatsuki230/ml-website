@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import { CSSProperties } from "@mui/styled-engine";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 

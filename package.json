@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
     "@mui/x-date-pickers": "^6.0.4",
     "@next/font": "^13.3.0",

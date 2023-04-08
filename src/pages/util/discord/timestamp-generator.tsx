@@ -81,9 +81,11 @@ export default function DiscordTimestampGenerator() {
             <Container>
                 <Typography variant="h3" className="p-2 px-4">Discord Timestamp Generator</Typography>
                 <Typography variant="h5" className="px-8">Start by entering your date: </Typography>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DesktopDateTimePicker className="px-10" format="DD/MM/YYYY HH:MM" value={time} onChange={(x) => trySetTime(x)} />
-                </LocalizationProvider>
+                <div className="px-10">
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DesktopDateTimePicker format="DD/MM/YYYY HH:MM" value={time} onChange={(x) => trySetTime(x)} />
+                    </LocalizationProvider>
+                </div>
 
                 <Typography variant="h5" className="px-8">Settings: </Typography>
                 <div className="px-10">
@@ -105,7 +107,9 @@ export default function DiscordTimestampGenerator() {
                     Code: <code className="bg-gray-700 text-white p-1 px-2 rounded-lg">{'<'}t:{time.unix()}:{format}{'>'}</code>
                 </Typography>
                 <br />
-                <Button className="mx-10" variant="contained" onClick={copy}>Copy</Button>
+                <div className="mx-10">
+                    <Button variant="contained" onClick={copy}>Copy</Button>
+                </div>
             </Container>
             <Snackbar open={copiedSnackbar} autoHideDuration={1000} onClose={() => setCopiedSnackbar(false)} message="Copied to clipboard!" />
             <Watermark />

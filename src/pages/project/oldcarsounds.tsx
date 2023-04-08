@@ -1,4 +1,3 @@
-import Info from "@mui/icons-material/Info";
 import { Typography, Alert, Button } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -35,7 +34,7 @@ export default function OldTruckSounds() {
             <Typography variant="h5">Features (release):</Typography>
             <Typography>&bull; Changes the car sounds to the release versions.</Typography>
             <p></p>
-            <Alert color="info" icon={<Info />}>
+            <Alert color="info">
                 <Typography>This mod is not compatible with any other mods that affect the car sounds in My Summer Car. Please make sure to remove any conflicting mods before using this mod.</Typography>
             </Alert>
             <p></p>
