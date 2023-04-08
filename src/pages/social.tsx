@@ -1,3 +1,4 @@
+import Watermark from "@/components/Watermark";
 import { Button, Paper, Stack, Typography } from "@mui/material";
 import Head from "next/head";
 import React from "react";
@@ -50,6 +51,7 @@ export default function Social() {
                     <Button href="https://reddit.com/u/mldkyt" variant="contained">Follow</Button>
                 </Paper>
             </Stack>
+            <Watermark />
         </>
     )
 }

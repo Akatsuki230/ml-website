@@ -1,3 +1,4 @@
+import Watermark from "@/components/Watermark";
 import { Accordion, AccordionDetails, AccordionSummary, Paper, Typography, Button } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -110,6 +111,7 @@ export default function Mods() {
                     </Paper>
                 </AccordionDetails>
             </Accordion>
+            <Watermark />
         </>
     )
 }

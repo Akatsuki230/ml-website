@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { PriorityHigh } from '@mui/icons-material';
+import Watermark from '@/components/Watermark';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -101,6 +102,7 @@ const Home = () => {
         <Typography variant="body2">
         Please note that I am not a professional page designer, so I apologize if the aesthetics of this page are not up to par. My main focus is on creating engaging and informative content, rather than on page design. Nonetheless, I hope you find the information here helpful and enjoyable. Thank you for your understanding.
         </Typography>
+        <Watermark />
       </Stack>
     </div>
   )
