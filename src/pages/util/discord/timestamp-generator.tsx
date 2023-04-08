@@ -40,21 +40,21 @@ function relative(time: Dayjs) {
 function selectFormatAndRender(format: string, time: Dayjs) {
     switch (format) {
         case 't':
-            return time.format('h:MM A');
+            return time.format('h:mm A');
         case 'T':
-            return time.format('h:MM:SS A');
+            return time.format('h:mm:SS A');
         case 'd':
             return time.format('DD/MM/YYYY');
         case 'D':
             return time.format('DD MMMM YYYY');
         case 'f':
-            return time.format('DD MMMM YYYY h:MM A');
+            return time.format('DD MMMM YYYY h:mm A');
         case 'F':
-            return time.format('dddd, MMMM, DD, YYYY h:MM A');
+            return time.format('dddd, MMMM, DD, YYYY h:mm A');
         case 'R':
             return relative(time);
         default:
-            return time.format('h:MM A');
+            return time.format('h:mm A');
     }
 }
 
@@ -91,12 +91,12 @@ export default function DiscordTimestampGenerator() {
                 <div className="px-10">
                     <Typography>Format: </Typography>
                     <Select value={format} onChange={(x) => setFormat(x.target.value)}>
-                        <MenuItem value="t">{time.format('h:MM A')}</MenuItem>
-                        <MenuItem value="T">{time.format('h:MM:SS A')}</MenuItem>
+                        <MenuItem value="t">{time.format('h:mm A')}</MenuItem>
+                        <MenuItem value="T">{time.format('h:mm:SS A')}</MenuItem>
                         <MenuItem value="d">{time.format('DD/MM/YYYY')}</MenuItem>
                         <MenuItem value="D">{time.format('DD MMMM YYYY')}</MenuItem>
-                        <MenuItem value="f">{time.format('DD MMMM YYYY h:MM A')}</MenuItem>
-                        <MenuItem value="F">{time.format('dddd, MMMM, DD, YYYY h:MM A')}</MenuItem>
+                        <MenuItem value="f">{time.format('DD MMMM YYYY h:mm A')}</MenuItem>
+                        <MenuItem value="F">{time.format('dddd, MMMM, DD, YYYY h:mm A')}</MenuItem>
                         <MenuItem value="R">{relative(time)}</MenuItem>
                     </Select>
                 </div>
