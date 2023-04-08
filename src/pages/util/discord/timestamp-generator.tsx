@@ -83,7 +83,7 @@ export default function DiscordTimestampGenerator() {
                 <Typography variant="h5" className="px-8">Start by entering your date: </Typography>
                 <div className="px-10">
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker format="DD/MM/YYYY HH:MM" value={time} onChange={(x) => trySetTime(x)} />
+                        <DesktopDateTimePicker format="DD/MM/YYYY HH:mm" value={time} onChange={(x) => trySetTime(x)} />
                     </LocalizationProvider>
                 </div>
 
