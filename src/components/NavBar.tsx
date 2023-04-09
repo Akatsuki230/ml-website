@@ -27,6 +27,7 @@ export default function NavBar() {
             <Link className="px-2" href="/">Home</Link>
             <Link className="px-2" href="/meshsave">Meshsave</Link>
             <Link className="px-2" href="/projects">Project list</Link>
+            
         </div>
     )
 }
