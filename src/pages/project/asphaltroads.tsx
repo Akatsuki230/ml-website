@@ -1,45 +1,40 @@
-import { Typography, Button, Alert } from "@mui/material";
+import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import NavBar from "../../components/NavBar";
 
 export default function AsphaltRoads() {
-    const router = useRouter();
-    const goToNexus = () => {
-        router.push("https://www.nexusmods.com/mysummercar/mods/3052");
-    }
-
     return (
         <>
             <Head>
                 <title>Asphalt Roads | mldkyt.com</title>
             </Head>
-            <NavBar selected={""} />
-            <Typography variant="h3">Asphalt Roads</Typography>
+            <NavBar/>
+            <br />
+            <h1 className="text-3xl font-bold mx-2">Asphalt Roads</h1>
             <p></p>
-            <Typography variant="h5">Features (as of now):</Typography>
+            <h2 className="text-xl font-bold mx-4">Features (as of now):</h2>
             <p></p>
-            <Typography>&bull; Changes dirt roads to asphalt roads</Typography>
-            <Typography>&bull; Also changes the feel of the roads</Typography>
-            <Typography>&bull; Bonus feature where you can convert the grass to asphalt as well</Typography>
+            <p className="mx-6">&bull; Changes dirt roads to asphalt roads</p>
+            <p className="mx-6">&bull; Also changes the feel of the roads</p>
+            <p className="mx-6">&bull; Bonus feature where you can convert the grass to asphalt as well</p>
             {/* changelog heading */}
             <p></p>
-            <Typography variant="h5">Changelog:</Typography>
+            <h2 className="text-xl font-bold mx-4">Changelog:</h2>
             <p></p>
-            <Typography variant="h6">v1.2</Typography>
-            <Typography>&bull; Walking sounds is now correct.</Typography>
-            <Typography>&bull; Removed some unused code.</Typography>
-            <Typography variant="h6">v1.1</Typography>
-            <Typography>&bull; Added more routes you can convert to asphalt.</Typography>
-            <Typography>&bull; Fixed coloring of the asphalt.</Typography>
-            <Typography>&bull; Improved performance.</Typography>
-            <Typography variant="h6">v1.0</Typography>
-            <Typography>&bull; Initial release.</Typography>
-            <Alert color="info">
-                <Typography>This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</Typography>
-            </Alert>
+            <h3 className="text-xl font-bold mx-6">v1.2</h3>
+            <p className="mx-8">&bull; Walking sounds is now correct.</p>
+            <p className="mx-8">&bull; Removed some unused code.</p>
+            <h3 className="text-xl font-bold mx-6">v1.1</h3>
+            <p className="mx-8">&bull; Added more routes you can convert to asphalt.</p>
+            <p className="mx-8">&bull; Fixed coloring of the asphalt.</p>
+            <p className="mx-8">&bull; Improved performance.</p>
+            <h3 className="text-xl font-bold mx-6">v1.0</h3>
+            <h3 className="mx-8">&bull; Initial release.</h3>
+            <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
             <p></p>
-            <Button variant="contained" onClick={goToNexus}>Go to NexusMods</Button>
+            <Link href="https://www.nexusmods.com/mysummercar/mods/3052" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</Link>
+            <Watermark />
         </>
     )
 }
