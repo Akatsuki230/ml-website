@@ -1,7 +1,5 @@
 import Watermark from '@/components/Watermark'
-import { Button, Chip, CircularProgress, Dialog, Skeleton, Snackbar, SnackbarContent, TextField, Typography } from '@mui/material'
 import { MongoClient } from 'mongodb'
-import { MuiColorInput } from 'mui-color-input'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -112,73 +110,71 @@ export default function Meshsave() {
                 <meta name="description" content="The biggest abomination in My Summer Car, now for download" />
                 <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
             </Head>
-            <NavBar selected="meshsave"/>
-            <Typography variant='h3'>My meshsave</Typography>
-            <Typography>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together. </Typography>
+            <NavBar />
+            <br />
+            <h1 className='text-3xl font-bold'>My meshsave</h1>
+            <p>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together. </p>
             
-            <div style={imageParentStyle}>
-                <img width={imgWidth} style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png'></img>
-                <img width={imgWidth} style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910848886259782/shitsuma2.png'></img>
-                <img width={imgWidth} style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849192435812/shitsuma3.png'></img>
-                <img width={imgWidth} style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849477652481/shitsuma4.png'></img>
+            <div className=''>
+                <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png'></img>
+                <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910848886259782/shitsuma2.png'></img>
+                <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849192435812/shitsuma3.png'></img>
+                <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849477652481/shitsuma4.png'></img>
             </div>
-            <Typography>People that liked this: </Typography>
+            <button onClick={dl} className="bg-blue-500 m-2 px-4 py-1 rounded-lg drop-shadow-lg border-2 border-black">Download meshsave</button>
+            <h2 className='text-2xl'>People that liked this: </h2>
             {peopleLiked.length == 0 && (
-                <div style={{display: 'inline-flex'}}>
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                    <Skeleton sx={{width: '100px', margin: '4px'}} variant='rounded' />
-                </div>
+                <>Loading...</>
             )}
-            {peopleLiked.map((like) => {
-                // if the color is dark, make the text white
-                const color = tinycolor(like.color);
-                const textColor = color.isDark() ? '#ffffff' : '#000000';
-                return (
-                    <Chip label={like.name} sx={{backgroundColor: like.color, color: textColor}} />
-                );
-            })}
-            <br/>
-            <br/>
-            <Button disabled={likedStatus != 'eligible'} variant='contained' onClick={_ => setLikeFormShown(true)}>
+            <div className='flex flex-wrap'>
+                {peopleLiked.map((like) => {
+                    // if the color is dark, make the text white
+                    const color = tinycolor(like.color);
+                    const textColor = color.isDark() ? '#ffffff' : '#000000';
+                    return (
+                        <div style={{
+                            backgroundColor: like.color,
+                            color: textColor,
+                        }} className="border-2 border-black m-0.5 rounded-xl drop-shadow-lg">
+                            <span className='mx-2'>{like.name}</span>
+                        </div>
+                    );
+                })}
+            </div>
+            <button className='m-2 px-4 py-1 bg-green-500 disabled:bg-gray-500 border-black border-2 rounded-lg drop-shadow-lg' disabled={likedStatus != 'eligible'} onClick={_ => setLikeFormShown(true)}>
                 {likedStatus == 'loading' ? (
-                    <><CircularProgress /> <Typography sx={{marginLeft: '1rem'}}>Checking if you liked the meshsave</Typography></>
+                    <>Checking if you can like...</>
                 ) : (
                     likedStatus == 'eligible' ? (
                         'Like'
                     ) : (
-                        'Already Liked'
+                        'Already liked'
                     )
                 )}
-            </Button>
+            </button>
             <br/>
-            <br/>
-            <Button variant='contained' onClick={dl}>Download meshsave</Button>
 
-            <Dialog open={likeFormShown}>
+            <div className={`${likeFormShown ? "" : "hidden"} fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-gray-400 to-gray-500 drop-shadow-lg rounded-lg`}>
                 <div style={{padding: '1rem'}}>
-                    <Typography variant='h5'>Like the meshsave</Typography>
-                    <Typography variant='body2'>You can only like this once per network. Choose your username wisely.</Typography>
+                    <button disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)} className="absolute top-2 right-2 bg-red-500 w-7 rounded-lg border-2 border-black drop-shadow-lg">X</button>
+                    <h1 className='text-xl font-bold'>Like the meshsave</h1>
+                    <p className='text-sm'>You can only like this once per network. Choose your username wisely.</p>
+                    <label>Name: </label>
                     <br/>
-                    <TextField label='Name' value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
+                    <input value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
                     <br/>
+                    <label>Color: </label>
+                    <br />
+                    <input type='color' value={likeFormColor} onChange={x => setLikeFormColor(x.currentTarget.value)} />
                     <br/>
-                    <MuiColorInput value={likeFormColor} onChange={(_, x) => setLikeFormColor(x.hex)} />
-                    <br/>
-                    <br/>
-                    <Button variant='contained' disabled={likeFormLoading} onClick={submitLike}>{likeFormLoading ? <CircularProgress /> : "Like"}</Button>
-                    <Button sx={{marginLeft: '1rem'}} variant='contained' color='error' disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)}>Close</Button>
+                    <button disabled={likeFormLoading} onClick={submitLike} className="bg-green-500 px-3 py-1 border-2 border-black rounded-lg">{likeFormLoading ? "Loading..." : "Like"}</button>
                 </div>
-            </Dialog>
+            </div>
 
-            <Snackbar 
-                autoHideDuration={1000} 
-                open={likeFormError != ''} 
-                onClose={_ => setLikeFormError('')} 
-                message={`Error: ${likeFormError}`} />
+            <div className={`${likeFormError == '' ? '' : 'hidden'} fixed left-4 bottom-4`}>
+                {likeFormError}
+            </div>
+
             <Watermark />
         </>
     );

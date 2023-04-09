@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter} from 'next/font/google';
 import { useEffect, useRef, useState } from "react";
 import { addSign, getSigns } from "@/components/SignWalls/SpawnBase";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -62,6 +63,8 @@ export default function SpawnBase() {
             <Head>
                 <title>Spawn Base</title>
             </Head>
+            <NavBar />
+            <br />
             <main className={inter.className + " min-h-screen dark:bg-black"}>
                 <div className="relative"> 
                     <img className="w-screen" src="/Y8SAoB1R6H.png" alt="spawnbase" />

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 
@@ -13,35 +13,32 @@ export default function IRLSimulator() {
             <Head>
                 <title>GoodOldMSC | mldkyt.com</title>
             </Head>
-            <NavBar selected={""} />
-            <Typography variant="h3">IRL Simulator</Typography>
-            <Typography>
+            <NavBar />
+            <br />
+            <h1 className="text-3xl font-bold mx-2">IRL Simulator</h1>
+            <p className="mx-4">
                 IRL Simulator is an upcoming game that I'm currently developing, and I couldn't be more excited to share it with you. This game is all about simulating real-life experiences, from driving a car to buying groceries and everything in between.
-            </Typography>
-            <br />
-            <Typography>
+            </p>
+            <p className="mx-4">
                 So far, I've implemented a variety of features that bring this game world to life, including a fully-realized terrain system, a detailed house and garage, and a functioning time system complete with a day/night cycle.
-            </Typography>
-            <br />
-            <Typography>
+            </p>
+            <p className="mx-4">
                 But the real fun is just getting started. In the coming months, I'll be adding even more features and content to IRL Simulator, including fully-realized roads and a variety of vehicles to drive, from a small car to a transport truck and everything in between.
-            </Typography>
-            <br />
-            <Typography>
+            </p>
+            <p className="mx-4">
                 To make the experience even more immersive, there will be two towns to explore, each with its own grocery store, parts shop, and tuning parts shop. And for those who need to stay connected, there will be a variety of electronics shops where you can buy everything from phones and tablets to laptops.
-            </Typography>
-            <br />
-            <Typography>
+            </p>
+            <p className="mx-4">
                 In order to add more realism to the game, I will implement a feature where batteries will have a certain amount of cycles and will lose capacity over time. This means you'll have to replace your batteries every so often, just like in real life.
-            </Typography>
-            <br />
-            <Typography>
+            </p>
+            <p className="mx-4">
                 Overall, IRL Simulator is shaping up to be an exciting and engaging game that will offer players a unique and immersive experience like no other. I can't wait to share it with you, and I hope you're as excited as I am!
-            </Typography>
+            </p>
             {/* images heading */}
-            <Typography variant="h4">Images</Typography>
+            <h2 className="text-2xl font-bold mx-2">Images</h2>
             <img src="/irlsimulator/1.png" alt="Image 1 of house" style={imageStyle}></img>
             <img src="/irlsimulator/2.png" alt="Image 2 of house" style={imageStyle}></img>
+            <Watermark />
         </>
     )
 }

@@ -1,38 +1,32 @@
-import { Typography, Alert, Button } from "@mui/material";
+import Watermark from "@/components/Watermark";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
 
 export default function OldTruckSounds() {
-    const router = useRouter();
-
     return (
         <>
             <Head>
                 <title>Old Hayosiko | mldkyt.com</title>
             </Head>
-            <NavBar selected={""} />
-            <Typography variant="h3">Old Hayosiko</Typography>
-            <p></p>
-            <Typography>
+            <NavBar />
+            <br />
+            <h1 className="text-3xl font-bold mx-2">Old Hayosiko</h1>
+            <p className="mx-6">
             This mod makes the Hayosiko van in My Summer Car look like it was from the pre-release versions of the game. With this mod, you can give your Hayosiko van a classic and nostalgic feel.
-            </Typography>
-            <p></p>
-            <Typography variant="h5">How to use</Typography>
-            <Typography>
+            </p>
+            <h2 className="text-xl font-bold mx-4">How to use</h2>
+            <p className="mx-6">
             To use this mod, you will need the MSCLoader mod loader. Simply download and install the mod using the MSCLoader and start your game. Once in-game, the Hayosiko van will automatically be updated to the pre-release version.
-            </Typography>
-            <p></p>
-            <Typography variant="h5">Features:</Typography>
-            <Typography>&bull; Makes the Hayosiko van look like it was from the pre-release versions of My Summer Car.</Typography>
-            <Typography>&bull; Easy to install and use with MSCLoader.</Typography>
-            <Typography>&bull; Hosted on NexusMods for easy access and download.</Typography>
-            <p></p>
-            <Alert color="info">
-                <Typography>This mod is not compatible with any other mods that affect the Hayosiko van. Please make sure to remove any conflicting mods before using this mod.</Typography>
-            </Alert>
-            <p></p>
-            <Button variant="contained" onClick={_ => router.push('https://www.nexusmods.com/mysummercar/mods/804')}>Go to NexusMods page</Button>
+            </p>
+            <h2 className="text-xl font-bold mx-4">Features:</h2>
+            <p className="mx-8">&bull; Makes the Hayosiko van look like it was from the pre-release versions of My Summer Car.</p>
+            <p className="mx-8">&bull; Easy to install and use with MSCLoader.</p>
+            <p className="mx-8">&bull; Hosted on NexusMods for easy access and download.</p>
+            <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the Hayosiko van. Please make sure to remove any conflicting mods before using this mod.</p>
+            <Link href="https://www.nexusmods.com/mysummercar/mods/804" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods page</Link>
+            <Watermark />
         </>
     )
 }

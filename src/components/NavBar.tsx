@@ -1,15 +1,11 @@
-import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { Inter } from "@next/font/google";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 
 const inter = Inter({subsets: ["latin"]});
 
-export default function 
-NavBar(props: {
-    selected: string
-}) {
-    const router = useRouter();
+export default function NavBar() {
 
     const hasRan = useRef(false);
     const [subs, setSubs] = useState(0);
@@ -24,17 +20,13 @@ NavBar(props: {
     })
 
     return (
-        <AppBar position="static">
-            <Toolbar>
-                <Typography className={inter.className}>mldkyt's website</Typography>
-                {subs != 0 ? <Typography sx={{marginLeft: '1rem', backgroundColor: '#000', color: '#fff', padding: '0.5rem 1rem', borderRadius: '1rem'}}>{subs} subs</Typography> : null}
-                <Button onClick={_ => router.push('/')} sx={{marginLeft: '1rem', color: 'white'}}>Home</Button>
-                <Button onClick={_ => router.push('/meshsave')} sx={{color: 'white'}}>Meshsave</Button>
-                <Button onClick={_ => router.push('/projects')} sx={{color: 'white'}}>Project list</Button>
-                <Button onClick={_ => router.push('/project/asphaltroads')} sx={{color: 'white'}}>Asphalt Roads</Button>
-                <Button onClick={_ => router.push('/project/irlsimulator')} sx={{color: 'white'}}>IRL Simulator</Button>
-                <Button onClick={_ => router.push('/project/oldcarsounds')} sx={{color: 'white'}}>OldCarSounds</Button>
-            </Toolbar> 
-        </AppBar>
+        <div className="fixed top-0 h-7 text-white bg-gradient-to-b from-gray-900 to-gray-600 w-screen">
+            <span className="text-xl first-letter:text-red-500">mldkyt's website</span>
+            {subs !== 0 ? 
+            <span className="bg-red-500 rounded-lg mx-2 p-0.5">{subs} subs</span> : null}
+            <Link className="px-2" href="/">Home</Link>
+            <Link className="px-2" href="/meshsave">Meshsave</Link>
+            <Link className="px-2" href="/projects">Project list</Link>
+        </div>
     )
 }

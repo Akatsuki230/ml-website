@@ -1,12 +1,11 @@
 import Watermark from "@/components/Watermark";
-import { Accordion, AccordionDetails, AccordionSummary, Paper, Typography, Button } from "@mui/material";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 
 export default function Mods() {
-    const [openAccordion, setOpenAccordion] = useState(0);
     const router = useRouter();
 
     return (
@@ -14,119 +13,100 @@ export default function Mods() {
             <Head>
                 <title>MLDKYT's website</title>
             </Head>
-            <NavBar selected={""} />
-            <Typography variant="h3">MLDKYT's projects</Typography>
-            <Accordion expanded={openAccordion === 1} onChange={(_, x) => x ? setOpenAccordion(1) : setOpenAccordion(0)}>
-                <AccordionSummary>
-                    <Typography>My Summer Car mods</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography variant="h6">I have a couple My Summer Car mods.</Typography>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Asphalt Roads
-                        </Typography>
-                        <Typography variant="body2">
-                            Changes dirt roads to asphalt roads. Also changes the feel of the roads.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/asphaltroads')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            OldCarSounds
-                        </Typography>
-                        <Typography variant="body2">
-                            OldCarSounds is a mod that changed the Satsuma to the old state.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/oldcarsounds')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Old highway cars
-                        </Typography>
-                        <Typography variant="body2">
-                            Old highway cars replaces cars on highway with satsumas from build 171
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/oldhighwaycars')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Old hayosiko
-                        </Typography>
-                        <Typography variant="body2">
-                            Old hayosiko returned the hayosiko to its old state.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/oldhayosiko')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Old world
-                        </Typography>
-                        <Typography variant="body2">
-                            Old world returned the world to its old state.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/oldworld')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Kekmet more gears
-                        </Typography>
-                        <Typography variant="body2">
-                            Kekmet more gears allows you to buy more gears to the kekmet.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/kekmetmoregears')}>Visit project's page</Button>
-                    </Paper>
-                    <p></p>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Kekmet speedometer
-                        </Typography>
-                        <Typography variant="body2">
-                            A slightly broken mod that replaces the tachometer with a speedometer in the kekmet.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/kekmetspeedometer')}>Visit project's page</Button>
-                    </Paper>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={openAccordion === 2} onChange={(_, x) => x ? setOpenAccordion(2) : setOpenAccordion(0)}>
-                <AccordionSummary>
-                    <Typography>Other projects</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    {/* IRL Simulator, link "/project/irlsimulator" */}
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            IRL Simulator
-                        </Typography>
-                        <Typography variant="body2">
-                            IRL Simulator is a game where you simulate your life.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/project/irlsimulator')}>Visit project's page</Button>
-                    </Paper>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={openAccordion === 3} onChange={(_, x) => x ? setOpenAccordion(3) : setOpenAccordion(0)}>
-                <AccordionSummary>
-                    <Typography>Online utilities</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Paper elevation={3} sx={{padding: '1rem'}}>
-                        <Typography variant="h6">
-                            Discord Timestamp Generator
-                        </Typography>
-                        <Typography variant="body2">
-                            Allows you to generate timestamps for Discord.
-                        </Typography>
-                        <Button variant="contained" onClick={_ => router.push('/util/discord/timestamp-generator')}>Visit utility's page</Button>
-                    </Paper>
-                </AccordionDetails>
-            </Accordion>
+            <NavBar />
+            <br/>
+            <h1 className="text-3xl font-bold px-2">MLDKYT's projects</h1>
+            <h2 className="text-2xl underline px-4">My Summer Car mods</h2>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Asphalt Roads
+                </h3>
+                <p className="px-4 text-white">
+                    Changes dirt roads to asphalt roads. Also changes the feel of the roads.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/asphaltroads">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    OldCarSounds
+                </h3>
+                <p className="px-4 text-white">
+                    OldCarSounds is a mod that changed the Satsuma to the old state.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldcarsounds">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Old highway cars
+                </h3>
+                <p className="px-4 text-white">
+                    Old highway cars replaces cars on highway with satsumas from build 171
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldhighwaycars">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Old hayosiko
+                </h3>
+                <p className="px-4 text-white">
+                    Old hayosiko returned the hayosiko to its old state.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldhayosiko">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Old world
+                </h3>
+                <p className="px-4 text-white">
+                    Old world returned the world to its old state.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldworld">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Kekmet more gears
+                </h3>
+                <p className="px-4 text-white">
+                    Kekmet more gears allows you to buy more gears to the kekmet.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/kekmetmoregears">Visit project's page</Link>
+            </div>
+            <p></p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+            <h3 className="px-2 text-xl text-white">
+                Kekmet speedometer
+            </h3>
+            <p className="px-4 text-white">
+                A slightly broken mod that replaces the tachometer with a speedometer in the kekmet.
+            </p>
+            <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/kekmetspeedometer">Visit project's page</Link>
+            </div>
+            <h2 className="text-2xl underline px-4">Other projects</h2>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    IRL Simulator
+                </h3>
+                <p className="px-4 text-white">
+                    IRL Simulator is a game where you simulate your life.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/irlsimulator">Visit project's page</Link>
+            </div>
+            <h2 className="text-2xl underline px-4">Online utilities</h2>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">
+                <h3 className="px-2 text-xl text-white">
+                    Discord Timestamp Generator
+                </h3>
+                <p className="px-4 text-white">
+                    Allows you to generate timestamps for Discord.
+                </p>
+                <Link className="m-2 mx-2 bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/util/discord/timestamp-generator">Visit utility's page</Link>
+            </div>
             <Watermark />
         </>
     )

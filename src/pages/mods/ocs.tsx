@@ -75,7 +75,7 @@ export default function OCS() {
             <Head>
                 <title>MLDKYT's website</title>
             </Head>
-            <NavBar selected={""}/>
+            <NavBar />
             <div className="bg-gray-900 text-white min-h-screen">
                 <div className="absolute right-8 top-16">
                     <a href="https://www.nexusmods.com/mysummercar/mods/464">

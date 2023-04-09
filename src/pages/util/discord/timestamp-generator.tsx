@@ -1,8 +1,4 @@
 import NavBar from "@/components/NavBar";
-import { Button, Container, MenuItem, Select, Snackbar, Typography } from "@mui/material";
-import { DesktopDateTimePicker } from "@mui/x-date-pickers/DesktopDateTimePicker";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import Head from "next/head";
 import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
@@ -37,24 +33,24 @@ function relative(time: Dayjs) {
     return Math.floor(diff / 29030400) + ' years ago';
 }
 
-function selectFormatAndRender(format: string, time: Dayjs) {
+function selectFormatAndRender(format: string, time: Dayjs, preview24Format: boolean) {
     switch (format) {
         case 't':
-            return time.format('h:mm A');
+            return time.format(preview24Format ? 'H:mm' : 'h:mm A');
         case 'T':
-            return time.format('h:mm:ss A');
+            return time.format(preview24Format ? 'H:mm:ss' : 'h:mm:ss A');
         case 'd':
             return time.format('DD/MM/YYYY');
         case 'D':
             return time.format('DD MMMM YYYY');
         case 'f':
-            return time.format('DD MMMM YYYY h:mm A');
+            return time.format(preview24Format ? 'DD MMMM YYYY H:mm' : 'DD MMMM YYYY h:mm A');
         case 'F':
-            return time.format('dddd, MMMM, DD, YYYY h:mm A');
+            return time.format(preview24Format ? 'dddd, MMMM, DD, YYYY, H:mm' : 'dddd, MMMM, DD, YYYY h:mm A');
         case 'R':
             return relative(time);
         default:
-            return time.format('h:mm A');
+            return time.format(preview24Format ? 'H:mm' : 'h:mm A');
     }
 }
 
@@ -62,14 +58,29 @@ export default function DiscordTimestampGenerator() {
     const [time, setTime] = useState(dayjs());
     const [format, setFormat] = useState('t');
     const [copiedSnackbar, setCopiedSnackbar] = useState(false);
+    const [preview24Format, setPreview24Format] = useState(false);
 
-    function trySetTime(x: Dayjs | null) {
-        if (x) setTime(x);
+    function setDate(date: Date) {
+        // copy the date, leave the time
+        const newTime = time;
+        newTime.year(date.getFullYear());
+        newTime.month(date.getMonth());
+        newTime.date(date.getDate());
+        setTime(newTime);
+    }
+
+    function setTime1(date: Date) {
+        // copy the time, leave the date
+        const newTime = time;
+        newTime.hour(date.getHours());
+        newTime.minute(date.getMinutes());
+        setTime(newTime);
     }
 
     function copy() {
         navigator.clipboard.writeText(`<t:${time.unix()}:${format}>`);
         setCopiedSnackbar(true);
+        setTimeout(() => setCopiedSnackbar(false), 1000);
     }
 
     return (
@@ -77,41 +88,41 @@ export default function DiscordTimestampGenerator() {
             <Head>
                 <title>mldkyt's website</title>
             </Head>
-            <NavBar selected="home" />
-            <Container>
-                <Typography variant="h3" className="p-2 px-4">Discord Timestamp Generator</Typography>
-                <Typography variant="h5" className="px-8">Start by entering your date: </Typography>
-                <div className="px-10">
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DesktopDateTimePicker format="DD/MM/YYYY HH:mm" value={time} onChange={(x) => trySetTime(x)} />
-                    </LocalizationProvider>
-                </div>
+            <NavBar />
+            <br />
+            <h1 className="p-2 px-4 text-3xl font-bold">Discord Timestamp Generator</h1>
 
-                <Typography variant="h5" className="px-8">Settings: </Typography>
-                <div className="px-10">
-                    <Typography>Format: </Typography>
-                    <Select value={format} onChange={(x) => setFormat(x.target.value)}>
-                        <MenuItem value="t">{time.format('h:mm A')}</MenuItem>
-                        <MenuItem value="T">{time.format('h:mm:ss A')}</MenuItem>
-                        <MenuItem value="d">{time.format('DD/MM/YYYY')}</MenuItem>
-                        <MenuItem value="D">{time.format('DD MMMM YYYY')}</MenuItem>
-                        <MenuItem value="f">{time.format('DD MMMM YYYY h:mm A')}</MenuItem>
-                        <MenuItem value="F">{time.format('dddd, MMMM, DD, YYYY h:mm A')}</MenuItem>
-                        <MenuItem value="R">{relative(time)}</MenuItem>
-                    </Select>
-                </div>
-
-                <Typography variant="h5" className="px-8">Output: </Typography>
-                <Typography className="px-10 text-md">Preview: {selectFormatAndRender(format, time)}</Typography>
-                <Typography className="px-10 text-md">
-                    Code: <code className="bg-gray-700 text-white p-1 px-2 rounded-lg">{'<'}t:{time.unix()}:{format}{'>'}</code>
-                </Typography>
+            <h2 className="px-8 text-xl">Settings: </h2>
+            <div className="px-10">
+                <label>Date: </label>
+                <input type='datetime-local' value={time.format('YYYY-MM-DD[T]HH:mm')} onChange={x => setTime(dayjs(x.currentTarget.value))}
+                        className="border-2 border-black rounded-lg drop-shadow-lg p-0.5 px-1" />
                 <br />
-                <div className="mx-10">
-                    <Button variant="contained" onClick={copy}>Copy</Button>
-                </div>
-            </Container>
-            <Snackbar open={copiedSnackbar} autoHideDuration={1000} onClose={() => setCopiedSnackbar(false)} message="Copied to clipboard!" />
+                <label>Format: </label>
+                <select className="border-2 border-black rounded-lg drop-shadow-lg p-0.5 px-1" value={format} onChange={(x) => setFormat(x.target.value)}>
+                    <option value="t">{time.format(preview24Format ? 'H:mm' : 'h:mm A')}</option>
+                    <option value="T">{time.format(preview24Format ? 'H:mm:ss' : 'h:mm:ss A')}</option>
+                    <option value="d">{time.format('DD/MM/YYYY')}</option>
+                    <option value="D">{time.format('DD MMMM YYYY')}</option>
+                    <option value="f">{time.format(preview24Format ? 'DD MMMM YYYY H:mm' : 'DD MMMM YYYY h:mm A')}</option>
+                    <option value="F">{time.format(preview24Format ? 'dddd, MMMM, DD, YYYY, H:mm' : 'dddd, MMMM, DD, YYYY h:mm A')}</option>
+                    <option value="R">{relative(time)}</option>
+                </select>
+                <br />
+                <input className="mr-2" type='checkbox' checked={preview24Format} onChange={x => setPreview24Format(x.currentTarget.checked)} />
+                <label>Preview is 24-hour</label>
+            </div>
+
+
+            <h2 className="px-8 text-xl">Output: </h2>
+            <p className="px-10 text-md">Preview: {selectFormatAndRender(format, time, preview24Format)}</p>
+            <p className="px-10 text-md">
+                Code: <code className="bg-gray-700 text-white p-1 px-2 rounded-lg">{'<'}t:{time.unix()}:{format}{'>'}</code>
+            </p>
+            <div className="mx-10 mt-3">
+                <button onClick={copy} className="bg-green-500 p-0.5 px-1.5 rounded-lg border-2 border-black">Copy</button>
+                {copiedSnackbar ? <span className="ml-2 text-green-500">Copied!</span> : null}
+            </div>
             <Watermark />
         </>
     )
