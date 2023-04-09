@@ -60,6 +60,9 @@ export default function SexPack() {
                 background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
             }} className="text-white w-max rounded-lg drop-shadow-2xl border-4 border-black">Please set this as your main resource pack {'<3'}</p>
             <p>This page is intended to look like ass, other pages look decent enough lmao.</p>
+            <Link href="https://www.youtube.com/watch?v=UJzE-KENUyw" className="m-2 bg-black text-white underline drop-shadow-lg p-0.5 px-1 rounded-lg">
+                Watch the making out of this texture pack! Warning: Sexual (Click me to watch)
+            </Link>
             <p className="text-3xl">Version 1.0</p>
             <p className="ml-2">Dying from an anvil yields: {'<'}player{'>'} squashed his ass using an anvil</p>
             <p className="ml-2">Dying from an arrow yields: {'<'}player{'>'} was remotely penetrated by {'<'}player{'>'}</p>
