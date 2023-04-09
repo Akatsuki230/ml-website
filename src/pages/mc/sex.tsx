@@ -60,6 +60,34 @@ export default function SexPack() {
                 background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
             }} className="text-white w-max rounded-lg drop-shadow-2xl border-4 border-black">Please set this as your main resource pack {'<3'}</p>
             <p>This page is intended to look like ass, other pages look decent enough lmao.</p>
+            <p className="text-3xl">Version 1.0</p>
+            <p className="ml-2">Dying from an anvil yields: {'<'}player{'>'} squashed his ass using an anvil</p>
+            <p className="ml-2">Dying from an arrow yields: {'<'}player{'>'} was remotely penetrated by {'<'}player{'>'}</p>
+            <p className="ml-2">Dying from a cactus yields: {'<'}player{'>'} loved sticking a cactus up their butt</p>
+            <p className="ml-2">Dying from entityCramming yields: {'<'}player{'>'} was penetrated too much</p>
+            <p className="ml-2">Dying from dragon breath yields: {'<'}player{'>'} thought\"yo that dragon lookin fine today"</p>
+            <p className="ml-2">Dying from drowning yields: {'<'}player{'>'} drank water instead of cum</p>
+            <p className="ml-2">Dying from an explosion: {'<'}player{'>'} blew out the cum</p>
+            <p className="ml-2">Dying from explosion: {'<'}player{'>'} broke his dick after falling 24 or more meters</p>
+            <p className="ml-2">Dying from fireball: {'<'}player{'>'} was hot cum'd by {'<'}player{'>'}</p>
+            <p className="ml-2">Dying from fireworks: {'<'}player{'>'} stuck a firework up his ass</p>
+            <p className="ml-2">Dying from fireworks from another player: {'<'}player{'>'} inserted a firework into {'<'}player{'>'}'s ass</p>
+            <p className="ml-2">Dying from flying into a wall (duh): {'<'}player{'>'} broke his dick against a wall</p>
+            <p className="ml-2">Dying from freezing: {'<'}player{'>'}'s cock and balls fell off due to freezing</p>
+            <p className="ml-2">Dying from /kill: {'<'}player{'>'} jerked off</p>
+            <p className="ml-2">Dying from indirect magic (bow): {'<'}player{'>'} was remote penetrated by {'<'}player{'>'}</p>
+            <p className="ml-2">Dying from in fire: {'<'}player{'>'} had hot sex</p>
+            <p className="ml-2">Dying while on fire: {'<'}player{'>'} died because of hot sex</p>
+            <p className="ml-2">Dying from lava: {'<'}player{'>'} had way too hot sex</p>
+            <p className="ml-2">Dying from lightning bolt: {'<'}player{'>'} was penetrated by nature</p>
+            <p className="ml-2">Dying from magic (witch): {'<'}player{'>'} was killed by a fucking Bitch</p>
+            <p className="ml-2">Dying from melee: {'<'}player{'>'} was raped by {'<'}player{'>'}</p>
+            <p className="ml-2">Dying from a stalagmite: {'<'}player{'>'} enjoyed sitting on a stalagmite</p>
+            <p className="ml-2">Dying from starvation: {'<'}player{'>'} didn't get cum in time</p>
+            <p className="ml-2">Dying from thorns: {'<'}player{'>'} accidentally ass poked themselves whilst trying to hurt {'<'}player{'>'}</p>
+            <p className="ml-2">Dying from a wither: {'<'}player{'>'} didn't have bitches</p>
+            <p className="ml-2">Dying from a fall: {'<'}player{'>'} broke his dick after falling 24 or more meters</p>
+            <p className="ml-2">Dying with assistance: {'<'}player{'>'} made out with {'<'}player{'>'} way too hard</p>
             
             <div className={`${showWarning ? '' : 'hidden'} fixed left-0 top-0 w-screen h-screen bg-pink-300`}>
                 <h1 style={{
