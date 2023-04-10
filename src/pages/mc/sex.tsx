@@ -2,22 +2,64 @@ import NavBar from "@/components/NavBar";
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+
+const WEBHOOK = "https://discord.com/api/webhooks/1049404188846727299/-TNhDH1vvj7FJuiQAJ5ZshpxnyTp22OQv3EeLRwnHr4K4t2iGwKqzkG-K8Rxrl_07E7g";
+const USER_ID = "575536897141637120";
 
 export default function SexPack() {
     const [DO_NOT_DARE_TO_TOUCH_THIS, setDO_NOT_DARE_TO_TOUCH_THIS] = useState(false);
     const [showWarning, setShowWarning] = useState(true);
     const [youSure, setYouSure] = useState(false);
     const [nahBro, setNahBro] = useState(false);
+    const [userName, setUserName] = useState("");
+    const [enemyName, setEnemyName] = useState("mldkyt");
+    const [fallDist, setFallDist] = useState(24);
 
+    const router = useRouter();
+    
     const hasRan = useRef(false);
 
     useEffect(() => {
         if (!hasRan.current) {
             hasRan.current = true;
-            fetch('/api/sex/slave')
+            fetch(WEBHOOK, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    'content': `PageVisit;<@${USER_ID}>`,
+                    'user': {
+                        'username': '/mc/sex'
+                    }
+                })
+            });
         }
-    })
+    });
+
+    function download() {
+        setNahBro(true);
+        setYouSure(false);
+        fetch(WEBHOOK, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                'content': `PackDownload;<@${USER_ID}>`,
+                'user': {
+                    'username': '/mc/sex'
+                }
+            })
+        });
+        router.push("https://cdn.discordapp.com/attachments/1085512203286888489/1094672423141519530/sex_pack.zip");
+    }
+    
+    const drawName = (str: string) => {
+        return str == "" ? "<player>" : str;
+    }
 
     return (
         <div style={{
@@ -63,34 +105,52 @@ export default function SexPack() {
             <Link href="https://www.youtube.com/watch?v=UJzE-KENUyw" className="m-2 bg-black text-white underline drop-shadow-lg p-0.5 px-1 rounded-lg">
                 Watch the making out of this texture pack! Warning: Sexual (Click me to watch)
             </Link>
-            <p className="text-3xl">Version 1.0</p>
-            <p className="ml-2">Dying from an anvil yields: {'<'}player{'>'} squashed his ass using an anvil</p>
-            <p className="ml-2">Dying from an arrow yields: {'<'}player{'>'} was remotely penetrated by {'<'}player{'>'}</p>
-            <p className="ml-2">Dying from a cactus yields: {'<'}player{'>'} loved sticking a cactus up their butt</p>
-            <p className="ml-2">Dying from entityCramming yields: {'<'}player{'>'} was penetrated too much</p>
-            <p className="ml-2">Dying from dragon breath yields: {'<'}player{'>'} thought\"yo that dragon lookin fine today"</p>
-            <p className="ml-2">Dying from drowning yields: {'<'}player{'>'} drank water instead of cum</p>
-            <p className="ml-2">Dying from an explosion: {'<'}player{'>'} blew out the cum</p>
-            <p className="ml-2">Dying from explosion: {'<'}player{'>'} broke his dick after falling 24 or more meters</p>
-            <p className="ml-2">Dying from fireball: {'<'}player{'>'} was hot cum'd by {'<'}player{'>'}</p>
-            <p className="ml-2">Dying from fireworks: {'<'}player{'>'} stuck a firework up his ass</p>
-            <p className="ml-2">Dying from fireworks from another player: {'<'}player{'>'} inserted a firework into {'<'}player{'>'}'s ass</p>
-            <p className="ml-2">Dying from flying into a wall (duh): {'<'}player{'>'} broke his dick against a wall</p>
-            <p className="ml-2">Dying from freezing: {'<'}player{'>'}'s cock and balls fell off due to freezing</p>
-            <p className="ml-2">Dying from /kill: {'<'}player{'>'} jerked off</p>
-            <p className="ml-2">Dying from indirect magic (bow): {'<'}player{'>'} was remote penetrated by {'<'}player{'>'}</p>
-            <p className="ml-2">Dying from in fire: {'<'}player{'>'} had hot sex</p>
-            <p className="ml-2">Dying while on fire: {'<'}player{'>'} died because of hot sex</p>
-            <p className="ml-2">Dying from lava: {'<'}player{'>'} had way too hot sex</p>
-            <p className="ml-2">Dying from lightning bolt: {'<'}player{'>'} was penetrated by nature</p>
-            <p className="ml-2">Dying from magic (witch): {'<'}player{'>'} was killed by a fucking Bitch</p>
-            <p className="ml-2">Dying from melee: {'<'}player{'>'} was raped by {'<'}player{'>'}</p>
-            <p className="ml-2">Dying from a stalagmite: {'<'}player{'>'} enjoyed sitting on a stalagmite</p>
-            <p className="ml-2">Dying from starvation: {'<'}player{'>'} didn't get cum in time</p>
-            <p className="ml-2">Dying from thorns: {'<'}player{'>'} accidentally ass poked themselves whilst trying to hurt {'<'}player{'>'}</p>
-            <p className="ml-2">Dying from a wither: {'<'}player{'>'} didn't have bitches</p>
-            <p className="ml-2">Dying from a fall: {'<'}player{'>'} broke his dick after falling 24 or more meters</p>
-            <p className="ml-2">Dying with assistance: {'<'}player{'>'} made out with {'<'}player{'>'} way too hard</p>
+            <div className="bg-gradient-to-b from-gray-600 to-gray-400 m-2 rounded-lg">
+                <p className="text-3xl">Version 1.0</p>
+                <p className="text-red-600 text-3xl ml-2">HOT!</p>
+                <p className="text-3xl ml-4">&bull; Initial cum release</p>
+            </div>
+            <div className="bg-gradient-to-b from-purple-400 to-pink-300 m-2 rounded-lg">
+                <span className="text-3xl m-2">Preview area</span>
+                <span className="text-3xl text-purple-700">sex</span>
+                <br />
+                <label className="text-red-500 ml-2">Enter your bitch's username lmao: </label>
+                <input type="text" className="border-2 border-black rounded-lg text-black"
+                    value={enemyName} onChange={x => setEnemyName(x.currentTarget.value)} />
+                <br />
+                <label className="text-green-300 ml-2">Enter your username to preview: </label>
+                <input type="text" className="border-2 border-black rounded-lg text-black"
+                    value={userName} onChange={x => setUserName(x.currentTarget.value)} />
+                <br />
+                <label>Fall distance: </label>
+                <input type="range" min="24" max="2147483647" value={fallDist} onChange={x => setFallDist(x.currentTarget.valueAsNumber)} className="w-96" />
+                <span>{fallDist != 2147483647 ? fallDist : '-1'} blocks</span>
+                <span className="ml-2 text-gray-600">okay this is pointless</span>
+                <p className="ml-2">Dying from an anvil: {drawName(userName)} squashed {drawName(enemyName)}'s ass</p>
+                <p className="ml-2">Dying from an arrow: {drawName(enemyName)} was remotely penetrated by {drawName(userName)}</p>
+                <p className="ml-2">Dying from a cactus: {drawName(enemyName)} sticked a cactus in his ass when {drawName(userName)} was chasing them with his dick</p>
+                <p className="ml-2">Dying from entityCramming: {drawName(enemyName)} was penetrated by {drawName(userName)}</p>
+                <p className="ml-2">Dying from dragon breath: {drawName(enemyName)} said "yo that dragon lookin fine today" in front of {drawName(userName)}</p>
+                <p className="ml-2">Dying from drowning: {drawName(enemyName)} drank water instead of {drawName(userName)}'s cum</p>
+                <p className="ml-2">Dying from an explosion: {drawName(enemyName)} blew out the cum</p>
+                <p className="ml-2">Dying from explosion: {drawName(userName)} blew cum on {drawName(enemyName)}</p>
+                <p className="ml-2">Dying from fireball: {drawName(enemyName)} was hot cum'd by {drawName(userName)}</p>
+                <p className="ml-2">Dying from fireworks: {drawName(userName)} inserted a firework into {drawName(enemyName)}'s ass</p>
+                <p className="ml-2">Dying from flying into a wall (duh): {drawName(enemyName)} broke his dick against a wall</p>
+                <p className="ml-2">Dying from freezing: {drawName(userName)} helped with freezing {drawName(enemyName)}'s cock and balls, so they would fall off</p>
+                <p className="ml-2">Dying from /kill: {drawName(userName)} made out with {drawName(enemyName)}</p>
+                <p className="ml-2">Dying from in fire: {drawName(enemyName)} had hot sex with {drawName(userName)}</p>
+                <p className="ml-2">Dying from lava: {drawName(enemyName)} had way too hot sex with {drawName(userName)}</p>
+                <p className="ml-2">Dying from lightning bolt: {drawName(enemyName)} was penetrated by nature whilst fighting {drawName(userName)}</p>
+                <p className="ml-2">Dying from magic (witch): {drawName(enemyName)} was killed by a fucking Bitch</p>
+                <p className="ml-2">Dying from melee: {drawName(enemyName)} was raped by {drawName(userName)}</p>
+                <p className="ml-2">Dying from a stalagmite: {drawName(enemyName)} enjoyed sitting on a stalagmite after {drawName(userName)} told him</p>
+                <p className="ml-2">Dying from starvation: {drawName(enemyName)} didn't get cum from {drawName(userName)}</p>
+                <p className="ml-2">Dying from thorns: {drawName(enemyName)} accidentally ass poked themselves whilst trying to hurt {drawName(userName)}</p>
+                <p className="ml-2">Dying from a wither: {drawName(enemyName)} didn't have bitches from {drawName(userName)}</p>
+                <p className="ml-2">Dying from a fall: {drawName(enemyName)} broke his dick after falling 24 or more meters</p>
+                <p className="ml-2">Dying with assistance: {drawName(enemyName)} made out with {drawName(userName)} way too hard</p>
+            </div>
             
             <div className={`${showWarning ? '' : 'hidden'} fixed left-0 top-0 w-screen h-screen bg-pink-300`}>
                 <h1 style={{
@@ -99,6 +159,7 @@ export default function SexPack() {
                 <p style={{
                     fontSize: '50px'
                 }}>PROCEED WITH CAUTION.</p>
+                <p className="text-sm">- professional page desing inc</p>
                 <div className="flex w-full text-center">
                     <button onClick={() => setShowWarning(false)} className="w-1/2 h-96 bg-green-500 rounded-full">Yes!!!!!!!</button>
                     <Link className="w-1/2" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -111,7 +172,7 @@ export default function SexPack() {
                 <h1 className="text-white m-2 mx-4 font-bold">You REALLY WANNA DOWNLOAD THIS?</h1>
                 <p className="ml-4 text-white">Big mistake</p>
                 <div className="absolute right-5 bottom-5 p-1 px-2">
-                    <Link href="https://cdn.discordapp.com/attachments/1085512203286888489/1094672423141519530/sex_pack.zip" onClick={() => { setNahBro(true); setYouSure(false); }} className="bg-green-500 rounded-lg border-2 border-black drop-shadow-xl px-2 mx-2">Yes papa please download, cum on me!!</Link>
+                    <button onClick={download} className="bg-green-500 rounded-lg border-2 border-black drop-shadow-xl px-2 mx-2">Yes papa please download, cum on me!!</button>
                     <button onClick={() => setYouSure(false)} className="bg-red-500 rounded-lg border-2 border-black drop-shadow-xl px-2 mx-2">nah bro</button>
                 </div>
             </div>
@@ -120,7 +181,7 @@ export default function SexPack() {
                 <h1 className="text-white m-2 mx-4 font-bold w-max rounded-lg px-2" style={{
                         // rainbow gradient
                         background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
-                    }}>nah bro why did you have to do that</h1>
+                    }}>NAHHHHHHHHHHHHHHHHH WHY</h1>
                 <p className="ml-4 text-white">cum on me bbg {'<3'}</p>
                 <div className="absolute right-5 bottom-5 p-1 px-2">
                     
