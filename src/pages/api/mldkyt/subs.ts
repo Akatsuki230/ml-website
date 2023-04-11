@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // if the last date the subs were updated is more than 1 day ago, update the subs
     if (now.diff(lastDate, 'day') > 1) {
         // get subs from youtube
-        const subs1 = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC7JMha1kjOS7gsJXwNtosNw&key=AIzaSyDUqFkmq3nu27P0fJCpNHXA1jBSgjxIFZo`).then(x => x.json());
+        const subs1 = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC7JMha1kjOS7gsJXwNtosNw&key=AIzaSyAUkLmdKNaosfUlnV27jI78NYB-ZvOQDDE`).then(x => x.json());
         // update subs in db
         await webdata.updateOne({ name: 'subs' }, { $set: { subs: Number(subs1.items[0].statistics.subscriberCount), lastDate: new Date() } });
         // get subs again
