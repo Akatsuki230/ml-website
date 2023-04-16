@@ -2,7 +2,6 @@ import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import NavBar from "../components/NavBar";
 
 export default function Mods() {
@@ -12,7 +11,7 @@ export default function Mods() {
         <>
             <Head>
                 <title>mldkyt's website</title>
-                <meta name="title" content="mldkyt's project list | mldkyt's website" />
+                <meta name="title" content="Projects | mldkyt's website" />
                 <meta name="description" content="List of mldkyt's projects, whether online or offline." />
                 <meta name="author" content="mldkyt" />
             </Head>
