@@ -8,6 +8,10 @@ export default function AsphaltRoads() {
         <>
             <Head>
                 <title>Asphalt Roads | mldkyt.com</title>
+                <meta name="title" content="Asphalt Roads mod | mldkyt's website" />
+                <meta name="description" content="Adds asphalt roads into My Summer Car." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar/>
             <br />
