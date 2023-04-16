@@ -9,16 +9,19 @@ export default function Social() {
         <>
             <Head>
                 <title>Social links</title>
+                <meta name="title" content="Social links | mldkyt's website" />
+                <meta name="description" content="List of mldkyt's social links." />
+                <meta name="author" content="mldkyt" />
             </Head>
             <NavBar />
             <br />
-            <h1 className="text-3xl underline m-4">Social links</h1>
-            <p className="mx-8 text-xl font-bold">Welcome to the social links page! Here you can find all of my social links.</p>
+            <h1 className="text-3xl m-4 mb-1 font-bold">Social links</h1>
+            <p className="mx-8 text-lg">Welcome to my social link page! Here you can find all of my online platforms where I connect with people from around the world. On Discord, you can join my server and chat with me and other members about our shared interests. Reddit is where I engage in discussions and share my thoughts on various topics. On YouTube, I upload videos about my hobbies and adventures, while Instagram is where I share snippets of my daily life through photos and stories.</p>
             <div className="flex flex-wrap">
                 <div className="m-2 p-2 bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg drop-shadow-lg w-max">
                     <h2 className="text-lg">Discord server</h2>
                     <p>My Discord server is where I post updates and you can chat.</p>
-                    <Link href="https://discord.gg/3TvJFJMZrf" className="border-2 border-black p-0.5 px-1 rounded-lg bg-green-500 drop-shadow-lg">Join</Link>
+                    <Link href="https://redir.mldkyt.com/discord" className="border-2 border-black p-0.5 px-1 rounded-lg bg-green-500 drop-shadow-lg">Join</Link>
                 </div>
                 <div className="m-2 p-2 bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg drop-shadow-lg w-max">
                     <h2 className="text-lg">Discord bot</h2>

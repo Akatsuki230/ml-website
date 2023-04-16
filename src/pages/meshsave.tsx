@@ -109,6 +109,7 @@ export default function Meshsave() {
                 <meta name="title" content="mldkyt's meshsave | mldkyt's website" />
                 <meta name="description" content="The biggest abomination in My Summer Car, now for download" />
                 <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

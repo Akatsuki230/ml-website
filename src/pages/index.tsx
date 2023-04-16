@@ -28,6 +28,10 @@ const Home = () => {
     <div>
       <Head>
         <title>mldkyt's website</title>
+        <meta name="title" content="mldkyt's website" />
+        <meta name="description" content="Welcome to mldkyt's website!" />
+        <meta name="author" content="mldkyt" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
       </Head>
       <NavBar />
       <br/>

@@ -11,6 +11,10 @@ export default function KekmetSpeedometer() {
         <>
             <Head>
                 <title>Kekmet speedometer | mldkyt.com</title>
+                <meta name="title" content="Kekmet speedometer | mldkyt's website" />
+                <meta name="description" content="Replaces the Kekmet's tachometer with a speedometer." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

@@ -62,6 +62,9 @@ export default function SpawnBase() {
         <>
             <Head>
                 <title>Spawn Base</title>
+                <meta name="title" content="Spawn base | mldkyt's signwalls" />
+                <meta name="description" content="The spawn base found in Minecraft." />
+                <meta name="author" content="mldkyt" />
             </Head>
             <NavBar />
             <br />

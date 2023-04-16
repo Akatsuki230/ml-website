@@ -9,6 +9,10 @@ export default function OldTruckSounds() {
         <>
             <Head>
                 <title>Old World | mldkyt.com</title>
+                <meta name="title" content="Old World | mldkyt's website" />
+                <meta name="description" content="Returns the ingame world to the older version in My Summer Car." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

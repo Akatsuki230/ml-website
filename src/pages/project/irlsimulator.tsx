@@ -11,7 +11,11 @@ export default function IRLSimulator() {
     return (
         <>
             <Head>
-                <title>GoodOldMSC | mldkyt.com</title>
+                <title>IRL Simulator | mldkyt.com</title>
+                <meta name="title" content="IRL Simulator | mldkyt's website" />
+                <meta name="description" content="IRL Simulator is a game about realism." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

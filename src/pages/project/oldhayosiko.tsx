@@ -9,6 +9,10 @@ export default function OldTruckSounds() {
         <>
             <Head>
                 <title>Old Hayosiko | mldkyt.com</title>
+                <meta name="title" content="Old Hayosiko | mldkyt's website" />
+                <meta name="description" content="Returns the Hayosiko to look like from the old versions in My Summer Car" />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

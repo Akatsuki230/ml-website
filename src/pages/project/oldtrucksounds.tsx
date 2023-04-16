@@ -9,6 +9,10 @@ export default function OldTruckSounds() {
         <>
             <Head>
                 <title>Old Truck Sounds | mldkyt.com</title>
+                <meta name="title" content="Old Truck Sounds | mldkyt's website" />
+                <meta name="description" content="Returns the truck to it's early alpha version in My Summer Car." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

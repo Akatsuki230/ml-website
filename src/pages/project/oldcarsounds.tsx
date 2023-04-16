@@ -11,6 +11,10 @@ export default function OldTruckSounds() {
         <>
             <Head>
                 <title>OldCarSounds | mldkyt.com</title>
+                <meta name="title" content="OldCarSounds | mldkyt's website" />
+                <meta name="description" content="Changes Satsuma's sounds for the old ones." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />

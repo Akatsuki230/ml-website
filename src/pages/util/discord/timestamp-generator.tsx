@@ -87,6 +87,9 @@ export default function DiscordTimestampGenerator() {
         <>
             <Head>
                 <title>mldkyt's website</title>
+                <meta name="title" content="Discord timestamp generator | mldkyt's website" />
+                <meta name="description" content="Generates timestamps." />
+                <meta name="author" content="mldkyt" />
             </Head>
             <NavBar />
             <br />

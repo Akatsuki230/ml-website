@@ -11,11 +11,14 @@ export default function Mods() {
     return (
         <>
             <Head>
-                <title>MLDKYT's website</title>
+                <title>mldkyt's website</title>
+                <meta name="title" content="mldkyt's project list | mldkyt's website" />
+                <meta name="description" content="List of mldkyt's projects, whether online or offline." />
+                <meta name="author" content="mldkyt" />
             </Head>
             <NavBar />
             <br/>
-            <h1 className="text-3xl font-bold px-2">MLDKYT's projects</h1>
+            <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
             <h2 className="text-2xl underline px-4">My Summer Car mods</h2>
             <p></p>
             <div className="bg-gradient-to-b from-gray-600 to-gray-500 m-4 py-2 rounded-lg drop-shadow-xl">

@@ -9,6 +9,10 @@ export default function KekmetMoreGears() {
         <>
             <Head>
                 <title>Kekmet more gears | mldkyt.com</title>
+                <meta name="title" content="Kekmet more gears | mldkyt's website" />
+                <meta name="description" content="Adds more gears to the Kekmet in My Summer Car." />
+                <meta name="author" content="mldkyt" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
             <NavBar />
             <br />
