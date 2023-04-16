@@ -31,24 +31,20 @@ const Home = () => {
       </Head>
       <NavBar />
       <br/>
-        <div className='m-2 p-2 rounded-lg drop-shadow-lg w-max bg-gradient-to-b from-red-600 to-red-400'>
-          <p className='font-bold text-xl'>Invite my Discord bot right now!</p>
-          <Link href="https://bot.mldkyt.com/invite" className='bg-green-500 p-1 rounded-lg border-2 border-black'>Invite</Link>
-        </div>
         <h1 className='text-3xl mx-2 font-bold'>Welcome to mldkyt's website!</h1>
         <p className='mx-4'>{visits} visits</p>
         <div className='flex flex-row'>
-          <div className='w-32 text-center bg-gradient-to-t from-gray-600 to-gray-800 text-white p-4 rounded-lg m-2 drop-shadow-lg'>
+          <div className='w-24 text-center bg-gradient-to-t from-gray-600 to-gray-800 text-white pb-3 pt-2 rounded-lg m-2 drop-shadow-lg'>
             <span>Projects</span>
             <br/>
             <br/>
-            <Link href="/projects" className='p-2 px-4 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
+            <Link href="/projects" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
           </div>
-          <div className='w-32 text-center bg-gradient-to-t from-gray-600 to-gray-800 text-white p-4 rounded-lg m-2 drop-shadow-lg'>
+          <div className='w-28 text-center bg-gradient-to-t from-gray-600 to-gray-800 text-white pb-3 pt-2 rounded-lg m-2 drop-shadow-lg'>
             <span>Social links</span>
             <br/>
             <br/>
-            <Link href="/social" className='p-2 px-4 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
+            <Link href="/social" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
           </div>
         </div>
         <h2 className='text-2xl mx-2'>About me</h2>

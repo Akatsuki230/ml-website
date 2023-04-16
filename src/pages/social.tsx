@@ -16,9 +16,14 @@ export default function Social() {
             <p className="mx-8 text-xl font-bold">Welcome to the social links page! Here you can find all of my social links.</p>
             <div className="flex flex-wrap">
                 <div className="m-2 p-2 bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg drop-shadow-lg w-max">
-                    <h2 className="text-lg">Discord</h2>
+                    <h2 className="text-lg">Discord server</h2>
                     <p>My Discord server is where I post updates and you can chat.</p>
                     <Link href="https://discord.gg/3TvJFJMZrf" className="border-2 border-black p-0.5 px-1 rounded-lg bg-green-500 drop-shadow-lg">Join</Link>
+                </div>
+                <div className="m-2 p-2 bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg drop-shadow-lg w-max">
+                    <h2 className="text-lg">Discord bot</h2>
+                    <p>This is a bot I made.</p>
+                    <Link className="border-2 border-black p-0.5 px-1 rounded-lg bg-green-500 drop-shadow-lg" href="https://bot.mldkyt.com">Read more</Link>
                 </div>
                 <div className="m-2 p-2 bg-gradient-to-b from-red-400 to-red-600 rounded-lg drop-shadow-lg w-max">
                     <h2 className="text-lg">YouTube</h2>
