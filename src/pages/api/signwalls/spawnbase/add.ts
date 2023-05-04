@@ -1,5 +1,4 @@
-import { MONGODB_CONN_STRING } from "@/components/Globals";
-import { MongoClient } from "mongodb";
+import { sql } from "@vercel/postgres";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,10 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.status(400).json({ message: "Author must be between 1 and 25 characters." });
         return;
     }
-    const client = new MongoClient(MONGODB_CONN_STRING);
-    await client.connect();
-    const signs = client.db('Minecraft').collection('SpawnBaseSigns');
-    await signs.insertOne({ content, author });
-    await client.close();
+    
+    await sql`CREATE TABLE IF NOT EXISTS SpawnBaseSigns (id SERIAL PRIMARY KEY, content TEXT, author TEXT)`;
+    await sql`INSERT INTO SpawnBaseSigns (content, author) VALUES (${content}, ${author})`;
     res.status(200).json({ message: "Success." });
 }

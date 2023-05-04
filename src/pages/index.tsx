@@ -1,21 +1,17 @@
-
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
-import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import Watermark from '@/components/Watermark';
-import Link from 'next/link';
 
 const Home = () => {
-  const router = useRouter();
   const [visits, setVisits] = useState('loading ');
   const hasLoaded = useRef(false);
 
   useEffect(() => {
     if (!hasLoaded.current) {
-      fetch('/api/visits')
+      fetch('/api/getVisits')
         .then(res => res.json())
         .then(data => {
           setVisits(data.visits);
@@ -42,13 +38,13 @@ const Home = () => {
             <span>Projects</span>
             <br/>
             <br/>
-            <Link href="/projects" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
+            <a href="/projects" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</a>
           </div>
           <div className='w-28 text-center bg-gradient-to-t from-gray-600 to-gray-800 text-white pb-3 pt-2 rounded-lg m-2 drop-shadow-lg'>
             <span>Social links</span>
             <br/>
             <br/>
-            <Link href="/social" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</Link>
+            <a href="/social" className='p-1 px-2 bg-green-600 rounded-lg border-2 border-black'>Show</a>
           </div>
         </div>
         <h2 className='text-2xl mx-2'>About me</h2>

@@ -1,7 +1,5 @@
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
-import { useRouter } from "next/router";
-import Link from "next/link";
 import Watermark from "@/components/Watermark";
 
 export default function KekmetMoreGears() {
@@ -36,7 +34,7 @@ export default function KekmetMoreGears() {
                 This content was generated using AI. If you find any errors, please report them to me on Discord (mldkyt#2555) or on Twitter (@mldkyt).
             </p>
             <br />
-            <Link href="https://www.nexusmods.com/mysummercar/mods/1578" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</Link>
+            <a href="https://www.nexusmods.com/mysummercar/mods/1578" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</a>
             <Watermark />
         </>
     )

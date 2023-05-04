@@ -1,12 +1,8 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
 
 export default function OldTruckSounds() {
-    const router = useRouter();
-
     return (
         <>
             <Head>
@@ -36,7 +32,7 @@ export default function OldTruckSounds() {
             <h2 className="text-xl font-bold mx-4">Features (release):</h2>
             <p className="mx-6">&bull; Changes the car sounds to the release versions.</p>
             <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the car sounds in My Summer Car. Please make sure to remove any conflicting mods before using this mod.</p>
-            <Link href="https://www.nexusmods.com/mysummercar/mods/464" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods page</Link>
+            <a href="https://www.nexusmods.com/mysummercar/mods/464" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods page</a>
             <Watermark />
         </>
     )

@@ -1,21 +1,16 @@
-import Watermark from '@/components/Watermark'
-import { MongoClient } from 'mongodb'
-import { GetServerSidePropsContext } from 'next'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import React, { CSSProperties, useEffect, useRef, useState } from 'react'
-import tinycolor from 'tinycolor2'
-import NavBar from '../components/NavBar'
+import Watermark from '@/components/Watermark';
+import { GetServerSidePropsContext } from 'next';
+import Head from 'next/head';
+import React, { CSSProperties, useEffect, useRef, useState } from 'react';
+import tinycolor from 'tinycolor2';
+import NavBar from '../components/NavBar';
+import kv from '@vercel/kv';
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const { dl } = ctx.query;
     if (dl && dl === '1') {
-        const mongoDB = new MongoClient(process.env.MONGODB_URI || "mongodb+srv://vercel-admin-user:S7pZrZm64HNVcLXo@cluster0.9awq2ww.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-        await mongoDB.connect();
-        const db = mongoDB.db('MeshsaveData');
-        const collection = db.collection('Data');
-        await collection.updateOne({ type: 'downloads'} , { $inc: { downloads: 1 } });
-        await mongoDB.close();
+        if (!await kv.exists('meshsaveDownloads')) await kv.set('meshsaveDownloads', 0);
+        await kv.incr('meshsaveDownloads');
         return {
             redirect: {
                 destination: 'https://cdn.discordapp.com/attachments/768887055438053476/1074257043759841321/meshsave.txt',
@@ -45,8 +40,6 @@ const imageStyle: CSSProperties = {
 }
 
 export default function Meshsave() {
-    const router = useRouter();
-    const [imgWidth, setImgWidth] = useState(0);
     const [peopleLiked, setPeopleLiked] = useState<Like[]>([]);
     const [likedStatus, setLikedStatus] = useState('loading');
 
@@ -60,11 +53,6 @@ export default function Meshsave() {
     const hasRan = useRef(false);
     
     useEffect(() => {
-        document.addEventListener('resize', function() {
-            setImgWidth(window.innerWidth / 4 - 30);
-        })
-        setImgWidth(window.innerWidth / 4 - 30);
-
         if (!hasRan.current) {
             hasRan.current = true;
             fetch('/api/meshsave/getLiked').then(res => res.json()).then(data => {

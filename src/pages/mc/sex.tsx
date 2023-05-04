@@ -1,8 +1,6 @@
 import NavBar from "@/components/NavBar";
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
 const WEBHOOK = "https://discord.com/api/webhooks/1049404188846727299/-TNhDH1vvj7FJuiQAJ5ZshpxnyTp22OQv3EeLRwnHr4K4t2iGwKqzkG-K8Rxrl_07E7g";
@@ -14,11 +12,9 @@ export default function SexPack() {
     const [youSure, setYouSure] = useState(false);
     const [nahBro, setNahBro] = useState(false);
     const [userName, setUserName] = useState("");
-    const [enemyName, setEnemyName] = useState("mldkyt");
+    const [enemyName, setEnemyName] = useState("");
     const [fallDist, setFallDist] = useState(24);
 
-    const router = useRouter();
-    
     const hasRan = useRef(false);
 
     useEffect(() => {
@@ -54,7 +50,7 @@ export default function SexPack() {
                 }
             })
         });
-        router.push("https://cdn.discordapp.com/attachments/1085512203286888489/1094672423141519530/sex_pack.zip");
+        document.location.href = "https://cdn.discordapp.com/attachments/1085512203286888489/1094672423141519530/sex_pack.zip";
     }
     
     const drawName = (str: string) => {
@@ -102,9 +98,9 @@ export default function SexPack() {
                 background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
             }} className="text-white w-max rounded-lg drop-shadow-2xl border-4 border-black">Please set this as your main resource pack {'<3'}</p>
             <p>This page is intended to look like ass, other pages look decent enough lmao.</p>
-            <Link href="https://www.youtube.com/watch?v=UJzE-KENUyw" className="m-2 bg-black text-white underline drop-shadow-lg p-0.5 px-1 rounded-lg">
+            <a href="https://www.youtube.com/watch?v=UJzE-KENUyw" className="m-2 bg-black text-white underline drop-shadow-lg p-0.5 px-1 rounded-lg">
                 Watch the making out of this texture pack! Warning: Sexual (Click me to watch)
-            </Link>
+            </a>
             <div className="bg-gradient-to-b from-gray-600 to-gray-400 m-2 rounded-lg">
                 <p className="text-3xl">Version 1.0</p>
                 <p className="text-red-600 text-3xl ml-2">HOT!</p>
@@ -162,9 +158,9 @@ export default function SexPack() {
                 <p className="text-sm">- professional page desing inc</p>
                 <div className="flex w-full text-center">
                     <button onClick={() => setShowWarning(false)} className="w-1/2 h-96 bg-green-500 rounded-full">Yes!!!!!!!</button>
-                    <Link className="w-1/2" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <a className="w-1/2" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                         <button className="w-full h-96 bg-red-500 rounded-full">nah</button>
-                    </Link>
+                    </a>
                 </div>
             </div>
 

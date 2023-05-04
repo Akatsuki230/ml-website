@@ -1,15 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { MongoClient } from "mongodb";
-import { MONGODB_CONN_STRING } from "@/components/Globals";
+import { sql } from "@vercel/postgres";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const client = new MongoClient(MONGODB_CONN_STRING);
-    await client.connect();
-    const signs = client.db('Minecraft').collection('SpawnBaseSigns');
-    const arrayOfSigns = await signs.find({}).toArray();
-    await client.close();
+    // create table if not exists
+    await sql`CREATE TABLE IF NOT EXISTS SpawnBaseSigns (id SERIAL PRIMARY KEY, content TEXT, author TEXT)`;
+    const { rows: signs } = await sql`SELECT * FROM SpawnBaseSigns`;
     res.status(200).json(
-        arrayOfSigns.map(x => {
+        signs.map(x => {
             return {
                 content: x.content,
                 author: x.author

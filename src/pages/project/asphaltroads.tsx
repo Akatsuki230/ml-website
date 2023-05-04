@@ -1,6 +1,5 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Link from "next/link";
 import NavBar from "../../components/NavBar";
 
 export default function AsphaltRoads() {
@@ -37,7 +36,7 @@ export default function AsphaltRoads() {
             <h3 className="mx-8">&bull; Initial release.</h3>
             <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
             <p></p>
-            <Link href="https://www.nexusmods.com/mysummercar/mods/3052" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</Link>
+            <a href="https://www.nexusmods.com/mysummercar/mods/3052" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</a>
             <Watermark />
         </>
     )
