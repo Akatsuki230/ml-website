@@ -60,33 +60,33 @@ const Home = () => {
           As a passionate game modder, I've created a variety of mods for the popular game My Summer Car. Each of these mods is designed to enhance the player experience and offer something new and exciting to the game.
         </p>
         <p className='mx-1'>
-          One of my most popular mods is <a href='/project/asphaltroads'>Asphalt roads</a>, which replaces the standard dirt roads in the game with smooth, realistic asphalt roads. This mod not only adds a new level of realism to the game but also makes driving smoother and more enjoyable.
+          One of my most popular mods is <a className='text-blue-500' href='/project/asphaltroads'>Asphalt roads</a>, which replaces the standard dirt roads in the game with smooth, realistic asphalt roads. This mod not only adds a new level of realism to the game but also makes driving smoother and more enjoyable.
         </p>
         <p className='mx-1'>
-          Another popular mod of mine is <a href='/project/oldcarsounds'>OldCarSounds</a>, which brings back the classic look and feel of the Satsuma from the earlier versions of My Summer Car. This mod includes a variety of tweaks and changes to the Satsuma's graphics and functionality, offering a nostalgic trip down memory lane for old alpha testers of the game.
+          Another popular mod of mine is <a className='text-blue-500' href='/project/oldcarsounds'>OldCarSounds</a>, which brings back the classic look and feel of the Satsuma from the earlier versions of My Summer Car. This mod includes a variety of tweaks and changes to the Satsuma's graphics and functionality, offering a nostalgic trip down memory lane for old alpha testers of the game.
         </p>
         <p className='mx-1'>
-          For players who enjoy driving the kekmet in My Summer Car, I've created several mods to enhance their experience. <a href='/project/kekmetspeedometer'>Kekmet Speedometer</a> and <a href='/project/kekmetmoregears'>Kekmet More Gears</a> offer new options for monitoring speed and shifting gears, respectively, making driving the kekmet even more fun.
+          For players who enjoy driving the kekmet in My Summer Car, I've created several mods to enhance their experience. <a className='text-blue-500' href='/project/kekmetspeedometer'>Kekmet Speedometer</a> and <a className='text-blue-500' href='/project/kekmetmoregears'>Kekmet More Gears</a> offer new options for monitoring speed and shifting gears, respectively, making driving the kekmet even more fun.
         </p>
         <p className='mx-1'>
-          If you're a fan of classic cars, my <a href='/project/oldworld'>Old World</a> and <a href='/project/oldhighwaycars'>Old Highway Cars</a> mods are perfect for you. <a href='/project/oldworld'>Old World</a> replaces the game's modern vehicles with classic cars from the 1960s and 70s, while <a href='/project/oldhighwaycars'>Old Highway Cars</a> adds a variety of vintage cars to the game's traffic.
+          If you're a fan of classic cars, my <a className='text-blue-500' href='/project/oldworld'>Old World</a> and <a className='text-blue-500' href='/project/oldhighwaycars'>Old Highway Cars</a> mods are perfect for you. <a className='text-blue-500' href='/project/oldworld'>Old World</a> replaces the game's modern vehicles with classic cars from the 1960s and 70s, while <a className='text-blue-500' href='/project/oldhighwaycars'>Old Highway Cars</a> adds a variety of vintage cars to the game's traffic.
         </p>
         <p className='mx-1'>
-          For those who want to add a touch of nostalgia to their game, I've created <a href='https://www.nexusmods.com/mysummercar/mods/912'>Windows Sounds</a>, which replaces the game's default sounds with classic Windows sound effects from Windows 7.
+          For those who want to add a touch of nostalgia to their game, I've created <a className='text-blue-500' href='https://www.nexusmods.com/mysummercar/mods/912'>Windows Sounds</a>, which replaces the game's default sounds with classic Windows sound effects from Windows 7.
         </p>
         <p className='mx-1'>
-          Finally, for fans of the game's iconic Hayosiko vehicle, my <a href='/project/oldhayosiko'>Old Hayosiko</a> mod changes textures and sounds of the vehicle, making it feel more nostalgic to drive.
+          Finally, for fans of the game's iconic Hayosiko vehicle, my <a className='text-blue-500' href='/project/oldhayosiko'>Old Hayosiko</a> mod changes textures and sounds of the vehicle, making it feel more nostalgic to drive.
         </p>
         
         <h2 className='text-2xl mx-2'>IRL Simulator</h2>
         <p className='mx-1'>
-          <a href='/project/irlsimulator'>IRL Simulator</a> is an upcoming game that I'm currently developing, and I couldn't be more excited to share it with you. This game is all about simulating real-life experiences, from driving a car to buying groceries and everything in between.
+          <a className='text-blue-500' href='/project/irlsimulator'>IRL Simulator</a> is an upcoming game that I'm currently developing, and I couldn't be more excited to share it with you. This game is all about simulating real-life experiences, from driving a car to buying groceries and everything in between.
         </p>
         <p className='mx-1'>
           So far, I've implemented a variety of features that bring this game world to life, including a fully-realized terrain system, a detailed house and garage, and a functioning time system complete with a day/night cycle.
         </p>
         <p className='mx-1'>
-          But the real fun is just getting started. In the coming months, I'll be adding even more features and content to <a href='/project/irlsimulator'>IRL Simulator</a>, including fully-realized roads and a variety of vehicles to drive, from a small car to a transport truck and everything in between.
+          But the real fun is just getting started. In the coming months, I'll be adding even more features and content to <a className='text-blue-500' href='/project/irlsimulator'>IRL Simulator</a>, including fully-realized roads and a variety of vehicles to drive, from a small car to a transport truck and everything in between.
         </p>
         <p className='mx-1'>
           To make the experience even more immersive, there will be two towns to explore, each with its own stores and mechanics. And for those who need to stay connected, there will be a variety of electronics shops where you can buy everything from phones and tablets to laptops.
