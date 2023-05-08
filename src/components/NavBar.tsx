@@ -15,7 +15,7 @@ export default function NavBar() {
     })
 
     return (
-        <div className="fixed top-0 h-7 text-white bg-gradient-to-b from-gray-900 to-gray-600 w-screen">
+        <div className="fixed top-0 h-7 text-white bg-gradient-to-b from-gray-900 to-gray-600 w-screen shadow-2xl">
             <span className="text-xl first-letter:text-red-500">mldkyt's website</span>
             {subs !== 0 ? 
             <span className="bg-red-500 rounded-lg mx-2 p-0.5">{subs} subs ♥️</span> : null}

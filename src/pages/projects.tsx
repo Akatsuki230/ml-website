@@ -14,6 +14,7 @@ export default function Mods() {
             <NavBar />
             <br/>
             <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
+            <p>This are all of mldkyt's projects.</p>
             <h2 className="text-2xl underline px-4">My Summer Car mods</h2>
 
             <p></p>
