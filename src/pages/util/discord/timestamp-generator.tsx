@@ -1,8 +1,9 @@
-import NavBar from "@/components/NavBar";
+import Sidebar from "@/components/Sidebar";
 import Head from "next/head";
 import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
 import Watermark from "@/components/Watermark";
+import { motion } from "framer-motion";
 
 function relative(time: Dayjs) {
     // show relative time like "5 minutes ago" or "in 3 days"
@@ -91,18 +92,25 @@ export default function DiscordTimestampGenerator() {
                 <meta name="description" content="Generates timestamps." />
                 <meta name="author" content="mldkyt" />
             </Head>
-            <NavBar />
             <br />
             <h1 className="p-2 px-4 text-3xl font-bold">Discord Timestamp Generator</h1>
 
-            <h2 className="px-8 text-xl">Settings: </h2>
+            <h2 className="px-8 text-2xl">Settings: </h2>
             <div className="px-10">
                 <label>Date: </label>
-                <input type='datetime-local' value={time.format('YYYY-MM-DD[T]HH:mm')} onChange={x => setTime(dayjs(x.currentTarget.value))}
-                        className="border-2 border-black rounded-lg drop-shadow-lg p-0.5 px-1" />
+                <motion.input
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        whileFocus={{ scale: 1.02 }}
+                        type='datetime-local' value={time.format('YYYY-MM-DD[T]HH:mm')} onChange={x => setTime(dayjs(x.currentTarget.value))}
+                        className="border-2 border-white rounded-lg drop-shadow-lg p-0.5 px-2 mt-1 bg-black" />
                 <br />
                 <label>Format: </label>
-                <select className="border-2 border-black rounded-lg drop-shadow-lg p-0.5 px-1" value={format} onChange={(x) => setFormat(x.target.value)}>
+                <motion.select
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    whileFocus={{ scale: 1.02 }}
+                    className="border-2 border-white rounded-lg drop-shadow-lg p-1 px-2 mt-1 bg-black" value={format} onChange={(x) => setFormat(x.target.value)}>
                     <option value="t">{time.format(preview24Format ? 'H:mm' : 'h:mm A')}</option>
                     <option value="T">{time.format(preview24Format ? 'H:mm:ss' : 'h:mm:ss A')}</option>
                     <option value="d">{time.format('DD/MM/YYYY')}</option>
@@ -110,22 +118,30 @@ export default function DiscordTimestampGenerator() {
                     <option value="f">{time.format(preview24Format ? 'DD MMMM YYYY H:mm' : 'DD MMMM YYYY h:mm A')}</option>
                     <option value="F">{time.format(preview24Format ? 'dddd, MMMM, DD, YYYY, H:mm' : 'dddd, MMMM, DD, YYYY h:mm A')}</option>
                     <option value="R">{relative(time)}</option>
-                </select>
+                </motion.select>
                 <br />
-                <input className="mr-2" type='checkbox' checked={preview24Format} onChange={x => setPreview24Format(x.currentTarget.checked)} />
+                <motion.input whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="mr-2 mt-1" type='checkbox' checked={preview24Format} onChange={x => setPreview24Format(x.currentTarget.checked)} />
                 <label>Preview is 24-hour</label>
             </div>
 
 
-            <h2 className="px-8 text-xl">Output: </h2>
-            <p className="px-10 text-md">Preview: {selectFormatAndRender(format, time, preview24Format)}</p>
-            <p className="px-10 text-md">
-                Code: <code className="bg-gray-700 text-white p-1 px-2 rounded-lg">{'<'}t:{time.unix()}:{format}{'>'}</code>
-            </p>
-            <div className="mx-10 mt-3">
-                <button onClick={copy} className="bg-green-500 p-0.5 px-1.5 rounded-lg border-2 border-black">Copy</button>
+            <h2 className="px-8 text-2xl mt-2">Output: </h2>
+            <table className="px-10 mt-1 ml-10">
+                <tbody>
+                    <tr>
+                        <td className="pr-2">Preview:</td>
+                        <td className="text-md">{selectFormatAndRender(format, time, preview24Format)}</td>
+                    </tr>
+                    <tr>
+                        <td className="pr-2">Code:</td>
+                        <td className="text-md"><code>{'<'}t:{time.unix()}:{format}{'>'}</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}  className="mx-10 mt-3 w-max">
+                <button onClick={copy} className="bg-black p-1 px-3 rounded-lg border-2 border-white">Copy</button>
                 {copiedSnackbar ? <span className="ml-2 text-green-500">Copied!</span> : null}
-            </div>
+            </motion.div>
             <Watermark />
         </>
     )

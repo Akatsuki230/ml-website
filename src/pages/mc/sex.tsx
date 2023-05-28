@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar";
+import Sidebar from "@/components/Sidebar";
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
@@ -64,7 +64,6 @@ export default function SexPack() {
             <Head>
                 <title>Sex pack</title>
             </Head>
-            <NavBar />
             <br />
             <img src="/sex/sex1.jpg" alt="sex message 1" className="w-full absolute top-7 -z-10"></img>
             <h1 className="text-3xl text-white font-bold">Sex pack?!?!?!?</h1>

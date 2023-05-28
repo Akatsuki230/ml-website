@@ -1,6 +1,7 @@
 import Head from "next/head";
-import NavBar from "../../components/NavBar";
+import Sidebar from "../../components/Sidebar";
 import Watermark from "@/components/Watermark";
+import { motion } from "framer-motion";
 
 export default function KekmetSpeedometer() {
     return (
@@ -12,7 +13,6 @@ export default function KekmetSpeedometer() {
                 <meta name="author" content="mldkyt" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
-            <NavBar />
             <br />
             <h1 className="text-3xl font-bold mx-2">Kekmet speedometer</h1>
             <p className="mx-6">
@@ -26,12 +26,14 @@ export default function KekmetSpeedometer() {
             <p className="mx-6">&bull; Replaces the tachometer in the Kekmet with a speedometer for more accurate speed measurement.</p>
             <p className="mx-6">&bull; Easy to install and use with MSCLoader.</p>
             <p className="mx-6">&bull; Hosted on NexusMods for easy access and download.</p>
-            <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the Kekmet's tachometer. Please make sure to remove any conflicting mods before using this mod.</p>
-            <p className="text-sm">
+            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the Kekmet's tachometer. Please make sure to remove any conflicting mods before using this mod.</p>
+            <p className="text-sm mx-6">
                 This content was generated using AI. If you find any errors, please report them to me on Discord (mldkyt#2555) or on Twitter (@mldkyt).
             </p>
             <br />
-            <a href="https://www.nexusmods.com/mysummercar/mods/1580" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</a>
+            <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max">
+                <a href="https://www.nexusmods.com/mysummercar/mods/1580" className="m-2 px-2 py-1 rounded-lg border-2 border-white">Go to NexusMods</a>
+            </motion.div>
             <Watermark />
         </>
     )

@@ -1,10 +1,10 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import NavBar from "../../components/NavBar";
+import { motion } from "framer-motion";
 
 export default function AsphaltRoads() {
     return (
-        <>
+        <main>
             <Head>
                 <title>Asphalt Roads | mldkyt.com</title>
                 <meta name="title" content="Asphalt Roads mod | mldkyt's website" />
@@ -12,7 +12,6 @@ export default function AsphaltRoads() {
                 <meta name="author" content="mldkyt" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
-            <NavBar/>
             <br />
             <h1 className="text-3xl font-bold mx-2">Asphalt Roads</h1>
             <p></p>
@@ -34,10 +33,13 @@ export default function AsphaltRoads() {
             <p className="mx-8">&bull; Improved performance.</p>
             <h3 className="text-xl font-bold mx-6">v1.0</h3>
             <h3 className="mx-8">&bull; Initial release.</h3>
-            <p className="bg-gradient-to-b from-red-600 to-red-400 m-2 rounded-lg drop-shadow-lg px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
+            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
             <p></p>
-            <a href="https://www.nexusmods.com/mysummercar/mods/3052" className="bg-orange-500 m-2 px-4 py-2 rounded-lg drop-shadow-lg">Go to NexusMods</a>
+            <br />
+            <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max">
+                <a href="https://www.nexusmods.com/mysummercar/mods/3052" className="m-2 rounded-lg border-2 border-white px-2 py-1">Go to NexusMods</a>
+            </motion.div>
             <Watermark />
-        </>
+        </main>
     )
 }

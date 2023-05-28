@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter} from 'next/font/google';
 import { useEffect, useRef, useState } from "react";
 import { addSign, getSigns } from "@/components/SignWalls/SpawnBase";
-import NavBar from "@/components/NavBar";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -66,7 +66,6 @@ export default function SpawnBase() {
                 <meta name="description" content="The spawn base found in Minecraft." />
                 <meta name="author" content="mldkyt" />
             </Head>
-            <NavBar />
             <br />
             <main className={inter.className + " min-h-screen dark:bg-black"}>
                 <div className="relative"> 

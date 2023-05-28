@@ -3,13 +3,12 @@ import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 import tinycolor from 'tinycolor2';
-import NavBar from '../components/NavBar';
 import kv from '@vercel/kv';
+import { motion } from 'framer-motion';
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const { dl } = ctx.query;
     if (dl && dl === '1') {
-        if (!await kv.exists('meshsaveDownloads')) await kv.set('meshsaveDownloads', 0);
         await kv.incr('meshsaveDownloads');
         return {
             redirect: {
@@ -19,11 +18,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
         }
     }
 
-    return {
-        props: {
-
-        }
-    }
+    return { props: {} }
 }
 
 interface Like {
@@ -36,7 +31,8 @@ const imageParentStyle: CSSProperties = {
 }
 
 const imageStyle: CSSProperties = {
-    margin: '10px'
+    margin: '10px',
+    width: 'calc(100% - 20px)',
 }
 
 export default function Meshsave() {
@@ -99,10 +95,9 @@ export default function Meshsave() {
                 <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
-            <NavBar />
             <br />
-            <h1 className='text-3xl font-bold'>My meshsave</h1>
-            <p>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together. </p>
+            <h1 className='text-3xl font-bold ml-2'>My meshsave</h1>
+            <p className='ml-4'>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together. </p>
             
             <div className=''>
                 <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png'></img>
@@ -110,7 +105,6 @@ export default function Meshsave() {
                 <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849192435812/shitsuma3.png'></img>
                 <img className='drop-shadow-lg' style={imageStyle} src='https://media.discordapp.net/attachments/768887055438053476/1042910849477652481/shitsuma4.png'></img>
             </div>
-            <button onClick={dl} className="bg-blue-500 m-2 px-4 py-1 rounded-lg drop-shadow-lg border-2 border-black">Download meshsave</button>
             <h2 className='text-2xl'>People that liked this: </h2>
             {peopleLiked.length == 0 && (
                 <>Loading...</>
@@ -130,7 +124,14 @@ export default function Meshsave() {
                     );
                 })}
             </div>
-            <button className='m-2 px-4 py-1 bg-green-500 disabled:bg-gray-500 border-black border-2 rounded-lg drop-shadow-lg' disabled={likedStatus != 'eligible'} onClick={_ => setLikeFormShown(true)}>
+            <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={dl} className="bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2">Download meshsave</motion.button>
+            <motion.button 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2 disabled:bg-gray-300' disabled={likedStatus != 'eligible'} onClick={_ => setLikeFormShown(true)}>
                 {likedStatus == 'loading' ? (
                     <>Checking if you can like...</>
                 ) : (
@@ -140,25 +141,35 @@ export default function Meshsave() {
                         'Already liked'
                     )
                 )}
-            </button>
+            </motion.button>
             <br/>
 
-            <div className={`${likeFormShown ? "" : "hidden"} fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-gray-400 to-gray-500 drop-shadow-lg rounded-lg`}>
+            <motion.div 
+                initial={{
+                    opacity: 0,
+                    transform: 'translate(-50%, -50%) scale(0.5)'
+                }}
+                animate={{
+                opacity: likeFormShown ? 1 : 0,
+                transform: `translate(-50%, -50%) scale(${likeFormShown ? 1 : 0.5})`
+            }} className='fixed left-1/2 top-1/2 bg-black rounded-lg'>
                 <div style={{padding: '1rem'}}>
-                    <button disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)} className="absolute top-2 right-2 bg-red-500 w-7 rounded-lg border-2 border-black drop-shadow-lg">X</button>
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)} className="absolute top-2 right-2 w-7 rounded-lg border-2 border-white">X</motion.button>
                     <h1 className='text-xl font-bold'>Like the meshsave</h1>
-                    <p className='text-sm'>You can only like this once per network. Choose your username wisely.</p>
                     <label>Name: </label>
                     <br/>
-                    <input value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
+                    <motion.input initial={{padding: '3px 6px'}} whileHover={{padding: '6px 9px'}} whileTap={{padding: '2px 4px'}} className='bg-black text-white border-2 border-white rounded-lg' value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
                     <br/>
                     <label>Color: </label>
                     <br />
-                    <input type='color' value={likeFormColor} onChange={x => setLikeFormColor(x.currentTarget.value)} />
+                    <motion.input whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} className='bg-black w-full' type='color' value={likeFormColor} onChange={x => setLikeFormColor(x.currentTarget.value)} />
                     <br/>
-                    <button disabled={likeFormLoading} onClick={submitLike} className="bg-green-500 px-3 py-1 border-2 border-black rounded-lg">{likeFormLoading ? "Loading..." : "Like"}</button>
+                    <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} disabled={likeFormLoading} onClick={submitLike} className="px-3 py-1 border-2 border-white rounded-lg disabled:bg-gray-300">{likeFormLoading ? "Loading..." : "Like"}</motion.button>
                 </div>
-            </div>
+            </motion.div>
 
             <div className={`${likeFormError == '' ? '' : 'hidden'} fixed left-4 bottom-4`}>
                 {likeFormError}

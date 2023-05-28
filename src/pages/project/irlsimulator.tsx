@@ -1,10 +1,11 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import NavBar from "../../components/NavBar";
+import Sidebar from "../../components/Sidebar";
 
 const imageStyle = {
-    width: '100%',
-    height: 'auto'
+    width: 'calc(100% - 2rem)',
+    height: 'auto',
+    margin: '1rem',
 } as any; // Workaround because the img element doesn't accept CSSProperties for some reason
 
 export default function IRLSimulator() {
@@ -17,7 +18,6 @@ export default function IRLSimulator() {
                 <meta name="author" content="mldkyt" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
             </Head>
-            <NavBar />
             <br />
             <h1 className="text-3xl font-bold mx-2">IRL Simulator</h1>
             <p className="mx-4">
