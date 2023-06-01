@@ -13,4 +13,4 @@ This is mldkyt's website code.
 1. Clone
 2. Run `npm install`
 3. Run `npm run build`
-4. To start `npm run start
+4. To start `npm run start`
