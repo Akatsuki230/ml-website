@@ -2,6 +2,7 @@ import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import React from "react";
 import Sidebar from '../components/Sidebar';
+import Script from "next/script";
 
 export default function Social() {
     return (
@@ -11,7 +12,7 @@ export default function Social() {
                 <meta name="title" content="Social links | mldkyt's website" />
                 <meta name="description" content="List of mldkyt's social links." />
                 <meta name="author" content="mldkyt" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+                <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
             <br />
             <h1 className="text-3xl m-4 mb-1 font-bold">Social links</h1>

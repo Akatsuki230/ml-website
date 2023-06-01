@@ -2,6 +2,7 @@ import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import Sidebar from "../../components/Sidebar";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function MSCTweaks() {
     return (
@@ -11,7 +12,7 @@ export default function MSCTweaks() {
                 <meta name="title" content="MSC Tweaks | mldkyt's website" />
                 <meta name="description" content="Changes Satsuma's sounds for the old ones." />
                 <meta name="author" content="mldkyt" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+                <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
             <br />
             <h1 className="text-3xl font-bold mx-2">MSC Tweaks</h1>

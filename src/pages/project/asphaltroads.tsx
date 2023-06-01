@@ -1,6 +1,7 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function AsphaltRoads() {
     return (
@@ -10,7 +11,7 @@ export default function AsphaltRoads() {
                 <meta name="title" content="Asphalt Roads mod | mldkyt's website" />
                 <meta name="description" content="Adds asphalt roads into My Summer Car." />
                 <meta name="author" content="mldkyt" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+                <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
             <br />
             <h1 className="text-3xl font-bold mx-2">Asphalt Roads</h1>

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Sidebar from "../../components/Sidebar";
 import Watermark from "@/components/Watermark";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function KekmetMoreGears() {
     return (
@@ -11,7 +12,7 @@ export default function KekmetMoreGears() {
                 <meta name="title" content="Kekmet more gears | mldkyt's website" />
                 <meta name="description" content="Adds more gears to the Kekmet in My Summer Car." />
                 <meta name="author" content="mldkyt" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+                <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
             <br />
             <h1 className="text-3xl font-bold mx-2">Kekmet more gears</h1>

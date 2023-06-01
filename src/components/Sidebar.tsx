@@ -7,19 +7,6 @@ const circle: CSSProperties = {
 }
 
 export default function Sidebar() {
-
-    const hasRan = useRef(false);
-    const [subs, setSubs] = useState(0);
-
-    useEffect(() => {
-        if (!hasRan.current) {
-            hasRan.current = true;
-            fetch('/api/mldkyt/subs').then(res => res.json()).then(data => {
-                setSubs(data.subs);
-            });
-        }
-    })
-
     return (
         <div className="text-center">
             <img src="/pfp.png" style={circle} />

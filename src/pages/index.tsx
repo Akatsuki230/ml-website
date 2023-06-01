@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import Watermark from '@/components/Watermark';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const Home = () => {
   const [visits, setVisits] = useState('loading ');
@@ -29,7 +30,7 @@ const Home = () => {
         <meta name="title" content="mldkyt's website" />
         <meta name="description" content="Welcome to mldkyt's website!" />
         <meta name="author" content="mldkyt" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+        <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
       </Head>
       <h1 className='text-4xl mx-2 my-4 font-bold text-center'>Welcome to mldkyt's website!</h1>
       <p className='mx-4'>{visits} visits</p>

@@ -1,6 +1,7 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import Sidebar from "../../components/Sidebar";
+import Script from "next/script";
 
 const imageStyle = {
     width: 'calc(100% - 2rem)',
@@ -16,7 +17,7 @@ export default function IRLSimulator() {
                 <meta name="title" content="IRL Simulator | mldkyt's website" />
                 <meta name="description" content="IRL Simulator is a game about realism." />
                 <meta name="author" content="mldkyt" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
+                <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
             <br />
             <h1 className="text-3xl font-bold mx-2">IRL Simulator</h1>
