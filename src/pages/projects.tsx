@@ -20,7 +20,7 @@ export default function Mods() {
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Asphalt Roads
                 </h3>
@@ -30,13 +30,13 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-[1px] border-black" href="/project/asphaltroads">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/asphaltroads">Visit project's page</Link>
                 </motion.div>
             </div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     MSC Tweaks
                 </h3>
@@ -46,13 +46,13 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-[1px] border-black" href="/project/msctweaks">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/msctweaks">Visit project's page</Link>
                 </motion.div>
             </div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     OldCarSounds
                 </h3>
@@ -62,13 +62,13 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-[1px] border-black" href="/project/oldcarsounds">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldcarsounds">Visit project's page</Link>
                 </motion.div>
             </div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Old highway cars
                 </h3>
@@ -78,12 +78,12 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldhighwaycars">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldhighwaycars">Visit project's page</Link>
                 </motion.div></div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Old hayosiko
                 </h3>
@@ -93,12 +93,12 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldhayosiko">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldhayosiko">Visit project's page</Link>
                 </motion.div></div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Old world
                 </h3>
@@ -108,12 +108,12 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/oldworld">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldworld">Visit project's page</Link>
                 </motion.div></div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Kekmet more gears
                 </h3>
@@ -123,12 +123,12 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/kekmetmoregears">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/kekmetmoregears">Visit project's page</Link>
                 </motion.div></div>
 
             <p></p>
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Kekmet speedometer
                 </h3>
@@ -138,7 +138,7 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/kekmetspeedometer">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/kekmetspeedometer">Visit project's page</Link>
                 </motion.div></div>
 
 
@@ -146,7 +146,7 @@ export default function Mods() {
             <h2 className="text-2xl underline px-4">Other projects</h2>
 
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     IRL Simulator
                 </h3>
@@ -156,14 +156,14 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/project/irlsimulator">Visit project's page</Link>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/irlsimulator">Visit project's page</Link>
                 </motion.div></div>
 
 
             <h2 className="text-2xl underline px-4">Online utilities</h2>
 
 
-            <div className="bg-gray-900 m-4 py-2 rounded-lg drop-shadow-xl">
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Discord Timestamp Generator
                 </h3>
@@ -173,8 +173,22 @@ export default function Mods() {
                 <motion.div className="absolute top-2 right-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
-                    <Link className="bg-green-500 rounded-lg p-0.5 px-1 border-2 border-black" href="/util/discord/timestamp-generator">Visit utility's page</Link>
-                </motion.div></div>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/discord/timestamp-generator">Visit utility's page</Link>
+                </motion.div>
+            </div>
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+                <h3 className="px-2 text-xl text-white">
+                    Discord Mention Generator
+                </h3>
+                <p className="px-4 text-white">
+                    Allows you to generate mentions for Discord.
+                </p>
+                <motion.div className="absolute top-2 right-2"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/discord/mention-generator">Visit utility's page</Link>
+                </motion.div>
+            </div>
             <Watermark />
         </>
     )

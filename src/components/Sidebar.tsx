@@ -25,7 +25,12 @@ export default function Sidebar() {
             <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/social">Social</Link>
+                <Link className="px-2" href="/projects">Projects</Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/social">Social links</Link>
             </motion.div>
             <span className="text-lg font-bold">Projects</span>
             <br />
@@ -85,6 +90,11 @@ export default function Sidebar() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/util/discord/timestamp-generator">Timestamp Gen</Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/util/discord/mention-generator">Mention Gen</Link>
             </motion.div>
 
         </div>
