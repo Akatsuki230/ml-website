@@ -1,7 +1,6 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import React from "react";
-import Sidebar from '../components/Sidebar';
 import Script from "next/script";
 
 export default function Social() {
@@ -58,20 +57,6 @@ export default function Social() {
                     <h2 className="text-lg">NexusMods</h2>
                     <p>This is my mod publishing profile.</p>
                     <a className="border-2 border-white p-0.5 px-1 rounded-lg" href="https://www.nexusmods.com/users/57424716">Open profile</a>
-                </div>
-                <div className="m-2 p-2 rounded-lg border-2 border-white" style={{
-                    width: "calc(100% - 1rem)"
-                }}>
-                    <h2 className="text-lg">Subreddit</h2>
-                    <p>This is my subreddit on Reddit.</p>
-                    <a className="border-2 border-white p-0.5 px-1 rounded-lg" href="https://reddit.com/r/mldkyt">Join</a>
-                </div>
-                <div className="m-2 p-2 rounded-lg border-2 border-white" style={{
-                    width: "calc(100% - 1rem)"
-                }}>
-                    <h2 className="text-lg">Reddit profile</h2>
-                    <p>This is my user page on Reddit.</p>
-                    <a className="border-2 border-white p-0.5 px-1 rounded-lg" href="https://reddit.com/u/mldkyt">Follow</a>
                 </div>
             <Watermark />
         </>
