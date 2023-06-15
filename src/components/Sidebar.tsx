@@ -84,6 +84,13 @@ export default function Sidebar() {
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/project/oldworld">Old World</Link>
             </motion.div>
+            <span className="text-lg font-bold">Generic Utilites</span>
+            <br />
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/util/number-convert">Number Convert</Link>
+            </motion.div>
             <span className="text-lg font-bold">Discord Utilities</span>
             <br />
             <motion.div

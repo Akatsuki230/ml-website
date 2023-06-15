@@ -162,7 +162,19 @@ export default function Mods() {
 
             <h2 className="text-2xl underline px-4">Online utilities</h2>
 
-
+            <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+                <h3 className="px-2 text-xl text-white">
+                    Number Converters
+                </h3>
+                <p className="px-4 text-white">
+                    Converts numbers to different bases and vice versa.
+                </p>
+                <motion.div className="absolute top-2 right-2"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}>
+                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/number-converter">Visit utility's page</Link>
+                </motion.div>
+            </div>
             <div className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Discord Timestamp Generator

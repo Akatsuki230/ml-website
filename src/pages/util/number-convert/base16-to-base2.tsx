@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Watermark from '@/components/Watermark';
 
 const Base16To2 = () => {
     const [input, setInput] = useState("");
@@ -15,6 +16,7 @@ const Base16To2 = () => {
             <p className="m-4 mx-8 text-2xl">Result: {
                 input === "" ? "" : parseInt(input, 16).toString(2)
             }</p>
+            <Watermark />
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from 'next/link';
+import Watermark from "@/components/Watermark";
 
 function lerp(a: number, b: number, t: number) {
     return a + (b - a) * t;
@@ -18,6 +19,7 @@ const Base2To10 = () => {
             <input type="number" name="input-convert" id="input-convert" value={input} onChange={x => setInput(x.currentTarget.value)}
                 className="bg-black border-2 border-white rounded-lg mx-8" />
             <p className="m-4 mx-8 text-2xl">Result: {parseInt(input, 2)}</p>
+            <Watermark />
         </div>
     );
 }
