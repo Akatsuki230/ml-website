@@ -1,4 +1,5 @@
 import Watermark from '@/components/Watermark';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Base8To2 = () => {
@@ -6,6 +7,7 @@ const Base8To2 = () => {
 
     return ( 
         <div>
+            <Link href="/util/number-convert" className='bg-gray-800 p-2 px-4 border-white border-2 rounded-lg m-2'>Back</Link>
             <h1 className="text-3xl m-2 mx-4">Base 8 to Base 2 converter</h1>
             <label className="text-xl mx-8" htmlFor="input-convert">Input number</label>
             <br />
