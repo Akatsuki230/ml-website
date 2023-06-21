@@ -91,6 +91,11 @@ export default function Sidebar() {
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/util/number-convert">Number Convert</Link>
             </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/util/binary-operations">Binary Operations</Link>
+            </motion.div>
             <span className="text-lg font-bold">Discord Utilities</span>
             <br />
             <motion.div

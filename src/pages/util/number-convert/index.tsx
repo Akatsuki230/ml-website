@@ -1,29 +1,53 @@
-import Watermark from "@/components/Watermark";
-import Link from "next/link";
 
+import Watermark from '@/components/Watermark';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const NumberConverters = () => {
+    const [from, setFrom] = useState("16");
+    const [to, setTo] = useState("8");
+    const [input, setInput] = useState("");
+
+    useEffect(() => {
+        // check for from and to in hash style #from=10&to=16
+        if (window.location.hash) {
+            const hash = window.location.hash.slice(1);
+            const hashArr = hash.split("&");
+            hashArr.forEach(h => {
+                const [key, value] = h.split("=");
+                if (key === "from") setFrom(value);
+                if (key === "to") setTo(value);
+            })
+        }
+    })
+
     return ( 
-        <>
-            <h1 className="text-3xl m-2 mx-4">Number Converters</h1>
-            <div className="flex flex-wrap">
-                <Link href="/util/number-convert/base2-to-base10" className="p-2 px-4 border-2 border-white mx-2 ml-4 bg-gray-800 rounded-lg">2 &rarr; 10</Link>
-                <Link href="/util/number-convert/base10-to-base2" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">10 &rarr; 2</Link>
-                <Link href="/util/number-convert/base10-to-base2" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">10 &rarr; 2</Link>
-                <Link href="/util/number-convert/base10-to-base16" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">10 &rarr; 16</Link>
-                <Link href="/util/number-convert/base16-to-base10" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">16 &rarr; 10</Link>
-                <Link href="/util/number-convert/base2-to-base16" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">2 &rarr; 16</Link>
-                <Link href="/util/number-convert/base16-to-base2" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">16 &rarr; 2</Link>
-                <Link href="/util/number-convert/base2-to-base8" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">2 &rarr; 8</Link>
-                <Link href="/util/number-convert/base8-to-base2" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">8 &rarr; 2</Link>
-                <Link href="/util/number-convert/base8-to-base10" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">8 &rarr; 10</Link>
-                <Link href="/util/number-convert/base10-to-base8" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">10 &rarr; 8</Link>
-                <Link href="/util/number-convert/base16-to-base8" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">16 &rarr; 8</Link>
-                <Link href="/util/number-convert/base8-to-base16" className="p-2 px-4 border-2 border-white mx-2 bg-gray-800 rounded-lg">8 &rarr; 16</Link>
-            </div>
+        <div>
+            <h1 className="text-3xl m-2 mx-4">Base 
+                <select value={from} onChange={e => setFrom(e.target.value)} className="bg-black border-2 border-white rounded-lg mx-2">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="16">16</option>
+                </select> 
+                to Base 
+                <select value={to} onChange={e => setTo(e.target.value)} className="bg-black border-2 border-white rounded-lg mx-2">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="16">16</option>
+                </select> 
+                converter
+            </h1>
+            <label className="text-xl mx-8" htmlFor="input-convert">Input number</label>
+            <br />
+            <input type="text" name="input-convert" id="input-convert" value={input} onChange={x => setInput(x.currentTarget.value)}
+                className="bg-black border-2 border-white rounded-lg mx-8" />
+            <p className="m-4 mx-8 text-2xl">Result: {
+                input === "" ? "" : parseInt(input, parseInt(from, 10)).toString(parseInt(to, 10))
+            }</p>
             <Watermark />
-        </>
-     );
+        </div>
+    );
 }
- 
 export default NumberConverters;

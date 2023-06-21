@@ -27,7 +27,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Changes dirt roads to asphalt roads. Also changes the feel of the roads.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/asphaltroads">Visit project's page</Link>
@@ -43,7 +43,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     A set of tweaks for My Summer Car.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/msctweaks">Visit project's page</Link>
@@ -59,7 +59,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     OldCarSounds is a mod that changed the Satsuma to the old state.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldcarsounds">Visit project's page</Link>
@@ -75,7 +75,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Old highway cars replaces cars on highway with satsumas from build 171
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldhighwaycars">Visit project's page</Link>
@@ -90,7 +90,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Old hayosiko returned the hayosiko to its old state.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldhayosiko">Visit project's page</Link>
@@ -105,7 +105,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Old world returned the world to its old state.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/oldworld">Visit project's page</Link>
@@ -120,7 +120,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Kekmet more gears allows you to buy more gears to the kekmet.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/kekmetmoregears">Visit project's page</Link>
@@ -135,7 +135,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     A slightly broken mod that replaces the tachometer with a speedometer in the kekmet.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/kekmetspeedometer">Visit project's page</Link>
@@ -153,7 +153,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     IRL Simulator is a game where you simulate your life.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/project/irlsimulator">Visit project's page</Link>
@@ -169,7 +169,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Converts numbers to different bases and vice versa.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/number-converter">Visit utility's page</Link>
@@ -182,7 +182,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Allows you to generate timestamps for Discord.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/discord/timestamp-generator">Visit utility's page</Link>
@@ -195,7 +195,7 @@ export default function Mods() {
                 <p className="px-4 text-white">
                     Allows you to generate mentions for Discord.
                 </p>
-                <motion.div className="absolute top-2 right-2"
+                <motion.div className="w-max ml-2"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}>
                     <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white" href="/util/discord/mention-generator">Visit utility's page</Link>
