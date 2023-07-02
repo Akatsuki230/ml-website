@@ -26,10 +26,6 @@ interface Like {
     color: string;
 }
 
-const imageParentStyle: CSSProperties = {
-    display: 'inline-block'
-}
-
 const imageStyle: CSSProperties = {
     margin: '10px',
     width: 'calc(100% - 20px)',

@@ -9,7 +9,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({subsets: ['latin']});
 
 const main: CSSProperties = {
-  marginLeft: '160px',
+  marginLeft: '180px',
   width: 'calc(100% - 160px)'
 }
 
@@ -18,7 +18,7 @@ const sidebar: CSSProperties = {
   top: 0,
   left: 0,
   bottom: 0,
-  width: '160px',
+  width: '180px',
   backgroundColor: '#222',
   overflowX: 'hidden',
   paddingTop: '20px',

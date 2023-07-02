@@ -1,5 +1,5 @@
-import Sidebar from "@/components/Sidebar";
 import Watermark from "@/components/Watermark";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 
@@ -8,7 +8,6 @@ const USER_ID = "575536897141637120";
 
 export default function SexPack() {
     const [DO_NOT_DARE_TO_TOUCH_THIS, setDO_NOT_DARE_TO_TOUCH_THIS] = useState(false);
-    const [showWarning, setShowWarning] = useState(true);
     const [youSure, setYouSure] = useState(false);
     const [nahBro, setNahBro] = useState(false);
     const [userName, setUserName] = useState("");
@@ -52,7 +51,7 @@ export default function SexPack() {
         });
         document.location.href = "https://cdn.discordapp.com/attachments/1085512203286888489/1094672423141519530/sex_pack.zip";
     }
-    
+
     const drawName = (str: string) => {
         return str == "" ? "<player>" : str;
     }
@@ -65,6 +64,8 @@ export default function SexPack() {
                 <title>Sex pack</title>
             </Head>
             <br />
+
+
             <img src="/sex/sex1.jpg" alt="sex message 1" className="w-full absolute top-7 -z-10"></img>
             <h1 className="text-3xl text-white font-bold">Sex pack?!?!?!?</h1>
             <p className="ml-2 text-white">Yes, you can now penetrate your friends with better death messages in minecraft!!!!</p>
@@ -83,19 +84,14 @@ export default function SexPack() {
                 </div>
                 <div className="w-1/4">
                     <img src="/sex/sex5.jpg" alt="please do not cancel me"></img>
-                    <span className="text-pink-300 bg-black">Have funnn!</span>
+                    <span className="text-pink-300 bg-black">Have funnn with your men!</span>
                 </div>
             </div>
             <button className="bg-green-500 px-4 p-1 border-2 border-black rounded-lg ml-2 drop-shadow-lg" onMouseEnter={() => setDO_NOT_DARE_TO_TOUCH_THIS(true)} onMouseLeave={() => setDO_NOT_DARE_TO_TOUCH_THIS(false)} onClick={() => setYouSure(true)}>Download sex_pack.zip</button>
             {DO_NOT_DARE_TO_TOUCH_THIS && <p className="bg-black w-max ml-2 rounded-lg text-white">I DARE YOU..... DO NOT CLICK THAT BUTTON!!!</p>}
             {DO_NOT_DARE_TO_TOUCH_THIS && <p className="bg-black w-max ml-2 rounded-lg text-red-500">YOU WILL REGRET THIS FOR LIFE!</p>}
             <p className="bg-gradient-to-r from-green-300 to-pink-500 w-max ml-2 rounded-lg">^^^^^^^ DOWNLOAOD BABYYYYYYYY</p>
-            <p className="text-white">Version: 1.0</p>
-            <p style={{
-                fontSize: '50px',
-                // rainbow gradient
-                background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
-            }} className="text-white w-max rounded-lg drop-shadow-2xl border-4 border-black">Please set this as your main resource pack {'<3'}</p>
+            <p className="text-white">Version: 1.0 (This is always outdated because i forget to change it)</p>
             <p>This page is intended to look like ass, other pages look decent enough lmao.</p>
             <a href="https://www.youtube.com/watch?v=UJzE-KENUyw" className="m-2 bg-black text-white underline drop-shadow-lg p-0.5 px-1 rounded-lg">
                 Watch the making out of this texture pack! Warning: Sexual (Click me to watch)
@@ -109,7 +105,7 @@ export default function SexPack() {
                 <span className="text-3xl m-2">Preview area</span>
                 <span className="text-3xl text-purple-700">sex</span>
                 <br />
-                <label className="text-red-500 ml-2">Enter your bitch's username lmao: </label>
+                <label className="text-red-500 ml-2">Enter your enemy's name: </label>
                 <input type="text" className="border-2 border-black rounded-lg text-black"
                     value={enemyName} onChange={x => setEnemyName(x.currentTarget.value)} />
                 <br />
@@ -119,7 +115,7 @@ export default function SexPack() {
                 <br />
                 <label>Fall distance: </label>
                 <input type="range" min="24" max="2147483647" value={fallDist} onChange={x => setFallDist(x.currentTarget.valueAsNumber)} className="w-96" />
-                <span>{fallDist != 2147483647 ? fallDist : '-1'} blocks</span>
+                <span>{fallDist != 2147483647 ? fallDist : -1} blocks</span>
                 <span className="ml-2 text-gray-600">okay this is pointless</span>
                 <p className="ml-2">Dying from an anvil: {drawName(userName)} squashed {drawName(enemyName)}'s ass</p>
                 <p className="ml-2">Dying from an arrow: {drawName(enemyName)} was remotely penetrated by {drawName(userName)}</p>
@@ -146,22 +142,6 @@ export default function SexPack() {
                 <p className="ml-2">Dying from a fall: {drawName(enemyName)} broke his dick after falling 24 or more meters</p>
                 <p className="ml-2">Dying with assistance: {drawName(enemyName)} made out with {drawName(userName)} way too hard</p>
             </div>
-            
-            <div className={`${showWarning ? '' : 'hidden'} fixed left-0 top-0 w-screen h-screen bg-pink-300`}>
-                <h1 style={{
-                    fontSize: '100px'
-                }}>WARNING!!!!!!!!!!!!!!!</h1>
-                <p style={{
-                    fontSize: '50px'
-                }}>PROCEED WITH CAUTION.</p>
-                <p className="text-sm">- professional page desing inc</p>
-                <div className="flex w-full text-center">
-                    <button onClick={() => setShowWarning(false)} className="w-1/2 h-96 bg-green-500 rounded-full">Yes!!!!!!!</button>
-                    <a className="w-1/2" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                        <button className="w-full h-96 bg-red-500 rounded-full">nah</button>
-                    </a>
-                </div>
-            </div>
 
             <div className={`${youSure ? '' : 'hidden'} fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-600 w-[500px] h-48 drop-shadow-2xl rounded-lg border-4 border-black`}>
                 <h1 className="text-white m-2 mx-4 font-bold">You REALLY WANNA DOWNLOAD THIS?</h1>
@@ -174,15 +154,35 @@ export default function SexPack() {
 
             <div className={`${nahBro ? '' : 'hidden'} fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 w-[500px] h-48 drop-shadow-2xl rounded-lg border-4 border-black`}>
                 <h1 className="text-white m-2 mx-4 font-bold w-max rounded-lg px-2" style={{
-                        // rainbow gradient
-                        background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
-                    }}>NAHHHHHHHHHHHHHHHHH WHY</h1>
+                    // rainbow gradient
+                    background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
+                }}>NAHHHHHHHHHHHHHHHHH WHY</h1>
                 <p className="ml-4 text-white">cum on me bbg {'<3'}</p>
                 <div className="absolute right-5 bottom-5 p-1 px-2">
-                    
+
                     <button onClick={() => setNahBro(false)} className="bg-green-500 rounded-lg border-2 border-black drop-shadow-xl px-2 mx-2">ok</button>
                 </div>
             </div>
+
+            <motion.div className="bg-black absolute left-0 top-0 w-screen h-screen"
+                initial={{opacity: 1}}
+                animate={{opacity: 0}}
+                transition={{delay: 1, duration: 1}}>
+                <motion.div
+                    style={{ transform: 'translate(-50%, -50%)', top: '50%', left: '50%', textAlign: 'center' }}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1 }}>
+                    <h1 style={{ fontSize: '10vw' }}>Minecraft</h1>
+                    <motion.h2 
+                        initial={{ fontSize: '4vw', transform: 'translateY(-50px)', opacity: 0 }}
+                        animate={{ fontSize: '5vw', transform: 'translateY(0)', opacity: 1 }}
+                        transition={{delay: 0.5, duration: 0.5}}>
+                            THE SEX UPDATE
+                    </motion.h2>
+                </motion.div>
+            </motion.div>
+
             <Watermark />
         </div>
     )

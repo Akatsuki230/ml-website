@@ -4,6 +4,9 @@ import React, { CSSProperties, useEffect, useRef, useState } from "react";
 
 const circle: CSSProperties = {
     borderRadius: '50%',
+    paddingLeft: '5px',
+    paddingRight: '5px',
+    paddingBottom: '5px'
 }
 
 export default function Sidebar() {
@@ -95,6 +98,11 @@ export default function Sidebar() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/util/binary-operations">Binary Operations</Link>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/util/text-binary-converter">Text to binary</Link>
             </motion.div>
             <span className="text-lg font-bold">Discord Utilities</span>
             <br />
