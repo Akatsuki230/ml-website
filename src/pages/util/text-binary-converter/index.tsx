@@ -113,7 +113,7 @@ export default function TextBinaryConverter() {
             </h1>
             <p className="text-xl m-2">Input: </p>
             <textarea name="input" id="input" value={input} onChange={x => setInput(x.currentTarget.value)} className="bg-black border-2 border-white rounded-md p-1 m-1" rows={10} cols={50} />
-            <p>Output: </p>
+            <p className="text-xl m-2">Output: </p>
             <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-black border-2 border-white rounded-md p-1 m-1" rows={10} cols={50} />
             <br />
             <motion.button onClick={flip} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
