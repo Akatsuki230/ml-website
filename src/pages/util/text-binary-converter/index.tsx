@@ -81,11 +81,16 @@ export default function TextBinaryConverter() {
     const [to, setTo] = useState('bin');
 
     const [input, setInput] = useState('');
+    const output = convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool');
 
-    function flip() {
+    function flipModes() {
         const temp = from;
         setFrom(to);
         setTo(temp);
+    }
+
+    function flipInputs() {
+        setInput(output);
     }
 
     function copy() {
@@ -116,8 +121,10 @@ export default function TextBinaryConverter() {
             <p className="text-xl m-2">Output: </p>
             <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-black border-2 border-white rounded-md p-1 m-1" rows={10} cols={50} />
             <br />
-            <motion.button onClick={flip} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
-                whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip</motion.button>
+            <motion.button onClick={flipModes} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
+                whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip Modes</motion.button>
+            <motion.button onClick={flipInputs} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
+                whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip Inputs</motion.button>
             {/* copy button */}
             <motion.button onClick={copy} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
                 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Copy</motion.button>
