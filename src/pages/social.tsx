@@ -16,7 +16,7 @@ export default function Social() {
             </Head>
             <br />
             <h1 className="text-3xl m-4 mb-1 font-bold">Social links</h1>
-            <p className="mx-8 text-lg">Welcome to my social link page! Here you can find all of my social networks where I connect with fans from around the world. You can join my <a className="text-blue-500" href="https://redir.mldkyt.com/discord">Discord server</a> and chat with me and other members about our shared interests. <a href="https://reddit.com/r/mldkyt" className="text-blue-500">Reddit</a> is where I engage in discussions and share my thoughts on various topics. On <a href="https://youtube.com/@mldkyt" className="text-blue-500">YouTube</a>, I upload videos about my hobbies and adventures, while <a href="https://instagram.com/mldkyt" className="text-blue-500">Instagram</a> is where I share updates through photos.</p>
+            <p className="mx-8 text-lg">Welcome to my social link page! Here you can find all of my social networks where I connect with fans from around the world. You can join my <a className="text-blue-500" href="https://redir.mldkyt.com/discord">Discord server</a> and chat with me and other members about our shared interests. On <a href="https://youtube.com/@mldkyt" className="text-blue-500">YouTube</a>, I upload videos about my hobbies and adventures, while <a href="https://instagram.com/mldkyt" className="text-blue-500">Instagram</a> is where I share updates through photos.</p>
             <div className="m-2 p-2 rounded-lg border-2 border-white" style={{
                 width: "calc(100% - 1rem)"
             }}>

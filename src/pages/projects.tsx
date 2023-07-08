@@ -1,6 +1,5 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Sidebar from "../components/Sidebar";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
