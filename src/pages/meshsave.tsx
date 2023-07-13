@@ -28,7 +28,7 @@ interface Like {
 
 const imageStyle: CSSProperties = {
     margin: '10px',
-    width: 'calc(100% - 20px)',
+    width: 'calc(100% - 45px)',
 }
 
 export default function Meshsave() {

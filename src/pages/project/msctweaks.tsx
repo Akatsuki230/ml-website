@@ -1,6 +1,5 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Sidebar from "../../components/Sidebar";
 import { motion } from "framer-motion";
 import Script from "next/script";
 

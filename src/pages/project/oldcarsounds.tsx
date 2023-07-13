@@ -1,8 +1,12 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Sidebar from "../../components/Sidebar";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import {CSSProperties} from "react";
+
+const itemStyle: CSSProperties = {
+    width: 'calc(100% - 45px)'
+}
 
 export default function OldTruckSounds() {
     return (
@@ -32,7 +36,7 @@ export default function OldTruckSounds() {
             <p className="mx-6">&bull; Adds shift delay.</p>
             <h2 className="text-xl font-bold mx-4">Features (release):</h2>
             <p className="mx-6">&bull; Changes the car sounds to the release versions.</p>
-            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the car sounds in My Summer Car. Please make sure to remove any conflicting mods before using this mod.</p>
+            <p style={itemStyle} className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the car sounds in My Summer Car. Please make sure to remove any conflicting mods before using this mod.</p>
             <br />
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="w-max">
                 <a href="https://www.nexusmods.com/mysummercar/mods/464" className="m-2 px-2 py-1 rounded-lg border-white border-2">Go to NexusMods page</a>

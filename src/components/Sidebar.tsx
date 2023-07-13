@@ -45,11 +45,6 @@ export default function Sidebar() {
             <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/irlsimulator">IRL Simulator</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/project/kekmetmoregears">Kekmet More Gears</Link>
             </motion.div>
             <motion.div

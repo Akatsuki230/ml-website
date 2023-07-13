@@ -2,6 +2,11 @@ import Watermark from "@/components/Watermark";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import {CSSProperties} from "react";
+
+const itemStyle: CSSProperties = {
+    width: 'calc(100% - 45px)'
+}
 
 export default function AsphaltRoads() {
     return (
@@ -34,7 +39,7 @@ export default function AsphaltRoads() {
             <p className="mx-8">&bull; Improved performance.</p>
             <h3 className="text-xl font-bold mx-6">v1.0</h3>
             <h3 className="mx-8">&bull; Initial release.</h3>
-            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
+            <p style={itemStyle} className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the roads. Please make sure to remove any conflicting mods before using this mod.</p>
             <p></p>
             <br />
             <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max">

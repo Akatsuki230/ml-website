@@ -1,8 +1,12 @@
 import Head from "next/head";
-import Sidebar from "../../components/Sidebar";
 import Watermark from "@/components/Watermark";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import {CSSProperties} from "react";
+
+const itemStyle: CSSProperties = {
+    width: 'calc(100% - 45px)'
+}
 
 export default function KekmetMoreGears() {
     return (
@@ -28,11 +32,11 @@ export default function KekmetMoreGears() {
             <p className="mx-6">&bull; Improves the engine performance of the Kekmet, allowing for better acceleration and speed.</p>
             <p className="mx-6">&bull; Easy to install and use with MSCLoader.</p>
             <p className="mx-6">&bull; Hosted on NexusMods for easy access and download.</p>
-            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">
+            <p style={itemStyle} className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">
                 This mod is not compatible with any other mods that affect the Kekmet. Please make sure to remove any conflicting mods before using this mod.
             </p>
             <p className="mx-6 text-sm">
-                This content was generated using AI. If you find any errors, please report them to me on Discord (mldkyt#2555) or on Twitter (@mldkyt).
+                This website's content was generated using AI. If you find any errors, typos or mistakes please report them to me on Discord (@mldkyt) or on Twitter (@mldkyt).
             </p>
             <br />
             <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max">

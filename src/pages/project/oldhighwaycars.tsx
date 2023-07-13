@@ -1,8 +1,12 @@
 import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Sidebar from "../../components/Sidebar";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import {CSSProperties} from "react";
+
+const itemStyle: CSSProperties = {
+    width: 'calc(100% - 45px)'
+}
 
 export default function OldTruckSounds() {
     return (
@@ -27,7 +31,7 @@ export default function OldTruckSounds() {
             <p className="mx-6">&bull; Replaces the cars on the highway with Satsumas from build 173.</p>
             <p className="mx-6">&bull; Easy to install and use with MSCLoader.</p>
             <p className="mx-6">&bull; Hosted on NexusMods for easy access and download.</p>
-            <p className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the cars on the highway. Please make sure to remove any conflicting mods before using this mod.</p>
+            <p style={itemStyle} className="m-2 rounded-lg border-2 border-red-500 px-2 py-1 text-white">This mod is not compatible with any other mods that affect the cars on the highway. Please make sure to remove any conflicting mods before using this mod.</p>
             <p></p>
             <br />
             <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max">

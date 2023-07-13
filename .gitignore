@@ -48,3 +48,6 @@ next.config.original.js
 .env.test.local
 .env.production.local
 .env
+
+#idea files
+.idea
