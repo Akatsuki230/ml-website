@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function RyowCompanion() {
     return (
         <>
+            <Head>
+                <meta name="og:title" content="RyowCompanion"></meta>
+                <meta name="og:description" content="A bot for my friends that adds physical interaction"></meta>
+            </Head>
             <h1 className="text-center text-[56px] m-4">RyowCompanion 🙏🏿</h1>
             <p className="m-2">A bot for my friends</p>
+            <h2 className="m-2 text-3xl font-bold">Description</h2>
+            <p>A Discord bot I made for my friends. It adds physical interaction, marrying members, making out with members and much more into my friend's Discord server.</p>
             <h2 className="m-2 text-3xl font-bold">Features</h2>
             <ul className="list-disc m-2">
                 <li className="ml-4"> Kissing</li>
