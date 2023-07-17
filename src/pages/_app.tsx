@@ -26,7 +26,7 @@ const sidebar: CSSProperties = {
   color: 'white'
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MLWebsite({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -45,4 +45,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default MLWebsite
