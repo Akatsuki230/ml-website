@@ -16,7 +16,7 @@ const Home = () => {
 
     useEffect(() => {
         if (!hasLoaded.current) {
-            fetch('/api/getVisits')
+            fetch(`/api/getVisits`)
                 .then(res => res.json())
                 .then(data => {
                     setVisits(data.visits);
