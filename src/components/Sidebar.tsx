@@ -35,12 +35,17 @@ export default function Sidebar() {
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2" href="/social">Social links</Link>
             </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link className="px-2" href="/pronouns">Pronouns</Link>
+            </motion.div>
             <span className="text-lg font-bold">Projects</span>
             <br />
             <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                <Link className="px-2 text-orange-300" href="/requisha">Requisha ♥️🙏🏿</Link>
+                <Link className="px-2 text-orange-300" href="/requisha">Requisha - The Love Bot ❤️🙏🏿</Link>
             </motion.div>
             <motion.div
                 whileHover={{ scale: 1.1 }}
