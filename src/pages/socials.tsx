@@ -5,11 +5,13 @@ import Script from "next/script";
 import { CSSProperties } from "react";
 
 
-const itemStyle: CSSProperties = {
-    width: 'calc(100% - 45px)'
-}
+
 
 export default function Socials() {
+    const itemStyle: CSSProperties = {
+        width: 'calc(100% - 45px)'
+    }
+
     return (
         <div>           
             <Head>
