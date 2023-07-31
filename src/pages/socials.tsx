@@ -4,14 +4,11 @@ import Head from "next/head";
 import Script from "next/script";
 import { CSSProperties } from "react";
 
+const itemStyle: CSSProperties = {
+    width: 'calc(100% - 45px)'
+}
 
-
-
-export default function Socials() {
-    const itemStyle: CSSProperties = {
-        width: 'calc(100% - 45px)'
-    }
-
+const Socials = () => {
     return (
         <div>           
             <Head>
@@ -75,3 +72,6 @@ export default function Socials() {
         </div>
     )
 }
+
+
+export default Socials
