@@ -47,51 +47,6 @@ export default function Sidebar() {
                 whileTap={{ scale: 0.9 }}>
                 <Link className="px-2 text-orange-300" href="/requisha">Requisha - The Love Bot ❤️🙏🏿</Link>
             </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/asphaltroads">Asphalt Roads</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/kekmetmoregears">Kekmet More Gears</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/kekmetspeedometer">Kekmet Speedo</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/msctweaks">MSC Tweaks</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/oldcarsounds">OldCarSounds</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/oldhayosiko">Old Hayosiko</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/oldhighwaycars">Old Highway Cars</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/oldtrucksounds">Old Truck Sounds</Link>
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}>
-                <Link className="px-2" href="/project/oldworld">Old World</Link>
-            </motion.div>
             <span className="text-lg font-bold">Generic Utilites</span>
             <br />
             <motion.div

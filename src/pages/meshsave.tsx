@@ -6,21 +6,6 @@ import tinycolor from 'tinycolor2';
 import kv from '@vercel/kv';
 import { motion } from 'framer-motion';
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-    const { dl } = ctx.query;
-    if (dl && dl === '1') {
-        await kv.incr('meshsaveDownloads');
-        return {
-            redirect: {
-                destination: 'https://cdn.discordapp.com/attachments/768887055438053476/1074257043759841321/meshsave.txt',
-                permanent: false
-            }
-        }
-    }
-
-    return { props: {} }
-}
-
 interface Like {
     name: string;
     color: string;
@@ -55,10 +40,6 @@ export default function Meshsave() {
             });
         }
     });
-
-    function dl() {
-        location.href = '/meshsave?dl=1'
-    }
 
     function submitLike() {
         setLikeFormLoading(true);
@@ -123,7 +104,7 @@ export default function Meshsave() {
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={dl} className="bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2">Download meshsave</motion.button>
+                disabled className="bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2">Download disabled due to toxicity</motion.button>
             <motion.button 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
