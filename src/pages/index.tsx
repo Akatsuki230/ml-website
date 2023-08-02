@@ -53,24 +53,12 @@ const Home = () => {
                     <Link href='/social' className='p-2 px-3 mr-2 bg-gray-900 rounded-lg border-2 border-white'>Show</Link>
                 </motion.div>
             </div>
-            <div className='p-2 m-2 rounded-lg'>
-                <h1 className='text-2xl'>Currently featured My Summer Car mod</h1>
-                <h2 className='text-xl'>Asphalt Roads</h2>
-                <p className='text-gray-400 text-sm'>Version 1.2 &bull; 20 465 views &bull; 8 409 downloads &bull; Info
-                    last updated 13/7/2023</p>
-                <p>Asphalt roads is a mod that replaces dirt roads with asphalt roads in My Summer Car.</p>
-                <motion.div className='mt-2 mb-1.5 w-max'
-                            whileHover={{scale: 1.1}}
-                            whileTap={{scale: 0.9}}>
-                    <Link href='/project/asphaltroads' className='p-2 px-3 bg-black rounded-lg border-2 border-white'>Open
-                        mod page</Link>
-                </motion.div>
-            </div>
             <h2 className='text-2xl mx-2 font-bold'>About me</h2>
             <div className='mx-1 flex flex-row flex-wrap'>Hello, I'm mldkyt! I'm available
                 on <YouTube/>, <Twitter/> and <TikTok /></div>
+            <span className='italic mx-1'>Click on any of the tags to go to my profile on them</span>
+            <div className='mx-1'>I have experience in C#, C++, C, Python, Java, Kotlin, JavaScript, TypeScript, HTML and CSS.</div>
             <Watermark/>
-            <span className='italic'>Click on any of the tags to go to my profile on them</span>
         </div>
     )
 }

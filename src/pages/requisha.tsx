@@ -22,11 +22,9 @@ export default function RyowCompanion() {
                 <li className="ml-4"> Holding ungodly amounts of cum</li>
                 <li className="ml-4"> Pins messages like "cum", "sex", "dick", "cock", "rape"</li>
                 <li className="ml-4"> Allows setting yourself as underage if you are underage (duh)</li>
-                <li className="ml-4"> Femboys ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</li>
             </ul>
             <h2 className="text-3xl m-2">Most popular commands</h2>
-            <ul className="list-disc m-2">
-                <li className="ml-4">/femboy ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</li>
+            <ul className="list-disc m-2">=
                 <li className="ml-4">/suck ❤️❤️❤️❤️❤️❤️</li>
                 <li className="ml-4">/rape ❤️❤️❤️❤️❤️</li>
                 <li className="ml-4">/marry ❤️❤️❤️❤️</li>

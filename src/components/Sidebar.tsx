@@ -45,7 +45,7 @@ export default function Sidebar() {
             <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                <Link className="px-2 text-orange-300" href="/requisha">Requisha - The Love Bot ❤️🙏🏿</Link>
+                <Link className="px-2" href="/requisha">Requisha - The Love Bot ❤️🙏🏿</Link>
             </motion.div>
             <span className="text-lg font-bold">Generic Utilites</span>
             <br />
