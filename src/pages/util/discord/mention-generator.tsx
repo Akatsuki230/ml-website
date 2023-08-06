@@ -26,7 +26,7 @@ const MentionGenerator = () => {
             <h1 className="text-3xl my-2 mx-4">Mention Generator</h1>
             <label className="text-xl ml-8" htmlFor="type">Select mention type:</label>
             <br />
-            <select name="type" id="type" className="ml-8 bg-black border-2 border-white rounded-lg w-56" value={type} onChange={x => setType(x.currentTarget.value)}>
+            <select name="type" id="type" className="ml-8 bg-[#2B0029] rounded-lg w-56" value={type} onChange={x => setType(x.currentTarget.value)}>
                 <option value="User">User</option>
                 <option value="Role">Role</option>
                 <option value="Channel">Channel</option>
@@ -35,7 +35,7 @@ const MentionGenerator = () => {
             <br />
             <label className="ml-8 text-xl" htmlFor="id">{type} ID: </label>
             <br />
-            <input type="text" name="id" id="id" className="border-2 border-white bg-black ml-8 rounded-lg" value={id} onChange={x => setID(x.currentTarget.value)} />
+            <input type="text" name="id" id="id" className="bg-[#2B0029] ml-8 rounded-lg" value={id} onChange={x => setID(x.currentTarget.value)} />
             <br />
             <p className="text-2xl ml-8">The ping will look like this: {genPing(type, id)}</p>
             

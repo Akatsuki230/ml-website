@@ -1,6 +1,4 @@
-import Watermark from "@/components/Watermark";
 import Head from "next/head";
-import Link from "next/link";
 import {motion} from "framer-motion";
 import {CSSProperties} from "react";
 
@@ -20,10 +18,24 @@ export default function Mods() {
             <br/>
             <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
             <p className="ml-6">These are all of mldkyt's projects.</p>
-            
+            <h2 className="text-2xl underline px-4">Discord Bots</h2>
+            <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
+                <h3 className="px-2 text-xl text-white">
+                    Requisha
+                </h3>
+                <p className="px-4 text-white">
+                    Requisha, the love bot for my friends' Discord server.
+                </p>
+                <motion.div className="w-max ml-2"
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}>
+                    <a className="bg-blue-600 rounded-lg p-0.5 px-1"
+                          href="/requisha">Bot's page</a>
+                </motion.div>
+            </div>
             <h2 className="text-2xl underline px-4">Online utilities</h2>
 
-            <div style={itemStyle} className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+            <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Number Converters
                 </h3>
@@ -33,11 +45,11 @@ export default function Mods() {
                 <motion.div className="w-max ml-2"
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
-                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white"
-                          href="/util/number-converter">Visit utility's page</Link>
+                    <a className="bg-blue-600 rounded-lg p-0.5 px-1"
+                          href="/util/number-convert">Visit utility's page</a>
                 </motion.div>
             </div>
-            <div style={itemStyle} className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+            <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Text to Binary Translator
                 </h3>
@@ -47,11 +59,11 @@ export default function Mods() {
                 <motion.div className="w-max ml-2"
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
-                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white"
-                          href="/util/text-binary-converter">Visit utility's page</Link>
+                    <a className="bg-blue-600 rounded-lg p-0.5 px-1"
+                          href="/util/text-binary-converter">Visit utility's page</a>
                 </motion.div>
             </div>
-            <div style={itemStyle} className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+            <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Discord Timestamp Generator
                 </h3>
@@ -61,11 +73,11 @@ export default function Mods() {
                 <motion.div className="w-max ml-2"
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
-                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white"
-                          href="/util/discord/timestamp-generator">Visit utility's page</Link>
+                    <a className="bg-blue-600 rounded-lg p-0.5 px-1"
+                          href="/util/discord/timestamp-generator">Visit utility's page</a>
                 </motion.div>
             </div>
-            <div style={itemStyle} className="bg-black border-2 border-white m-4 py-2 rounded-lg drop-shadow-none">
+            <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Discord Mention Generator
                 </h3>
@@ -75,11 +87,10 @@ export default function Mods() {
                 <motion.div className="w-max ml-2"
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
-                    <Link className="bg-black rounded-lg p-0.5 px-1 border-2 border-white"
-                          href="/util/discord/mention-generator">Visit utility's page</Link>
+                    <a className="bg-blue-600 rounded-lg p-0.5 px-1"
+                          href="/util/discord/mention-generator">Visit utility's page</a>
                 </motion.div>
             </div>
-            <Watermark/>
         </>
     )
 }

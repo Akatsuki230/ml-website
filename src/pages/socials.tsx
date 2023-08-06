@@ -1,4 +1,3 @@
-import Watermark from "@/components/Watermark";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Script from "next/script";
@@ -68,7 +67,6 @@ const Socials = () => {
                     <a target="_blank" className="border-2 border-white p-0.5 px-1 rounded-lg" href="https://www.nexusmods.com/users/57424716">Open profile</a>
                 </motion.div>
             </div>
-            <Watermark />
         </div>
     )
 }

@@ -103,30 +103,30 @@ export default function TextBinaryConverter() {
         <div>
             <h1>
                 <select value={from} onChange={x => setFrom(x.currentTarget.value)}
-                    className="bg-black border-2 border-white rounded-md p-1 m-1">
+                    className="bg-[#2B0029] rounded-md p-1 m-1">
                     <option value="text">text:ascii</option>
                     <option value="bin">number:binary</option>
                     <option value="bool">number:booleans</option>
                 </select>
                 <span>to</span>
                 <select value={to} onChange={x => setTo(x.currentTarget.value)}
-                    className="bg-black border-2 border-white rounded-md p-1 m-1">
+                    className="bg-[#2B0029] rounded-md p-1 m-1">
                     <option value="text">text:ascii</option>
                     <option value="bin">number:binary</option>
                     <option value="bool">number:booleans</option>
                 </select>
             </h1>
             <p className="text-xl m-2">Input: </p>
-            <textarea name="input" id="input" value={input} onChange={x => setInput(x.currentTarget.value)} className="bg-black border-2 border-white rounded-md p-1 m-1" rows={10} cols={50} />
+            <textarea name="input" id="input" value={input} onChange={x => setInput(x.currentTarget.value)} className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={50} />
             <p className="text-xl m-2">Output: </p>
-            <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-black border-2 border-white rounded-md p-1 m-1" rows={10} cols={50} />
+            <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={50} />
             <br />
-            <motion.button onClick={flipModes} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
+            <motion.button onClick={flipModes} className="bg-gray-950 rounded-md p-1 px-2 m-1"
                 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip Modes</motion.button>
-            <motion.button onClick={flipInputs} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
+            <motion.button onClick={flipInputs} className="bg-gray-950 rounded-md p-1 px-2 m-1"
                 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip Inputs</motion.button>
             {/* copy button */}
-            <motion.button onClick={copy} className="bg-black border-2 border-white rounded-md p-1 px-2 m-1"
+            <motion.button onClick={copy} className="bg-blue-600 rounded-md p-1 px-2 m-1"
                 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Copy</motion.button>
         </div>
     )

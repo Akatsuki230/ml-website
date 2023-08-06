@@ -1,30 +1,7 @@
 import Head from 'next/head'
-import {useState} from 'react';
-import {useEffect} from 'react';
-import {useRef} from 'react';
-import Watermark from '@/components/Watermark';
-import {motion} from 'framer-motion';
-import Link from 'next/link';
 import Script from 'next/script';
-import YouTube from '@/components/Social/YouTube';
-import Twitter from '@/components/Social/Twitter';
-import TikTok from '@/components/Social/TikTok';
 
 const Home = () => {
-    const [visits, setVisits] = useState('loading ');
-    const hasLoaded = useRef(false);
-
-    useEffect(() => {
-        if (!hasLoaded.current) {
-            fetch(`/api/getVisits`)
-                .then(res => res.json())
-                .then(data => {
-                    setVisits(data.visits);
-                });
-            hasLoaded.current = true;
-        }
-    }, [])
-
     return (
         <div>
             <Head>
@@ -34,31 +11,34 @@ const Home = () => {
                 <meta name="author" content="mldkyt"/>
                 <Script async src={process.env.ADS_URL} crossOrigin="anonymous"></Script>
             </Head>
-            <h1 className='text-4xl mx-2 my-4 font-bold text-center'>Welcome to mldkyt's website!</h1>
-            <p className='mx-4'>{visits} visits</p>
-            <div className='text-center h-11 bg-gray-900 text-white py-2 px-0.5 rounded-lg m-2'>
-                <span className='float-left ml-4'>Projects</span>
-                <motion.div className='float-right'
-                            whileHover={{scale: 1.1}}
-                            whileTap={{scale: 0.9}}>
-                    <Link href='/projects'
-                          className='p-2 px-3 mr-2 bg-gray-900 rounded-lg border-2 border-white'>Show</Link>
-                </motion.div>
+            <h1 className='text-4xl mx-2 my-4 text-center'>Welcome to mldkyt's website!</h1>
+            <div className='container'>
+                <h2 className='text-2xl mx-2 font-bold'>About me</h2>
+                <div className='mx-1 flex flex-row flex-wrap'>mldkyt is a YouTuber, TikToker and was a MSC modder.</div>
+                <div className='mx-1'>mldkyt has experience in C#, C++, C, Python, Java, Kotlin, JavaScript, TypeScript, HTML, CSS and more.</div>
+                <div className='mx-1'>You can join my <a href='https://discord.gg/JgFNmSwYME' className='text-blue-400'>Discord</a> server, although it's dead. You can also subscribe on <a href='https://youtube.com/@mldkyt' className='text-blue-400'>YouTube</a> and follow on <a href='https://tiktok.com/u/mldkyt'>TikTok</a>.</div>
+
+                <h2 className='m-2 ml-2 text-2xl font-bold'>Explore: </h2>
+                <div className='flex'>
+                    <div className='ml-8 text-center w-40 h-48 bg-gradient-to-b from-[#3C0041] to-[#111] rounded-md relative'>
+                        <p className='text-xl font-bold'>Projects</p>
+                        <p>This is a list of my projects</p>
+                        <a href='/projects' className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>Explore</a>
+                    </div>
+
+                    <div className='ml-8 text-center w-40 h-48 bg-gradient-to-b from-[#3C0041] to-[#111] rounded-md relative'>
+                        <p className='text-xl font-bold'>Socials</p>
+                        <p>A list of my social links</p>
+                        <a href='/socials' className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>Explore</a>
+                    </div>
+                    
+                    <div className='ml-8 text-center w-40 h-48 bg-gradient-to-b from-[#3C0041] to-[#111] rounded-md relative'>
+                        <p className='text-xl font-bold'>Pronouns</p>
+                        <p>These are my pronouns</p>
+                        <a href='/pron' className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>View</a>
+                    </div>
+                </div>
             </div>
-            <div className='text-center h-11 bg-gray-900 text-white py-2 px-0.5 rounded-lg m-2'>
-                <span className='float-left ml-4'>Social links</span>
-                <motion.div className='float-right'
-                            whileHover={{scale: 1.1}}
-                            whileTap={{scale: 0.9}}>
-                    <Link href='/social' className='p-2 px-3 mr-2 bg-gray-900 rounded-lg border-2 border-white'>Show</Link>
-                </motion.div>
-            </div>
-            <h2 className='text-2xl mx-2 font-bold'>About me</h2>
-            <div className='mx-1 flex flex-row flex-wrap'>Hello, I'm mldkyt! I'm available
-                on <YouTube/>, <Twitter/> and <TikTok /></div>
-            <span className='italic mx-1'>Click on any of the tags to go to my profile on them</span>
-            <div className='mx-1'>I have experience in C#, C++, C, Python, Java, Kotlin, JavaScript, TypeScript, HTML and CSS.</div>
-            <Watermark/>
         </div>
     )
 }

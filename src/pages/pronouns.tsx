@@ -1,7 +1,11 @@
+import Head from "next/head";
 
 export default function Pronouns() {
     return (
         <>
+            <Head>
+                <title>mldkyt's pronouns</title>
+            </Head>
             <h1 className="text-3xl m-2 mx-4 font-bold">mldkyt's pronouns</h1>
             <h2 className="text-2xl m-1 mx-6 font-bold">Calling me</h2>
             <p className="m-1 mx-8">&bull; ❤️ mld</p>

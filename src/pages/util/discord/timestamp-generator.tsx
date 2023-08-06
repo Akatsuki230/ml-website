@@ -1,8 +1,7 @@
-import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
-import Watermark from "@/components/Watermark";
 import { motion } from "framer-motion";
 
 function relative(time: Dayjs) {
@@ -103,14 +102,14 @@ export default function DiscordTimestampGenerator() {
                         whileTap={{ scale: 0.98 }}
                         whileFocus={{ scale: 1.02 }}
                         type='datetime-local' value={time.format('YYYY-MM-DD[T]HH:mm')} onChange={x => setTime(dayjs(x.currentTarget.value))}
-                        className="border-2 border-white rounded-lg drop-shadow-lg p-0.5 px-2 mt-1 bg-black" />
+                        className="rounded-lg drop-shadow-lg p-0.5 px-2 mt-1 bg-[#2B0029]" />
                 <br />
                 <label>Format: </label>
                 <motion.select
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     whileFocus={{ scale: 1.02 }}
-                    className="border-2 border-white rounded-lg drop-shadow-lg p-1 px-2 mt-1 bg-black" value={format} onChange={(x) => setFormat(x.target.value)}>
+                    className="rounded-lg drop-shadow-lg p-1 px-2 mt-1 bg-[#2B0029]" value={format} onChange={(x) => setFormat(x.target.value)}>
                     <option value="t">{time.format(preview24Format ? 'H:mm' : 'h:mm A')}</option>
                     <option value="T">{time.format(preview24Format ? 'H:mm:ss' : 'h:mm:ss A')}</option>
                     <option value="d">{time.format('DD/MM/YYYY')}</option>
@@ -139,10 +138,9 @@ export default function DiscordTimestampGenerator() {
                 </tbody>
             </table>
             <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}  className="mx-10 mt-3 w-max">
-                <button onClick={copy} className="bg-black p-1 px-3 rounded-lg border-2 border-white">Copy</button>
+                <button onClick={copy} className="bg-blue-600 p-1 px-3 rounded-lg">Copy</button>
                 {copiedSnackbar ? <span className="ml-2 text-green-500">Copied!</span> : null}
             </motion.div>
-            <Watermark />
         </>
     )
 }

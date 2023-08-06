@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Link from "next/link";
 
 export default function RyowCompanion() {
     return (
@@ -37,10 +36,10 @@ export default function RyowCompanion() {
             <br />
             <div className="flex flex-nowrap">
                 <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max whitespace-nowrap">
-                    <Link href='https://discord.gg/UsxXxaSwVZ' className="p-2 bg-blue-600 rounded-xl m-2">Join my friend's Discord server 🙏🏿</Link>  
+                    <a href='https://discord.gg/UsxXxaSwVZ' className="p-2 bg-blue-600 rounded-xl m-2">Join my friend's Discord server 🙏🏿</a>  
                 </motion.div>
                 <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="w-max whitespace-nowrap">
-                    <Link href='https://github.com/mldkyt/Requisha' className="p-2 border-2 border-white rounded-xl m-2">GitHub Repository</Link>
+                    <a href='https://github.com/mldkyt/Requisha' className="p-2 border-2 border-white rounded-xl m-2">GitHub Repository</a>
                 </motion.div>
             </div>
         </>

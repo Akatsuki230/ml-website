@@ -1,4 +1,3 @@
-import Watermark from '@/components/Watermark';
 import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import React, { CSSProperties, useEffect, useRef, useState } from 'react';
@@ -13,7 +12,7 @@ interface Like {
 
 const imageStyle: CSSProperties = {
     margin: '10px',
-    width: 'calc(100% - 45px)',
+    width: 'calc(100% - 20px)',
 }
 
 export default function Meshsave() {
@@ -63,6 +62,10 @@ export default function Meshsave() {
         });
     }
 
+    function dl() {
+        location.href = '/meshsave.txt';
+    }
+
     return (
         <>
             <Head>
@@ -104,11 +107,12 @@ export default function Meshsave() {
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                disabled className="bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2">Download disabled due to toxicity</motion.button>
+                className="bg-blue-600 text-white rounded-md px-2 py-1 ml-2"
+                onClick={dl}>Download meshsave</motion.button>
             <motion.button 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className='bg-black text-white border-white border-2 rounded-md px-2 py-1 ml-2 disabled:bg-gray-300' disabled={likedStatus != 'eligible'} onClick={_ => setLikeFormShown(true)}>
+                className='bg-black text-white rounded-md px-2 py-1 ml-2 disabled:bg-gray-300' disabled={likedStatus != 'eligible'} onClick={_ => setLikeFormShown(true)}>
                 {likedStatus == 'loading' ? (
                     <>Checking if you can like...</>
                 ) : (
@@ -134,25 +138,23 @@ export default function Meshsave() {
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)} className="absolute top-2 right-2 w-7 rounded-lg border-2 border-white">X</motion.button>
+                        disabled={likeFormLoading} onClick={_ => setLikeFormShown(false)} className="absolute top-2 right-2 w-7 bg-red-600 rounded-md">X</motion.button>
                     <h1 className='text-xl font-bold'>Like the meshsave</h1>
                     <label>Name: </label>
                     <br/>
-                    <motion.input initial={{padding: '3px 6px'}} whileHover={{padding: '6px 9px'}} whileTap={{padding: '2px 4px'}} className='bg-black text-white border-2 border-white rounded-lg' value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
+                    <motion.input initial={{padding: '3px 6px'}} whileHover={{padding: '6px 9px'}} whileTap={{padding: '2px 4px'}} className='bg-gray-900 text-white  rounded-lg' value={likeFormName} onChange={x => setLikeFormName(x.currentTarget.value)} />
                     <br/>
                     <label>Color: </label>
                     <br />
                     <motion.input whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} className='bg-black w-full' type='color' value={likeFormColor} onChange={x => setLikeFormColor(x.currentTarget.value)} />
                     <br/>
-                    <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} disabled={likeFormLoading} onClick={submitLike} className="px-3 py-1 border-2 border-white rounded-lg disabled:bg-gray-300">{likeFormLoading ? "Loading..." : "Like"}</motion.button>
+                    <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} disabled={likeFormLoading} onClick={submitLike} className="px-3 py-1 bg-green-700 rounded-lg disabled:bg-gray-300">{likeFormLoading ? "Loading..." : "Like"}</motion.button>
                 </div>
             </motion.div>
 
             <div className={`${likeFormError == '' ? '' : 'hidden'} fixed left-4 bottom-4`}>
                 {likeFormError}
             </div>
-
-            <Watermark />
         </>
     );
 }

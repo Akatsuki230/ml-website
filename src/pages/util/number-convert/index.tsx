@@ -1,6 +1,3 @@
-
-import Watermark from '@/components/Watermark';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const NumberConverters = () => {
@@ -24,14 +21,14 @@ const NumberConverters = () => {
     return ( 
         <div>
             <h1 className="text-3xl m-2 mx-4">Base 
-                <select value={from} onChange={e => setFrom(e.target.value)} className="bg-black border-2 border-white rounded-lg mx-2">
+                <select value={from} onChange={e => setFrom(e.target.value)} className="bg-[#2B0029] rounded-lg mx-2">
                     <option value="2">2</option>
                     <option value="8">8</option>
                     <option value="10">10</option>
                     <option value="16">16</option>
                 </select> 
                 to Base 
-                <select value={to} onChange={e => setTo(e.target.value)} className="bg-black border-2 border-white rounded-lg mx-2">
+                <select value={to} onChange={e => setTo(e.target.value)} className="bg-[#2B0029] rounded-lg mx-2">
                     <option value="2">2</option>
                     <option value="8">8</option>
                     <option value="10">10</option>
@@ -42,11 +39,10 @@ const NumberConverters = () => {
             <label className="text-xl mx-8" htmlFor="input-convert">Input number</label>
             <br />
             <input type="text" name="input-convert" id="input-convert" value={input} onChange={x => setInput(x.currentTarget.value)}
-                className="bg-black border-2 border-white rounded-lg mx-8" />
+                className="bg-[#2B0029] rounded-lg mx-8" />
             <p className="m-4 mx-8 text-2xl">Result: {
                 input === "" ? "" : parseInt(input, parseInt(from, 10)).toString(parseInt(to, 10))
             }</p>
-            <Watermark />
         </div>
     );
 }
