@@ -18,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(404).json({error: "Not found"});
     }
 
+    await sql`UPDATE redirects SET views = views + 1 WHERE id = ${path}`
     res.status(200).json({
         id: data.rows[0].id,
         url: data.rows[0].url,
