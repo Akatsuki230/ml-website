@@ -130,10 +130,10 @@ export default function Redirection(props: Data) {
     return (
         <>
             <Head>
-                <title>Custom page</title>
                 {
                     props.type == 'redirect' && (
                         <>
+                            <title>Redirect by mldkyt</title>
                             <meta name="title" content="mldkyt has shared a link with you"/>
                             <meta name="description" content={`Redirects to: ${props.label}`}/>
                             <meta name="theme-color" content="#00FFFF"/>
@@ -143,6 +143,7 @@ export default function Redirection(props: Data) {
                 {
                     props.type == 'image' && (
                         <>
+                            <title>Shared image by mldkyt</title>
                             <meta name="title" content="mldkyt has shared an image with you"/>
                             <meta name="description" content={props.label}/>
                             <meta name="theme-color" content="#00FFFF"/>
@@ -153,6 +154,7 @@ export default function Redirection(props: Data) {
                 {
                     props.type == 'file' && (
                         <>
+                            <title>File shared by mldkyt</title>
                             <meta name="title" content="mldkyt has shared a file with you"/>
                             <meta name="description" content={props.label}/>
                             <meta name="theme-color" content="#00FFFF"/>
@@ -162,6 +164,7 @@ export default function Redirection(props: Data) {
                 {
                     props.error && (
                         <>
+                            <title>Error</title>
                             <meta name="title" content="Error"/>
                             <meta name="description" content={props.errorMessage}/>
                             <meta name="theme-color" content="#FF0000"/>
