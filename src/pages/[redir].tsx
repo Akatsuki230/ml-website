@@ -71,6 +71,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         }
     }
 
+    await sql`UPDATE redirects SET views = views + 1 WHERE id = ${redir}`
+
     return {
         props: {
             type: data.rows[0].type,
@@ -89,7 +91,6 @@ type Data = {
     error: boolean;
     errorMessage: string;
 }
-
 export default function Redirection(props: Data) {
     const [redirectTime, setRedirectTime] = useState(3)
     const [screenHeight, setScreenHeight] = useState(0)
@@ -163,7 +164,7 @@ export default function Redirection(props: Data) {
                         <>
                             <meta name="title" content="Error"/>
                             <meta name="description" content={props.errorMessage}/>
-                            <meta name="theme-color" content="#F00"/>
+                            <meta name="theme-color" content="#FF0000"/>
                         </>
                     )
                 }
