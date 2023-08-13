@@ -40,6 +40,7 @@ interface AdminPropertiesProps {
 }
 
 export default function AdminProperties(props: AdminPropertiesProps) {
+    const [id, setId] = React.useState(props.redirect.id)
     const [url, setUrl] = React.useState(props.redirect.url)
     const [label, setLabel] = React.useState(props.redirect.label)
     const [type, setType] = React.useState(props.redirect.type)
@@ -57,6 +58,7 @@ export default function AdminProperties(props: AdminPropertiesProps) {
         const response = await fetch('/api/redirect/save', {
             body: JSON.stringify({
                 id: props.redirect.id,
+                newId: id,
                 url,
                 label,
                 type
@@ -85,6 +87,13 @@ export default function AdminProperties(props: AdminPropertiesProps) {
         <main className="max-w-3xl mx-auto">
             <h1 className="text-2xl font-bold mb-4">Editing {props.redirect.label}</h1>
             <form className="space-y-4">
+
+                <label htmlFor="url" className="block">
+                    <span className="font-bold">ID</span>
+                    <input type="url" id="id" value={id} onChange={e => setId(e.target.value)}
+                           className="block w-full mt-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-black"/>
+                </label>
+
                 <label htmlFor="url" className="block">
                     <span className="font-bold">URL</span>
                     <input type="url" id="url" value={url} onChange={e => setUrl(e.target.value)}
@@ -116,7 +125,7 @@ export default function AdminProperties(props: AdminPropertiesProps) {
                     <span>Save</span>
                 </button>
                 <button onClick={deleteRedirect} type="button"
-                        className="ml-2 bg-red-300 hover:bg-red-500 active:bg-red-700 px-2 py-1 rounded-lg">
+                        className="ml-2 bg-red-700 hover:bg-red-500 active:bg-red-700 px-2 py-1 rounded-lg">
                     <span>Delete</span>
                 </button>
             </form>

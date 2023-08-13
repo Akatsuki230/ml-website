@@ -38,10 +38,7 @@ export default function AdminCreate() {
             discardNotificationAfter(5);
         }
         else {
-            setNotification('Created!');
-            setTimeout(() => {
-                window.location.href = `/admin/properties?id=${id}`;
-            }, 1000);
+            window.location.href = `/admin/properties?id=${id}`;
         }
     }
 
@@ -52,25 +49,26 @@ export default function AdminCreate() {
             <form className="ml-4 mt-4">
                 <label className="block">
                     <span className="text-gray-700">ID</span>
-                    <input value={id} onChange={x => setId(x.currentTarget.value)} className="form-input mt-1 block w-full bg-black" placeholder="mldkyt" />
+                    <input value={id} onChange={x => setId(x.currentTarget.value)} className="form-input mt-1 block bg-black" placeholder="mldkyt" />
                 </label>
                 <label className="block">
                     <span className="text-gray-700">Label</span>
-                    <input value={label} onChange={x => setLabel(x.currentTarget.value)} className="form-input mt-1 block w-full bg-black" placeholder="mldkyt" />
+                    <input value={label} onChange={x => setLabel(x.currentTarget.value)} className="form-input mt-1 block bg-black" placeholder="mldkyt" />
                 </label>
                 <label className="block">
                     <span className="text-gray-700">URL</span>
-                    <input value={url} onChange={x => setUrl(x.currentTarget.value)} className="form-input mt-1 block w-full bg-black" placeholder="https://mldkyt.com" />
+                    <input value={url} onChange={x => setUrl(x.currentTarget.value)} className="form-input mt-1 block bg-black" placeholder="https://mldkyt.com" />
                 </label>
                 <label className='block'>
                     <span className="text-gray-700">Type</span>
-                    <select value={type} onChange={x => setType(x.currentTarget.value)} className="form-select mt-1 block w-full bg-black">
+                    <select value={type} onChange={x => setType(x.currentTarget.value)} className="form-select mt-1 block bg-black">
+                        <option value="">[none]</option>
                         <option value="redirect">Redirect</option>
                         <option value="image">Image</option>
                         <option value="file">File</option>
                     </select>
                 </label>
-                <button onClick={add} className="bg-gray-800 hover:bg-gray-500 active:bg-gray-700 px-2 py-1 rounded-lg">Create</button>
+                <button onClick={add} className="mt-2 bg-gray-800 hover:bg-gray-500 active:bg-gray-700 px-2 py-1 rounded-lg">Create</button>
             </form>
             {
                 notification && (
