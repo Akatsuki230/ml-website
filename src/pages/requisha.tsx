@@ -8,6 +8,8 @@ export default function RyowCompanion() {
                 <meta name="og:title" content="Requisha ❤️🙏🏿"></meta>
                 <meta name="og:description" content="A love bot for my friends, god bless ❤️🙏🏿"></meta>
                 <title>Requisha ❤️🙏🏿</title>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                        crossOrigin="anonymous"></script>
             </Head>
             <h1 className="text-center text-[56px] m-4">Requisha ❤️ 🙏🏿</h1>
             <p className="m-2">A love bot for my friends</p>

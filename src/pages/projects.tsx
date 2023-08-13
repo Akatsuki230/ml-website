@@ -14,11 +14,13 @@ export default function Mods() {
                 <meta name="title" content="Projects | mldkyt's website"/>
                 <meta name="description" content="List of mldkyt's projects, whether online or offline."/>
                 <meta name="author" content="mldkyt"/>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                        crossOrigin="anonymous"></script>
             </Head>
             <br/>
             <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
             <p className="ml-6">These are all of mldkyt's projects.</p>
-            <h2 className="text-2xl underline px-4">Discord Bots</h2>
+            <h2 className="text-2xl px-4">Discord Bots</h2>
             <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
                     Requisha
@@ -33,7 +35,7 @@ export default function Mods() {
                           href="/requisha">Bot's page</a>
                 </motion.div>
             </div>
-            <h2 className="text-2xl underline px-4">Online utilities</h2>
+            <h2 className="text-2xl px-4">Online utilities</h2>
 
             <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
                 <h3 className="px-2 text-xl text-white">
