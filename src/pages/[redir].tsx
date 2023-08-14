@@ -9,7 +9,7 @@ import {sql} from "@vercel/postgres";
 function renderRedirect(url: string, label: string, redirTime: number) {
     return (
         <>
-            <h1 className='text-3xl'>Redirecting you to {label} in {redirTime} seconds...</h1>
+            <h1 className='text-3xl w-screen'>Redirecting you to {label} in {redirTime} seconds...</h1>
         </>
     )
 }
@@ -17,7 +17,7 @@ function renderRedirect(url: string, label: string, redirTime: number) {
 function renderImage(url: string, label: string) {
     return (
         <>
-            <h1 className='text-3xl'>{label}</h1>
+            <h1 className='text-3xl w-screen'>{label}</h1>
             <img src={url} alt={label}/>
         </>
     )
@@ -30,7 +30,7 @@ function renderFile(url: string, label: string) {
 
     return (
         <>
-            <h1 className='text-3xl'>{label}</h1>
+            <h1 className='text-3xl w-screen'>{label}</h1>
             <br/>
             <button onClick={f} className='bg-blue-600 rounded-lg px-2 py-1'>
                 Download
@@ -92,11 +92,11 @@ type Data = {
     errorMessage: string;
 }
 export default function Redirection(props: Data) {
-    const [redirectTime, setRedirectTime] = useState(3)
+    const [redirectTime, setRedirectTime] = useState(5)
     const [screenHeight, setScreenHeight] = useState(0)
 
     const hasRan = useRef(false)
-    const countDown = useRef(3)
+    const countDown = useRef(5)
 
     function resizeEvent() {
         setScreenHeight(window.innerHeight)
@@ -172,7 +172,7 @@ export default function Redirection(props: Data) {
                     )
                 }
             </Head>
-            <h1 className='text-2xl'>mldkyt has shared something with you:</h1>
+            <h1 className='text-2xl p-4'>mldkyt has shared something with you:</h1>
             <br/>
             <br/>
             <div className='text-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2' style={{

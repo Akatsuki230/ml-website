@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { CSSProperties } from 'react';
 import Navbar from '@/components/Navbar';
 import { Inter } from 'next/font/google';
-import styles from './_app.module.css';
+import { FakeLoad } from '@/components/FakeLoad';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -25,7 +25,7 @@ function MLWebsite({ Component, pageProps }: AppProps) {
       </Head>
       <div className={inter.className}>
         <div className={`bg-[#111] text-white min-h-screen min-w-full top-0 absolute`}>
-          <div className={styles.initanim}>
+          <div>
             <br />
             <br />
             <Component {...pageProps} />
@@ -34,6 +34,7 @@ function MLWebsite({ Component, pageProps }: AppProps) {
         <div style={navbar}>
           <Navbar />
         </div>
+        <FakeLoad />
         <Analytics />
       </div>
     </>

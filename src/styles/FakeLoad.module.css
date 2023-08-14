@@ -1,0 +1,9 @@
+.progresscolor::-moz-progress-bar { 
+    background: greenyellow;
+}
+.progresscolor::-webkit-progress-value { 
+    background: greenyellow;
+}
+.progresscolor {
+    color: greenyellow;
+}
