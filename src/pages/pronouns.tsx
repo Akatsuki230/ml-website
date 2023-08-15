@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 import Head from "next/head";
 
 export default function Pronouns() {
@@ -55,7 +56,15 @@ export default function Pronouns() {
                     <p className='text-xl font-bold'>Homepage</p>
                     <p>This is the homepage of this website.</p>
                     <a href='/'
-                       className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>Explore</a>
+                       className='bottom-2 absolute left-1/2 -translate-x-1/2'>
+                        <motion.button
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className='bg-blue-700 rounded-xl p-2 px-4 mr-2'
+                        >
+                            Explore
+                        </motion.button>
+                    </a>
                 </div>
 
                 <div
@@ -63,7 +72,15 @@ export default function Pronouns() {
                     <p className='text-xl font-bold'>Projects</p>
                     <p>This is a list of my projects</p>
                     <a href='/projects'
-                       className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>Explore</a>
+                       className='bottom-2 absolute left-1/2 -translate-x-1/2'>
+                        <motion.button
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            className='bg-blue-700 rounded-xl p-2 px-4 mr-2'
+                        >
+                            Explore
+                        </motion.button>
+                    </a>
                 </div>
 
                 <div
@@ -71,7 +88,15 @@ export default function Pronouns() {
                     <p className='text-xl font-bold'>Socials</p>
                     <p>A list of my social links</p>
                     <a href='/socials'
-                       className='p-2 px-4 mr-2 bg-blue-700 rounded-xl bottom-2 absolute left-1/2 -translate-x-1/2'>Explore</a>
+                       className='bottom-2 absolute left-1/2 -translate-x-1/2'>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className='bg-blue-700 rounded-xl p-2 px-4 mr-2'
+                        >
+                            Explore
+                        </motion.button>
+                    </a>
                 </div>
             </div>
         </>
