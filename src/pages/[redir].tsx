@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Simulate} from "react-dom/test-utils";
 import error = Simulate.error;
 import load = Simulate.load;
@@ -95,8 +95,13 @@ export default function Redirection(props: Data) {
     const [redirectTime, setRedirectTime] = useState(5)
     const [screenHeight, setScreenHeight] = useState(0)
 
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+
     const hasRan = useRef(false)
     const countDown = useRef(5)
+
+
 
     function resizeEvent() {
         setScreenHeight(window.innerHeight)
@@ -120,6 +125,14 @@ export default function Redirection(props: Data) {
                     }
                 }, 1000)
             }
+
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
         }
 
         return function () {
@@ -172,6 +185,14 @@ export default function Redirection(props: Data) {
                     )
                 }
             </Head>
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className='text-2xl p-4'>mldkyt has shared something with you:</h1>
             <br/>
             <br/>

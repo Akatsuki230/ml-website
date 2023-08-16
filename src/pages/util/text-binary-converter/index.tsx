@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react"
+import React, { useState } from "react"
 
 function booleanListToBinary(booleanList: string): string {
     const booleanArray: boolean[] = booleanList.split(' ').map(val => val === 'true');
@@ -83,6 +83,25 @@ export default function TextBinaryConverter() {
     const [input, setInput] = useState('');
     const output = convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool');
 
+    const [screenWidth, setScreenWidth] = useState(0);
+    const hasRan = React.useRef(false);
+
+    function resize() {
+        setScreenWidth(window.innerWidth);
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('resize', resize);
+        if (!hasRan.current) {
+            hasRan.current = true;
+            resize();
+        }
+        return () => {
+            window.removeEventListener('resize', resize);
+        }
+    }, []);
+
+
     function flipModes() {
         const temp = from;
         setFrom(to);
@@ -117,9 +136,9 @@ export default function TextBinaryConverter() {
                 </select>
             </h1>
             <p className="text-xl m-2">Input: </p>
-            <textarea name="input" id="input" value={input} onChange={x => setInput(x.currentTarget.value)} className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={50} />
+            <textarea name="input" id="input" value={input} onChange={x => setInput(x.currentTarget.value)} className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={screenWidth > 640 ? 50 : 30} />
             <p className="text-xl m-2">Output: </p>
-            <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={50} />
+            <textarea name="output" id="output" value={convert(input, from as 'text' | 'bin' | 'bool', to as 'text' | 'bin' | 'bool')} readOnly className="bg-[#2B0029] rounded-md p-1 m-1" rows={10} cols={screenWidth > 640 ? 50 : 30} />
             <br />
             <motion.button onClick={flipModes} className="bg-gray-950 rounded-md p-1 px-2 m-1"
                 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>Flip Modes</motion.button>

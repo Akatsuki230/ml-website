@@ -1,9 +1,26 @@
 import {motion} from 'framer-motion';
 import Head from 'next/head'
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const Home = () => {
     const [showProgrammingList, setShowProgrammingList] = React.useState(false);
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+
+    const hasRan = useRef(false);
+
+    useEffect(() => {
+        if (!hasRan.current) {
+            hasRan.current = true;
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
+        }
+    }, []);
 
     return (
         <div>
@@ -16,6 +33,14 @@ const Home = () => {
                         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
                         crossOrigin="anonymous"></script>
             </Head>
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className='text-4xl mx-2 my-4 text-center'>Welcome to mldkyt's website!</h1>
             <div className='container'>
                 <h2 className='text-2xl mx-2 font-bold'>About me</h2>
@@ -30,11 +55,21 @@ const Home = () => {
                     <span className='text-blue-400 cursor-pointer' onClick={() => setShowProgrammingList(true)}>show languages</span>}
                 </div>
                 <div className='mx-1'>You can join my <a href='https://discord.gg/JgFNmSwYME'
-                                                         className='text-blue-400'>Discord</a> server, although it's
-                    dead. You can also subscribe on <a href='https://youtube.com/@mldkyt'
+                                                         className='text-blue-400'>Discord</a> server. You can also subscribe on <a href='https://youtube.com/@mldkyt'
                                                        className='text-blue-400'>YouTube</a> and follow on <a
-                        href='https://tiktok.com/u/mldkyt'>TikTok</a>.
+                        href='https://tiktok.com/u/mldkyt' className='text-blue-400'>TikTok</a>.
                 </div>
+
+                <a href='/funfact'>
+                    <motion.button
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                        className='ml-2 bg-blue-700 hover:bg-blue-600 active:bg-blue-900 px-2 py-1 rounded-lg'
+                    >
+                        random fact about me
+                    </motion.button>
+                </a>
+
                 <h2 className='m-2 ml-2 text-2xl font-bold'>Some of my projects: </h2>
 
                 <div className='ml-4 p-2 bg-[#2B0029] rounded-lg'>

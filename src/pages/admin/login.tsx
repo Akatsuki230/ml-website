@@ -13,7 +13,7 @@ export default function AdminLogin() {
 
     const testAndSetToken = () => {
         document.cookie = `token=${textToken}; path=/; max-age=31536000; samesite=strict; secure`
-        window.location.href = '/admin'
+        window.location.href = '/admin/custompage'
     }
 
     return (

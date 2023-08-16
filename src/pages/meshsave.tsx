@@ -24,6 +24,10 @@ export default function Meshsave() {
 
     const [likeFormError, setLikeFormError] = useState('');
 
+
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+
     const hasRan = useRef(false);
     
     useEffect(() => {
@@ -35,6 +39,13 @@ export default function Meshsave() {
                     setLikedStatus(data.liked);
                 });
             });
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
         }
     });
 
@@ -74,7 +85,14 @@ export default function Meshsave() {
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
                         crossOrigin="anonymous"></script>
             </Head>
-            <br />
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className='text-3xl font-bold ml-2'>My meshsave</h1>
             <p className='ml-4'>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together. </p>
             

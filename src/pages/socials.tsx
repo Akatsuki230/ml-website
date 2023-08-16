@@ -1,12 +1,30 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { CSSProperties } from "react";
+import React, {CSSProperties, useEffect, useRef, useState} from "react";
 
 const itemStyle: CSSProperties = {
     width: 'calc(100% - 45px)'
 }
 
 const Socials = () => {
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+
+    const hasRan = useRef(false);
+
+    useEffect(() => {
+        if (!hasRan.current) {
+            hasRan.current = true;
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
+        }
+    }, []);
+
     return (
         <div>           
             <Head>
@@ -17,7 +35,14 @@ const Socials = () => {
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
                         crossOrigin="anonymous"></script>
             </Head>
-            <br />
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className="text-3xl m-4 mb-1 font-bold">Social links</h1>
             <p className="mx-8 text-lg">Welcome to my social link page! Here you can find all of my social networks where I connect with fans from around the world. You can join my <a className="text-blue-500" href="https://redir.mldkyt.com/discord">Discord server</a> and chat with me and other members about our shared interests. On <a href="https://youtube.com/@mldkyt" className="text-blue-500">YouTube</a>, I upload videos about my hobbies and adventures, while <a href="https://www.tiktok.com/mldkyt" className="text-blue-500">TikTok</a> is where I post short code tutorials.</p>
             <div className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none" style={itemStyle}>

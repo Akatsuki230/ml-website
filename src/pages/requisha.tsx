@@ -1,7 +1,26 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
+import React, {useEffect, useRef, useState} from "react";
 
-export default function RyowCompanion() {
+export default function Requisha() {
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+
+    const hasRan = useRef(false);
+
+    useEffect(() => {
+        if (!hasRan.current) {
+            hasRan.current = true;
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
+        }
+    }, []);
+
     return (
         <>
             <Head>
@@ -11,6 +30,14 @@ export default function RyowCompanion() {
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
                         crossOrigin="anonymous"></script>
             </Head>
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className="text-center text-[56px] m-4">Requisha ❤️ 🙏🏿</h1>
             <p className="m-2">A love bot for my friends</p>
             <h2 className="m-2 text-3xl font-bold">Description</h2>

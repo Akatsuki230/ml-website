@@ -38,13 +38,13 @@ export default function AdminCreate() {
             discardNotificationAfter(5);
         }
         else {
-            window.location.href = `/admin/properties?id=${id}`;
+            window.location.href = `/admin/custompage/properties?id=${id}`;
         }
     }
 
     return (
         <main>
-            <button onClick={() => window.location.href = '/admin'} className="ml-4 mt-4 bg-gray-800 hover:bg-gray-500 active:bg-gray-700 px-2 py-1 rounded-lg">Back</button>
+            <button onClick={() => window.location.href = '/admin/custompage'} className="ml-4 mt-4 bg-gray-800 hover:bg-gray-500 active:bg-gray-700 px-2 py-1 rounded-lg">Back</button>
             <h1 className="ml-4 mt-4 text-3xl font-bold">Create a redirect</h1>
             <form className="ml-4 mt-4">
                 <label className="block">

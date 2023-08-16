@@ -11,11 +11,11 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     }
 
     const {id} = ctx.query as { id: string }
-    if (!id) return {redirect: {destination: '/admin', permanent: false}}
+    if (!id) return {redirect: {destination: '/admin/custompage', permanent: false}}
     const redirect = (await sql`SELECT *
                                 FROM redirects
                                 WHERE id = ${id}`).rows[0]
-    if (!redirect) return {redirect: {destination: '/admin', permanent: false}}
+    if (!redirect) return {redirect: {destination: '/admin/custompage', permanent: false}}
     return {
         props: {
             redirect: {
@@ -76,11 +76,11 @@ export default function AdminProperties(props: AdminPropertiesProps) {
     }
 
     const deleteRedirect = () => {
-        window.location.href = `/admin/delete?id=${props.redirect.id}`
+        window.location.href = `/admin/custompage/delete?id=${props.redirect.id}`
     }
 
     const back = () => {
-        window.location.href = '/admin'
+        window.location.href = '/admin/custompage'
     }
 
     return (

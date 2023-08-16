@@ -7,6 +7,12 @@ export default function Navbar() {
     const [hovering, setHovering] = useState(false);
     const [fullOpacity, setFullOpacity] = useState(true);
     const [selected, setSelected] = useState('');
+
+    const [screenWidth, setScreenWidth] = useState(0);
+    const hasRan = useRef(false);
+
+    const [showLinkSelector, setShowLinkSelector] = useState(false);
+
     function updateOpacity() {
         setFullOpacity(hovering || window.scrollY < 40);
     }
@@ -37,10 +43,21 @@ export default function Navbar() {
         setSelected(tempSelected);
     }
 
+    function resize() {
+        setScreenWidth(window.innerWidth);
+    }
+
     useEffect(() => {
         document.addEventListener('scroll', updateOpacity);
+        window.addEventListener('resize', resize);
+        if (!hasRan.current) {
+            hasRan.current = true;
+            resize();
+        }
+
         return () => {
             document.removeEventListener('scroll', updateOpacity);
+            window.removeEventListener('resize', resize);
         }
     }, []);
 
@@ -64,11 +81,33 @@ export default function Navbar() {
         }} animate={fullOpacity ? 'full' : 'half'} onPointerEnter={hoverOn} onPointerLeave={hoverOff} className="bg-[#2B0029] text-center flex text-white m-2 p-2 rounded-md">
             <span className="mx-2">mldkyt's website</span>
             <br />
-            <a className={`ml-2 w-20 ${selected == 'home' ? 'bg-[#4A0056] rounded-md': ''}`} href="/">Home</a>
-            <a className={`w-24 ${selected == 'meshsave' ? 'bg-[#4A0056] rounded-md': ''}`} href="/meshsave">Meshsave</a>
-            <a className={`w-20 ${selected.startsWith('project') ? 'bg-[#4A0056] rounded-md': ''}`} href="/projects">Projects</a>
-            <a className={`w-20 ${selected == 'social' ? 'bg-[#4A0056] rounded-md': ''}`} href="/social">Socials</a>
-            <a className={`w-24 ${selected == 'pronouns' ? 'bg-[#4A0056] rounded-md': ''}`} href="/pronouns">Pronouns</a>
+            <div className={screenWidth < 640 ? 'hidden' : ''}>
+                <a className={`ml-2 p-1 w-20 ${selected == 'home' ? 'bg-[#4A0056] rounded-md': ''}`} href="/">Home</a>
+                <a className={`ml-2 p-1 w-24 ${selected == 'meshsave' ? 'bg-[#4A0056] rounded-md': ''}`} href="/meshsave">Meshsave</a>
+                <a className={`ml-2 p-1 w-20 ${selected.startsWith('project') ? 'bg-[#4A0056] rounded-md': ''}`} href="/projects">Projects</a>
+                <a className={`ml-2 p-1 w-20 ${selected == 'social' ? 'bg-[#4A0056] rounded-md': ''}`} href="/social">Socials</a>
+                <a className={`ml-2 p-1 w-24 ${selected == 'pronouns' ? 'bg-[#4A0056] rounded-md': ''}`} href="/pronouns">Pronouns</a>
+            </div>
+            <div className={screenWidth >= 640 ? 'hidden' : ''}>
+                <a className={`ml-2 w-20 ${showLinkSelector ? 'bg-[#4A0056] rounded-md' : ''}`} onClick={() => setShowLinkSelector(!showLinkSelector)}>Navigate</a>
+                {
+                    showLinkSelector && (
+                        <>
+                            <br/>
+                            <br/>
+                            <a className={`ml-2 p-1 w-20 ${selected == 'home' ? 'bg-[#4A0056] rounded-md': ''}`} href="/">Home</a>
+                            <br />
+                            <a className={`ml-2 p-1 w-24 ${selected == 'meshsave' ? 'bg-[#4A0056] rounded-md': ''}`} href="/meshsave">Meshsave</a>
+                            <br />
+                            <a className={`ml-2 p-1 w-20 ${selected.startsWith('project') ? 'bg-[#4A0056] rounded-md': ''}`} href="/projects">Projects</a>
+                            <br />
+                            <a className={`ml-2 p-1 w-20 ${selected == 'social' ? 'bg-[#4A0056] rounded-md': ''}`} href="/social">Socials</a>
+                            <br />
+                            <a className={`ml-2 p-1 w-24 ${selected == 'pronouns' ? 'bg-[#4A0056] rounded-md': ''}`} href="/pronouns">Pronouns</a>
+                        </>
+                    )
+                }
+            </div>
         </motion.div>
     )
 }

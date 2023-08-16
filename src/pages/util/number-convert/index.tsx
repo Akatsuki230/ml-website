@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const NumberConverters = () => {
     const [from, setFrom] = useState("16");
-    const [to, setTo] = useState("8");
+    const [to, setTo] = useState("10");
     const [input, setInput] = useState("");
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const NumberConverters = () => {
             </h1>
             <label className="text-xl mx-8" htmlFor="input-convert">Input number</label>
             <br />
-            <input type="text" name="input-convert" id="input-convert" value={input} onChange={x => setInput(x.currentTarget.value)}
+            <input type={Number(from) > 10 ? "text" : "number"} name="input-convert" id="input-convert" value={input} onChange={x => setInput(x.currentTarget.value)}
                 className="bg-[#2B0029] rounded-lg mx-8" />
             <p className="m-4 mx-8 text-2xl">Result: {
                 input === "" ? "" : parseInt(input, parseInt(from, 10)).toString(parseInt(to, 10))

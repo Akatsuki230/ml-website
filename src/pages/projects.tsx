@@ -1,12 +1,29 @@
 import Head from "next/head";
 import {motion} from "framer-motion";
-import {CSSProperties} from "react";
+import React, {CSSProperties, useEffect, useRef, useState} from "react";
 
 const itemStyle: CSSProperties = {
     width: 'calc(100% - 45px)'
 }
 
 export default function Mods() {
+    const [live, setLive] = useState(false);
+    const [liveLink, setLiveLink] = useState('');
+    const hasRan = useRef(false);
+
+    useEffect(() => {
+        if (!hasRan.current) {
+            hasRan.current = true;
+
+            fetch('/api/live/get').then(x => x.json()).then(x => {
+                if (x.live) {
+                    setLive(true);
+                    setLiveLink(x.link);
+                }
+            })
+        }
+    }, []);
+
     return (
         <>
             <Head>
@@ -17,7 +34,14 @@ export default function Mods() {
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
                         crossOrigin="anonymous"></script>
             </Head>
-            <br/>
+
+            {live && (
+                <div className='border-2 border-red-600 rounded-md m-2'>
+                    <h3 className='text-2xl m-2'>mldkyt's currently live!</h3>
+                    <p className='ml-4'>You can go watch his stream <a className='text-blue-400' href={liveLink}>here</a>.</p>
+                </div>
+            )}
+
             <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
             <p className="ml-6">These are all of mldkyt's projects.</p>
             <h2 className="text-2xl px-4">Discord Bots</h2>
@@ -32,7 +56,7 @@ export default function Mods() {
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                     <a className="bg-blue-600 rounded-lg p-0.5 px-1"
-                          href="/requisha">Bot's page</a>
+                          href="/Requisha">Bot's page</a>
                 </motion.div>
             </div>
 

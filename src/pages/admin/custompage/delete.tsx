@@ -12,11 +12,11 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     }
 
     let {id, confirm} = ctx.query as { id: string, confirm: string };
-    if (!id) return {redirect: {destination: '/admin', permanent: false}};
+    if (!id) return {redirect: {destination: '/admin/custompage', permanent: false}};
     const redirect = (await sql`SELECT *
                                 FROM redirects
                                 WHERE id = ${id}`).rows[0];
-    if (!redirect) return {redirect: {destination: '/admin', permanent: false}};
+    if (!redirect) return {redirect: {destination: '/admin/custompage', permanent: false}};
     if (!confirm) confirm = '0';
     if (confirm === '1') {
         await sql`DELETE
@@ -24,7 +24,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
                   WHERE id = ${id}`;
         return {
             redirect: {
-                destination: `/admin`,
+                destination: `/admin/custompage`,
                 permanent: false
             }
         }
@@ -53,11 +53,11 @@ interface AdminPropertiesProps {
 export default function AdminDeleteRedirect(props: AdminPropertiesProps) {
 
     async function performDelete() {
-        window.location.href = `/admin/delete?id=${props.redirect.id}&confirm=1`;
+        window.location.href = `/admin/custompage/delete?id=${props.redirect.id}&confirm=1`;
     }
 
     function performBack() {
-        window.location.href = `/admin`;
+        window.location.href = `/admin/custompage`;
     }
 
     return (

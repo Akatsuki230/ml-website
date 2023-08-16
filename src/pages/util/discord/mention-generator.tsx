@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 
 function genPing(type:string, id: string) {
     switch (type) {
@@ -17,6 +17,25 @@ function genPing(type:string, id: string) {
 const MentionGenerator = () => {
     const [type, setType] = useState("User");
     const [id, setID] = useState("");
+
+    const [screenWidth, setScreenWidth] = useState(0);
+    const hasRan = useRef(false);
+
+    function resize() {
+        setScreenWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', resize);
+        if (!hasRan.current) {
+            hasRan.current = true;
+            resize();
+        }
+
+        return () => {
+            window.removeEventListener('resize', resize);
+        }
+    }, []);
 
     return ( 
         <div>
@@ -37,7 +56,13 @@ const MentionGenerator = () => {
             <br />
             <input type="text" name="id" id="id" className="bg-[#2B0029] ml-8 rounded-lg" value={id} onChange={x => setID(x.currentTarget.value)} />
             <br />
-            <p className="text-2xl ml-8">The ping will look like this: {genPing(type, id)}</p>
+            {screenWidth >= 640 && <p className="text-2xl ml-8">The ping will look like this: {genPing(type, id)}</p>}
+            {screenWidth < 640 && (
+                <>
+                    <p className="text-2xl ml-8">The ping will look like this: </p>
+                    <p className="text-2xl ml-8">{genPing(type, id)}</p>
+                </>
+            )}
             
             <hr className="my-4"/>
 
