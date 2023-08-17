@@ -14,7 +14,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
     return {
         props: {
-            isLive: await kv.get('live') == 'true',
+            isLive: await kv.get('live'),
             link: await kv.get('live_link')
         }
     }
