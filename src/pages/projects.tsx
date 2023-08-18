@@ -87,7 +87,7 @@ export default function Mods() {
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                     <a className="bg-blue-600 rounded-lg p-0.5 px-1"
-                          href="/oldcarsounds">View</a>
+                          href="/project/oldcarsounds">View</a>
                 </motion.div>
             </div>
             <div style={itemStyle} className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none">
@@ -101,7 +101,7 @@ export default function Mods() {
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                     <a className="bg-blue-600 rounded-lg p-0.5 px-1"
-                          href="/msctweaks">View</a>
+                          href="/project/msctweaks">View</a>
                 </motion.div>
             </div>
 
