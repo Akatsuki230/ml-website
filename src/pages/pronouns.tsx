@@ -56,15 +56,16 @@ export default function Pronouns() {
             <p className="m-1 mx-8">&bull; ❤️ sweetie</p>
             <p className="m-1 mx-8">&bull; ❤️ baby</p>
             <p className="m-1 mx-8">&bull; ❤️ babe</p>
-            <p className="m-1 mx-8">&bull; ❤️ cutiepie</p>
-            <p className="m-1 mx-8">&bull; 👍 femboy</p>
+            <p className="m-1 mx-8">&bull; ❤️ cutie</p>
+            <p className="m-1 mx-8">&bull; ❤️ patootie</p>
+            <p className="m-1 mx-8">&bull; ❤️ femboy</p>
 
             <h2 className="text-3xl m-2 mx-4 font-bold">Meaning of these icons: </h2>
 
             <div className="flex ml-4">
                 <div className="m-2 bg-[#3C0041] rounded-md p-1">
                     <p className="text-2xl font-bold">❤️</p>
-                    <p>PLEASE USE THIS MASTER~</p>
+                    <p>PLEASE USE THIS MASTER</p>
                 </div>
                 <div className="m-2 bg-[#3C0041] rounded-md p-1">
                     <p className="text-2xl font-bold">👍</p>

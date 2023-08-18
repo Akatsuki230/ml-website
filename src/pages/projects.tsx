@@ -56,7 +56,7 @@ export default function Mods() {
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                     <a className="bg-blue-600 rounded-lg p-0.5 px-1"
-                          href="/Requisha">Bot's page</a>
+                          href="/requisha">Bot's page</a>
                 </motion.div>
             </div>
 
