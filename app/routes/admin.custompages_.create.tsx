@@ -4,32 +4,51 @@ import Navbar from "~/components/Navbar";
 
 export const action: ActionFunction = async ({request}) => {
   const formData = await request.formData();
-  if (!formData.has('id') || !formData.has('label') || !formData.has('type') || !formData.has('bgType') || !formData.has('bgColour') || !formData.has('bgImage') || !formData.has('textColour') || !formData.has('textBgColour') || !formData.has('textBgOpacity'))
+  if (!formData.has('id') || !formData.has('label') || !formData.has('url') || !formData.has('type') || !formData.has('bgType') || !formData.has('textColour') || !formData.has('textBgColour') || !formData.has('textBgOpacity'))
     return redirect(`/admin/custompages/create`, 302)
+  const bgType = formData.get('bgType')!.toString()
+  let bgValue = ''
+  if (bgType == 'colour') {
+    bgValue = formData.get('bgColour')!.toString()
+  }
+  else if (bgType == 'imageStretch') {
+    bgValue = formData.get('bgImage')!.toString()
+  }
+  else {
+    console.log('Invalid bgType')
+    return redirect(`/admin/custompages/create`, 302)
+  }
+
   const dataCheck = await (await fetch(`${process.env.FIREBASE_URL}/redirects/${formData.get('id')!.toString()}.json`)).json()
-  if (!dataCheck)
+  if (dataCheck != null) {
+    console.log('Already exists')
     return redirect(`/admin/custompages/create`, 302)
+  }
 
   const textBgColour = `#${Number(formData.get('textBgOpacity')!.toString()).toString(16)}${formData.get('textBgColour')!.toString().substring(1)}`
 
   await fetch(`${process.env.FIREBASE_URL}/redirects/${formData.get('id')!.toString()}.json`, {
     method: 'PUT',
     body: JSON.stringify({
-      url: formData.get('id')!.toString(),
+      url: formData.get('url')!.toString(),
       label: formData.get('label')!.toString(),
       views: 0,
       type: formData.get('type')!.toString(),
       themeType: formData.get('bgType')!.toString(),
-      themeBgValue: formData.get('bgType')!.toString() == 'colour' ? formData.get('bgColour')!.toString() : formData.get('bgImage')!.toString(),
+      themeBgValue: bgValue,
       themeTextColor: formData.get('textColour')!.toString(),
       themeTextBgColor: textBgColour
     })
   })
 
+  return redirect(`/admin/custompages`, 302)
 }
 
 export default function AdminCustompages_Create() {
   return <>
+    <a href='/admin/custompages'>
+      <button className='bg-blue-600 p-1 px-2 m-1 rounded-md'>Back</button>
+    </a>
     <form action={`/admin/custompages/create`} method='post'>
       <h2 className='text-2xl m-2'>General settings</h2>
       <label className='m-1' htmlFor='id'>ID</label>
@@ -37,6 +56,9 @@ export default function AdminCustompages_Create() {
       <br/>
       <label className='m-1' htmlFor='label'>Label</label>
       <input className='bg-black' type='text' name='label' id='label'/>
+      <br/>
+      <label className='m-1' htmlFor='url'>URL</label>
+      <input className='bg-black' type='text' name='url' id='url'/>
       <br/>
       <label className='m-1' htmlFor='type'>Type</label>
       <select className='bg-black' name='type' id='type'>

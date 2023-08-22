@@ -38,6 +38,9 @@ export default function AdminCustompages() {
   return (
     <>
       <button className='bg-blue-600 p-1 px-2 m-1 rounded-md' onClick={() => location.href = '/admin'}>Back</button>
+      <a href='/admin/custompages/create'>
+        <button className='bg-blue-600 p-1 px-2 m-1 rounded-md'>Create</button>
+      </a>
       <h1 className='text-3xl m-2'>Custom page manager</h1>
       <table className='w-screen'>
         <thead>

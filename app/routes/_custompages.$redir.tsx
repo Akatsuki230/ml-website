@@ -13,7 +13,12 @@ export const loader: LoaderFunction = async (ctx) => {
   }
 
   const data = await (await fetch(`${process.env.FIREBASE_URL}/redirects/${redir}.json`)).json()
-  console.log(data)
+  if (data == null) {
+    return {
+      error: true,
+      errorMessage: 'Redirect not found'
+    }
+  }
 
   return data
 }
