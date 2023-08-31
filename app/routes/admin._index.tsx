@@ -5,7 +5,7 @@ import Navbar from "~/components/Navbar";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const cookies = request.headers.get('Cookie') ?? ''
-  if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD};`)) {
+  if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
     return redirect('/admin/login', 302)
   }
   return {}

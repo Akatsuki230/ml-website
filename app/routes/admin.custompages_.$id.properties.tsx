@@ -3,9 +3,14 @@ import type {ActionFunction, LoaderFunction} from "@remix-run/node";
 import { redirect} from "@remix-run/node";
 import Navbar from "~/components/Navbar";
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = async ({ params, request }) => {
   if (!params.id)
     return redirect('/admin/custompages', 302)
+
+  const cookies = request.headers.get('Cookie') ?? ''
+  if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
+    return redirect('/admin/login', 302)
+  }
 
   const data = await (await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`)).json()
   data.id = params.id

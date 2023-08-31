@@ -68,7 +68,7 @@ export default function AdminCustompages_Create() {
       </select>
       <h2 className='text-2xl m-2'>Theme settings</h2>
       <label className='m-1' htmlFor='bgType'>Background Type</label>
-      <select name='bgType' id='bgType'>
+      <select name='bgType' id='bgType' className="bg-black">
         <option value='colour'>Colour</option>
         <option value='imageStretch'>Image</option>
       </select>
@@ -83,7 +83,7 @@ export default function AdminCustompages_Create() {
       </>
       <br/>
       <label className='m-1' htmlFor='textColour'>Text Colour</label>
-      <input className='bg-black' type='color' name='textColour' id='textColour'/>
+      <input className='bg-black' type='color' name='textColour' id='textColour' defaultValue='#ffffff'/>
       <br/>
       <label className='m-1' htmlFor='textBgColour'>Text Background Colour</label>
       <input className='bg-black' type='color' name='textBgColour' id='textBgColour'/>
