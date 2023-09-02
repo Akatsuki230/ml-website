@@ -16,8 +16,7 @@ export default function Index() {
   return (
     <>
       <h1 className="text-4xl mx-2 my-4 text-center">
-        Welcome to mldkyt's website!{" "}
-        <span className="text-yellow-400 text-sm">Now rewritten in Remix!</span>
+        Welcome to mldkyt's website!
       </h1>
       <h2 className="text-2xl mx-2 font-bold">About me</h2>
       <div className="mx-1 text-lg">
@@ -48,7 +47,7 @@ export default function Index() {
           </span>
         )}
       </div>
-      <p>I am 17 but I sound like a 50 year old creep but i'm not :)</p>
+      <p className="mx-1">I am 17 years old</p>
       <div className="mx-1">
         You can join my{" "}
         <a href="https://discord.gg/JgFNmSwYME" className="text-blue-400">
@@ -77,27 +76,33 @@ export default function Index() {
 
       <h2 className="m-2 ml-2 text-2xl font-bold">Some of my projects: </h2>
 
-      <div className="mx-4 p-2 bg-[#2B0029] rounded-lg">
-        <h3 className="ml-2 text-xl">Requisha</h3>
+      <div className="mx-4 mt-2 p-2 bg-[#2B0029] rounded-lg">
+        <h3 className="ml-2 text-xl">Asphalt Roads</h3>
         <p className="ml-4">
-          Requisha is a love bot I made for my friends' public Discord server.
+          A mod for My Summer Car that changes dirt roads to asphalt roads.
         </p>
-        <a href="/ryow_dc">
+        <a href="/project/asphaltroads">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="ml-2 bg-blue-700 hover:bg-blue-600 active:bg-blue-900 px-2 py-1 rounded-lg"
           >
-            show me it in action pretty please :3
+            More info
           </motion.button>
         </a>
-        <a href="/ryow-companion">
+      </div>
+      <div className="mx-4 mt-2 p-2 bg-[#2B0029] rounded-lg">
+        <h3 className="ml-2 text-xl">Astolfmale2</h3>
+        <p className="ml-4">
+          A resource pack for Minecraft that adds many references to Astolfo.
+        </p>
+        <a href="/project/asphaltroads">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="ml-2 bg-blue-700 hover:bg-blue-600 active:bg-blue-900 px-2 py-1 rounded-lg"
           >
-            MORE details
+            More info
           </motion.button>
         </a>
       </div>
