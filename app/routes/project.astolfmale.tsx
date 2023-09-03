@@ -1,7 +1,17 @@
+import { V2_MetaFunction } from "@remix-run/node";
 import Navbar from "~/components/Navbar";
 
-export default function Astolfmale() {
+export const meta: V2_MetaFunction = () => {
+  return [
+    {title: "Astolfmale Resource Pack"},
+    {name: "title", content: "Astolfmale | mldkyt's Website"},
+    {name: "description", content: "Astolfmale is a resource pack for Minecraft which replaces the Cherry wood with Femboy wood."},
+    {name: "author", content: "mldkyt"}
+  ]
+}
 
+
+export default function Astolfmale() {
 
   return <>
     <h1 className="text-3xl mx-2">Astolfmale Resource Pack</h1>

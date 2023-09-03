@@ -1,5 +1,15 @@
+import { V2_MetaFunction } from "@remix-run/node";
 import { useState } from "react";
 import Navbar from "~/components/Navbar";
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    {title: "Astolfmale2 Resource Pack"},
+    {name: "title", content: "Astolfmale2 | mldkyt's Website"},
+    {name: "description", content: "Astolfmale2 is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed."},
+    {name: "author", content: "mldkyt"}
+  ]
+}
 
 export default function Astolfmale() {
   const [hideImages, setHideImages] = useState(false);
