@@ -20,12 +20,43 @@ const itemStyle: CSSProperties = {
   width: "calc(100% - 45px)",
 };
 
-export default function Mods() {
+export default function Projects() {
+  const [placeStarting, setPlaceStarting] = useState(false);
+
   return (
     <>
       <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
       <p className="ml-6">These are all of mldkyt's projects.</p>
-      
+
+      <h2 className="text-2xl px-4">Online Projects</h2>
+
+      <div
+        style={itemStyle}
+        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
+      >
+        <h3 className="ml-2 text-xl">Astolph0/place</h3>
+        <p className="ml-4">
+          This is a 100x100 grid where anyone can view and if you create an
+          account using username and password, you can also place tiles every 5
+          minutes.
+        </p>
+        <motion.div
+          className={`w-max ml-2 ${
+            placeStarting ? "pointer-events-none" : ""
+          }`}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setPlaceStarting(true)}
+        >
+          <a
+            className="bg-blue-600 rounded-lg p-0.5 px-1"
+            href="https://place.mldkyt.com"
+          >
+            {placeStarting ? "Starting, please wait..." : "Start"}
+          </a>
+        </motion.div>
+      </div>
+
       <h2 className="text-2xl px-4">Fun Apps</h2>
 
       <div

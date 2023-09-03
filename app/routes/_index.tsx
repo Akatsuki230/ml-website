@@ -13,6 +13,8 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   const [showProgrammingList, setShowProgrammingList] = useState(false);
+  const [placeStarting, setPlaceStarting] = useState(false);
+
   return (
     <>
       <h1 className="text-4xl mx-2 my-4 text-center">
@@ -113,11 +115,13 @@ export default function Index() {
         </p>
         <a href="https://place.mldkyt.com">
           <motion.button
+            disabled={placeStarting}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="ml-2 bg-blue-700 hover:bg-blue-600 active:bg-blue-900 px-2 py-1 rounded-lg"
+            onClick={() => setPlaceStarting(true)}
           >
-            Start
+            {placeStarting ? 'Starting, please give it a while...' : 'Start'}
           </motion.button>
         </a>
       </div>
