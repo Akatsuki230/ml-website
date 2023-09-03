@@ -8,9 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { CSSProperties } from "react";
 import globalStyle from "./global.css";
-import Navbar from "~/components/Navbar";
 import { FakeLoad } from "~/components/FakeLoad";
 
 export const links: LinksFunction = () => [

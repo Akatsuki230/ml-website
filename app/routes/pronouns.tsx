@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import type { V2_MetaFunction } from "@remix-run/node";
 import Navbar from "~/components/Navbar";
 
