@@ -21,29 +21,6 @@ const itemStyle: CSSProperties = {
 };
 
 export default function Mods() {
-  const [requishaCountdown, setRequishaCountdown] = useState(3);
-  const requishaCountdownRef = useRef(3);
-  const requishaCountdownInterval = useRef(setInterval(() => {}, 0));
-
-  const requishaHoverStart = () => {
-    requishaCountdownInterval.current = setInterval(() => {
-      if (requishaCountdownRef.current > 1) {
-        requishaCountdownRef.current--;
-        setRequishaCountdown(requishaCountdownRef.current);
-      }
-      else {
-        clearInterval(requishaCountdownInterval.current);
-        document.location.href = '/requisha';
-      }
-    }, 1000);
-  };
-
-  const requishaHoverEnd = () => {
-    clearInterval(requishaCountdownInterval.current);
-    setRequishaCountdown(3);
-    requishaCountdownRef.current = 3;
-  };
-
   return (
     <>
       <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>
@@ -161,34 +138,6 @@ export default function Mods() {
           >
             View
           </a>
-        </motion.div>
-      </div>
-
-      <h2 className="text-2xl px-4">Discord Bots</h2>
-
-      <div
-        style={itemStyle}
-        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
-      >
-        <h3 className="px-2 text-xl text-white">Requisha</h3>
-        <p className="px-4 text-white">
-          Requisha, the love bot for my friends' Discord server.
-        </p>
-        <p className="px-2 mx-2 w-max text-xl bg-red-500 rounded-md">
-          NSFW content warning 
-        </p>
-        <motion.div
-          className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <button
-            className="bg-blue-600 rounded-lg p-0.5 px-1 select-none"
-            onPointerEnter={requishaHoverStart}
-            onPointerLeave={requishaHoverEnd}
-          >
-            Hover over for {requishaCountdown} seconds to visit
-          </button>
         </motion.div>
       </div>
 
