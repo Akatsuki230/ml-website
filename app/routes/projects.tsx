@@ -41,9 +41,7 @@ export default function Projects() {
           minutes.
         </p>
         <motion.div
-          className={`w-max ml-2 ${
-            placeStarting ? "pointer-events-none" : ""
-          }`}
+          className={`w-max ml-2 ${placeStarting ? "pointer-events-none" : ""}`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setPlaceStarting(true)}

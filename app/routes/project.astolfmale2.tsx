@@ -4,12 +4,16 @@ import Navbar from "~/components/Navbar";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    {title: "Astolfmale2 Resource Pack"},
-    {name: "title", content: "Astolfmale2 | mldkyt's Website"},
-    {name: "description", content: "Astolfmale2 is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed."},
-    {name: "author", content: "mldkyt"}
-  ]
-}
+    { title: "Astolfmale2 Resource Pack" },
+    { name: "title", content: "Astolfmale2 | mldkyt's Website" },
+    {
+      name: "description",
+      content:
+        "Astolfmale2 is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed.",
+    },
+    { name: "author", content: "mldkyt" },
+  ];
+};
 
 export default function Astolfmale() {
   const [hideImages, setHideImages] = useState(false);
@@ -20,10 +24,15 @@ export default function Astolfmale() {
     <>
       <h1 className="text-3xl mx-2">Astolfmale2 Resource Pack</h1>
       <p className="mx-2">MINECRAFT: :3 EDITION LETS GOOOO</p>
-      <p className="mx-2">This resource pack changes the Minecraft loading screen, logo and ending screen to be more Astolfo themed.</p>
+      <p className="mx-2">
+        This resource pack changes the Minecraft loading screen, logo and ending
+        screen to be more Astolfo themed.
+      </p>
       <h2 className="text-xl mx-2">
         Images{" "}
-        <button className="text-blue-500 cursor-pointer" onClick={toggleImages}>{hideImages ? "show" : "hide"}</button>
+        <button className="text-blue-500 cursor-pointer" onClick={toggleImages}>
+          {hideImages ? "show" : "hide"}
+        </button>
       </h2>
       {hideImages || (
         <>

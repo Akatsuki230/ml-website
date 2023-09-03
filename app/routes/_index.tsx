@@ -49,7 +49,6 @@ export default function Index() {
           </span>
         )}
       </div>
-      <p className="mx-1">I am 17 years old</p>
       <div className="mx-1">
         You can join my{" "}
         <a href="https://discord.gg/JgFNmSwYME" className="text-blue-400">
