@@ -1,17 +1,16 @@
-import {motion} from "framer-motion";
-import type {CSSProperties} from "react";
-import React, { useEffect, useRef, useState} from "react";
+import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const navbar: CSSProperties = {
-  position: 'fixed',
+  position: "fixed",
   top: 0,
   left: 0,
-  width: 'calc(100vw - 15px)',
-  height: '40px'
-}
+  width: "calc(100vw - 15px)",
+  height: "40px",
+};
 
 export default function Navbar(props: { sel: string }) {
-
   const [hovering, setHovering] = useState(false);
   const [fullOpacity, setFullOpacity] = useState(true);
 
@@ -19,7 +18,6 @@ export default function Navbar(props: { sel: string }) {
   const hasRan = useRef(false);
 
   const [showLinkSelector, setShowLinkSelector] = useState(false);
-
 
   if (!fullOpacity && hovering) setFullOpacity(true);
 
@@ -32,17 +30,17 @@ export default function Navbar(props: { sel: string }) {
       setFullOpacity(hovering || window.scrollY < 40);
     }
 
-    document.addEventListener('scroll', updateOpacity);
-    window.addEventListener('resize', resize);
+    document.addEventListener("scroll", updateOpacity);
+    window.addEventListener("resize", resize);
     if (!hasRan.current) {
       hasRan.current = true;
       resize();
     }
 
     return () => {
-      document.removeEventListener('scroll', updateOpacity);
-      window.removeEventListener('resize', resize);
-    }
+      document.removeEventListener("scroll", updateOpacity);
+      window.removeEventListener("resize", resize);
+    };
   }, [hovering]);
 
   function hoverOn() {
@@ -56,54 +54,127 @@ export default function Navbar(props: { sel: string }) {
 
   return (
     <div style={navbar}>
-      <motion.div variants={{
-        'full': {
-          opacity: 1,
-        },
-        'half': {
-          opacity: 0.5,
-        }
-      }} animate={fullOpacity ? 'full' : 'half'} onPointerEnter={hoverOn} onPointerLeave={hoverOff}
-                  className="bg-[#2B0029] text-center flex text-white m-2 p-2 rounded-md">
+      <motion.div
+        variants={{
+          full: {
+            opacity: 1,
+          },
+          half: {
+            opacity: 0.5,
+          },
+        }}
+        animate={fullOpacity ? "full" : "half"}
+        onPointerEnter={hoverOn}
+        onPointerLeave={hoverOff}
+        className="bg-[#2B0029] text-center flex text-white m-2 p-2 rounded-md"
+      >
         <span className="mx-2">mldkyt's website</span>
-        <br/>
-        <div className={screenWidth < 640 ? 'hidden' : ''}>
-          <a className={`ml-2 p-1 w-20 ${props.sel == 'home' ? 'bg-[#4A0056] rounded-md' : ''}`} href="/">Home</a>
-          <a className={`ml-2 p-1 w-24 ${props.sel == 'meshsave' ? 'bg-[#4A0056] rounded-md' : ''}`}
-             href="/meshsave">Meshsave</a>
-          <a className={`ml-2 p-1 w-20 ${props.sel == 'project' ? 'bg-[#4A0056] rounded-md' : ''}`}
-             href="/projects">Projects</a>
-          <a className={`ml-2 p-1 w-20 ${props.sel == 'social' ? 'bg-[#4A0056] rounded-md' : ''}`}
-             href="/social">Socials</a>
-          <a className={`ml-2 p-1 w-24 ${props.sel == 'pronouns' ? 'bg-[#4A0056] rounded-md' : ''}`}
-             href="/pronouns">Pronouns</a>
+        <br />
+        <div className={screenWidth < 640 ? "hidden" : ""}>
+          <a
+            className={`ml-2 p-1 w-20 ${
+              props.sel == "home" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            className={`ml-2 p-1 w-24 ${
+              props.sel == "meshsave" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/meshsave"
+          >
+            Meshsave
+          </a>
+          <a
+            className={`ml-2 p-1 w-20 ${
+              props.sel == "project" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            className={`ml-2 p-1 w-20 ${
+              props.sel == "social" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/social"
+          >
+            Socials
+          </a>
+          <a
+            className={`ml-2 p-1 w-24 ${
+              props.sel == "pronouns" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/pronouns"
+          >
+            Pronouns
+          </a>
         </div>
-        <div className={screenWidth >= 640 ? 'hidden' : ''}>
-          <a className={`ml-2 w-20 ${showLinkSelector ? 'bg-[#4A0056] rounded-md' : ''}`}
-             onClick={() => setShowLinkSelector(!showLinkSelector)}>Navigate</a>
-          {
-            showLinkSelector && (
-              <>
-                <br/>
-                <br/>
-                <a className={`ml-2 p-1 w-20 ${props.sel == 'home' ? 'bg-[#4A0056] rounded-md' : ''}`} href="/">Home</a>
-                <br/>
-                <a className={`ml-2 p-1 w-24 ${props.sel == 'meshsave' ? 'bg-[#4A0056] rounded-md' : ''}`}
-                   href="/meshsave">Meshsave</a>
-                <br/>
-                <a className={`ml-2 p-1 w-20 ${props.sel.startsWith('project') ? 'bg-[#4A0056] rounded-md' : ''}`}
-                   href="/projects">Projects</a>
-                <br/>
-                <a className={`ml-2 p-1 w-20 ${props.sel == 'social' ? 'bg-[#4A0056] rounded-md' : ''}`}
-                   href="/social">Socials</a>
-                <br/>
-                <a className={`ml-2 p-1 w-24 ${props.sel == 'pronouns' ? 'bg-[#4A0056] rounded-md' : ''}`}
-                   href="/pronouns">Pronouns</a>
-              </>
-            )
-          }
+        <div className={screenWidth >= 640 ? "hidden" : ""}>
+          <a
+            className={`ml-2 w-20 ${
+              showLinkSelector ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            onClick={() => setShowLinkSelector(!showLinkSelector)}
+          >
+            Navigate
+          </a>
+          {showLinkSelector && (
+            <>
+              <br />
+              <br />
+              <a
+                className={`ml-2 p-1 w-20 ${
+                  props.sel == "home" ? "bg-[#4A0056] rounded-md" : ""
+                }`}
+                href="/"
+              >
+                Home
+              </a>
+              <br />
+              <a
+                className={`ml-2 p-1 w-24 ${
+                  props.sel == "meshsave" ? "bg-[#4A0056] rounded-md" : ""
+                }`}
+                href="/meshsave"
+              >
+                Meshsave
+              </a>
+              <br />
+              <a
+                className={`ml-2 p-1 w-20 ${
+                  props.sel.startsWith("project")
+                    ? "bg-[#4A0056] rounded-md"
+                    : ""
+                }`}
+                href="/projects"
+              >
+                Projects
+              </a>
+              <br />
+              <a
+                className={`ml-2 p-1 w-20 ${
+                  props.sel == "social" ? "bg-[#4A0056] rounded-md" : ""
+                }`}
+                href="/social"
+              >
+                Socials
+              </a>
+              <br />
+              <a
+                className={`ml-2 p-1 w-24 ${
+                  props.sel == "pronouns" ? "bg-[#4A0056] rounded-md" : ""
+                }`}
+                href="/pronouns"
+              >
+                Pronouns
+              </a>
+            </>
+          )}
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
