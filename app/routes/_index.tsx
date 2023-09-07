@@ -97,7 +97,7 @@ export default function Index() {
         <p className="ml-4">
           A resource pack for Minecraft that adds many references to Astolfo.
         </p>
-        <a href="/project/asphaltroads">
+        <a href="/project/astolfmale2">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
