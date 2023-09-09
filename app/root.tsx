@@ -12,6 +12,7 @@ import globalStyle from "./global.css";
 import { FakeLoad } from "~/components/FakeLoad";
 import { motion } from "framer-motion";
 import React from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -60,6 +61,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Analytics />
       </body>
     </html>
   );
