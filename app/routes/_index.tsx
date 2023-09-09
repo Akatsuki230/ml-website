@@ -93,17 +93,17 @@ export default function Index() {
         </a>
       </div>
       <div className="mx-4 mt-2 p-2 bg-[#2B0029] rounded-lg">
-        <h3 className="ml-2 text-xl">Astolfmale2</h3>
+        <h3 className="ml-2 text-xl">Astolfo Resource Pack</h3>
         <p className="ml-4">
-          A resource pack for Minecraft that adds many references to Astolfo.
+          A resource pack for Minecraft that adds Astolfo.
         </p>
-        <a href="/project/astolfmale2">
+        <a href="/project/astolforesourcepack">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="ml-2 bg-blue-700 hover:bg-blue-600 active:bg-blue-900 px-2 py-1 rounded-lg"
           >
-            More info
+            More info / Download
           </motion.button>
         </a>
       </div>

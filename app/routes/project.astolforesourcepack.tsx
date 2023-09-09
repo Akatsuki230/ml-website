@@ -4,25 +4,26 @@ import Navbar from "~/components/Navbar";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "Astolfmale2 Resource Pack" },
-    { name: "title", content: "Astolfmale2 | mldkyt's Website" },
+    { title: "Astolfo Resource Pack" },
+    { name: "title", content: "Astolfo Resource Pack | mldkyt's Website" },
     {
       name: "description",
       content:
-        "Astolfmale2 is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed.",
+        "Astolfo Resource Pack is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed.",
     },
     { name: "author", content: "mldkyt" },
+    { name: "theme-color", content: "#2B0029" },
   ];
 };
 
-export default function Astolfmale() {
+export default function Astolfo() {
   const [hideImages, setHideImages] = useState(false);
 
   const toggleImages = () => setHideImages(!hideImages);
 
   return (
     <>
-      <h1 className="text-3xl mx-2">Astolfmale2 Resource Pack</h1>
+      <h1 className="text-3xl mx-2">Astolfo Resource Pack</h1>
       <p className="mx-2">MINECRAFT: :3 EDITION LETS GOOOO</p>
       <p className="mx-2">
         This resource pack changes the Minecraft loading screen, logo and ending
@@ -39,22 +40,25 @@ export default function Astolfmale() {
           <img
             className="mx-2 rounded-md"
             src="/javaw_ULMDv1zpSI.png"
-            alt="Astolfmale2 Resource Pack"
+            alt="Astolfo Resource Pack"
           />
           <img
             className="mx-2 rounded-md"
             src="/javaw_Milpgk01lr.png"
-            alt="Astolfmale2 Resource Pack"
+            alt="Astolfo Resource Pack"
           />
           <img
             className="mx-2 rounded-md"
             src="/javaw_6NRIG1In28.png"
-            alt="Astolfmale2 Resource Pack"
+            alt="Astolfo Resource Pack"
           />
         </>
       )}
 
-      <a href="https://github.com/Astolph0/Astolfmale2/releases/tag/releases">
+      <button className="mx-2 m-1 p-2 px-4 bg-gray-500 rounded-md" disabled>
+        Download installer (coming sooooon)
+      </button>
+      <a href="https://github.com/Astolph0/AstolfoResourcePack/releases/tag/releases">
         <button className="mx-2 m-1 p-2 px-4 bg-green-500 rounded-md">
           Download and installation instructions
         </button>
