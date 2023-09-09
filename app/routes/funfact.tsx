@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Navbar from "~/components/Navbar";
 
@@ -9,6 +9,15 @@ export const loader: LoaderFunction = async () => {
   // select random from array
   return facts[Math.floor(Math.random() * facts.length)];
 };
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "Fun Fact" },
+    { name: "title", content: "Random Fun Fact | mldkyt's Website" },
+    { name: "description", content: "Random fun fact generator for mldkyt." },
+    { name: 'theme-color', content: '#FF77FF'}
+  ]
+}
 
 export default function FunFact() {
   const data = useLoaderData();

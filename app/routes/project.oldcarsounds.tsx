@@ -11,6 +11,7 @@ export const meta: V2_MetaFunction = () => {
         "OldCarSounds is a mod for My Summer Car which returns old sounds from old builds of My Summer Car and puts them in the newest version of the game.",
     },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

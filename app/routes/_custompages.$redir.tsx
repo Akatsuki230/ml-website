@@ -139,7 +139,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
         { title: "Redirect by mldkyt" },
         { name: "title", content: "Redirect by mldkyt" },
         { name: "description", content: `Redirects to ${data.label}` },
-        { name: "theme-color", content: "#00FFFF" },
+        { name: 'theme-color', content: '#FF77FF'},
         { name: "author", content: "mldkyt" },
       ];
     case "image":
@@ -147,7 +147,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
         { title: "Image shared by mldkyt" },
         { name: "title", content: "mldkyt has shared an image with you" },
         { name: "description", content: `Image ${data.label}` },
-        { name: "theme-color", content: "#00FFFF" },
+        { name: 'theme-color', content: '#FF77FF'},
         { name: "og:image", content: data.url },
         { name: "author", content: "mldkyt" },
       ];
@@ -156,7 +156,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
         { title: "File shared by mldkyt" },
         { name: "title", content: "mldkyt has shared a file with you" },
         { name: "description", content: `File ${data.label}` },
-        { name: "theme-color", content: "#00FFFF" },
+        { name: 'theme-color', content: '#FF77FF'},
         { name: "author", content: "mldkyt" },
       ];
     default:
@@ -164,7 +164,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
         { title: "Error" },
         { name: "title", content: "Error" },
         { name: "description", content: `Error ${data.label}` },
-        { name: "theme-color", content: "#FF0000" },
+        { name: 'theme-color', content: '#FF77FF'},
         { name: "author", content: "mldkyt" },
       ];
   }

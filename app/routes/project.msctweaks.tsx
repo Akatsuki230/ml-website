@@ -11,6 +11,7 @@ export const meta: V2_MetaFunction = () => {
         "MSC Tweaks is a mod for My Summer Car which adds a few tweaks, such as always open console, fall damage (though buggy) and more.",
     },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

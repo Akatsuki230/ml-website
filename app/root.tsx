@@ -10,6 +10,8 @@ import {
 } from "@remix-run/react";
 import globalStyle from "./global.css";
 import { FakeLoad } from "~/components/FakeLoad";
+import { motion } from "framer-motion";
+import React from "react";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -17,6 +19,8 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const [loaded, setLoaded] = React.useState(false);
+
   return (
     <html lang="en">
       <head>
@@ -34,9 +38,25 @@ export default function App() {
         <div className="bg-[#111] text-white min-h-screen min-w-full top-0 absolute">
           <br />
           <br />
-          <Outlet />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            variants={{
+              "1": {
+                opacity: 0,
+                scale: 0.8,
+              },
+              "2": {
+                opacity: 1,
+                scale: 1
+              },
+            }}
+            animate={loaded ? "2" : "1"}
+            transition={{ duration: 0.5, ease: 'backInOut' }}
+          >
+            <Outlet />
+          </motion.div>
         </div>
-        <FakeLoad />
+        <FakeLoad loadedCallback={() => setLoaded(true)} />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

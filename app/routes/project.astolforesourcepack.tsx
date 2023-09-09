@@ -12,7 +12,7 @@ export const meta: V2_MetaFunction = () => {
         "Astolfo Resource Pack is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed.",
     },
     { name: "author", content: "mldkyt" },
-    { name: "theme-color", content: "#2B0029" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

@@ -11,6 +11,7 @@ export const meta: V2_MetaFunction = () => {
         "Astolfo Is Coming For You is a program that if you run on your PC, Astolfo will come to your house, or turn your PC off, depending on the variant.",
     },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

@@ -9,6 +9,7 @@ export const meta: V2_MetaFunction = () => {
     { name: "title", content: "Social links | mldkyt's website" },
     { name: "description", content: "List of mldkyt's social links." },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

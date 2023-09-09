@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-export function FakeLoad() {
-  const [currentAnim, setCurrentAnim] = React.useState('0');
+export function FakeLoad(props: { loadedCallback: () => void }) {
+  const [currentAnim, setCurrentAnim] = React.useState("0");
   const hasRan = useRef(false);
 
   useEffect(function () {
     if (hasRan.current) return;
     hasRan.current = true;
-		setTimeout(function () {
-			setCurrentAnim("1");
-		}, 10);
+    setTimeout(function () {
+      setCurrentAnim("1");
+    }, 10);
     setTimeout(function () {
       setCurrentAnim("2");
     }, 310);
+    setTimeout(function () {
+      props.loadedCallback();
+    }, 510);
   }, []);
 
   return (
@@ -34,7 +37,7 @@ export function FakeLoad() {
       }}
     >
       <div className="flex flex-col items-center justify-center h-full">
-				<img src="/pfp.png" className="w-32 mb-8 rounded-full" />
+        <img src="/pfp.png" className="w-32 mb-8 rounded-full" />
         <div className="w-96 bg-gray-600 rounded-md">
           <motion.div
             className="h-2 bg-blue-400 rounded-md"

@@ -16,6 +16,7 @@ export const meta: V2_MetaFunction = () => {
       content:
         "https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png",
     },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

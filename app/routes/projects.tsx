@@ -13,6 +13,7 @@ export const meta: V2_MetaFunction = () => {
       content: "List of mldkyt's projects, whether they're finished or not",
     },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 

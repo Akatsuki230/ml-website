@@ -11,6 +11,7 @@ export const meta: V2_MetaFunction = () => {
         "Asphalt Roads is a mod for My Summer Car which replaces dirt roads with asphalt roads.",
     },
     { name: "author", content: "mldkyt" },
+    { name: 'theme-color', content: '#FF77FF'}
   ];
 };
 
