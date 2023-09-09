@@ -35,32 +35,50 @@ export default function Astolfo() {
           {hideImages ? "show" : "hide"}
         </button>
       </h2>
+
+      <p>Installer version: 1.0</p>
+      <a href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
+        <button className="mx-2 m-1 p-2 px-4 bg-blue-500 rounded-md">
+          Download installer (recommended!)
+        </button>
+      </a>
+      <a href="https://github.com/Astolph0/AstolfoResourcePack/releases/tag/releases">
+        <button className="mx-2 m-1 p-2 px-4 bg-gray-500 rounded-md">
+          Manual download and installation instructions
+        </button>
+      </a>
+
+      
       {hideImages || (
         <>
           <img
             className="mx-2 rounded-md"
-            src="/javaw_ULMDv1zpSI.png"
+            src="/javaw_XU7cPPUNy2.png"
             alt="Astolfo Resource Pack"
           />
           <img
             className="mx-2 rounded-md"
-            src="/javaw_Milpgk01lr.png"
+            src="/javaw_9CTZlO2WlC.png"
             alt="Astolfo Resource Pack"
           />
           <img
             className="mx-2 rounded-md"
-            src="/javaw_6NRIG1In28.png"
+            src="/javaw_fcqiaAZDlS.png"
             alt="Astolfo Resource Pack"
           />
         </>
       )}
 
-      <button className="mx-2 m-1 p-2 px-4 bg-gray-500 rounded-md" disabled>
-        Download installer (coming sooooon)
-      </button>
+      
+      <p>Installer version: 1.0</p>
+      <a href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
+        <button className="mx-2 m-1 p-2 px-4 bg-blue-500 rounded-md">
+          Download installer (recommended!)
+        </button>
+      </a>
       <a href="https://github.com/Astolph0/AstolfoResourcePack/releases/tag/releases">
-        <button className="mx-2 m-1 p-2 px-4 bg-green-500 rounded-md">
-          Download and installation instructions
+        <button className="mx-2 m-1 p-2 px-4 bg-gray-500 rounded-md">
+          Manual download and installation instructions
         </button>
       </a>
 
