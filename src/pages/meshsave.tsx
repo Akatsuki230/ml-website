@@ -9,12 +9,12 @@ const imageStyle: CSSProperties = {
   width: "calc(100% - 20px)",
 };
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Meshsave() {
   function dl() {
     location.href = "/meshsave.txt";
-  } 
+  }
   return (
     <div className={inter.className}>
       <Head>
@@ -24,14 +24,20 @@ export default function Meshsave() {
           name="description"
           content="Programmer Astolfo's (fucked up) meshsave for My Summer Car."
         />
-        <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
+        <meta
+          name="og:image"
+          content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png"
+        />
         <meta name="theme-color" content="#FF77FF"></meta>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
-     crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
 
-      <h1 className="text-3xl font-bold ml-2">My meshsave</h1>
-      <p className="ml-4">
+      <h1 className="text-5xl text-center font-bold my-4 text-white">Programmer Astolfo's meshsave</h1>
+      <p className="ml-4 text-white">
         In my save, the car looks like it has been through a war zone. The car's
         body is badly damaged and has been crashed at high speed multiple times.
         The mesh of the car is severely damaged and it looks like it has been
@@ -76,5 +82,5 @@ export default function Meshsave() {
       <br />
       <Navbar sel="meshsave" />
     </div>
-  )
+  );
 }

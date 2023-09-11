@@ -14,7 +14,7 @@ export default function Navbar(props: { sel: string }) {
   const [hovering, setHovering] = useState(false);
   const [fullOpacity, setFullOpacity] = useState(true);
 
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(641);
   const hasRan = useRef(false);
 
   const [showLinkSelector, setShowLinkSelector] = useState(false);
@@ -68,7 +68,8 @@ export default function Navbar(props: { sel: string }) {
         onPointerLeave={hoverOff}
         className="bg-[#2B0029] text-center flex text-white m-2 p-2 rounded-md"
       >
-        <span className="mx-2">mldkyt's website</span>
+        <img src="/pfp.png" alt="Astolfo Profile Picture" className="h-6 w-6 rounded-full" />
+        <span className="mx-2 font-bold">{screenWidth <= 640 ? 'Astolfo': 'Programmer Astolfo'}'s website</span>
         <br />
         <div className={screenWidth < 640 ? "hidden" : ""}>
           <a

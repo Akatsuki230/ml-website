@@ -1,5 +1,6 @@
 
 import Navbar from "@/components/NavBar";
+import { Inter } from "next/font/google";
 
 // export const meta: V2_MetaFunction = () => {
 //   return [
@@ -15,12 +16,14 @@ import Navbar from "@/components/NavBar";
 //   ];
 // };
 
+const inter = Inter({ subsets: ["latin"] })
+
 export default function AstolfoIsComingForYou() {
   return (
-    <>
-      <h1 className="text-3xl mx-2">Astolfo Is Coming For You</h1>
-      <h2 className="text-xl mx-2">1. The safe variant</h2>
-      <p className="mx-2">
+    <div className={inter.className}>
+      <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Is Coming For You</h1>
+      <h2 className="text-2xl mx-2 font-bold text-white">1. The safe variant</h2>
+      <p className="mx-2 text-white">
         The safe variant has a countdown from 100 to 0 and then Astolfo gives
         you a lot of compliments ❤️.
       </p>
@@ -35,8 +38,8 @@ export default function AstolfoIsComingForYou() {
         alt="Astolfo Is Coming For You Compliments"
       />
 
-      <h2 className="text-xl mx-2">2. The unsafe variant</h2>
-      <p className="mx-2">
+      <h2 className="text-2xl mx-2 font-bold text-white">2. The unsafe variant</h2>
+      <p className="mx-2 text-white">
         The unsafe variant has a countdown from 100 to 0 and then Astolfo gets
         angry at you and turns your PC off.
       </p>
@@ -51,12 +54,12 @@ export default function AstolfoIsComingForYou() {
         alt="Astolfo Is Coming For You Evil Shutdown"
       />
       <a href="https://github.com/Astolph0/AstolfoIsComingForYou/releases/">
-        <button className="mx-2 m-1 p-2 px-4 bg-green-500 rounded-md">
+        <button className="mx-2 m-1 p-2 px-4 bg-green-500 rounded-md text-white">
           Download
         </button>
       </a>
 
       <Navbar sel="project" />
-    </>
+    </div>
   );
 }
