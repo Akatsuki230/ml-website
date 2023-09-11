@@ -15,6 +15,8 @@ export default function Pronouns() {
         <meta name="description" content="Pronouns that Programmer Astolfo uses. Quick summary: \nhe/him\nCalling: mld, mldkyt, astolfo, mldk\nAddressing: cute, love, lover, patootie, honey, sweetie, baby, babe, cutie" />
         <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
         <meta name="theme-color" content="#FF77FF" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+     crossOrigin="anonymous"></script>
       </Head>
 
       <h1 className="text-3xl m-2 mx-4 font-bold">mldkyt's pronouns</h1>

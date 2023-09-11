@@ -22,6 +22,8 @@ export default function Projects() {
         <meta name="og:title" content="Programmer Astolfo's projects" />
         <meta name="description" content="Programmer Astolfo's projects." />
         <meta name='theme-color' content='#FF77FF' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+     crossOrigin="anonymous"></script>
       </Head>
 
       <h1 className="text-3xl font-bold px-2">mldkyt's project list</h1>

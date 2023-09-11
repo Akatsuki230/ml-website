@@ -26,6 +26,8 @@ export default function Meshsave() {
         />
         <meta name="og:image" content="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" />
         <meta name="theme-color" content="#FF77FF"></meta>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+     crossOrigin="anonymous"></script>
       </Head>
 
       <h1 className="text-3xl font-bold ml-2">My meshsave</h1>

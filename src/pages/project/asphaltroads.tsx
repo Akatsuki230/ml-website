@@ -1,4 +1,5 @@
 import Navbar from "@/components/NavBar";
+import Head from "next/head";
 
 // export const meta: V2_MetaFunction = () => {
 //   return [
@@ -17,6 +18,18 @@ import Navbar from "@/components/NavBar";
 export default function AsphaltRoads() {
   return (
     <div>
+      <Head>
+        <title>Asphalt Roads | Programmer Astolfo's website</title>
+        <meta name="og:title" content="Asphalt Roads" />
+        <meta
+          name="description"
+          content="Asphalt Roads is a mod for My Summer Car which replaces dirt roads with asphalt roads." />
+        <meta name="og:image" content="https://staticdelivery.nexusmods.com/mods/2600/images/3670/3670-1691406498-1770392602.png" />
+        <meta name="theme-color" content="#FF77FF" />
+        <meta name="author" content="Programmer Astolfo" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"></script>
+      </Head>
       <div className="border-2 border-orange-500 m-2 rounded-lg">
         <p className="text-2xl font-bold ml-2">WARNING</p>
         <p className="mx-4">

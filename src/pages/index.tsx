@@ -17,6 +17,7 @@ export default function Home() {
         <meta name="description" content="Welcome to Programmer Astolfo's website!" />
         <meta name='author' content='Programmer Astolfo | mldkyt' />
         <meta name='theme-color' content='#FF77FF' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187" crossOrigin="anonymous"></script>
       </Head>
       <h1 className="text-4xl mx-2 my-4 text-center">
         Welcome to Programmer Astolfo's website!

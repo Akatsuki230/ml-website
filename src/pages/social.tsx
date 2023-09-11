@@ -18,6 +18,8 @@ export default function Social() {
         <meta name="og:title" content="Programmer Astolfo's social links" />
         <meta name="description" content="Programmer Astolfo's social links." />
         <meta name='theme-color' content='#FF77FF' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+     crossOrigin="anonymous"></script>
       </Head>
 
       <h1 className="text-3xl m-4 mb-1 font-bold">Social links</h1>
