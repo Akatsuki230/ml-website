@@ -1,11 +1,19 @@
 import Navbar from "@/components/NavBar"
 import { Inter } from "next/font/google"
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"]})
 
 export default function Discord() {
     return (
         <div className={inter.className}>
+            <Head>
+                <title>Programmer Astolfo's Discord server</title>
+                <meta name="description" content="Join Programmer Astolfo's Discord server!" />
+                <meta name="author" content="Programmer Astolfo | mldkyt" />
+                <meta name="theme-color" content="#FF77FF" />
+            </Head>
+
             <h1 className="mt-4 text-5xl text-center font-bold text-white">Programmer Astolfo's Discord server</h1>
             <div className="text-center">
                 <a href="https://discord.gg/JgFNmSwYME">

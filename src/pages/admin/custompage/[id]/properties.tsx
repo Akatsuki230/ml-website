@@ -4,6 +4,7 @@
 import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
+import {Inter} from "next/font/google";
 
 // export const loader: LoaderFunction = async ({ params, request }) => {
 //   if (!params.id) return redirect("/admin/custompages", 302);
@@ -103,6 +104,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 //   );
 // };
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function AdminCustompagesIdProperties(props: { customPage: any; textBg: string; textBgOpacity: number }) {
   const [label, setLabel] = React.useState(props.customPage.label);
   const [url, setUrl] = React.useState(props.customPage.url);
@@ -136,7 +139,7 @@ export default function AdminCustompagesIdProperties(props: { customPage: any; t
   }
 
   return (
-    <>
+    <div className={`${inter.className} text-white`}>
       <h1 className="text-3xl m-2">Properties of {props.customPage.id}</h1>
       <h2 className="text-2xl m-2">General settings</h2>
       <label className="m-1" htmlFor="id">
@@ -282,6 +285,6 @@ export default function AdminCustompagesIdProperties(props: { customPage: any; t
         Return
       </button>
       <Navbar sel="" />
-    </>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import process from "process";
+import {Inter} from "next/font/google";
 
 // export const loader: LoaderFunction = async ({ params, request }) => {
 //   if (!params.id) return redirect("/admin/custompages", 302);
@@ -28,6 +29,8 @@ import process from "process";
 //   });
 //   return redirect("/admin/custompages", 302);
 // };
+
+const inter = Inter({ subsets: ["latin"] });
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const cookies = ctx.req.headers.cookie ?? "";
@@ -65,7 +68,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
 export default function AdminCustompagesPageDelete(props: { id: string }) {
   return (
-    <>
+    <div className={`${inter.className} text-white`}>
       <h1 className="text-3xl m-2">
         Are you sure you want to delete "{props.id}"?
       </h1>
@@ -82,6 +85,6 @@ export default function AdminCustompagesPageDelete(props: { id: string }) {
         Cancel
       </button>
       <Navbar sel="" />
-    </>
+    </div>
   );
 }

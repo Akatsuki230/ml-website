@@ -1,6 +1,7 @@
 import * as process from "process";
 import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
+import {Inter} from "next/font/google";
 
 // export const loader: LoaderFunction = async ({ request }) => {
 //   const cookies = request.headers.get("Cookie") ?? "";
@@ -25,17 +26,19 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function Admin() {
   return (
-    <div>
-      <h1 className="text-3xl m-2">Welcome to the admin page, mldkyt!</h1>
+    <div className={inter.className}>
+      <h1 className="text-3xl m-2 font-bold text-white">Welcome to the admin page, mldkyt!</h1>
       <a href="/admin/custompages">
-        <button className="bg-blue-600 p-1 m-2 rounded-md">
+        <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
           Manage custom pages
         </button>
       </a>
       <a href="/admin/factmanager">
-        <button className="bg-blue-600 p-1 m-2 rounded-md">
+        <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
           Manage fun facts
         </button>
       </a>

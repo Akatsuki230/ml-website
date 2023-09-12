@@ -94,21 +94,21 @@ export default function FactManager(props: { facts: { fact: string }[] }) {
   return (
     <div className={inter.className}>
       <button
-        className="bg-blue-600 p-1 px-2 m-1 rounded-md"
+        className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white"
         onClick={() => (location.href = "/admin")}
       >
         Back
       </button>
-      <h1 className="m-1 text-3xl">Fact manager</h1>
+      <h1 className="m-1 text-3xl text-white font-bold">Fact manager</h1>
       <form action="/admin/factmanager" method="POST" className="m-1">
         <label htmlFor="fact">Fact</label>
         <input
           type="text"
           onChange={(x) => setCreateFact(x.currentTarget.value)}
           value={createFact}
-          className="block m-1 bg-black"
+          className="block m-1 bg-black text-white"
         />
-        <button type="button" onClick={create} className="bg-blue-600 p-1 px-2 m-1 rounded-md">
+        <button type="button" onClick={create} className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white">
           Add
         </button>
       </form>
@@ -118,7 +118,7 @@ export default function FactManager(props: { facts: { fact: string }[] }) {
         type="text"
         value={search}
         onChange={(x) => setSearch(x.currentTarget.value)}
-        className="bg-black"
+        className="bg-black text-white"
         id="search"
       />
 

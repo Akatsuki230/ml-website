@@ -1,7 +1,9 @@
 import Navbar from "@/components/NavBar";
 import { useState } from "react";
+import {Inter} from "next/font/google";
 
 
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AdminCustompages_Create() {
   const [createID, setCreateID] = useState("");
@@ -36,7 +38,7 @@ export default function AdminCustompages_Create() {
   }
 
   return (
-    <>
+    <div className={`${inter.className} text-white`}>
       <a href="/admin/custompages">
         <button className="bg-blue-600 p-1 px-2 m-1 rounded-md">Back</button>
       </a>
@@ -101,7 +103,6 @@ export default function AdminCustompages_Create() {
         type="color"
         name="textColour"
         id="textColour"
-        defaultValue="#ffffff"
         value={createTextColour}
         onChange={x=>setCreateTextColour(x.currentTarget.value)}
       />
@@ -114,7 +115,6 @@ export default function AdminCustompages_Create() {
         type="color"
         name="textBgColour"
         id="textBgColour"
-        defaultValue="#000000"
         value={createTextBgColour}
         onChange={x=>setCreateTextBgColour(x.currentTarget.value)}
       />
@@ -129,13 +129,12 @@ export default function AdminCustompages_Create() {
         id="textBgOpacity"
         min="0"
         max="255"
-        defaultValue="255"
         value={createTextBgColourOpacity}
         onChange={x=>setCreateTextBgColourOpacity(Number(x.currentTarget.value))}
       />
       <br />
       <button className="bg-blue-600 p-1 m-2 rounded-md" onClick={create}>Create</button>
       <Navbar sel="" />
-    </>
+    </div>
   );
 }

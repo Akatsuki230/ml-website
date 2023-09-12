@@ -1,5 +1,8 @@
 import Navbar from "@/components/NavBar";
 import { useState } from "react";
+import {Inter} from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AdminLogin() {
   const [password, setPassword] = useState("");
@@ -12,12 +15,12 @@ export default function AdminLogin() {
   };
 
   return (
-    <>
-      <h1 className="text-3xl m-2">Admin login</h1>
-      <p className="m-2">Enter the password below: </p>
+    <div className={`${inter.className} text-white`}>
+      <h1 className="text-5xl m-2 font-bold text-center">Administrator Login</h1>
+      <p className="m-2 text-xl font-bold">Enter the password below: </p>
       <input
         type="password"
-        className="m-2 bg-black rounded-md"
+        className="m-2 bg-black rounded-md border-[1px]"
         value={password}
         onChange={(x) => setPassword(x.currentTarget.value)}
       />
@@ -26,6 +29,6 @@ export default function AdminLogin() {
         Log in
       </button>
       <Navbar sel="" />
-    </>
+    </div>
   );
 }

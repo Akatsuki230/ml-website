@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
-import { motion } from "framer-motion";
+import {Inter} from "next/font/google";
+import {motion} from "framer-motion";
 import Navbar from "@/components/NavBar";
 import Head from "next/head";
-import { useEffect, useRef } from "react";
+import {useEffect, useRef} from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
   const hasRan = useRef(false);
@@ -27,8 +27,8 @@ export default function Home() {
           name="description"
           content="Welcome to Programmer Astolfo's website!"
         />
-        <meta name="author" content="Programmer Astolfo | mldkyt" />
-        <meta name="theme-color" content="#FF77FF" />
+        <meta name="author" content="Programmer Astolfo | mldkyt"/>
+        <meta name="theme-color" content="#FF77FF"/>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
@@ -40,9 +40,9 @@ export default function Home() {
         <div className="bg-gradient-to-b from-[#2B0029] to-black">
           <motion.div
             className="h-96"
-            initial={{ opacity: 0, transform: "scale(0.8) translateY(-100px)" }}
-            animate={{ opacity: 1, transform: "scale(1) translateY(0)" }}
-            transition={{ duration: 1, ease: "backOut" }}
+            initial={{opacity: 0, transform: "scale(0.8) translateY(-100px)"}}
+            animate={{opacity: 1, transform: "scale(1) translateY(0)"}}
+            transition={{duration: 1, ease: "backOut"}}
           >
             <div className="relative px-[10%] top-1/2 -translate-y-1/2">
               <div className="flex">
@@ -64,9 +64,9 @@ export default function Home() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1, delay: 0.5}}
         >
           <div className="relative px-[10%] py-[3%]">
             <h1 className="text-3xl text-white font-bold">About me</h1>
@@ -80,9 +80,9 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1, delay: 0.8}}
         >
           <div className="relative px-[10%] py-[3%]">
             <h1 className="text-3xl text-white font-bold">
@@ -124,9 +124,9 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1, delay: 1}}
         >
           <div className="relative px-[10%] py-[3%]">
             <h1 className="text-3xl text-white font-bold">
@@ -170,7 +170,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <Navbar sel="home" />
+      <Navbar sel="home"/>
     </div>
   );
 }
