@@ -1,23 +1,23 @@
 import Navbar from "@/components/NavBar";
-import { motion } from "framer-motion";
-import { Inter } from "next/font/google";
+import {motion} from "framer-motion";
+import {Inter} from "next/font/google";
 import Head from "next/head";
-import { CSSProperties } from "react";
+import {CSSProperties} from "react";
 
 const itemStyle: CSSProperties = {
   width: "calc(100% - 45px)",
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export default function Social() {
   return (
-    <div className={inter.className}>
+    <div className={`${inter.className} text-white`}>
       <Head>
-        <title>Programmer Astolfo's social links</title>
-        <meta name="og:title" content="Programmer Astolfo's social links" />
-        <meta name="description" content="Programmer Astolfo's social links." />
-        <meta name="theme-color" content="#FF77FF" />
+        <title>mldkyt's social links</title>
+        <meta name="og:title" content="mldkyt's social links"/>
+        <meta name="description" content="mldkyt's social links."/>
+        <meta name="theme-color" content="#FF77FF"/>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
@@ -25,21 +25,21 @@ export default function Social() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl mt-2 text-center font-bold text-white">Social links</h1>
-      <p className="mx-8 text-lg text-white">Welcome to my social link page!</p>
+      <h1 className="text-5xl mt-2 text-center font-bold ">mldkyt's social links</h1>
+      <p className="mx-8 text-lg ">Welcome to my social link page!</p>
       <div
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">MC Username</h2>
-        <p className="px-4 text-white">
+        <h2 className="px-2 text-xl ">MC Username</h2>
+        <p className="px-4 ">
           My Minecraft username is "<b>Astolph0</b>".
         </p>
 
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -55,23 +55,23 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">Discord server</h2>
-        <p className="px-4 font-bold text-white">
+        <h2 className="px-2 text-xl ">Discord server</h2>
+        <p className="px-4 font-bold ">
           On Discord my username is "astolf0.", not "mldkyt" and my display name
-          is "Programmer Astolfo".
+          is "mldkyt".
         </p>
-        <p className="px-4 font-bold text-white">
+        <p className="px-4 font-bold ">
           I also have an alt account "programmer.astolfo"
         </p>
-        <p className="px-4 text-white">
+        <p className="px-4 ">
           My Discord server is where I post updates about new videos and where
           you can get My Summer Car modding help. Note the server is very
           inactive
         </p>
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -87,14 +87,14 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">YouTube</h2>
-        <p className="px-4 text-white">
+        <h2 className="px-2 text-xl ">YouTube</h2>
+        <p className="px-4 ">
           My YouTube channel is where I upload my videos.
         </p>
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -110,13 +110,13 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">Twitch</h2>
-        <p className="px-4 text-white">My Twitch channel is where I stream.</p>
+        <h2 className="px-2 text-xl ">Twitch</h2>
+        <p className="px-4 ">My Twitch channel is where I stream.</p>
 
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -132,15 +132,15 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">Twitter</h2>
-        <p className="px-4 text-white">
+        <h2 className="px-2 text-xl ">Twitter</h2>
+        <p className="px-4 ">
           My Twitter channel is where I shitpost.
         </p>
 
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -156,19 +156,19 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">TikTok</h2>
-        <p className="px-4 font-bold text-white">
+        <h2 className="px-2 text-xl ">TikTok</h2>
+        <p className="px-4 font-bold ">
           On TikTok I am named "astolph0_", not "mldkyt" and my display name is
-          "Programmer Astolfo"
+          "mldkyt"
         </p>
-        <p className="px-4 text-white">
+        <p className="px-4 ">
           TikTok is where I post short code tutorials.
         </p>
 
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -184,13 +184,13 @@ export default function Social() {
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl text-white">NexusMods</h2>
-        <p className="px-4 text-white">This is my mod publishing profile.</p>
+        <h2 className="px-2 text-xl ">NexusMods</h2>
+        <p className="px-4 ">This is my mod publishing profile.</p>
 
         <motion.div
           className="w-max ml-2"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
         >
           <a
             rel="noopener"
@@ -202,7 +202,7 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
-      <Navbar sel="social" />
+      <Navbar sel="social"/>
     </div>
   );
 }

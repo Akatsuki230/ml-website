@@ -16,9 +16,9 @@ export default function Projects() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Programmer Astolfo's projects</title>
-        <meta name="og:title" content="Programmer Astolfo's projects" />
-        <meta name="description" content="Programmer Astolfo's projects." />
+        <title>mldkyt's projects</title>
+        <meta name="og:title" content="mldkyt's projects" />
+        <meta name="description" content="mldkyt's projects." />
         <meta name="theme-color" content="#FF77FF" />
         <script
           async

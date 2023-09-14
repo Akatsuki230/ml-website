@@ -2,12 +2,13 @@ import {Inter} from "next/font/google";
 import {motion} from "framer-motion";
 import Navbar from "@/components/NavBar";
 import Head from "next/head";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 
 const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
   const hasRan = useRef(false);
+  const [readMore, setReadMore] = useState(false);
 
   useEffect(() => {
     if (hasRan.current) return;
@@ -22,12 +23,12 @@ export default function Home() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Programmer Astolfo's website</title>
+        <title>mldkyt's website</title>
         <meta
           name="description"
-          content="Welcome to Programmer Astolfo's website!"
+          content="Welcome to mldkyt's website!"
         />
-        <meta name="author" content="Programmer Astolfo | mldkyt"/>
+        <meta name="author" content="mldkyt"/>
         <meta name="theme-color" content="#FF77FF"/>
         <script
           async
@@ -39,23 +40,22 @@ export default function Home() {
       <div className="absolute left-0 top-0 w-screen">
         <div className="bg-gradient-to-b from-[#2B0029] to-black">
           <motion.div
-            className="h-96"
+            className="h-56"
             initial={{opacity: 0, transform: "scale(0.8) translateY(-100px)"}}
             animate={{opacity: 1, transform: "scale(1) translateY(0)"}}
             transition={{duration: 1, ease: "backOut"}}
           >
             <div className="relative px-[10%] top-1/2 -translate-y-1/2">
               <div className="flex">
-                <div className="relative top-6">
+                <div className="relative top-5">
                   <img
                     src="/pfp.png"
                     alt="Astolfo Profile Picture"
-                    className="rounded-full w-24"
+                    className="rounded-full w-10"
                   />
                 </div>
                 <div className="ml-4">
-                  <h1 className="text-5xl my-4 text-white">Programmer</h1>
-                  <h1 className="text-5xl my-4 text-white">Astolfo</h1>
+                  <h1 className="text-5xl my-4 text-white">mldkyt</h1>
                 </div>
               </div>
               <p className="text-white">Scroll down &#x2193;</p>
@@ -68,14 +68,31 @@ export default function Home() {
           animate={{opacity: 1}}
           transition={{duration: 1, delay: 0.5}}
         >
-          <div className="relative px-[10%] py-[3%]">
+          <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">About me</h1>
             <p className="my-4 text-white">
-              I write code in many different languages, those include C#, C++,
-              C, Python, Java, Kotlin, JavaScript, TypeScript, HTML and CSS. My
-              experience in programming is very high, as I have been writing
-              code for over 10 years.
+              I am proficient in writing code across a wide array of programming languages, encompassing a diverse spectrum of options. These languages encompass C#, C++, C, Python, Java, Kotlin, JavaScript, TypeScript, HTML, and CSS. My experience and expertise in the realm of programming are substantial, having dedicated over a decade to crafting and refining code.
             </p>
+
+            {readMore && <>
+                <motion.p initial={{opacity: 0, fontSize: '0%'}} animate={{opacity: 1, fontSize: '100%'}} transition={{duration: 1}} className="my-4 text-white">
+                    Over the course of my extensive journey in the realm of programming, I've delved into the nuances and intricacies of various languages, each with its unique syntax and application. C# and C++ offer robust capabilities for software development, while C itself provides a foundational understanding of programming principles. Python, renowned for its simplicity and versatility, has been a valuable tool in numerous projects. Java and Kotlin enable cross-platform compatibility, bolstering my repertoire for mobile and web applications. JavaScript and TypeScript empower me to create dynamic and interactive web experiences, while HTML and CSS lay the foundation for web development.
+                </motion.p>
+
+                <motion.p initial={{opacity: 0, fontSize: '0%'}} animate={{opacity: 1, fontSize: '100%'}} transition={{duration: 1}} className="my-4 text-white">
+                    My decade-long voyage in programming has been marked by continuous learning and adaptation. Staying abreast of the latest advancements and best practices has been integral to my growth as a programmer. Throughout this journey, I've undertaken diverse projects, tackling challenges and honing my problem-solving skills.
+                </motion.p>
+
+                <motion.p initial={{opacity: 0, fontSize: '0%'}} animate={{opacity: 1, fontSize: '100%'}} transition={{duration: 1}} className="my-4 text-white">
+                    In essence, my proficiency across these programming languages, coupled with my extensive experience, positions me as a versatile and capable programmer, equipped to navigate the multifaceted landscape of software development with finesse.
+                </motion.p>
+                <button className='text-blue-500 cursor-pointer' onClick={() => setReadMore(false)}>Show less &#x2190;</button>
+
+            </>}
+
+            {readMore || <>
+              <button className='text-blue-500 cursor-pointer' onClick={() => setReadMore(true)}>Show more &#x2192;</button>
+            </>}
           </div>
         </motion.div>
 
@@ -84,9 +101,9 @@ export default function Home() {
           animate={{opacity: 1}}
           transition={{duration: 1, delay: 0.8}}
         >
-          <div className="relative px-[10%] py-[3%]">
+          <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">
-              Programmer Astolfo's Projects
+              mldkyt's Projects
             </h1>
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">Astolph0/place</h2>
@@ -128,9 +145,9 @@ export default function Home() {
           animate={{opacity: 1}}
           transition={{duration: 1, delay: 1}}
         >
-          <div className="relative px-[10%] py-[3%]">
+          <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">
-              Stalk Programmer Astolfo
+              Stalk mldkyt
             </h1>
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">

@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 // export const meta: V2_MetaFunction = () => {
 //   return [
@@ -21,6 +22,25 @@ const inter = Inter({ subsets: ["latin"] })
 export default function AstolfoIsComingForYou() {
   return (
     <div className={inter.className}>
+      <Head>
+        <title>Astolfo Is Coming For You | mldkyt's website</title>
+        <meta name="og:title" content="Astolfo Is Coming For You" />
+        <meta
+          name="description"
+          content="Astolfo Is Coming For You is a program that if you run on your PC, Astolfo will come to your house, or turn your PC off, depending on the variant."
+        />
+        <meta
+          name="og:image"
+          content="https://mldkyt.com/VirtualBoxVM_lCURwn9Xdd.png"
+        />
+        <meta name="theme-color" content="#FF77FF" />
+        <meta name="author" content="mldkyt" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Is Coming For You</h1>
       <h2 className="text-2xl mx-2 font-bold text-white">1. The safe variant</h2>
       <p className="mx-2 text-white">

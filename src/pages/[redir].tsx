@@ -261,22 +261,22 @@ export default function Redirect(props: { data: any }) {
             <Head>
                 {props.data.type == "redirect" && (
                     <>
-                        <title>Redirect by Programmer Astolfo</title>
-                        <meta name="og:title" content="Redirect by Programmer Astolfo" />
+                        <title>Redirect by mldkyt</title>
+                        <meta name="og:title" content="Redirect by mldkyt" />
                         <meta
                             name="description"
                             content={`Redirects to ${props.data.label}`}
                         />
                         <meta name='theme-color' content='#FF77FF' />
-                        <meta name="author" content="Programmer Astolfo" />
+                        <meta name="author" content="mldkyt" />
                     </>
                 )}
                 {props.data.type == "image" && (
                     <>
-                        <title>Image shared by Programmer Astolfo</title>
+                        <title>Image shared by mldkyt</title>
                         <meta
                             name="og:title"
-                            content="Programmer Astolfo has shared an image with you"
+                            content="mldkyt has shared an image with you"
                         />
                         <meta
                             name="description"
@@ -284,22 +284,22 @@ export default function Redirect(props: { data: any }) {
                         />
                         <meta name='theme-color' content='#FF77FF' />
                         <meta name="og:image" content={props.data.url} />
-                        <meta name="author" content="Programmer Astolfo" />
+                        <meta name="author" content="mldkyt" />
                     </>
                 )}
                 {props.data.type == "file" && (
                     <>
-                        <title>File shared by Programmer Astolfo</title>
+                        <title>File shared by mldkyt</title>
                         <meta
                             name="og:title"
-                            content="Programmer Astolfo has shared a file with you"
+                            content="mldkyt has shared a file with you"
                         />
                         <meta
                             name="description"
                             content={`File ${props.data.label}`}
                         />
                         <meta name='theme-color' content='#FF77FF' />
-                        <meta name="author" content="Programmer Astolfo" />
+                        <meta name="author" content="mldkyt" />
                     </>
                 )}
                 {props.data.type == "error" && (
@@ -311,7 +311,7 @@ export default function Redirect(props: { data: any }) {
                             content={`Error ${props.data.label}`}
                         />
                         <meta name='theme-color' content='#FF77FF' />
-                        <meta name="author" content="Programmer Astolfo" />
+                        <meta name="author" content="mldkyt" />
                     </>
                 )}
             </Head>

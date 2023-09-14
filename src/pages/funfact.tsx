@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function FunFact(props: { funFact: { fact: string } }) {
     return (
         <div className={inter.className}>
-            <h1 className="text-2xl ml-4 mt-2 font-bold">Random fact about Programmer Astolfo:</h1>
+            <h1 className="text-2xl ml-4 mt-2 font-bold">Random fact about mldkyt:</h1>
             <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-lg w-max">{props.funFact.fact}</p>
 
             <Navbar sel="" />

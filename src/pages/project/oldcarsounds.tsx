@@ -1,5 +1,6 @@
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 // export const meta: V2_MetaFunction = () => {
 //   return [
@@ -20,6 +21,21 @@ const inter = Inter({ subsets: ["latin"] })
 export default function OldCarSounds() {
   return (
     <div className={inter.className}>
+      <Head>
+        <title>OldCarSounds | mldkyt</title>
+        <meta name="og:title" content="OldCarSounds" />
+        <meta
+          name="description"
+          content="OldCarSounds is a mod for My Summer Car which returns old sounds from old builds of My Summer Car and puts them in the newest version of the game."
+        />
+        <meta name="theme-color" content="#FF77FF" />
+        <meta name="author" content="mldkyt" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <div className="border-2 border-orange-500 m-2 rounded-lg">
         <p className="text-2xl font-bold ml-2 text-white">WARNING</p>
         <p className="mx-4 text-white">

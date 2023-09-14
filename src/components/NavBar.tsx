@@ -69,7 +69,7 @@ export default function Navbar(props: { sel: string }) {
         className="bg-[#2B0029] text-center flex text-white m-2 p-2 rounded-md"
       >
         <img src="/pfp.png" alt="Astolfo Profile Picture" className="h-6 w-6 rounded-full" />
-        <span className="mx-2 font-bold">{screenWidth <= 640 ? 'Astolfo': 'Programmer Astolfo'}'s website</span>
+        <span className="mx-2 font-bold">mldkyt's website</span>
         <br />
         <div className={screenWidth < 640 ? "hidden" : ""}>
           <a
