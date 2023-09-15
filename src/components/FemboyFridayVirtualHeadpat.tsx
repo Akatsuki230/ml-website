@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function FemboyFridayVirtualHeadpat() {
   const isFriday = new Date().getDay() === 5;
 
+  const [show, setShow] = useState(isFriday);
   const [sending, setSending] = useState(false);
   const [alreadySent, setAlreadySent] = useState(false);
   const [notFridayOnServer, setNotFridayOnServer] = useState(false);
@@ -19,15 +20,21 @@ export default function FemboyFridayVirtualHeadpat() {
         setSending(false);
         setCount(x.count);
         if (!x.success) {
-          setAlreadySent(true);
+          if (x.message == 'Not friday') {
+            setNotFridayOnServer(true);
+          }
+          if (x.message == 'Already voted') {
+            setAlreadySent(true);
+          }
         }
       });
   };
 
-  return isFriday ? (
+  return show ? (
     <>
       <div className="fixed top-14 w-max right-2 text-white border-2 border-blue-600 rounded-lg">
-        <span className="m-2 text-xl font-bold">Today is Femboy Friday :3</span>
+        <span className="m-2 text-lg font-bold">Today is Femboy Friday :3</span>
+        <span className="mx-0.5 text-lg text-red-500 cursor-pointer" onClick={() =>setShow(false)}>Close</span>
         <br />
         {!sending && !alreadySent && count === 0 && (
           <motion.button
