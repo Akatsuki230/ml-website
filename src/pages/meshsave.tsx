@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
@@ -80,6 +81,7 @@ export default function Meshsave() {
       </motion.button>
       <br />
       <br />
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="meshsave" />
     </div>
   );

@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import {motion} from "framer-motion";
 import {Inter} from "next/font/google";
@@ -202,6 +203,7 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="social"/>
     </div>
   );

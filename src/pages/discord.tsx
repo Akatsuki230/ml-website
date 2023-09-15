@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar"
 import {Inter} from "next/font/google"
 import Head from "next/head";
@@ -40,6 +41,7 @@ export default function Discord() {
         from the owner or from other members of the Discord server.</p>
       <img src="/Discord_rAkc4GD2Xv.png" alt="Modding support channel" className="mx-6 rounded-md mt-2"/>
 
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel=""/>
     </div>
   )

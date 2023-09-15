@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -16,7 +17,7 @@ import Head from "next/head";
 //   ];
 // };
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AsphaltRoads() {
   return (
@@ -47,9 +48,17 @@ export default function AsphaltRoads() {
           deprecated and will only get bug fixes or functionality fixes.
         </p>
       </div>
-      <h1 className="text-center text-5xl font-bold text-white">Asphalt Roads</h1>
+      <h1 className="text-center text-5xl font-bold text-white">
+        Asphalt Roads
+      </h1>
       <p className="mx-2 text-white">
-      Asphalt Roads stands out as a modification (commonly referred to as a "mod") designed for the popular video game My Summer Car. This particular mod has a specific purpose: it transforms the traditional dirt roads within the game into sleek and modern asphalt roads. This alteration can significantly impact gameplay by providing a smoother and faster driving experience for players navigating the virtual world of My Summer Car.
+        Asphalt Roads stands out as a modification (commonly referred to as a
+        "mod") designed for the popular video game My Summer Car. This
+        particular mod has a specific purpose: it transforms the traditional
+        dirt roads within the game into sleek and modern asphalt roads. This
+        alteration can significantly impact gameplay by providing a smoother and
+        faster driving experience for players navigating the virtual world of My
+        Summer Car.
       </p>
       <img
         className="rounded-lg ml-4"
@@ -66,7 +75,9 @@ export default function AsphaltRoads() {
       >
         <button className="mt-2">Download</button>
       </a>
-      <p className="ml-4 text-white">You can also build it from source on GitHub: </p>
+      <p className="ml-4 text-white">
+        You can also build it from source on GitHub:{" "}
+      </p>
       <a
         className="ml-4 px-2 py-1 bg-black border-2 border-white rounded-lg text-white"
         href="https://github.com/mldkyt/AsphaltRoads/releases"
@@ -85,6 +96,7 @@ export default function AsphaltRoads() {
         You push your changes on GitHub, and upload the mod on NexusMods,{" "}
         <u>where you link me as the original author of the mod</u>.
       </p>
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>
   );

@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
@@ -119,6 +120,7 @@ export default function Pronouns() {
       </div>
       <br />
       <br />
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="pronouns" />
     </div>
   );

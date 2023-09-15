@@ -1,4 +1,5 @@
 
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -79,6 +80,7 @@ export default function AstolfoIsComingForYou() {
         </button>
       </a>
 
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>
   );

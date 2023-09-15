@@ -2,6 +2,7 @@ import {useState} from "react";
 import Navbar from "@/components/NavBar";
 import {Inter} from "next/font/google";
 import Head from "next/head";
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 
 // export const meta: V2_MetaFunction = () => {
 //   return [
@@ -106,6 +107,7 @@ export default function Astolfo() {
         </button>
       </a>
 
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="project"/>
     </div>
   );

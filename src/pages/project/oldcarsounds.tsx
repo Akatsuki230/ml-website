@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -80,6 +81,7 @@ export default function OldCarSounds() {
         You push your changes on GitHub, and upload the mod on NexusMods,{" "}
         <u>where you link me as the original author of the mod</u>.
       </p>
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>
   );

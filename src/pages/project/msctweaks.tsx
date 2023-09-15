@@ -1,3 +1,4 @@
+import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import {Inter} from "next/font/google";
 import Head from "next/head";
@@ -63,6 +64,7 @@ export default function MSCTweaks() {
       >
         <button className="mt-2">Download</button>
       </a>
+      <FemboyFridayVirtualHeadpat />
       <Navbar sel="project"/>
     </div>
   );
