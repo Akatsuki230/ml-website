@@ -177,7 +177,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1, delay: 1.1 }}
         >
           <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">mldkyt's Projects</h1>
@@ -237,7 +237,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 1.4 }}
         >
           <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">Stalk mldkyt</h1>
