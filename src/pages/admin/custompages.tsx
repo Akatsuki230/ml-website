@@ -3,29 +3,6 @@ import { GetServerSidePropsContext } from "next";
 import process from "process";
 import {Inter} from "next/font/google";
 
-// export const loader: LoaderFunction = async ({ request }) => {
-//   const cookies = request.headers.get("Cookie") ?? "";
-//   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
-//     return redirect("/admin/login", 302);
-//   }
-
-//   const data = await (
-//     await fetch(`${process.env.FIREBASE_URL}/redirects.json`)
-//   ).json();
-//   let customPages: any[] = [];
-//   for (const i in data) {
-//     const page = data[i];
-//     customPages.push({
-//       id: i,
-//       label: page.label,
-//       type: page.type,
-//     });
-//   }
-//   return {
-//     customPages,
-//   };
-// };
-
 interface CustomPageWithID {
   id: string;
   label: string;

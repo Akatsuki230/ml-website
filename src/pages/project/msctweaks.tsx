@@ -3,20 +3,6 @@ import Navbar from "@/components/NavBar";
 import {Inter} from "next/font/google";
 import Head from "next/head";
 
-// export const meta: V2_MetaFunction = () => {
-//   return [
-//     { title: "MSC Tweaks" },
-//     { name: "title", content: "MSC Tweaks | mldkyt's website" },
-//     {
-//       name: "description",
-//       content:
-//         "MSC Tweaks is a mod for My Summer Car which adds a few tweaks, such as always open console, fall damage (though buggy) and more.",
-//     },
-//     { name: "author", content: "mldkyt" },
-//     { name: 'theme-color', content: '#FF77FF'}
-//   ];
-// };
-
 const inter = Inter({subsets: ["latin"]})
 
 export default function MSCTweaks() {

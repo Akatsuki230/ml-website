@@ -1,29 +1,7 @@
-// import { useLoaderData } from "@remix-run/react";
-// import type { ActionFunction, LoaderFunction } from "@remix-run/node";
-// import { redirect } from "@remix-run/node";
 import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 import {Inter} from "next/font/google";
-
-// export const loader: LoaderFunction = async ({ params, request }) => {
-//   if (!params.id) return redirect("/admin/custompages", 302);
-
-//   const cookies = request.headers.get("Cookie") ?? "";
-//   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
-//     return redirect("/admin/login", 302);
-//   }
-
-//   const data = await (
-//     await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`)
-//   ).json();
-//   data.id = params.id;
-//   return {
-//     customPage: data,
-//     textBg: `#${data.themeTextBgColor.substring(3)}`,
-//     textBgOpacity: parseInt(data.themeTextBgColor.substring(1, 3), 16),
-//   };
-// };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   if (!ctx.params?.id) return { redirect: { destination: "/admin/custompages", permanent: false } };
@@ -44,65 +22,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     },
   };
 }
-
-// export const action: ActionFunction = async ({ params, request }) => {
-//   const body = await request.formData();
-//   if (
-//     !body.has("id") ||
-//     !body.has("label") ||
-//     !body.has("type") ||
-//     !body.has("bgType") ||
-//     !body.has("bgColour") ||
-//     !body.has("textColour") ||
-//     !body.has("textBgColour") ||
-//     !body.has("textBgOpacity")
-//   )
-//     return redirect(`/admin/custompages/${params.id}/properties`, 302);
-//   const themeType: string = body.get("bgType")!.toString();
-//   let themeBgColor: string;
-//   if (themeType == "colour") {
-//     themeBgColor = body.get("bgColour")!.toString();
-//   } else {
-//     themeBgColor = body.get("bgImage")!.toString();
-//   }
-
-//   const original = await (
-//     await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`)
-//   ).json();
-
-//   await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`, {
-//     method: "DELETE",
-//   });
-
-//   let textBgOpacityStr = Number(body.get("textBgOpacity")!.toString()).toString(
-//     16
-//   );
-//   if (textBgOpacityStr.length == 1) textBgOpacityStr = "0" + textBgOpacityStr;
-
-//   await fetch(
-//     `${process.env.FIREBASE_URL}/redirects/${body.get("id")!.toString()}.json`,
-//     {
-//       method: "PUT",
-//       body: JSON.stringify({
-//         label: body.get("label")!.toString(),
-//         type: body.get("type")!.toString(),
-//         url: body.get("url")!.toString(),
-//         themeType: themeType,
-//         themeTextBgColor: `#${textBgOpacityStr}${body
-//           .get("textBgColour")!
-//           .toString()
-//           .substring(1)}`,
-//         themeTextColor: body.get("textColour")!.toString(),
-//         themeBgValue: themeBgColor,
-//         views: original.views,
-//       }),
-//     }
-//   );
-//   return redirect(
-//     `/admin/custompages/${body.get("id")!.toString()}/properties`,
-//     302
-//   );
-// };
 
 const inter = Inter({ subsets: ["latin"] });
 

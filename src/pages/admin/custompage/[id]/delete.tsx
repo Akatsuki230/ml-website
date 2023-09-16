@@ -3,33 +3,6 @@ import { GetServerSidePropsContext } from "next";
 import process from "process";
 import {Inter} from "next/font/google";
 
-// export const loader: LoaderFunction = async ({ params, request }) => {
-//   if (!params.id) return redirect("/admin/custompages", 302);
-
-//   const cookies = request.headers.get("Cookie") ?? "";
-//   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
-//     return redirect("/admin/login", 302);
-//   }
-
-//   const data = await (
-//     await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`)
-//   ).json();
-//   if (!data) {
-//     return redirect("/admin/custompages", 302);
-//   }
-//   data.id = params.id;
-//   return {
-//     customPage: data,
-//   };
-// };
-
-// export const action: ActionFunction = async ({ params }) => {
-//   await fetch(`${process.env.FIREBASE_URL}/redirects/${params.id}.json`, {
-//     method: "DELETE",
-//   });
-//   return redirect("/admin/custompages", 302);
-// };
-
 const inter = Inter({ subsets: ["latin"] });
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

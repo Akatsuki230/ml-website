@@ -4,20 +4,6 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 
-// export const meta: V2_MetaFunction = () => {
-//   return [
-//     { title: "Astolfo Resource Pack" },
-//     { name: "title", content: "Astolfo Resource Pack | mldkyt's Website" },
-//     {
-//       name: "description",
-//       content:
-//         "Astolfo Resource Pack is a resource pack for Minecraft which replaces the loading screen, logo and ending screen to be more Astolfo themed.",
-//     },
-//     { name: "author", content: "mldkyt" },
-//     { name: 'theme-color', content: '#FF77FF'}
-//   ];
-// };
-
 const inter = Inter({subsets: ["latin"]})
 
 export default function Astolfo() {

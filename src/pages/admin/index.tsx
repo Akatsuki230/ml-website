@@ -3,14 +3,6 @@ import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import {Inter} from "next/font/google";
 
-// export const loader: LoaderFunction = async ({ request }) => {
-//   const cookies = request.headers.get("Cookie") ?? "";
-//   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
-//     return redirect("/admin/login", 302);
-//   }
-//   return {};
-// };
-
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const cookies = ctx.req.headers.cookie ?? "";
   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {

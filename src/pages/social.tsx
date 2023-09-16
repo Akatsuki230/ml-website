@@ -28,6 +28,32 @@ export default function Social() {
 
       <h1 className="text-5xl mt-2 text-center font-bold ">mldkyt's social links</h1>
       <p className="mx-8 text-lg ">Welcome to my social link page!</p>
+
+      <div
+        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
+        style={itemStyle}
+      >
+        <h2 className="px-2 text-xl ">Discord Server</h2>
+        <p className="px-4 ">
+          Join my Discord server full of femboys and non-femboys. It has a custom bot.
+          I also have a section dedicated to My Summer Car modding and help.
+        </p>
+
+        <motion.div
+          className="w-max ml-2"
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
+        >
+          <a
+            rel="noopener"
+            target="_blank"
+            className="bg-blue-600 rounded-lg p-0.5 px-1"
+            href="https://cs.namemc.com/profile/Astolph0.1"
+          >
+            Hop in!
+          </a>
+        </motion.div>
+      </div>
       <div
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}

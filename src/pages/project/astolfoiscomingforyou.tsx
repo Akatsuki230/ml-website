@@ -4,20 +4,6 @@ import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
-// export const meta: V2_MetaFunction = () => {
-//   return [
-//     { title: "Astolfo Is Coming For You" },
-//     { name: "title", content: "Astolfo Is Coming For You | mldkyt's Website" },
-//     {
-//       name: "description",
-//       content:
-//         "Astolfo Is Coming For You is a program that if you run on your PC, Astolfo will come to your house, or turn your PC off, depending on the variant.",
-//     },
-//     { name: "author", content: "mldkyt" },
-//     { name: 'theme-color', content: '#FF77FF'}
-//   ];
-// };
-
 const inter = Inter({ subsets: ["latin"] })
 
 export default function AstolfoIsComingForYou() {

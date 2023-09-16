@@ -124,25 +124,53 @@ export default function Home() {
                   versatile and capable programmer, equipped to navigate the
                   multifaceted landscape of software development with finesse.
                 </motion.p>
-                <button
+                <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}
                   className="text-blue-500 cursor-pointer"
                   onClick={() => setReadMore(false)}
                 >
                   Show less &#x2190;
-                </button>
+                </motion.button>
               </>
             )}
 
             {readMore || (
               <>
-                <button
+                <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}
                   className="text-blue-500 cursor-pointer"
                   onClick={() => setReadMore(true)}
                 >
                   Show more &#x2192;
-                </button>
+                </motion.button>
               </>
             )}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
+          <div className="relative px-[10%] py-[10px]">
+            <h1 className="text-3xl text-white font-bold">
+              Hang out in my Discord server
+            </h1>
+            <p className="my-2 text-white">
+              A Discord server full of femboys and non-femboys. It has a custom bot.
+              I also have a section dedicated to My Summer Car modding and help.
+            </p>
+            <motion.div
+              className="w-max"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <a
+                className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                href="/discord"
+              >
+                <button>Hop in!</button>
+              </a>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -156,34 +184,52 @@ export default function Home() {
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">Astolph0/place</h2>
               <p className="text-white">An r/place clone</p>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="https://place.mldkyt.com/"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Open</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="https://place.mldkyt.com/"
+                >
+                  <button className="mt-2">Open</button>
+                </a>
+              </motion.div>
             </div>
             <div className="mt-4">
               <h2 className="text-xl text-white font-bold">
                 Astolfo Resource Pack
               </h2>
               <p className="text-white">A resource pack for Minecraft</p>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="/project/astolforesourcepack"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Download</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="/project/astolforesourcepack"
+                >
+                  <button className="mt-2">Download</button>
+                </a>
+              </motion.div>
             </div>
             <div className="mt-4">
               <h2 className="text-xl text-white font-bold">Asphalt Roads</h2>
               <p className="text-white">A mod for My Summer Car</p>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="/project/asphaltroads"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Download</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="/project/asphaltroads"
+                >
+                  <button className="mt-2">Download</button>
+                </a>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -199,35 +245,53 @@ export default function Home() {
               <h2 className="text-xl text-white font-bold">
                 <span className="text-red-500">You</span>Tube
               </h2>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="https://youtube.com/@mldkyt"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Subscribe</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="https://youtube.com/@mldkyt"
+                >
+                  <button className="mt-2">Subscribe</button>
+                </a>
+              </motion.div>
             </div>
             <div className="mt-4">
               <h2 className="text-xl text-white font-bold">
                 <span className="text-[#25f4ee]">Tik</span>
                 <span className="text-[#ee1d52]">Tok</span>
               </h2>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="https://tiktok.com/@astolph0_"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Follow</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="https://tiktok.com/@astolph0_"
+                >
+                  <button className="mt-2">Follow</button>
+                </a>
+              </motion.div>
             </div>
             <div className="mt-4">
               <h2 className="text-xl text-white font-bold">
                 <span className="text-[#a970ff]">Twitch</span>
               </h2>
-              <a
-                className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                href="https://twitch.tv/mldkyt"
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <button className="mt-2">Follow</button>
-              </a>
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="https://twitch.tv/mldkyt"
+                >
+                  <button className="mt-2">Follow</button>
+                </a>
+              </motion.div>
             </div>
           </div>
         </motion.div>

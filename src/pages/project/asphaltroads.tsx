@@ -3,20 +3,6 @@ import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
-// export const meta: V2_MetaFunction = () => {
-//   return [
-//     { title: "Asphalt Roads" },
-//     { name: "title", content: "Asphalt Roads | mldkyt's Website" },
-//     {
-//       name: "description",
-//       content:
-//         "Asphalt Roads is a mod for My Summer Car which replaces dirt roads with asphalt roads.",
-//     },
-//     { name: "author", content: "mldkyt" },
-//     { name: 'theme-color', content: '#FF77FF'}
-//   ];
-// };
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function AsphaltRoads() {

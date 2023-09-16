@@ -1,41 +1,8 @@
-//import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
-//import { useLoaderData } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/NavBar";
 import process from "process";
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
-
-// export const loader: LoaderFunction = async (ctx) => {
-//   //   get $redir from path
-//   const redir = ctx.params["redir"];
-//   if (!redir)
-//     return {
-//       error: true,
-//       errorMessage: "No custom path provided / Internal error",
-//     };
-
-//   const data = await (
-//     await fetch(`${process.env.FIREBASE_URL}/redirects/${redir}.json`)
-//   ).json();
-//   if (data == null) {
-//     return {
-//       error: true,
-//       errorMessage: "Redirect not found",
-//     };
-//   }
-
-//   if (!data.views) data.views = 0;
-//   data.views++;
-//   await fetch(`${process.env.FIREBASE_URL}/redirects/${redir}.json`, {
-//     method: "PATCH",
-//     body: JSON.stringify({
-//       views: data.views,
-//     }),
-//   });
-
-//   return data;
-// };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const { redir } = ctx.params as { redir: string };
@@ -179,44 +146,6 @@ function renderError(label: string) {
         </>
     );
 }
-
-// export const meta: V2_MetaFunction = ({ data }) => {
-//     switch (data.type) {
-//         case "redirect":
-//             return [
-//                 { title: "Redirect by mldkyt" },
-//                 { name: "title", content: "Redirect by mldkyt" },
-//                 { name: "description", content: `Redirects to ${data.label}` },
-//                 { name: 'theme-color', content: '#FF77FF' },
-//                 { name: "author", content: "mldkyt" },
-//             ];
-//         case "image":
-//             return [
-//                 { title: "Image shared by mldkyt" },
-//                 { name: "title", content: "mldkyt has shared an image with you" },
-//                 { name: "description", content: `Image ${data.label}` },
-//                 { name: 'theme-color', content: '#FF77FF' },
-//                 { name: "og:image", content: data.url },
-//                 { name: "author", content: "mldkyt" },
-//             ];
-//         case "file":
-//             return [
-//                 { title: "File shared by mldkyt" },
-//                 { name: "title", content: "mldkyt has shared a file with you" },
-//                 { name: "description", content: `File ${data.label}` },
-//                 { name: 'theme-color', content: '#FF77FF' },
-//                 { name: "author", content: "mldkyt" },
-//             ];
-//         default:
-//             return [
-//                 { title: "Error" },
-//                 { name: "title", content: "Error" },
-//                 { name: "description", content: `Error ${data.label}` },
-//                 { name: 'theme-color', content: '#FF77FF' },
-//                 { name: "author", content: "mldkyt" },
-//             ];
-//     }
-// };
 
 export default function Redirect(props: { data: any }) {
     const [redirectTime, setRedirectTime] = useState(5);

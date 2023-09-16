@@ -8,8 +8,6 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
 
   const login = () => {
-    //   set a cookie named token to the value for 1 week
-    //   redirect to /admin
     document.cookie = `token=${password};max-age=${60 * 60 * 24 * 7};path=/`;
     window.location.href = "/admin";
   };

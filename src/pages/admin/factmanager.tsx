@@ -2,56 +2,7 @@ import process from "process";
 import Navbar from "@/components/NavBar";
 import { useState } from "react";
 import { GetServerSidePropsContext } from "next";
-import getRawBody from 'raw-body';
 import { Inter } from "next/font/google";
-
-// export const loader: LoaderFunction = async ({ request }) => {
-//   const cookies = request.headers.get("Cookie") ?? "";
-//   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD};`)) {
-//     return redirect("/admin/login", 302);
-//   }
-
-//   const facts = await (
-//     await fetch(`${process.env.FIREBASE_URL}/facts.json`)
-//   ).json();
-
-//   return facts;
-// };
-
-// export const action: ActionFunction = async ({ request }) => {
-//   if (!request.headers.has("Content-Type")) return null;
-
-//   if (request.headers.get("Content-Type") == "application/json") {
-//     const body = await request.json();
-//     if (body.action == "delete" && body.id) {
-//       await fetch(`${process.env.FIREBASE_URL}/facts/${body.id}.json`, {
-//         method: "DELETE",
-//       });
-//     }
-//   }
-
-//   if (
-//     request.headers.get("Content-Type") == "application/x-www-form-urlencoded"
-//   ) {
-//     const formData = await request.formData();
-//     if (formData.has("action") && formData.has("fact")) {
-//       const action = formData.get("action") as string;
-//       const fact = formData.get("fact") as string;
-//       if (action == "add") {
-//         const facts = await (
-//           await fetch(`${process.env.FIREBASE_URL}/facts.json`)
-//         ).json();
-//         facts.push({ fact });
-//         await fetch(`${process.env.FIREBASE_URL}/facts.json`, {
-//           method: "PUT",
-//           body: JSON.stringify(facts),
-//         });
-//       }
-//     }
-//   }
-
-//   return null;
-// };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const cookies = ctx.req.headers.cookie ?? "";
