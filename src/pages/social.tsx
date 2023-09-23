@@ -46,9 +46,8 @@ export default function Social() {
         >
           <a
             rel="noopener"
-            target="_blank"
             className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://cs.namemc.com/profile/Astolph0.1"
+            href="/discord"
           >
             Hop in!
           </a>
