@@ -149,28 +149,7 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
-      <div
-        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
-        style={itemStyle}
-      >
-        <h2 className="px-2 text-xl ">Twitch</h2>
-        <p className="px-4 ">My Twitch channel is where I stream.</p>
-
-        <motion.div
-          className="w-max ml-2"
-          whileHover={{scale: 1.1}}
-          whileTap={{scale: 0.9}}
-        >
-          <a
-            rel="noopener"
-            target="_blank"
-            className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://twitch.tv/mldkyt"
-          >
-            Follow
-          </a>
-        </motion.div>
-      </div>
+      
       <div
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
