@@ -19,11 +19,11 @@ export default function Meshsave() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>mldkyt's Meshsave</title>
-        <meta name="og:title" content="mldkyt's Meshsave" />
+        <title>Programmer Astolfo's Meshsave</title>
+        <meta name="og:title" content="Programmer Astolfo's Meshsave" />
         <meta
           name="description"
-          content="mldkyt's (fucked up) meshsave for My Summer Car."
+          content="Programmer Astolfo's (fucked up) meshsave for My Summer Car."
         />
         <meta
           name="og:image"
@@ -37,7 +37,7 @@ export default function Meshsave() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl text-center font-bold my-4 text-white">mldkyt's meshsave</h1>
+      <h1 className="text-5xl text-center font-bold my-4 text-white">Programmer Astolfo's meshsave</h1>
       <p className="ml-4 text-white">
         In my save, the car looks like it has been through a war zone. The car's
         body is badly damaged and has been crashed at high speed multiple times.

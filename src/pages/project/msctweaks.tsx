@@ -9,7 +9,7 @@ export default function MSCTweaks() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>MSC Tweaks | mldkyt's website</title>
+        <title>MSC Tweaks | Programmer Astolfo's website</title>
         <meta name="og:title" content="MSC Tweaks"/>
         <meta
           name="description"
@@ -20,7 +20,7 @@ export default function MSCTweaks() {
           content="https://staticdelivery.nexusmods.com/mods/2600/images/3665/3665-1691255198-609977580.jpeg"
         />
         <meta name="theme-color" content="#FF77FF"/>
-        <meta name="author" content="mldkyt" />
+        <meta name="author" content="Programmer Astolfo" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"

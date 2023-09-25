@@ -28,9 +28,9 @@ export default function Discord() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>mldkyt's Discord server</title>
-        <meta name="description" content="Join mldkyt's Discord server!" />
-        <meta name="author" content="mldkyt" />
+        <title>Programmer Astolfo's Discord server</title>
+        <meta name="description" content="Join Programmer Astolfo's Discord server!" />
+        <meta name="author" content="Programmer Astolfo" />
         <meta name="theme-color" content="#FF77FF" />
         <script
           async
@@ -40,7 +40,7 @@ export default function Discord() {
       </Head>
 
       <h1 className="mt-4 text-5xl text-center font-bold text-white">
-        mldkyt's Discord server
+        Programmer Astolfo's Discord server
       </h1>
       <div className="text-center">
         <a href="https://discord.gg/JgFNmSwYME">

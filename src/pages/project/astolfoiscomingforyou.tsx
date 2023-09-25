@@ -10,7 +10,7 @@ export default function AstolfoIsComingForYou() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Astolfo Is Coming For You | mldkyt's website</title>
+        <title>Astolfo Is Coming For You | Programmer Astolfo's website</title>
         <meta name="og:title" content="Astolfo Is Coming For You" />
         <meta
           name="description"
@@ -21,7 +21,7 @@ export default function AstolfoIsComingForYou() {
           content="https://mldkyt.com/VirtualBoxVM_lCURwn9Xdd.png"
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="mldkyt" />
+        <meta name="author" content="Programmer Astolfo" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"

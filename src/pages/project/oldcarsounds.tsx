@@ -9,14 +9,14 @@ export default function OldCarSounds() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>OldCarSounds | mldkyt</title>
+        <title>OldCarSounds | Programmer Astolfo</title>
         <meta name="og:title" content="OldCarSounds" />
         <meta
           name="description"
           content="OldCarSounds is a mod for My Summer Car which returns old sounds from old builds of My Summer Car and puts them in the newest version of the game."
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="mldkyt" />
+        <meta name="author" content="Programmer Astolfo" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
@@ -51,7 +51,7 @@ export default function OldCarSounds() {
       </p>
       <a
         className="ml-4 px-2 py-1 bg-black border-2 border-white rounded-lg text-white"
-        href="https://www.github.com/mldkyt/OldCarSounds/releases"
+        href="https://www.github.com/ProgrammerAstolfo/OldCarSounds/releases"
       >
         <button className="mt-1">Releases</button>
       </a>

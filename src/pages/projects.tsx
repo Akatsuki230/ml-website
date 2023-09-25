@@ -17,9 +17,9 @@ export default function Projects() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>mldkyt's projects</title>
-        <meta name="og:title" content="mldkyt's projects" />
-        <meta name="description" content="mldkyt's projects." />
+        <title>Programmer Astolfo's projects</title>
+        <meta name="og:title" content="Programmer Astolfo's projects" />
+        <meta name="description" content="Programmer Astolfo's projects." />
         <meta name="theme-color" content="#FF77FF" />
         <script
           async
@@ -29,9 +29,9 @@ export default function Projects() {
       </Head>
 
       <h1 className="text-5xl text-center font-bold px-2 my-4 text-white">
-        mldkyt's project list
+        Programmer Astolfo's project list
       </h1>
-      <p className="ml-6 text-white">This is a full list of mldkyt's projects.</p>
+      <p className="ml-6 text-white">This is a full list of Programmer Astolfo's projects.</p>
 
       <h2 className="text-2xl px-4 text-white">Online Projects</h2>
 

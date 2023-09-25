@@ -10,11 +10,11 @@ export default function Pronouns() {
   return (
     <div className={`${inter.className} text-white`}>
       <Head>
-        <title>mldkyt's pronouns</title>
-        <meta name="og:title" content="mldkyt's pronouns" />
+        <title>Programmer Astolfo's pronouns</title>
+        <meta name="og:title" content="Programmer Astolfo's pronouns" />
         <meta
           name="description"
-          content="Pronouns that mldkyt uses. Quick summary: \nhe/him\nCalling: mld, mldkyt, astolfo, mldk\nAddressing: cute, love, lover, patootie, honey, sweetie, baby, babe, cutie"
+          content="Pronouns that Programmer Astolfo uses. Quick summary: \nhe/him\nCalling: Programmer Astolfo, Astolfo, mldk\nAddressing: cute, love, lover, patootie, honey, sweetie, baby, babe, cutie"
         />
         <meta
           name="og:image"
@@ -28,11 +28,10 @@ export default function Pronouns() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl my-4 text-center font-bold ">mldkyt's pronouns</h1>
+      <h1 className="text-5xl my-4 text-center font-bold ">Programmer Astolfo's pronouns</h1>
       <h2 className="text-2xl m-1 mx-6 font-bold ">Calling me</h2>
-      <p className="m-1 mx-8  ">&bull; ❤️ mld</p>
-      <p className="m-1 mx-8 ">&bull; 👍 astolfo</p>
-      <p className="m-1 mx-8 ">&bull; 👍 mldkyt</p>
+      <p className="m-1 mx-8 ">&bull; ❤️ Programmer Astolfo</p>
+      <p className="m-1 mx-8 ">&bull; 👍 Astolfo</p>
       <h2 className="text-2xl m-1 mx-6 font-bold ">Pronouns</h2>
       <p className="m-1 mx-8 ">&bull; ❤️ he/him</p>
       <p className="m-1 mx-8 ">&bull; 👍 they/them</p>

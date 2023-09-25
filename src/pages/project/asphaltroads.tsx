@@ -9,7 +9,7 @@ export default function AsphaltRoads() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Asphalt Roads | mldkyt's website</title>
+        <title>Asphalt Roads | Programmer Astolfo's website</title>
         <meta name="og:title" content="Asphalt Roads" />
         <meta
           name="description"
@@ -20,7 +20,7 @@ export default function AsphaltRoads() {
           content="https://staticdelivery.nexusmods.com/mods/2600/images/3670/3670-1691406498-1770392602.png"
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="mldkyt" />
+        <meta name="author" content="Programmer Astolfo" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
@@ -66,7 +66,7 @@ export default function AsphaltRoads() {
       </p>
       <a
         className="ml-4 px-2 py-1 bg-black border-2 border-white rounded-lg text-white"
-        href="https://github.com/mldkyt/AsphaltRoads/releases"
+        href="https://github.com/ProgrammerAstolfo/AsphaltRoads"
       >
         <button className="mt-2">Source Code</button>
       </a>

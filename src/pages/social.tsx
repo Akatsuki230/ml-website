@@ -15,9 +15,9 @@ export default function Social() {
   return (
     <div className={`${inter.className} text-white`}>
       <Head>
-        <title>mldkyt's social links</title>
-        <meta name="og:title" content="mldkyt's social links"/>
-        <meta name="description" content="mldkyt's social links."/>
+        <title>Programmer Astolfo's social links</title>
+        <meta name="og:title" content="Programmer Astolfo's social links"/>
+        <meta name="description" content="Programmer Astolfo's social links."/>
         <meta name="theme-color" content="#FF77FF"/>
         <script
           async
@@ -26,7 +26,7 @@ export default function Social() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl mt-2 text-center font-bold ">mldkyt's social links</h1>
+      <h1 className="text-5xl mt-2 text-center font-bold ">Programmer Astolfo's social links</h1>
       <p className="mx-8 text-lg ">Welcome to my social link page!</p>
 
       <div
@@ -53,6 +53,7 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
+
       <div
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
@@ -77,18 +78,34 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
+
       <div
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
         style={itemStyle}
       >
-        <h2 className="px-2 text-xl ">Discord server</h2>
-        <p className="px-4 font-bold ">
-          On Discord my username is "astolf0.", not "mldkyt" and my display name
-          is "mldkyt".
-        </p>
-        <p className="px-4 font-bold ">
-          I also have an alt account "programmer.astolfo"
-        </p>
+        <h2 className="px-2 text-xl ">Steam</h2>
+
+        <motion.div
+          className="w-max ml-2"
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
+        >
+          <a
+            rel="noopener"
+            target="_blank"
+            className="bg-blue-600 rounded-lg p-0.5 px-1"
+            href="https://steamcommunity.com/id/programmerastolfo/"
+          >
+            Open
+          </a>
+        </motion.div>
+      </div>
+
+      <div
+        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
+        style={itemStyle}
+      >
+        <h2 className="px-2 text-xl">Discord server</h2>
         <p className="px-4 ">
           My Discord server is where I post updates about new videos and where
           you can get My Summer Car modding help. Note the server is very
@@ -103,7 +120,7 @@ export default function Social() {
             rel="noopener"
             target="_blank"
             className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://redir.mldkyt.com/discord"
+            href="/discord"
           >
             Join
           </a>
@@ -126,7 +143,7 @@ export default function Social() {
             rel="noopener"
             target="_blank"
             className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://youtube.com/@mldkyt"
+            href="https://youtube.com/@programmer.astolfo"
           >
             Subscribe
           </a>
@@ -159,10 +176,6 @@ export default function Social() {
         style={itemStyle}
       >
         <h2 className="px-2 text-xl ">TikTok</h2>
-        <p className="px-4 font-bold ">
-          On TikTok I am named "astolph0_", not "mldkyt" and my display name is
-          "mldkyt"
-        </p>
         <p className="px-4 ">
           TikTok is where I post short code tutorials.
         </p>
@@ -176,7 +189,7 @@ export default function Social() {
             rel="noopener"
             target="_blank"
             className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://www.tiktok.com/@astolph0_"
+            href="https://www.tiktok.com/@programmer.astolfo"
           >
             Follow
           </a>

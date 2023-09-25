@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Admin() {
   return (
     <div className={inter.className}>
-      <h1 className="text-3xl m-2 font-bold text-white">Welcome to the admin page, mldkyt!</h1>
+      <h1 className="text-3xl m-2 font-bold text-white">Welcome to the admin page, Programmer Astolfo!</h1>
       <a href="/admin/custompages">
         <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
           Manage custom pages

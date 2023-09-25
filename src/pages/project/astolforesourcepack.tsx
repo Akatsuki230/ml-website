@@ -14,7 +14,7 @@ export default function Astolfo() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Astolfo Resource Pack | mldkyt's website</title>
+        <title>Astolfo Resource Pack | Programmer Astolfo's website</title>
         <meta name="og:title" content="Astolfo Resource Pack" />
         <meta
           name="description"
@@ -25,7 +25,7 @@ export default function Astolfo() {
           content="https://mldkyt.com/javaw_9CTZlO2WlC.png"
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="mldkyt" />
+        <meta name="author" content="Programmer Astolfo" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"

@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>mldkyt's website</title>
-        <meta name="description" content="Welcome to mldkyt's website!" />
-        <meta name="author" content="mldkyt" />
+        <title>Programmer Astolfo's website</title>
+        <meta name="description" content="Welcome to Programmer Astolfo's website!" />
+        <meta name="author" content="Programmer Astolfo" />
         <meta name="theme-color" content="#FF77FF" />
         <script
           async
@@ -53,7 +53,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h1 className="text-5xl my-4 text-white">mldkyt</h1>
+                  <h1 className="text-5xl my-4 text-white">Programmer Astolfo</h1>
                 </div>
               </div>
               <p className="text-white">Scroll down &#x2193;</p>
@@ -65,6 +65,18 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className="relative px-[10%] py-[10px]">
+            <p className="my-4 text-white bg-blue-900 p-2 px-4 rounded-lg">
+              I am in the progress of changing names. My old name is mldkyt and I'm changing everywhere to "Programmer Astolfo".
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
         >
           <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">About me</h1>
@@ -149,7 +161,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1, delay: 0.9 }}
         >
           <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">
@@ -180,7 +192,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 1.1 }}
         >
           <div className="relative px-[10%] py-[10px]">
-            <h1 className="text-3xl text-white font-bold">mldkyt's Projects</h1>
+            <h1 className="text-3xl text-white font-bold">Programmer Astolfo's Projects</h1>
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">Astolph0/place</h2>
               <p className="text-white">An r/place clone</p>
@@ -237,10 +249,10 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.4 }}
+          transition={{ duration: 1, delay: 1.3 }}
         >
           <div className="relative px-[10%] py-[10px]">
-            <h1 className="text-3xl text-white font-bold">Stalk mldkyt</h1>
+            <h1 className="text-3xl text-white font-bold">Stalk Programmer Astolfo</h1>
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">
                 <span className="text-red-500">You</span>Tube
@@ -252,7 +264,7 @@ export default function Home() {
               >
                 <a
                   className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://youtube.com/@mldkyt"
+                  href="https://youtube.com/@Programmer Astolfo"
                 >
                   <button className="mt-2">Subscribe</button>
                 </a>
@@ -287,7 +299,7 @@ export default function Home() {
               >
                 <a
                   className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://twitch.tv/mldkyt"
+                  href="https://twitch.tv/Programmer Astolfo"
                 >
                   <button className="mt-2">Follow</button>
                 </a>
