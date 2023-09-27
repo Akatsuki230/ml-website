@@ -288,23 +288,6 @@ export default function Home() {
                 </a>
               </motion.div>
             </div>
-            <div className="mt-4">
-              <h2 className="text-xl text-white font-bold">
-                <span className="text-[#a970ff]">Twitch</span>
-              </h2>
-              <motion.div
-                className="w-max"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a
-                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://twitch.tv/Programmer Astolfo"
-                >
-                  <button className="mt-2">Follow</button>
-                </a>
-              </motion.div>
-            </div>
           </div>
         </motion.div>
 
