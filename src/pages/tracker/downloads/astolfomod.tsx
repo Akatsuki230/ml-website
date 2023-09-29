@@ -1,8 +1,8 @@
 import { GetServerSidePropsContext } from "next";
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-    const trackingData = await (await fetch(`https://${process.env.FIREBASE_URL}/track.json`)).json()
-    await fetch(`https://${process.env.FIREBASE_URL}/track.json`, {
+    const trackingData = await (await fetch(`${process.env.FIREBASE_URL}/track.json`)).json()
+    await fetch(`${process.env.FIREBASE_URL}/track.json`, {
         method: 'PATCH', 
         body: JSON.stringify({
             'astolfomoddownloads': trackingData['astolfomoddownloads'] + 1

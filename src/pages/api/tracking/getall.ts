@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return;
     }
 
-    const data = await (await fetch('https://mldkyt-s-website-default-rtdb.europe-west1.firebasedatabase.app/track.json')).json()
+    const data = await (await fetch(`${process.env.FIREBASE_URL}/track.json`)).json()
 
     res.json(data)
 }
