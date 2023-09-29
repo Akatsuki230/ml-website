@@ -264,7 +264,7 @@ export default function Home() {
               >
                 <a
                   className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://youtube.com/@Programmer Astolfo"
+                  href="https://youtube.com/@programmer.astolfo"
                 >
                   <button className="mt-2">Subscribe</button>
                 </a>
@@ -282,7 +282,7 @@ export default function Home() {
               >
                 <a
                   className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://tiktok.com/@astolph0_"
+                  href="https://tiktok.com/@programmer.astolfo"
                 >
                   <button className="mt-2">Follow</button>
                 </a>

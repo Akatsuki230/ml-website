@@ -34,6 +34,11 @@ export default function Admin() {
           Manage fun facts
         </button>
       </a>
+      <a href="/admin/tracking">
+        <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
+          Tracking Information
+        </button>
+      </a>
       <Navbar sel="" />
     </div>
   );
