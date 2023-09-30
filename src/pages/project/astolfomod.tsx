@@ -18,7 +18,7 @@ export default function AstolfoMod() {
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/javaw_9CTZlO2WlC.png"
+          content="https://mldkyt.com/Screenshot_20230929_132211.png"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="Programmer Astolfo" />
