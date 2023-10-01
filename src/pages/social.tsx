@@ -60,7 +60,10 @@ export default function Social() {
       >
         <h2 className="px-2 text-xl ">MC Username</h2>
         <p className="px-4 ">
-          My Minecraft username is "<b>Astolph0</b>".
+          My Minecraft username is "<b>ProgramerAstolfo</b>".
+        </p>
+        <p className="px-4">
+          There is one M because of the 16 character limit.
         </p>
 
         <motion.div
@@ -72,7 +75,7 @@ export default function Social() {
             rel="noopener"
             target="_blank"
             className="bg-blue-600 rounded-lg p-0.5 px-1"
-            href="https://cs.namemc.com/profile/Astolph0.1"
+            href="https://cs.namemc.com/profile/ProgramerAstolfo.1"
           >
             NameMC profile
           </a>
