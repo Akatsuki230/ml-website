@@ -21,7 +21,7 @@ export default function Tracking() {
 
             {loading && <span className="text-xl font-bold">Data is loading, please wait...</span>}
 
-            <table>
+            <table className="text-white">
                 <thead>
                     <tr>
                         <th>Key</th>

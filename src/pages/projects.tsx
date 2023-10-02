@@ -84,6 +84,30 @@ export default function Projects() {
         </motion.div>
       </div>
 
+      <h2 className="text-2xl px-4 text-white">AstolfOS</h2>
+
+      <div
+        style={itemStyle}
+        className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
+      >
+        <h3 className="px-2 text-xl text-white">AstolfOS</h3>
+        <p className="px-4 text-white">
+          The Astolfo Operating System, based on Ubuntu.
+        </p>
+        <motion.div
+          className="w-max ml-2"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <a
+            className="bg-blue-600 rounded-lg p-0.5 px-1 text-white"
+            href="/project/astolfos"
+          >
+            View
+          </a>
+        </motion.div>
+      </div>
+
       <h2 className="text-2xl px-4 text-white">Minecraft Related</h2>
 
       <div

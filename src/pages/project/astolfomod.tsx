@@ -57,8 +57,8 @@ export default function AstolfoMod() {
 
       <details>
         <summary className="mx-2 text-white">Changelog</summary>
-        <h2 className="text-xl mx-2 font-bold">Version 1.0</h2>
-        <ul className="mx-4">First release</ul>
+        <h2 className="text-xl mx-2 font-bold text-white">Version 1.0</h2>
+        <ul className="mx-4 text-white">First release</ul>
       </details>
 
       <p className="mx-2 text-white">Mod version: 1.0</p>
