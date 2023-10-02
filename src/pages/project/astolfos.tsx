@@ -74,9 +74,9 @@ export default function AstolfoMod() {
             </div>
             <h2 className="mx-2 text-white text-xl">Or check out the repository first:</h2>
             <a
-                href="/tracker/downloads/astolfomod">
+                href="https://github.com/ProgrammerAstolfo/AstolfOS">
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="mx-2 m-1 p-2 px-4 bg-blue-600 rounded-md text-white">
-                    Or open GitHub
+                    Open GitHub
                 </motion.button>
             </a>
 
