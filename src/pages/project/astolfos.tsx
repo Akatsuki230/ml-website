@@ -62,6 +62,9 @@ export default function AstolfoMod() {
                 <h3 className="text-2xl font-bold text-white">CAUTION:</h3>
                 <p className="text-white">This script comes with ABSOLUTELY NO WARRANTY. If it somehow destroys your system, it's not my fault.</p>
             </div>
+            <div className="mx-4 p-2 bg-yellow-700 rounded-xl">
+                <p className="text-white">This script was only tested under Ubuntu. It may work on other systems though.</p>
+            </div>
 
             <div className="bg-gray-800 text-white p-2 mx-4 mt-2 rounded-xl font-mono">
                 wget https://raw.githubusercontent.com/ProgrammerAstolfo/AstolfOS/master/install.sh<br />
