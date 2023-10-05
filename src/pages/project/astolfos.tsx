@@ -42,10 +42,16 @@ export default function AstolfoMod() {
             </ul>
 
             <details>
-                <summary className="mx-2 text-white">Images</summary>
+                <summary className="mx-2 text-white">Images/KDE</summary>
                 <img src="/Screenshot_20231001_204658.png"></img>
                 <img src="/Screenshot_20231001_205609.png"></img>
                 <img src="/Screenshot_20231001_205725.png"></img>
+            </details>
+
+            <details>
+                <summary className="mx-2 text-white">Images/Gnome</summary>
+                <img src="/Screenshot from 2023-10-05 21-31-02.png"></img>
+                <img src="/Screenshot from 2023-10-05 21-30-52.png"></img>
             </details>
 
             <details>
@@ -54,6 +60,7 @@ export default function AstolfoMod() {
                 <ul className="mx-4 text-white">Fix neofetch installation</ul>
                 <ul className="mx-4 text-white">Add editing of bash config</ul>
                 <ul className="mx-4 text-white">Use shell commands a bit more properly</ul>
+                <ul className="mx-4 text-white">Add support to Ubuntu Gnome</ul>
                 <h2 className="text-xl mx-2 font-bold text-white">Version 1.0</h2>
                 <ul className="mx-4 text-white">First release</ul>
             </details>
