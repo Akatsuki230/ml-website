@@ -50,11 +50,15 @@ export default function AstolfoMod() {
 
             <details>
                 <summary className="mx-2 text-white">Changelog</summary>
+                <h2 className="text-xl mx-2 font-bold text-white">Version 1.1</h2>
+                <ul className="mx-4 text-white">Fix neofetch installation</ul>
+                <ul className="mx-4 text-white">Add editing of bash config</ul>
+                <ul className="mx-4 text-white">Use shell commands a bit more properly</ul>
                 <h2 className="text-xl mx-2 font-bold text-white">Version 1.0</h2>
                 <ul className="mx-4 text-white">First release</ul>
             </details>
 
-            <p className="mx-2 text-white">Script version: 1.0</p>
+            <p className="mx-2 text-white">Script version: 1.1</p>
 
             <h2 className="text-white text-xl">Use this script now:</h2>
 
@@ -69,11 +73,7 @@ export default function AstolfoMod() {
             <div className="bg-gray-800 text-white p-2 mx-4 mt-2 rounded-xl font-mono">
                 wget https://raw.githubusercontent.com/ProgrammerAstolfo/AstolfOS/master/install.sh<br />
                 sudo chmod +x install.sh<br/>
-                sudo ./install.sh<br/>
-                <br/>
-                wget https://raw.githubusercontent.com/ProgrammerAstolfo/AstolfOS/master/owoifier.sh<br />
-                sudo chmod +x owoifier.sh<br />
-                ./owoifier.sh<br />
+                ./install.sh<br/>
             </div>
             <h2 className="mx-2 text-white text-xl">Or check out the repository first:</h2>
             <a

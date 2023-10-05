@@ -35,8 +35,8 @@ export default function Astolfo() {
       <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Resource Pack</h1>
       <p className="text-2xl font-bold text-center mx-2 text-white">MINECRAFT: :3 EDITION LETS GOOOO</p>
       <p className="mx-2 text-white">
-        This resource pack changes the Minecraft loading screen, logo and ending
-        screen to be more Astolfo themed.
+        This resource pack changes the Minecraft loading screen, logo, totem of undying
+        and ending screen to be more Astolfo themed.
       </p>
       <h2 className="text-xl mx-2  text-white">
         Images{" "}
