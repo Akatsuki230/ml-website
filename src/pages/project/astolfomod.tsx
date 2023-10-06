@@ -13,12 +13,12 @@ export default function AstolfoMod() {
         <title>Astolfo Forge Mod | Programmer Astolfo's website</title>
         <meta name="og:title" content="Astolfo Forge mod" />
         <meta
-          name="description"
+          name="og:description"
           content="Astolfo Forge mod adds Astolfo in 3 outfits and some items and commands for him!"
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/Screenshot_20230929_132211.png"
+          content="https://mldkyt.com/2023-10-06_21.34.58.png"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="Programmer Astolfo" />
@@ -34,9 +34,7 @@ export default function AstolfoMod() {
       </h2>
 
       <ul className="text-white">
-        <li className="mx-4">&bull; Astolfo in Casual outfit</li>
-        <li className="mx-4">&bull; Astolfo in Armour outfit</li>
-        <li className="mx-4">&bull; Astolfo in another outfit</li>
+        <li className="mx-4">&bull; Astolfo in 3 outfits</li>
         <li className="mx-4">&bull; Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
         <li className="mx-4">&bull; Felix</li>
         <li className="mx-4">&bull; Astolfo Sword</li>
@@ -51,6 +49,7 @@ export default function AstolfoMod() {
 
       <details>
         <summary className="mx-2 text-white">Images</summary>
+        <img src="/2023-10-06_21.34.58.png"></img>
         <img src="/Screenshot_20230929_132211.png"></img>
         <img src="/Screenshot_20230929_202606.png"></img>
         <img src="/Screenshot_20230929_202616.png"></img>
