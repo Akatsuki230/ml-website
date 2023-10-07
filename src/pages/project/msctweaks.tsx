@@ -1,3 +1,5 @@
+import Astolfo from "@/components/Astolfo";
+import DeprecatedWarning from "@/components/DeprecatedWarning";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import {Inter} from "next/font/google";
@@ -27,14 +29,13 @@ export default function MSCTweaks() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <div className="border-2 border-orange-500 m-2 rounded-lg">
-        <p className="text-2xl font-bold ml-2 text-white">WARNING</p>
-        <p className="mx-4 text-white">
-          The information you are about to read is for a mod that has been
-          deprecated and will only get bug fixes or functionality fixes.
-        </p>
-      </div>
-      <h1 className="text-5xl mt-2 text-center font-bold text-white">MSC Tweaks</h1>
+      <DeprecatedWarning />
+      <h1 className="text-5xl mt-2 text-center font-bold text-white mx-auto w-max" style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}>MSC Tweaks</h1>
       <p className="mx-2 text-white">
         MSC Tweaks (also My Summer Car Tweaks) is a mod for My Summer Car which
         adds a few tweaks, such as always open console, fall damage (though
@@ -50,6 +51,7 @@ export default function MSCTweaks() {
       >
         <button className="mt-2">Download</button>
       </a>
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project"/>
     </div>

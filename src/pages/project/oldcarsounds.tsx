@@ -1,9 +1,11 @@
+import Astolfo from "@/components/Astolfo";
+import DeprecatedWarning from "@/components/DeprecatedWarning";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function OldCarSounds() {
   return (
@@ -23,14 +25,18 @@ export default function OldCarSounds() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <div className="border-2 border-orange-500 m-2 rounded-lg">
-        <p className="text-2xl font-bold ml-2 text-white">WARNING</p>
-        <p className="mx-4 text-white">
-          The information you are about to read is for a mod that has been
-          deprecated and will only get bug fixes or functionality fixes.
-        </p>
-      </div>
-      <h1 className="text-center mt-2 text-5xl font-bold  text-white">OldCarSounds</h1>
+      <DeprecatedWarning />
+      <h1
+        className="text-center mt-2 text-5xl font-bold  text-white mx-auto w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        OldCarSounds
+      </h1>
       <p className="mx-2 text-white">
         OldCarSounds (also OCS, Old Car Sounds) is a mod for My Summer Car which
         returns old sounds from old builds of My Summer Car and puts them in the
@@ -44,7 +50,7 @@ export default function OldCarSounds() {
         className="ml-4 px-2 py-1 bg-orange-500 rounded-lg text-white"
         href="https://www.nexusmods.com/mysummercar/mods/3666"
       >
-      <button className="mt-1">Download</button>
+        <button className="mt-1">Download</button>
       </a>
       <p className="ml-4 text-white">
         Or you can download an older release from the GitHub repository:
@@ -67,6 +73,7 @@ export default function OldCarSounds() {
         You push your changes on GitHub, and upload the mod on NexusMods,{" "}
         <u>where you link me as the original author of the mod</u>.
       </p>
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>

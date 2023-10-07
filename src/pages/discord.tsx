@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
@@ -29,7 +30,10 @@ export default function Discord() {
     <div className={inter.className}>
       <Head>
         <title>Programmer Astolfo's Discord server</title>
-        <meta name="description" content="Join Programmer Astolfo's Discord server!" />
+        <meta
+          name="description"
+          content="Join Programmer Astolfo's Discord server!"
+        />
         <meta name="author" content="Programmer Astolfo" />
         <meta name="theme-color" content="#FF77FF" />
         <script
@@ -39,7 +43,15 @@ export default function Discord() {
         ></script>
       </Head>
 
-      <h1 className="mt-4 text-5xl text-center font-bold text-white">
+      <h1
+        className="mt-4 text-5xl text-center font-bold text-white mx-auto w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
         Programmer Astolfo's Discord server
       </h1>
       <div className="text-center">
@@ -117,6 +129,7 @@ export default function Discord() {
         className="mx-6 rounded-md mt-2"
       />
 
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="" />
     </div>

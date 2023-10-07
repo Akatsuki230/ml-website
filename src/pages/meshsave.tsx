@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
@@ -37,7 +38,17 @@ export default function Meshsave() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl text-center font-bold my-4 text-white">Programmer Astolfo's meshsave</h1>
+      <h1
+        className="text-5xl text-center font-bold my-4 w-max mx-auto"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        Programmer Astolfo's meshsave
+      </h1>
       <p className="ml-4 text-white">
         In my save, the car looks like it has been through a war zone. The car's
         body is badly damaged and has been crashed at high speed multiple times.
@@ -81,6 +92,7 @@ export default function Meshsave() {
       </motion.button>
       <br />
       <br />
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="meshsave" />
     </div>

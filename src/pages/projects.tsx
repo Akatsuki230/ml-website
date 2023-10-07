@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
@@ -28,10 +29,20 @@ export default function Projects() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl text-center font-bold px-2 my-4 text-white">
+      <h1
+        className="text-5xl text-center font-bold px-2 my-4 text-white mx-auto w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
         Programmer Astolfo's project list
       </h1>
-      <p className="ml-6 text-white">This is a full list of Programmer Astolfo's projects.</p>
+      <p className="ml-6 text-white">
+        This is a full list of Programmer Astolfo's projects.
+      </p>
 
       <h2 className="text-2xl px-4 text-white">Online Projects</h2>
 
@@ -244,6 +255,7 @@ export default function Projects() {
         </motion.div>
       </div>
 
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>

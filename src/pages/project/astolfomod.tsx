@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
@@ -28,7 +29,12 @@ export default function AstolfoMod() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Forge Mod</h1>
+      <h1 className="text-5xl mt-2 text-center font-bold text-white mx-auto w-max" style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}>Astolfo Forge Mod</h1>
       <h2 className="mx-2 text-white text-2xl font-bold">
         This mod adds:
       </h2>
@@ -41,11 +47,6 @@ export default function AstolfoMod() {
         <li className="mx-4">&bull; Astolfo Biome</li>
         <li className="mx-4">&bull; /duplicateastolfos command for more cuteness</li>
       </ul>
-
-      <div className="mx-2 p-2 bg-red-800 rounded-xl">
-        <h3 className="text-2xl font-bold text-white">CAUTION:</h3>
-        <p className="text-white">This mod disables entity cramming in the world as soon as you load it! Be sure to back up your world files before trying.</p>
-      </div>
 
       <details>
         <summary className="mx-2 text-white">Images</summary>
@@ -75,6 +76,8 @@ export default function AstolfoMod() {
         </motion.button>
       </a>
 
+      <p className="mx-2 text-gray-500 text-sm">Made using MCreator.</p>
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>

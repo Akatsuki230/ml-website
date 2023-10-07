@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import Navbar from "@/components/NavBar";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
+import Astolfo from "@/components/Astolfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function Home() {
     <div className={inter.className}>
       <Head>
         <title>Programmer Astolfo's website</title>
-        <meta name="description" content="Welcome to Programmer Astolfo's website!" />
+        <meta
+          name="description"
+          content="Welcome to Programmer Astolfo's website!"
+        />
         <meta name="author" content="Programmer Astolfo" />
         <meta name="theme-color" content="#FF77FF" />
         <script
@@ -53,7 +57,17 @@ export default function Home() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h1 className="text-5xl my-4 text-white">Programmer Astolfo</h1>
+                  <h1
+                    className="text-5xl my-4"
+                    style={{
+                      background:
+                        "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+                      WebkitBackgroundClip: "text",
+                      color: "transparent",
+                    }}
+                  >
+                    Programmer Astolfo
+                  </h1>
                 </div>
               </div>
               <p className="text-white">Scroll down &#x2193;</p>
@@ -67,19 +81,12 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className="relative px-[10%] py-[10px]">
-            <p className="my-4 text-white bg-blue-900 p-2 px-4 rounded-lg">
-              I am in the progress of changing names. My old name is mldkyt and I'm changing everywhere to "Programmer Astolfo".
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-        >
-          <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">About me</h1>
+
+            <p className="text-sm italic text-gray-600">
+              I'm not gay, but 20$ is 20$.
+            </p>
+
             <p className="my-4 text-white">
               I am proficient in writing code across a wide array of programming
               languages, encompassing a diverse spectrum of options. These
@@ -136,7 +143,9 @@ export default function Home() {
                   versatile and capable programmer, equipped to navigate the
                   multifaceted landscape of software development with finesse.
                 </motion.p>
-                <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   className="text-blue-500 cursor-pointer"
                   onClick={() => setReadMore(false)}
                 >
@@ -147,7 +156,9 @@ export default function Home() {
 
             {readMore || (
               <>
-                <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   className="text-blue-500 cursor-pointer"
                   onClick={() => setReadMore(true)}
                 >
@@ -161,15 +172,22 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.7 }}
         >
-          <div className="relative px-[10%] py-[10px]">
-            <h1 className="text-3xl text-white font-bold">
+          <div className="relative px-[10%] py-[10px] bg-gray-900">
+            <h1
+              className="text-3xl text-white font-bold w-max"
+              style={{
+                background:
+                  "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
               Hang out in my Discord server
             </h1>
             <p className="my-2 text-white">
-              A Discord server full of femboys and non-femboys. It has a custom bot.
-              I also have a section dedicated to My Summer Car modding and help.
+              My Discord server with a custom bot.
             </p>
             <motion.div
               className="w-max"
@@ -180,7 +198,7 @@ export default function Home() {
                 className="text-white bg-blue-600 p-1 px-2 rounded-md"
                 href="/discord"
               >
-                <button>Hop in!</button>
+                <button>Show it to me in detail :3</button>
               </a>
             </motion.div>
           </div>
@@ -189,26 +207,12 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
+          transition={{ duration: 1, delay: 0.9 }}
         >
           <div className="relative px-[10%] py-[10px]">
-            <h1 className="text-3xl text-white font-bold">Programmer Astolfo's Projects</h1>
-            <div className="mt-6">
-              <h2 className="text-xl text-white font-bold">Astolph0/place</h2>
-              <p className="text-white">An r/place clone</p>
-              <motion.div
-                className="w-max"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a
-                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
-                  href="https://place.mldkyt.com/"
-                >
-                  <button className="mt-2">Open</button>
-                </a>
-              </motion.div>
-            </div>
+            <h1 className="text-3xl text-white font-bold">
+              Programmer Astolfo's Projects
+            </h1>
             <div className="mt-4">
               <h2 className="text-xl text-white font-bold">
                 Astolfo Resource Pack
@@ -243,16 +247,43 @@ export default function Home() {
                 </a>
               </motion.div>
             </div>
+            <div className="mt-4">
+              <h2
+                className="text-xl text-white font-bold w-max"
+                style={{
+                  background:
+                    "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Other projects
+              </h2>
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="/projects"
+                >
+                  <button className="mt-2">View a full list :3</button>
+                </a>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.3 }}
+          transition={{ duration: 1, delay: 1.1 }}
         >
           <div className="relative px-[10%] py-[10px]">
-            <h1 className="text-3xl text-white font-bold">Stalk Programmer Astolfo</h1>
+            <h1 className="text-3xl text-white font-bold">
+              Stalk Programmer Astolfo
+            </h1>
             <div className="mt-6">
               <h2 className="text-xl text-white font-bold">
                 <span className="text-red-500">You</span>Tube
@@ -288,9 +319,35 @@ export default function Home() {
                 </a>
               </motion.div>
             </div>
+            <div className="mt-4">
+              <h2
+                className="text-xl font-bold w-max"
+                style={{
+                  background:
+                    "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Other social links
+              </h2>
+              <motion.div
+                className="w-max"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <a
+                  className="text-white bg-blue-600 p-1 px-2 rounded-md"
+                  href="/social"
+                >
+                  <button className="mt-2">View the full list :3</button>
+                </a>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
+        <Astolfo />
         <FemboyFridayVirtualHeadpat />
       </div>
 

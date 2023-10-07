@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import {motion} from "framer-motion";
@@ -26,7 +27,12 @@ export default function Social() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl mt-2 text-center font-bold ">Programmer Astolfo's social links</h1>
+      <h1 className="text-5xl mt-2 text-center font-bold mx-auto w-max" style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}>Programmer Astolfo's social links</h1>
       <p className="mx-8 text-lg ">Welcome to my social link page!</p>
 
       <div
@@ -199,6 +205,7 @@ export default function Social() {
           </a>
         </motion.div>
       </div>
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="social"/>
     </div>

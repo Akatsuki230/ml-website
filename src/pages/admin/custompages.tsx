@@ -75,7 +75,7 @@ export default function AdminCustompages(props: { customPages: CustomPageWithID[
       <a href="/admin/custompage/create">
         <button className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white">Create</button>
       </a>
-      <h1 className="text-3xl m-2 text-white">Custom page manager</h1>
+      <h1 className="text-3xl m-2 text-white" >Custom page manager</h1>
       <table className="w-screen">
         <thead>
           <tr>

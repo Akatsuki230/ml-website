@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
@@ -23,6 +24,7 @@ export default function FunFact(props: { funFact: { fact: string } }) {
         {props.funFact.fact}
       </p>
 
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="" />
     </div>

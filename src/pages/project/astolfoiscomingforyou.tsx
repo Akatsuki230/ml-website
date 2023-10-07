@@ -1,10 +1,10 @@
-
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AstolfoIsComingForYou() {
   return (
@@ -28,8 +28,20 @@ export default function AstolfoIsComingForYou() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Is Coming For You</h1>
-      <h2 className="text-2xl mx-2 font-bold text-white">1. The safe variant</h2>
+      <h1
+        className="text-5xl mt-2 text-center font-bold text-white mx-auto w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        Astolfo Is Coming For You
+      </h1>
+      <h2 className="text-2xl mx-2 font-bold text-white">
+        1. The safe variant
+      </h2>
       <p className="mx-2 text-white">
         The safe variant has a countdown from 100 to 0 and then Astolfo gives
         you a lot of compliments ❤️.
@@ -45,7 +57,9 @@ export default function AstolfoIsComingForYou() {
         alt="Astolfo Is Coming For You Compliments"
       />
 
-      <h2 className="text-2xl mx-2 font-bold text-white">2. The unsafe variant</h2>
+      <h2 className="text-2xl mx-2 font-bold text-white">
+        2. The unsafe variant
+      </h2>
       <p className="mx-2 text-white">
         The unsafe variant has a countdown from 100 to 0 and then Astolfo gets
         angry at you and turns your PC off.
@@ -66,6 +80,7 @@ export default function AstolfoIsComingForYou() {
         </button>
       </a>
 
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />
     </div>

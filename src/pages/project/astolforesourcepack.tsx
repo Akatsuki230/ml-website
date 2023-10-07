@@ -1,12 +1,13 @@
-import {useState} from "react";
+import { useState } from "react";
 import Navbar from "@/components/NavBar";
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import Head from "next/head";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
+import Astolfo from "@/components/Astolfo";
 
-const inter = Inter({subsets: ["latin"]})
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Astolfo() {
+export default function AstolfoResourcePack() {
   const [hideImages, setHideImages] = useState(false);
 
   const toggleImages = () => setHideImages(!hideImages);
@@ -32,11 +33,23 @@ export default function Astolfo() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <h1 className="text-5xl mt-2 mx-2 text-center font-bold text-white">Astolfo Resource Pack</h1>
-      <p className="text-2xl font-bold text-center mx-2 text-white">MINECRAFT: :3 EDITION LETS GOOOO</p>
+      <h1
+        className="text-5xl mt-2 mx-auto text-center font-bold text-white w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        Astolfo Resource Pack
+      </h1>
+      <p className="text-2xl font-bold text-center mx-2 text-white">
+        MINECRAFT: :3 EDITION LETS GOOOO
+      </p>
       <p className="mx-2 text-white">
-        This resource pack changes the Minecraft loading screen, logo, totem of undying
-        and ending screen to be more Astolfo themed.
+        This resource pack changes the Minecraft loading screen, logo, totem of
+        undying and ending screen to be more Astolfo themed.
       </p>
       <h2 className="text-xl mx-2  text-white">
         Images{" "}
@@ -46,8 +59,7 @@ export default function Astolfo() {
       </h2>
 
       <p className="mx-2 text-white">Installer version: 1.0</p>
-      <a
-        href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
+      <a href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
         <button className="mx-2 m-1 p-2 px-4 bg-blue-500 rounded-md text-white">
           Download installer (recommended!)
         </button>
@@ -57,7 +69,6 @@ export default function Astolfo() {
           Manual download and installation instructions
         </button>
       </a>
-
 
       {hideImages || (
         <>
@@ -79,10 +90,8 @@ export default function Astolfo() {
         </>
       )}
 
-
       <p className="ml-2 text-white">Installer version: 1.0</p>
-      <a
-        href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
+      <a href="https://github.com/Astolph0/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
         <button className="mx-2 m-1 p-2 px-4 bg-blue-500 rounded-md text-white">
           Download installer (recommended!)
         </button>
@@ -93,8 +102,9 @@ export default function Astolfo() {
         </button>
       </a>
 
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
-      <Navbar sel="project"/>
+      <Navbar sel="project" />
     </div>
   );
 }

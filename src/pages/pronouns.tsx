@@ -1,3 +1,4 @@
+import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
 import { motion } from "framer-motion";
@@ -28,7 +29,17 @@ export default function Pronouns() {
         ></script>
       </Head>
 
-      <h1 className="text-5xl my-4 text-center font-bold ">Programmer Astolfo's pronouns</h1>
+      <h1
+        className="text-5xl my-4 text-center font-bold mx-auto w-max"
+        style={{
+          background:
+            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        Programmer Astolfo's pronouns
+      </h1>
       <h2 className="text-2xl m-1 mx-6 font-bold ">Calling me</h2>
       <p className="m-1 mx-8 ">&bull; ❤️ Programmer Astolfo</p>
       <p className="m-1 mx-8 ">&bull; 👍 Astolfo</p>
@@ -119,6 +130,7 @@ export default function Pronouns() {
       </div>
       <br />
       <br />
+      <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="pronouns" />
     </div>
