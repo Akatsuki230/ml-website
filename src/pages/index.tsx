@@ -83,10 +83,6 @@ export default function Home() {
           <div className="relative px-[10%] py-[10px]">
             <h1 className="text-3xl text-white font-bold">About me</h1>
 
-            <p className="text-sm italic text-gray-600">
-              I'm not gay, but 20$ is 20$.
-            </p>
-
             <p className="my-4 text-white">
               I am proficient in writing code across a wide array of programming
               languages, encompassing a diverse spectrum of options. These
