@@ -82,41 +82,35 @@ export default function AstolfoMod() {
 
       <p className="mx-2 text-white">Script version: 1.1</p>
 
-      <h2 className="text-white text-xl">Use this script now:</h2>
-
-      <div className="mx-4 p-2 bg-red-800 rounded-xl">
-        <h3 className="text-2xl font-bold text-white">CAUTION:</h3>
-        <p className="text-white">
-          This script comes with ABSOLUTELY NO WARRANTY. If it somehow destroys
-          your system, it's not my fault.
-        </p>
-      </div>
-      <div className="mx-4 p-2 bg-yellow-700 rounded-xl">
-        <p className="text-white">
-          This script was only tested under Ubuntu. It may work on other systems
-          though.
-        </p>
-      </div>
-
-      <div className="bg-gray-800 text-white p-2 mx-4 mt-2 rounded-xl font-mono">
-        wget
-        https://raw.githubusercontent.com/ProgrammerAstolfo/AstolfOS/master/install.sh
-        <br />
-        sudo chmod +x install.sh
-        <br />
-        ./install.sh
-        <br />
-      </div>
-      <h2 className="mx-2 text-white text-xl">
-        Or check out the repository first:
-      </h2>
-      <a href="https://github.com/ProgrammerAstolfo/AstolfOS">
+      <h2 className="text-white mx-2 text-2xl font-bold">All the documentation has moved to GitHub:</h2>
+      <p className="text-white mx-2">Select "Automatic installation" if you use Ubuntu 22.04 and want to have everything done automatically.</p>
+      <p className="text-white mx-2">Select "Manual installation" if you use other distro. Works on Arch too.</p>
+      <p className="text-white mx-2">Select "Source code" to go straight to source code. Contains scripts as well as configuration files.</p>
+      <a href="https://github.com/ProgrammerAstolfo/AstolfOS/wiki/Automatic-Installation-(Ubuntu-only)">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="mx-2 m-1 p-2 px-4 bg-blue-600 rounded-md text-white"
+          className="bg-blue-600 text-white rounded-lg p-2 px-4 mx-2"
         >
-          Open GitHub
+          Automatic installation (recommended for Ubuntu users!)
+        </motion.button>
+      </a>
+      <a href="https://github.com/ProgrammerAstolfo/AstolfOS/wiki/Manual-Installation">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-gray-600 text-white rounded-lg p-2 px-4 mx-2"
+        >
+          Manual installation (owo)
+        </motion.button>
+      </a>
+      <a href="https://github.com/ProgrammerAstolfo/AstolfOS/wiki/Manual-Installation">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-gray-600 text-white rounded-lg p-2 px-4 mx-2"
+        >
+          Source code
         </motion.button>
       </a>
 
