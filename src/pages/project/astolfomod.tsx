@@ -45,7 +45,13 @@ export default function AstolfoMod() {
         <li className="mx-4">&bull; Felix</li>
         <li className="mx-4">&bull; Astolfo Sword</li>
         <li className="mx-4">&bull; Astolfo Biome</li>
-        <li className="mx-4">&bull; /duplicateastolfos command for more cuteness</li>
+        <li className="mx-4">&bull; Hideri</li>
+        <li className="mx-4">&bull; Venti</li>
+        <li className="mx-4">&bull; Rimuru</li>
+        <li className="mx-4">&bull; Nagisa</li>
+        <li className="mx-4">&bull; Sieg</li>
+        <li className="mx-4">&bull; Bridget</li>
+        <li className="mx-4">&bull; /duplicatecuties command for more cuteness &lt;3</li>
       </ul>
 
       <details>
@@ -60,6 +66,17 @@ export default function AstolfoMod() {
 
       <details>
         <summary className="mx-2 text-white">Changelog</summary>
+        <h2 className="text-xl mx-2 font-bold text-white">Version 1.2</h2>
+        <ul className="mx-4 text-white">Added Hideri</ul>
+        <ul className="mx-4 text-white">Added Bridget</ul>
+        <ul className="mx-4 text-white">Added Venti</ul>
+        <ul className="mx-4 text-white">Added /cuterain</ul>
+        <ul className="mx-4 text-white">Added /despawn</ul>
+        <ul className="mx-4 text-white">Added /duplicatecuties</ul>
+        <ul className="mx-4 text-white">Removed /duplicateastolfos</ul>
+        <ul className="mx-4 text-white">Added Rimuru</ul>
+        <ul className="mx-4 text-white">Added Nagisa</ul>
+        <ul className="mx-4 text-white">Added Sieg</ul>
         <h2 className="text-xl mx-2 font-bold text-white">Version 1.1</h2>
         <ul className="mx-4 text-white">Added Astolfo Sword</ul>
         <ul className="mx-4 text-white">Added Astolfo Biome</ul>
@@ -68,7 +85,7 @@ export default function AstolfoMod() {
         <ul className="mx-4 text-white">First release</ul>
       </details>
 
-      <p className="mx-2 text-white">Mod version: 1.1</p>
+      <p className="mx-2 text-white">Mod version: 1.2</p>
       <a
         href="/tracker/downloads/astolfomod">
         <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="mx-2 m-1 p-2 px-4 bg-blue-600 rounded-md text-white">
