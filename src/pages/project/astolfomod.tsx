@@ -15,7 +15,7 @@ export default function AstolfoMod() {
         <meta name="og:title" content="Astolfo Forge mod" />
         <meta
           name="og:description"
-          content="Astolfo Forge mod adds Astolfo in 3 outfits and some items and commands for him!"
+          content="Astolfo Forge mod adds lots of femboys into Minecraft!"
         />
         <meta
           name="og:image"
