@@ -40,7 +40,7 @@ export default function AstolfoMod() {
       </h2>
 
       <ul className="text-white">
-        <li className="mx-4">&bull; Astolfo in 3 outfits</li>
+        <li className="mx-4">&bull; Astolfo in 4 outfits</li>
         <li className="mx-4">&bull; Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
         <li className="mx-4">&bull; Felix</li>
         <li className="mx-4">&bull; Astolfo Sword</li>
