@@ -13,8 +13,6 @@ const itemStyle: CSSProperties = {
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Projects() {
-  const [placeStarting, setPlaceStarting] = useState(false);
-
   return (
     <div className={inter.className}>
       <Head>
@@ -50,23 +48,20 @@ export default function Projects() {
         style={itemStyle}
         className="bg-[#2B0029] m-4 py-2 rounded-lg drop-shadow-none"
       >
-        <h3 className="ml-2 text-xl text-white">Astolph0/place</h3>
+        <h3 className="ml-2 text-xl text-white">The Femboy List</h3>
         <p className="ml-4 text-white">
-          This is a 100x100 grid where anyone can view and if you create an
-          account using username and password, you can also place tiles every 5
-          minutes.
+          A list of femboys, that keeps growing and growing.
         </p>
         <motion.div
-          className={`w-max ml-2 ${placeStarting ? "pointer-events-none" : ""}`}
+          className={`w-max ml-2`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setPlaceStarting(true)}
         >
           <a
             className="bg-blue-600 rounded-lg p-0.5 px-1 text-white"
-            href="https://place.mldkyt.com"
+            href="/femboy"
           >
-            {placeStarting ? "Starting, please wait..." : "Start"}
+            Start
           </a>
         </motion.div>
       </div>

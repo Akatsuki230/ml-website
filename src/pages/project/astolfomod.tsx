@@ -40,11 +40,11 @@ export default function AstolfoMod() {
       </h2>
 
       <ul className="text-white">
+        <li className="mx-4">&bull; Femboy Biome</li>
         <li className="mx-4">&bull; Astolfo in 4 outfits</li>
         <li className="mx-4">&bull; Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
         <li className="mx-4">&bull; Felix</li>
         <li className="mx-4">&bull; Astolfo Sword</li>
-        <li className="mx-4">&bull; Astolfo Biome</li>
         <li className="mx-4">&bull; Hideri</li>
         <li className="mx-4">&bull; Venti</li>
         <li className="mx-4">&bull; Rimuru</li>
