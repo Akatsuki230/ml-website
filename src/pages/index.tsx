@@ -42,7 +42,7 @@ export default function Home() {
       <div className="absolute left-0 top-0 w-screen">
         <div className="bg-gradient-to-b from-[#2B0029] to-black">
           <motion.div
-            className="h-56"
+            className="h-64"
             initial={{ opacity: 0, transform: "scale(0.8) translateY(-100px)" }}
             animate={{ opacity: 1, transform: "scale(1) translateY(0)" }}
             transition={{ duration: 1, ease: "backOut" }}
@@ -70,6 +70,9 @@ export default function Home() {
                   </h1>
                 </div>
               </div>
+              <p className="text-white">
+                Czech | Femboy | 17 | Programmer
+              </p>
               <p className="text-white">Scroll down &#x2193;</p>
             </div>
           </motion.div>
