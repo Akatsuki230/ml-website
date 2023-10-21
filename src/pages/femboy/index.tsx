@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Astolfo from '@/components/Astolfo'
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 
 export default function FemboyList() {
     const [data, setData] = useState([] as { name: string, description: string, imageUrl: string, wiki: string }[]);
@@ -57,6 +58,10 @@ export default function FemboyList() {
             }
             {data.length == 0 && <p>Cute boys are loading~ :3</p>}
 
+            <h2>Missing a femboy?</h2>
+            <a href="https://forms.gle/gesKa6uGRvVvBMZ39" target="_blank">Click here to suggest a femboy~!</a>
+
+            <ViewTracker />
             <Astolfo />
             <FemboyFridayVirtualHeadpat />
             <Navbar sel="" />

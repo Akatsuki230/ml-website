@@ -2,6 +2,7 @@ import Astolfo from "@/components/Astolfo";
 import DeprecatedWarning from "@/components/DeprecatedWarning";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 import {Inter} from "next/font/google";
 import Head from "next/head";
 
@@ -51,6 +52,8 @@ export default function MSCTweaks() {
       >
         <button className="mt-2">Download</button>
       </a>
+
+      <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project"/>

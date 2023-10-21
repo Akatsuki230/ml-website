@@ -1,6 +1,7 @@
 import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -114,6 +115,7 @@ export default function AstolfoMod() {
         </motion.button>
       </a>
 
+      <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />

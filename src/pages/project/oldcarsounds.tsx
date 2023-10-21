@@ -2,6 +2,7 @@ import Astolfo from "@/components/Astolfo";
 import DeprecatedWarning from "@/components/DeprecatedWarning";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
@@ -73,6 +74,8 @@ export default function OldCarSounds() {
         You push your changes on GitHub, and upload the mod on NexusMods,{" "}
         <u>where you link me as the original author of the mod</u>.
       </p>
+
+      <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />

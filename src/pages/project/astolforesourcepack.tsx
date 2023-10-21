@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Astolfo from "@/components/Astolfo";
+import ViewTracker from "@/components/ViewTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -102,6 +103,7 @@ export default function AstolfoResourcePack() {
         </button>
       </a>
 
+      <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="project" />

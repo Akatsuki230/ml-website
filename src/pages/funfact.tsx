@@ -1,6 +1,7 @@
 import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Navbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 import { GetServerSidePropsContext } from "next";
 import { Inter } from "next/font/google";
 
@@ -24,6 +25,7 @@ export default function FunFact(props: { funFact: { fact: string } }) {
         {props.funFact.fact}
       </p>
 
+      <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
       <Navbar sel="" />

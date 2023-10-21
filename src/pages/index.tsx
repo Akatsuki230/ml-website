@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import Astolfo from "@/components/Astolfo";
+import ViewTracker from "@/components/ViewTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,6 +74,7 @@ export default function Home() {
               <p className="text-white">
                 Czech | Femboy | 17 | Programmer
               </p>
+              <ViewTracker />
               <p className="text-white">Scroll down &#x2193;</p>
             </div>
           </motion.div>
