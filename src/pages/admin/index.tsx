@@ -39,6 +39,11 @@ export default function Admin() {
           Tracking Information
         </button>
       </a>
+      <a href="/admin/pageviews">
+        <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
+          Page View counts
+        </button>
+      </a>
       <Navbar sel="" />
     </div>
   );
