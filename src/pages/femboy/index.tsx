@@ -1,5 +1,4 @@
 import React from "react";
-import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 import Astolfo from '@/components/Astolfo'
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
@@ -59,7 +58,7 @@ export default function FemboyList() {
             {data.length == 0 && <p>Cute boys are loading~ :3</p>}
 
             <h2>Missing a femboy?</h2>
-            <a href="https://forms.gle/gesKa6uGRvVvBMZ39" target="_blank">Click here to suggest a femboy~!</a>
+            <a className="text-blue-600 underline" href="https://forms.gle/gesKa6uGRvVvBMZ39" target="_blank">Click here to suggest a femboy~!</a>
 
             <ViewTracker />
             <Astolfo />

@@ -1,11 +1,6 @@
-const {NextApiRequest, NextApiResponse} = require('next');
+import { NextApiRequest, NextApiResponse } from "next";
 
-/**
- * 
- * @param {NextApiRequest} req 
- * @param {NextApiResponse} res 
- */
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res :NextApiResponse) {
     if (req.method !== 'POST') {
         console.log('Handler method')
         res.status(400).send({ message: 'Invalid method' });
@@ -34,7 +29,7 @@ export default async function handler(req, res) {
 
     path = path.replace('/', '_');
     
-    let res1 = await (await fetch(`${process.env.FIREBASE_URL}/visits/${path}.json`)).json()
+    let res1: number = await (await fetch(`${process.env.FIREBASE_URL}/visits/${path}.json`)).json()
     if (res1 == null) {
         await fetch(`${process.env.FIREBASE_URL}/visits/${path}.json`, {
             method: 'PUT',
