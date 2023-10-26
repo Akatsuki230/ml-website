@@ -26,6 +26,11 @@ export default function ChatPointsLeaderBoard() {
                 <meta name="author" content="Programmer Astolfo" />
                 <meta name="theme-color" content="#FF77FF" />
                 <title>The Chatpoint Leaderboard</title>
+                <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                crossOrigin="anonymous"
+                ></script>
             </Head>
             <a href="/discord">
                 <p className="text-blue-600 underline">Return back to the Discord page</p>
