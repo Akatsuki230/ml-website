@@ -61,6 +61,11 @@ export default function Discord() {
             Join now
           </button>
         </a>
+        <a href="https://forms.gle/aXEzprRZxqs5Co86A">
+          <button className="ml-4 bg-gray-600 my-8 text-white px-4 py-2 rounded-md">
+            Ban appeal
+          </button>
+        </a>
       </div>
       {loadedStats ? (
         <>
@@ -133,7 +138,7 @@ export default function Discord() {
       <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
-      <Navbar sel="" />
+      <Navbar sel="discord" />
     </div>
   );
 }

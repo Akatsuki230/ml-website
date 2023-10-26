@@ -112,6 +112,14 @@ export default function Navbar(props: { sel: string }) {
           >
             Pronouns
           </a>
+          <a
+            className={`ml-2 p-1 w-24 ${
+              props.sel == "discord" ? "bg-[#4A0056] rounded-md" : ""
+            }`}
+            href="/discord"
+          >
+            Discord
+          </a>
         </div>
         <div className={screenWidth >= 640 ? "hidden" : ""}>
           <a
@@ -171,6 +179,14 @@ export default function Navbar(props: { sel: string }) {
                 href="/pronouns"
               >
                 Pronouns
+              </a>
+              <a
+                className={`ml-2 p-1 w-24 ${
+                  props.sel == "discord" ? "bg-[#4A0056] rounded-md" : ""
+                }`}
+                href="/discord"
+              >
+                Discord
               </a>
             </>
           )}
