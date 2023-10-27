@@ -1,4 +1,3 @@
-import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
