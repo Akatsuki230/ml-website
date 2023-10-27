@@ -1,4 +1,4 @@
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import { useEffect, useState } from "react";
 
 export default function Tracking() {
@@ -40,7 +40,7 @@ export default function Tracking() {
                 </tbody>
             </table>
 
-            <Navbar sel="" />
+            <FinalNavbar sel="" />
         </>
     )
 }

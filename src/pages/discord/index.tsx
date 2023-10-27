@@ -1,11 +1,11 @@
 import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import React from "react";
+import { Accordion, Button, Container, Image } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,12 +30,12 @@ export default function Discord() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Programmer Astolfo's Discord server</title>
+        <title>mldkyt's Discord server</title>
         <meta
           name="description"
-          content="Join Programmer Astolfo's Discord server!"
+          content="Join mldkyt's Discord server!"
         />
-        <meta name="author" content="Programmer Astolfo" />
+        <meta name="author" content="mldkyt" />
         <meta name="theme-color" content="#FF77FF" />
         <script
           async
@@ -43,6 +43,59 @@ export default function Discord() {
           crossOrigin="anonymous"
         ></script>
       </Head>
+
+      <FinalNavbar sel="discord" />
+      <Container>
+        <FemboyFridayVirtualHeadpat />
+        <h1>mldkyt's Discord server</h1>
+        <p>The official Discord server for mldkyt, named "mldkyt's bedroom"</p>
+        <Button as="a" href="https://discord.gg/JgFNmSwYME">
+          Join now
+        </Button>
+        <Button style={{marginLeft: '15px'}} as="a" href="https://forms.gle/aXEzprRZxqs5Co86A" variant="secondary">
+          Ban appeal
+        </Button>
+        
+        <br />
+        <br />
+        {loadedStats ? (
+          <>
+            <p>
+              <strong>{members}</strong> members,
+              <br />
+              <strong style={{color: 'lime'}}>{onlineMembers}</strong> online members
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Loading member stats...
+            </p>
+          </>
+        )}
+
+        <h2>Features of this Discord server</h2>
+        <Accordion defaultActiveKey='0'>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Custom Discord bot</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                This server has a custom Discord bot which has ChatPoints, CutePoints and more.
+              </p>
+              <p>
+                You can view the leaderboard for <a className="text-blue-600 underline" href="/discord/chatpoints">ChatPoints</a> and <a className="text-blue-600 underline" href="/discord/cutepoints">CutePoints</a> respectively.
+              </p>
+              <Image
+                src="/Discord_LHPOzTvDUC.png"
+                alt="Discord bot"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+
+        <br />
+        <ViewTracker />
+      </Container>
 
       <h1
         className="mt-4 text-5xl text-center font-bold text-white mx-auto w-max"
@@ -53,7 +106,7 @@ export default function Discord() {
           color: "transparent",
         }}
       >
-        Programmer Astolfo's Discord server
+        mldkyt's Discord server
       </h1>
       <div className="text-center">
         <a href="https://discord.gg/JgFNmSwYME">
@@ -78,18 +131,11 @@ export default function Discord() {
         </>
       ) : (
         <>
-          <motion.p
+          <p
             className="ml-8 text-xl"
-            initial={{ color: "#444" }}
-            animate={{ color: "#666" }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 0.5,
-            }}
           >
             Loading member stats...
-          </motion.p>
+          </p>
         </>
       )}
       <h2 className="text-3xl text-white px-4 mt-2 font-bold">
@@ -111,7 +157,7 @@ export default function Discord() {
       <ViewTracker />
       <Astolfo />
       <FemboyFridayVirtualHeadpat />
-      <Navbar sel="discord" />
+      <FinalNavbar sel="discord" />
     </div>
   );
 }

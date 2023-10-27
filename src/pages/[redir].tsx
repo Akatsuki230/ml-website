@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import process from "process";
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
-import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import { Inter } from "next/font/google";
+import { Container } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const data = await (
     await fetch(`${process.env.FIREBASE_URL}/redirects/${redir}.json`)
   ).json();
-  console.log("Data", data);
   if (data == null) {
     return {
       props: {
@@ -46,8 +45,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     }),
   });
 
-  console.log(data);
-
   return {
     props: {
       data,
@@ -58,46 +55,22 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 function renderRedirect(
   url: string,
   label: string,
-  redirTime: number,
-  text: string,
-  textBg: string
+  redirTime: number
 ) {
-  const r = parseInt(textBg.substring(3, 5), 16);
-  const g = parseInt(textBg.substring(5, 7), 16);
-  const b = parseInt(textBg.substring(8, 9), 16);
-  const a = parseInt(textBg.substring(1, 3), 16) / 255;
-
   return (
     <>
-      <div
-        className="text-3xl w-screen"
-        style={{
-          color: text,
-          backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})`,
-        }}
-      >
-        <h1 className="text-5xl">{label}</h1>
-        <h1>Redirecting you in {redirTime} seconds...</h1>
+      <div>
+        <h2 className="text-5xl">{label}</h2>
+        <p>Redirecting you in {redirTime} seconds...</p>
       </div>
     </>
   );
 }
 
-function renderImage(url: string, label: string, text: string, textBg: string) {
-  const r = parseInt(textBg.substring(3, 5), 16);
-  const g = parseInt(textBg.substring(5, 7), 16);
-  const b = parseInt(textBg.substring(8, 9), 16);
-  const a = parseInt(textBg.substring(1, 3), 16) / 255;
-
+function renderImage(url: string, label: string) {
   return (
     <>
-      <h1
-        className="text-3xl w-max p-1 rounded-md mb-2"
-        style={{
-          color: text,
-          backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})`,
-        }}
-      >
+      <h1>
         {label}
       </h1>
       <img
@@ -114,25 +87,14 @@ function renderImage(url: string, label: string, text: string, textBg: string) {
   );
 }
 
-function renderFile(url: string, label: string, text: string, textBg: string) {
+function renderFile(url: string, label: string) {
   function f() {
     document.location.href = url;
   }
 
-  const r = parseInt(textBg.substring(3, 5), 16);
-  const g = parseInt(textBg.substring(5, 7), 16);
-  const b = parseInt(textBg.substring(8, 9), 16);
-  const a = parseInt(textBg.substring(1, 3), 16) / 255;
-
   return (
     <>
-      <h1
-        className="text-3xl p-1 rounded-md"
-        style={{
-          color: text,
-          backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})`,
-        }}
-      >
+      <h1>
         {label}
       </h1>
       <br />
@@ -195,39 +157,39 @@ export default function Redirect(props: { data: any }) {
       <Head>
         {props.data.type == "redirect" && (
           <>
-            <title>Redirect by Programmer Astolfo</title>
-            <meta name="og:title" content="Redirect by Programmer Astolfo" />
+            <title>Redirect by mldkyt</title>
+            <meta name="og:title" content="Redirect by mldkyt" />
             <meta
               name="description"
               content={`Redirects to ${props.data.label}`}
             />
             <meta name="theme-color" content="#FF77FF" />
-            <meta name="author" content="Programmer Astolfo" />
+            <meta name="author" content="mldkyt" />
           </>
         )}
         {props.data.type == "image" && (
           <>
-            <title>Image shared by Programmer Astolfo</title>
+            <title>Image shared by mldkyt</title>
             <meta
               name="og:title"
-              content="Programmer Astolfo has shared an image with you"
+              content="mldkyt has shared an image with you"
             />
             <meta name="description" content={`Image ${props.data.label}`} />
             <meta name="theme-color" content="#FF77FF" />
             <meta name="og:image" content={props.data.url} />
-            <meta name="author" content="Programmer Astolfo" />
+            <meta name="author" content="mldkyt" />
           </>
         )}
         {props.data.type == "file" && (
           <>
-            <title>File shared by Programmer Astolfo</title>
+            <title>File shared by mldkyt</title>
             <meta
               name="og:title"
-              content="Programmer Astolfo has shared a file with you"
+              content="mldkyt has shared a file with you"
             />
             <meta name="description" content={`File ${props.data.label}`} />
             <meta name="theme-color" content="#FF77FF" />
-            <meta name="author" content="Programmer Astolfo" />
+            <meta name="author" content="mldkyt" />
           </>
         )}
         {props.data.type == "error" && (
@@ -236,10 +198,11 @@ export default function Redirect(props: { data: any }) {
             <meta name="og:title" content="Error" />
             <meta name="description" content={`Error ${props.data.label}`} />
             <meta name="theme-color" content="#FF77FF" />
-            <meta name="author" content="Programmer Astolfo" />
+            <meta name="author" content="mldkyt" />
           </>
         )}
       </Head>
+      <FinalNavbar sel="" />
       {!props.data.error && (
         <>
           {props.data.themeType == "colour" && (
@@ -271,67 +234,52 @@ export default function Redirect(props: { data: any }) {
         </>
       )}
 
-      <h1
-        className="text-2xl p-4"
-        style={{
-          background:
-            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
-          WebkitBackgroundClip: "text",
-          color: "transparent",
-        }}
-      >
-        Programmer Astolfo has shared something with you:
-      </h1>
-      <br />
-      <br />
-      <div
-        className="text-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
-        style={{
-          top: `${screenHeight / 2}px`,
-        }}
-      >
-        {props.data.error ? (
-          <>{renderError(props.data.errorMessage)}</>
-        ) : (
-          <>
-            {props.data.type == "redirect" &&
-              renderRedirect(
-                props.data.url,
-                props.data.label,
-                redirectTime,
-                props.data.themeTextColor,
-                props.data.themeTextBgColor
-              )}
-            {props.data.type == "image" &&
-              renderImage(
-                props.data.url,
-                props.data.label,
-                props.data.themeTextColor,
-                props.data.themeTextBgColor
-              )}
-            {props.data.type == "file" &&
-              renderFile(
-                props.data.url,
-                props.data.label,
-                props.data.themeTextColor,
-                props.data.themeTextBgColor
-              )}
-          </>
-        )}
-        {props.data.error || (
-          <div
-            className="mt-2"
-            style={{
-              color: props.data.themeTextColor,
-            }}
-          >
-            Views: {props.data.views}
-          </div>
-        )}
-      </div>
-      <Astolfo />
-      <FemboyFridayVirtualHeadpat />
-      <Navbar sel="" />
+      <Container>
+        <FemboyFridayVirtualHeadpat />
+        <h1>
+          mldkyt has shared something with you:
+        </h1>
+        <div
+          className="text-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{
+            top: `${screenHeight / 2}px`,
+          }}
+        >
+          {props.data.error ? (
+            <>{renderError(props.data.errorMessage)}</>
+          ) : (
+            <>
+              {props.data.type == "redirect" &&
+                renderRedirect(
+                  props.data.url,
+                  props.data.label,
+                  redirectTime
+                )}
+              {props.data.type == "image" &&
+                renderImage(
+                  props.data.url,
+                  props.data.label
+                )}
+              {props.data.type == "file" &&
+                renderFile(
+                  props.data.url,
+                  props.data.label
+                )}
+            </>
+          )}
+          {props.data.error || (
+            <div
+              className="mt-2"
+              style={{
+                color: props.data.themeTextColor,
+              }}
+            >
+              Views: {props.data.views}
+            </div>
+          )}
+        </div>
+      </Container>
+      
     </div>
   );
 }

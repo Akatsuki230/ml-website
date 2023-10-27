@@ -1,10 +1,9 @@
-import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { Accordion, Container, Image } from "react-bootstrap";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +11,7 @@ export default function AstolfoMod() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Astolfo Forge Mod | Programmer Astolfo's website</title>
+        <title>Astolfo Forge Mod | mldkyt's website</title>
         <meta name="og:title" content="Astolfo Forge mod" />
         <meta
           name="og:description"
@@ -23,82 +22,93 @@ export default function AstolfoMod() {
           content="https://mldkyt.com/2023-10-06_21.34.58.png"
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="Programmer Astolfo" />
+        <meta name="author" content="mldkyt" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <h1 className="text-5xl mt-2 text-center font-bold text-white mx-auto w-max" style={{
-          background:
-            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
-          WebkitBackgroundClip: "text",
-          color: "transparent",
-        }}>Astolfo Forge Mod</h1>
-      <h2 className="mx-2 text-white text-2xl font-bold">
-        This mod adds:
-      </h2>
 
-      <ul className="text-white">
-        <li className="mx-4">&bull; Femboy Biome</li>
-        <li className="mx-4">&bull; Astolfo in 4 outfits</li>
-        <li className="mx-4">&bull; Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
-        <li className="mx-4">&bull; Felix</li>
-        <li className="mx-4">&bull; Astolfo Sword</li>
-        <li className="mx-4">&bull; Hideri</li>
-        <li className="mx-4">&bull; Venti</li>
-        <li className="mx-4">&bull; Rimuru</li>
-        <li className="mx-4">&bull; Nagisa</li>
-        <li className="mx-4">&bull; Sieg</li>
-        <li className="mx-4">&bull; Bridget</li>
-        <li className="mx-4">&bull; /duplicatecuties command for more cuteness &lt;3</li>
-      </ul>
+      <FinalNavbar sel="project" />
 
-      <details>
-        <summary className="mx-2 text-white">Images</summary>
-        <img src="/2023-10-06_21.34.58.png"></img>
-        <img src="/Screenshot_20230929_132211.png"></img>
-        <img src="/Screenshot_20230929_202606.png"></img>
-        <img src="/Screenshot_20230929_202616.png"></img>
-        <img src="/Screenshot_20230929_202626.png"></img>
-        <img src="/Screenshot_20230929_202633.png"></img>
-      </details>
+      <Container>
+        <FemboyFridayVirtualHeadpat />
 
-      <details>
-        <summary className="mx-2 text-white">Changelog</summary>
-        <h2 className="text-xl mx-2 font-bold text-white">Version 1.2</h2>
-        <ul className="mx-4 text-white">Added Hideri</ul>
-        <ul className="mx-4 text-white">Added Bridget</ul>
-        <ul className="mx-4 text-white">Added Venti</ul>
-        <ul className="mx-4 text-white">Added /cuterain</ul>
-        <ul className="mx-4 text-white">Added /despawn</ul>
-        <ul className="mx-4 text-white">Added /duplicatecuties</ul>
-        <ul className="mx-4 text-white">Removed /duplicateastolfos</ul>
-        <ul className="mx-4 text-white">Added Rimuru</ul>
-        <ul className="mx-4 text-white">Added Nagisa</ul>
-        <ul className="mx-4 text-white">Added Sieg</ul>
-        <h2 className="text-xl mx-2 font-bold text-white">Version 1.1</h2>
-        <ul className="mx-4 text-white">Added Astolfo Sword</ul>
-        <ul className="mx-4 text-white">Added Astolfo Biome</ul>
-        <ul className="mx-4 text-white">Added Felix Agryle</ul>
-        <h2 className="text-xl mx-2 font-bold text-white">Version 1.0</h2>
-        <ul className="mx-4 text-white">First release</ul>
-      </details>
+        <h1>
+          Astolfo Forge Mod
+        </h1>
 
-      <p className="mx-2 text-white">Mod version: 1.2</p>
-      <a
-        href="/tracker/downloads/astolfomod">
-        <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} className="mx-2 m-1 p-2 px-4 bg-blue-600 rounded-md text-white">
-          Download the mod from GitHub
-        </motion.button>
-      </a>
+        <h2>Feature list</h2>
+        <ul className="text-white">
+          <li className="mx-4">Femboy Biome</li>
+          <li className="mx-4">Astolfo in 4 outfits</li>
+          <li className="mx-4">Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
+          <li className="mx-4">Felix</li>
+          <li className="mx-4">Astolfo Sword</li>
+          <li className="mx-4">Hideri</li>
+          <li className="mx-4">Venti</li>
+          <li className="mx-4">Rimuru</li>
+          <li className="mx-4">Nagisa</li>
+          <li className="mx-4">Sieg</li>
+          <li className="mx-4">Bridget</li>
+          <li className="mx-4">/duplicate_cuties command for more cuteness &lt;3</li>
+        </ul>
+        <Accordion defaultActiveKey="2">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Images</Accordion.Header>
+            <Accordion.Body>
+              <Image style={{width: '100%'}} src="/2023-10-06_21.34.58.png" />
+              <Image style={{width: '100%'}} src="/Screenshot_20230929_132211.png" />
+              <Image style={{width: '100%'}} src="/Screenshot_20230929_202606.png" />
+              <Image style={{width: '100%'}} src="/Screenshot_20230929_202616.png" />
+              <Image style={{width: '100%'}} src="/Screenshot_20230929_202626.png" />
+              <Image style={{width: '100%'}} src="/Screenshot_20230929_202633.png" />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Changelog</Accordion.Header>
+            <Accordion.Body>
+              <h2 className="text-xl mx-2 font-bold text-white">Version 1.2</h2>
+              <ul>
+                <li>Added Hideri</li>
+                <li>Added Bridget</li>
+                <li>Added Venti</li>
+                <li>Added /cuterain</li>
+                <li>Added /despawn</li>
+                <li>Added /duplicatecuties</li>
+                <li>Removed /duplicateastolfos</li>
+                <li>Added Rimuru</li>
+                <li>Added Nagisa</li>
+                <li>Added Sieg</li>
+              </ul>
+              <h2 className="text-xl mx-2 font-bold text-white">Version 1.1</h2>
+              <ul>
+                <li>Added Astolfo Sword</li>
+                <li>Added Astolfo Biome</li>
+                <li>Added Felix Agryle</li>
+              </ul>
+              <h2 className="text-xl mx-2 font-bold text-white">Version 1.0</h2>
+              <ul>
+                <li>First release</li>
+              </ul>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Download</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                <a href="/tracker/downloads/astolfomod">Download the mod from GitHub</a>
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+        <br />
+        <p className="mx-2 text-gray-500 text-sm">Made using MCreator.</p>
+        
+        <ViewTracker />
+      </Container>
 
-      <p className="mx-2 text-gray-500 text-sm">Made using MCreator.</p>
-      <ViewTracker />
-      <Astolfo />
-      <FemboyFridayVirtualHeadpat />
-      <Navbar sel="project" />
     </div>
   )
 }

@@ -1,7 +1,11 @@
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import { useState, useRef, useEffect } from "react";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
+import { Inter } from "next/font/google";
+import { Container, Table } from "react-bootstrap";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function CutePointsLeaderBoard() {
     const [data, setData] = useState([] as {name: string, avatar: string, cutepoints: number, user_id: number}[]);
@@ -20,10 +24,10 @@ export default function CutePointsLeaderBoard() {
     })
 
     return (
-        <div className="text-white text-center">
+        <div className={inter.className}>
             <Head>
-                <meta name="description" content="The cutepoint leaderboard for Programmer Astolfo's Discord server" />
-                <meta name="author" content="Programmer Astolfo" />
+                <meta name="description" content="The cutepoint leaderboard for mldkyt's Discord server" />
+                <meta name="author" content="mldkyt" />
                 <meta name="theme-color" content="#FF77FF" />
                 <title>The Cutepoint Leaderboard</title>
                 <script
@@ -32,36 +36,39 @@ export default function CutePointsLeaderBoard() {
                 crossOrigin="anonymous"
                 ></script>
             </Head>
-            <a href="/discord">
-                <p className="text-blue-600 underline">Return back to the Discord page</p>
-            </a>
-            <h1 className="text-3xl font-bold">The Cutepoint Leaderboard</h1>
-            <table className="relative left-[50%] -translate-x-1/2">
-                <thead>
-                    <tr>
-                        <th className="px-4"></th>
-                        <th className="px-4">Name</th>
-                        <th className="px-4">Cutepoints</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((x, i) => (
-                        <tr key={x.user_id}>
-                            <td className="px-4">
-                                <img className="rounded-full" width={64} height={64} src={x.avatar} alt={`avatar of ${x.name}`} />
-                            </td>
-                            <td className="px-4">{x.name}</td>
-                            <td className="px-4">{x.cutepoints}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
 
-            <p>
-                It can take upwards of 24 hours for this leaderboard to update. If you changed your nickname, it will update within 24 hours on the leaderboard.
-            </p>
-            <Navbar sel="" />
-            <ViewTracker />
+            <FinalNavbar sel="" />
+            <Container>
+                <h1 className="text-3xl font-bold">The Cutepoint Leaderboard</h1>
+                <a href="/discord">
+                    <p className="text-blue-600 underline">Return back to the Discord page</p>
+                </a>
+                <Table className="relative left-[50%] -translate-x-1/2">
+                    <thead>
+                        <tr>
+                            <th className="px-4"></th>
+                            <th className="px-4">Name</th>
+                            <th className="px-4">Cutepoints</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((x) => (
+                            <tr key={x.user_id}>
+                                <td className="px-4">
+                                    <img className="rounded-full" width={64} height={64} src={x.avatar} alt={`avatar of ${x.name}`} />
+                                </td>
+                                <td className="px-4">{x.name}</td>
+                                <td className="px-4">{x.cutepoints}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+
+                <p>
+                    It can take upwards of 24 hours for this leaderboard to update. If you changed your nickname, it will update within 24 hours on the leaderboard.
+                </p>
+                <ViewTracker />
+            </Container>
         </div>
     )
 

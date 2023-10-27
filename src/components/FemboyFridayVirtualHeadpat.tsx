@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { Alert, Button, CloseButton } from "react-bootstrap";
 
 export default function FemboyFridayVirtualHeadpat() {
   const isFriday = new Date().getDay() === 5;
@@ -32,47 +32,51 @@ export default function FemboyFridayVirtualHeadpat() {
 
   return show ? (
     <>
-      <div className="fixed top-14 w-max right-2 text-white border-2 border-blue-600 rounded-lg">
-        <span className="m-2 text-lg font-bold">Today is Femboy Friday :3</span>
-        <span className="mx-0.5 text-lg text-red-500 cursor-pointer" onClick={() =>setShow(false)}>Close</span>
+      <Alert>
+        <span style={{
+          fontSize: '2rem'
+        }}>Today is Femboy Friday!</span>
+        <CloseButton style={{
+          margin: '1rem'
+        }} onClick={() => setShow(false)} />
         <br />
         {!sending && !alreadySent && count === 0 && (
-          <motion.button
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="m-2 bg-blue-600 px-2 py-1 rounded-lg cursor-pointer"
+          <Button
             onClick={sendVirtualHeadpat}
           >
             Send me a virtual headpat
-          </motion.button>
+          </Button>
         )}
         {sending && (
-          <motion.p
-            className="m-2"
-            initial={{ color: "#444" }}
-            animate={{ color: "#666" }}
-            transition={{ repeat: Infinity, repeatType: "mirror", duration: 0.5 }}
-          >
+          <span>
             Sending...
-          </motion.p>
+          </span>
         )}
         {!sending && alreadySent && (
-          <p className="m-2">
-            You already sent a virtual headpat today :3
-          </p>
+          <>
+            <span>
+              You already sent a virtual headpat today :3
+            </span>
+            <br />
+          </>
         )}
         {!sending && count !== 0 && (
-          <p className="m-2">
-            There were {count} sent virtual headpats today :3
-          </p>
+          <>
+            <span>
+              There were {count} sent virtual headpats today :3
+            </span>
+            <br/>
+          </>
         )}
         {!sending && notFridayOnServer && (
-          <p className="m-2">
-            Your PC reports Friday, but the server reports it's not Friday :(
-          </p>
+          <>
+            <span>
+              Your PC reports Friday, but the server reports it's not Friday :(
+            </span>
+            <br/>
+          </>
         )}
-      </div>
+      </Alert>
     </>
   ) : null;
 }

@@ -1,7 +1,8 @@
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import process from "process";
 import {Inter} from "next/font/google";
+import { Container, Table } from "react-bootstrap";
 
 interface CustomPageWithID {
   id: string;
@@ -66,50 +67,52 @@ export default function AdminCustompages(props: { customPages: CustomPageWithID[
 
   return (
     <div className={inter.className}>
-      <button
-        className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white"
-        onClick={() => (location.href = "/admin")}
-      >
-        Back
-      </button>
-      <a href="/admin/custompage/create">
-        <button className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white">Create</button>
-      </a>
-      <h1 className="text-3xl m-2 text-white" >Custom page manager</h1>
-      <table className="w-screen">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Label</th>
-            <th>Type</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.customPages.map((page: any, i: number) => {
-            return (
-              <tr key={i}>
-                <td className='text-white'>{renderShortened(page.id)}</td>
-                <td className='text-white'>{renderShortened(page.label)}</td>
-                <td className='text-white'>{page.type}</td>
-                <td>
-                  <a href={`/admin/custompage/${page.id}/properties`}>
-                    <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
-                      Edit
-                    </button>
-                  </a>
-                  <a href={`/admin/custompage/${page.id}/delete`}>
-                    <button className="bg-red-600 p-1 m-2 rounded-md text-white">
-                      Delete
-                    </button>
-                  </a>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <Navbar sel="" />
+      <FinalNavbar sel="" />
+      <Container>
+        <button
+          className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white"
+          onClick={() => (location.href = "/admin")}
+        >
+          Back
+        </button>
+        <a href="/admin/custompage/create">
+          <button className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white">Create</button>
+        </a>
+        <h1 className="text-3xl m-2 text-white" >Custom page manager</h1>
+        <Table className="w-screen">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Label</th>
+              <th>Type</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {props.customPages.map((page: any, i: number) => {
+              return (
+                <tr key={i}>
+                  <td className='text-white'>{renderShortened(page.id)}</td>
+                  <td className='text-white'>{renderShortened(page.label)}</td>
+                  <td className='text-white'>{page.type}</td>
+                  <td>
+                    <a href={`/admin/custompage/${page.id}/properties`}>
+                      <button className="bg-blue-600 p-1 m-2 rounded-md text-white">
+                        Edit
+                      </button>
+                    </a>
+                    <a href={`/admin/custompage/${page.id}/delete`}>
+                      <button className="bg-red-600 p-1 m-2 rounded-md text-white">
+                        Delete
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </Container>
     </div>
   );
 }
