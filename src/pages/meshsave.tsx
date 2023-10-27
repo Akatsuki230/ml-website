@@ -1,11 +1,11 @@
 import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { motion } from "framer-motion";
-import { Inter } from "next/font/google";
+import { Content, Inter } from "next/font/google";
 import Head from "next/head";
 import { CSSProperties } from "react";
+import { Button, Carousel, Container, Image } from "react-bootstrap";
 
 const imageStyle: CSSProperties = {
   margin: "10px",
@@ -21,11 +21,11 @@ export default function Meshsave() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Programmer Astolfo's Meshsave</title>
-        <meta name="og:title" content="Programmer Astolfo's Meshsave" />
+        <title>mldkyt's Meshsave</title>
+        <meta name="og:title" content="mldkyt's Meshsave" />
         <meta
           name="description"
-          content="Programmer Astolfo's (fucked up) meshsave for My Summer Car."
+          content="mldkyt's (fucked up) meshsave for My Summer Car."
         />
         <meta
           name="og:image"
@@ -38,66 +38,43 @@ export default function Meshsave() {
           crossOrigin="anonymous"
         ></script>
       </Head>
+      <FinalNavbar sel="meshsave" />
 
-      <h1
-        className="text-5xl text-center font-bold my-4 w-max mx-auto"
-        style={{
-          background:
-            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
-          WebkitBackgroundClip: "text",
-          color: "transparent",
-        }}
-      >
-        Programmer Astolfo's meshsave
-      </h1>
-      <p className="ml-4 text-white">
-        In my save, the car looks like it has been through a war zone. The car's
-        body is badly damaged and has been crashed at high speed multiple times.
-        The mesh of the car is severely damaged and it looks like it has been
-        pieced back together.{" "}
-      </p>
+      <Container>
+        <FemboyFridayVirtualHeadpat />
+        <h1>
+          mldkyt's meshsave
+        </h1>
+        <p>
+          In my save, the car looks like it has been through a war zone. The car's
+          body is badly damaged and has been crashed at high speed multiple times.
+          The mesh of the car is severely damaged and it looks like it has been
+          pieced back together.
+        </p>
 
-      <div className="">
-        <img
-          className="drop-shadow-lg"
-          style={imageStyle}
-          src="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png"
-          alt="shitsuma1"
-        ></img>
-        <img
-          className="drop-shadow-lg"
-          style={imageStyle}
-          src="https://media.discordapp.net/attachments/768887055438053476/1042910848886259782/shitsuma2.png"
-          alt="shitsuma2"
-        ></img>
-        <img
-          className="drop-shadow-lg"
-          style={imageStyle}
-          src="https://media.discordapp.net/attachments/768887055438053476/1042910849192435812/shitsuma3.png"
-          alt="shitsuma3"
-        ></img>
-        <img
-          className="drop-shadow-lg"
-          style={imageStyle}
-          src="https://media.discordapp.net/attachments/768887055438053476/1042910849477652481/shitsuma4.png"
-          alt="shitsuma4"
-        ></img>
-      </div>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="bg-blue-600 text-white rounded-md px-2 py-1 ml-2"
-        onClick={dl}
-      >
-        Download the meshsave
-      </motion.button>
-      <br />
-      <br />
+        <Carousel>
+          <Carousel.Item>
+            <Image src="https://media.discordapp.net/attachments/768887055438053476/1042910848529739777/shitsuma1.png" alt="shitsuma1" style={{width: '100%'}}/>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src="https://media.discordapp.net/attachments/768887055438053476/1042910848886259782/shitsuma2.png" alt="shitsuma2" style={{width: '100%'}}/>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src="https://media.discordapp.net/attachments/768887055438053476/1042910849192435812/shitsuma3.png" alt="shitsuma3" style={{width: '100%'}}/>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src="https://media.discordapp.net/attachments/768887055438053476/1042910849477652481/shitsuma4.png" alt="shitsuma4" style={{width: '100%'}}/>
+          </Carousel.Item>
+        </Carousel>
+        <br />
+        <Button onClick={dl}>
+          Download the meshsave
+        </Button>
+        <br />
+        <br />
+        <ViewTracker />
+      </Container>
 
-      <ViewTracker />
-      <Astolfo />
-      <FemboyFridayVirtualHeadpat />
-      <Navbar sel="meshsave" />
     </div>
   );
 }

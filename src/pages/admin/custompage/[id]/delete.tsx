@@ -1,4 +1,4 @@
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import process from "process";
 import {Inter} from "next/font/google";
@@ -57,7 +57,7 @@ export default function AdminCustompagesPageDelete(props: { id: string }) {
       >
         Cancel
       </button>
-      <Navbar sel="" />
+      <FinalNavbar sel="" />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import Astolfo from '@/components/Astolfo'
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 
 export default function FemboyList() {
@@ -63,7 +63,7 @@ export default function FemboyList() {
             <ViewTracker />
             <Astolfo />
             <FemboyFridayVirtualHeadpat />
-            <Navbar sel="" />
+            <FinalNavbar sel="" />
         </div>
     )
 

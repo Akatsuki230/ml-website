@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext, NextApiRequest, NextApiResponse } from "next";
+import { GetServerSidePropsContext } from "next";
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   ctx.res.writeHead(301, { Location: "/social" });

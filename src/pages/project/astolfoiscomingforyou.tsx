@@ -1,9 +1,9 @@
-import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { Accordion, Button, Container, Image } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +11,7 @@ export default function AstolfoIsComingForYou() {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Astolfo Is Coming For You | Programmer Astolfo's website</title>
+        <title>Astolfo Is Coming For You | mldkyt's website</title>
         <meta name="og:title" content="Astolfo Is Coming For You" />
         <meta
           name="description"
@@ -22,69 +22,62 @@ export default function AstolfoIsComingForYou() {
           content="https://mldkyt.com/VirtualBoxVM_lCURwn9Xdd.png"
         />
         <meta name="theme-color" content="#FF77FF" />
-        <meta name="author" content="Programmer Astolfo" />
+        <meta name="author" content="mldkyt" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <h1
-        className="text-5xl mt-2 text-center font-bold text-white mx-auto w-max"
-        style={{
-          background:
-            "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)",
-          WebkitBackgroundClip: "text",
-          color: "transparent",
-        }}
-      >
-        Astolfo Is Coming For You
-      </h1>
-      <h2 className="text-2xl mx-2 font-bold text-white">
-        1. The safe variant
-      </h2>
-      <p className="mx-2 text-white">
-        The safe variant has a countdown from 100 to 0 and then Astolfo gives
-        you a lot of compliments ❤️.
-      </p>
-      <img
-        className="mx-2 rounded-md"
-        src="/VirtualBoxVM_lCURwn9Xdd.png"
-        alt="Astolfo Is Coming For You Countdown"
-      />
-      <img
-        className="mx-2 rounded-md"
-        src="/VirtualBoxVM_y4yGiQAs1A.png"
-        alt="Astolfo Is Coming For You Compliments"
-      />
+      
+      <FinalNavbar sel="project" />
+      <Container>
+        <FemboyFridayVirtualHeadpat />
+        <h1>Astolfo is coming for you</h1>
 
-      <h2 className="text-2xl mx-2 font-bold text-white">
-        2. The unsafe variant
-      </h2>
-      <p className="mx-2 text-white">
-        The unsafe variant has a countdown from 100 to 0 and then Astolfo gets
-        angry at you and turns your PC off.
-      </p>
-      <img
-        className="mx-2 rounded-md"
-        src="/VirtualBoxVM_R7Oo1N36h9.png"
-        alt="Astolfo Is Coming For You Evil Countdown"
-      />
-      <img
-        className="mx-2 rounded-md"
-        src="/VirtualBoxVM_cRDIvd1bG6.png"
-        alt="Astolfo Is Coming For You Evil Shutdown"
-      />
-      <a href="https://github.com/Astolph0/AstolfoIsComingForYou/releases/">
-        <button className="mx-2 m-1 p-2 px-4 bg-green-500 rounded-md text-white">
-          Download
-        </button>
-      </a>
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>The safe variant</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                The safe variant has a countdown from 100 to 0 and then Astolfo gives you a lot of compliments &lt;3
+              </p>
+              <Button as="a" href="https://github.com/mldkyt/AstolfoIsComingForYou/releases">
+                Download
+              </Button>
+              <br />
+              <br />
+              <h4>Pictures</h4>
+              <Image rounded src="/VirtualBoxVM_lCURwn9Xdd.png" alt="Astolfo is cute <3"></Image>
+              <br />
+              <Image rounded src="/VirtualBoxVM_y4yGiQAs1A.png" alt="Astolfo is cute <3"></Image>
+              <br />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>The evil variant</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                The evil variant has a countdown from 100 to 0 and then Astolfo shuts down your PC.
+              </p>
+              <Button as="a" href="https://github.com/mldkyt/AstolfoIsComingForYou/releases">
+                Download
+              </Button>
+              <br />
+              <br />
+              <h4>Pictures</h4>
+              <Image rounded src="/VirtualBoxVM_R7Oo1N36h9.png" alt="Astolfo is cute <3"></Image>
+              <br />
+              <Image rounded src="/VirtualBoxVM_cRDIvd1bG6.png" alt="Astolfo is cute <3"></Image>
+              <br />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+        <br />
+        <ViewTracker />
+      </Container>
 
-      <ViewTracker />
-      <Astolfo />
-      <FemboyFridayVirtualHeadpat />
-      <Navbar sel="project" />
+      
     </div>
   );
 }

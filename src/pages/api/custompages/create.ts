@@ -7,24 +7,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  const { id, label, url, type, bgType, bgColour, textColour, textBgColour, textBgOpacity } = JSON.parse(req.body) as {id: string, label: string, url: string, type: string, bgType: string, bgColour: string, textColour: string, textBgColour: string, textBgOpacity: string};
-  if (id === undefined || label === undefined || url === undefined || type === undefined || bgType === undefined || bgColour === undefined || textColour === undefined || textBgColour === undefined || textBgOpacity === undefined){
+  const { id, label, url, type } = JSON.parse(req.body) as {id: string, label: string, url: string, type: string };
+  if (id === undefined || label === undefined || url === undefined || type === undefined){
     res.end("Invalid request");
     return;
   }
-
-  let bgValue = "";
-  if (bgType == "colour" || bgType == "imageStretch") {
-    bgValue = textBgColour;
-  } else {
-    console.log("Invalid bgType");
-    res.end("Invalid request");
-    return;
-  }
-
-  const textBgColourFull = `#${Number(
-    textBgOpacity
-  ).toString(16)}${textBgColour.substring(1)}`;
 
   const dataCheck = await (
     await fetch(
@@ -45,11 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         url: url,
         label: label,
         views: 0,
-        type: type,
-        themeType: bgType,
-        themeBgValue: bgValue,
-        themeTextColor: textColour,
-        themeTextBgColor: textBgColourFull,
+        type: type
       }),
     }
   );

@@ -11,7 +11,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
     return {
         redirect: { 
-            destination: 'https://github.com/ProgrammerAstolfo/AstolfoForge/releases/'
+            destination: 'https://github.com/mldkyt/AstolfoForge/releases/'
         }
     }
 }

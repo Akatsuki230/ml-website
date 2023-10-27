@@ -1,10 +1,13 @@
-import Navbar from "@/components/NavBar";
+import FinalNavbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  if (!ctx.params?.id) return { redirect: { destination: "/admin/custompages", permanent: false } };
+  if (!ctx.params?.id)
+    return {
+      redirect: { destination: "/admin/custompages", permanent: false },
+    };
   const cookies = ctx.req.headers.cookie ?? "";
   if (!cookies.includes(`token=${process.env.ADMIN_PASSWORD}`)) {
     return { redirect: { destination: "/admin/login", permanent: false } };
@@ -17,23 +20,20 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return {
     props: {
       customPage: data,
-      textBg: `#${data.themeTextBgColor.substring(3)}`,
-      textBgOpacity: parseInt(data.themeTextBgColor.substring(1, 3), 16),
     },
   };
 }
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function AdminCustompagesIdProperties(props: { customPage: any; textBg: string; textBgOpacity: number }) {
+export default function AdminCustompagesIdProperties(props: {
+  customPage: any;
+  textBg: string;
+  textBgOpacity: number;
+}) {
   const [label, setLabel] = React.useState(props.customPage.label);
   const [url, setUrl] = React.useState(props.customPage.url);
   const [type, setType] = React.useState(props.customPage.type);
-  const [bgType, setBgType] = React.useState(props.customPage.themeType);
-  const [bgColour, setBgColour] = React.useState(props.customPage.themeBgValue);
-  const [textColour, setTextColour] = React.useState(props.customPage.themeTextColor);
-  const [textBgColour, setTextBgColour] = React.useState(props.textBg);
-  const [textBgOpacity, setTextBgOpacity] = React.useState(props.textBgOpacity);
 
   const save = () => {
     fetch(`/api/custompages/update`, {
@@ -43,19 +43,16 @@ export default function AdminCustompagesIdProperties(props: { customPage: any; t
         label,
         url,
         type,
-        bgType,
-        bgColour,
-        textColour,
-        textBgColour,
-        textBgOpacity,
       }),
-    }).then(x => x.text()).then(x => {
-      if (x !== "Success") {
-        alert(x);
-      }
-      location.reload();
-    });
-  }
+    })
+      .then((x) => x.text())
+      .then((x) => {
+        if (x !== "Success") {
+          alert(x);
+        }
+        location.reload();
+      });
+  };
 
   return (
     <div className={`${inter.className} text-white`}>
@@ -115,87 +112,11 @@ export default function AdminCustompagesIdProperties(props: { customPage: any; t
       <label className="m-1" htmlFor="bgType">
         Background Type
       </label>
-      <select
-        name="bgType"
-        id="bgType"
-        className="bg-black"
-        value={bgType}
-        onChange={(e) => setBgType(e.target.value)}
-      >
-        <option value="colour">Colour</option>
-        <option value="imageStretch">Image</option>
-      </select>
+
       <br />
-      {props.customPage.themeType == "colour" && (
-        <>
-          <label className="m-1" htmlFor="bgColour">
-            Background Colour
-          </label>
-          <input
-            className="bg-black"
-            type="color"
-            name="bgColour"
-            id="bgColour"
-            value={bgColour}
-            onChange={(e) => setBgColour(e.target.value)}
-          />
-        </>
-      )}
-      {props.customPage.themeType == "imageStretch" && (
-        <>
-          <label className="m-1" htmlFor="bgImage">
-            Background Image
-          </label>
-          <input
-            className="bg-black"
-            type="url"
-            name="bgImage"
-            id="bgImage"
-            value={bgColour}
-            onChange={(e) => setBgColour(e.target.value)}
-          />
-        </>
-      )}
-      <br />
-      <label className="m-1" htmlFor="textColour">
-        Text Colour
-      </label>
-      <input
-        className="bg-black"
-        type="color"
-        name="textColour"
-        id="textColour"
-        value={textColour}
-        onChange={(e) => setTextColour(e.target.value)}
-      />
-      <br />
-      <label className="m-1" htmlFor="textBgColour">
-        Text Background Colour
-      </label>
-      <input
-        className="bg-black"
-        type="color"
-        name="textBgColour"
-        id="textBgColour"
-        value={textBgColour}
-        onChange={(e) => setTextBgColour(e.target.value)}
-      />
-      <br />
-      <label className="m-1" htmlFor="textBgOpacity">
-        Text Background Opacity
-      </label>
-      <input
-        className="bg-black"
-        type="range"
-        name="textBgOpacity"
-        id="textBgOpacity"
-        min="0"
-        max="255"
-        value={textBgOpacity}
-        onChange={(e) => setTextBgOpacity(parseInt(e.target.value))}
-      />
-      <br />
-      <button onClick={save} className="bg-blue-600 p-1 m-2 rounded-md">Save</button>
+      <button onClick={save} className="bg-blue-600 p-1 m-2 rounded-md">
+        Save
+      </button>
 
       <button
         className="bg-blue-600 p-1 m-2 rounded-md"
@@ -203,7 +124,7 @@ export default function AdminCustompagesIdProperties(props: { customPage: any; t
       >
         Return
       </button>
-      <Navbar sel="" />
+      <FinalNavbar sel="" />
     </div>
   );
 }
