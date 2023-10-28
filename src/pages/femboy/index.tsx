@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import Astolfo from '@/components/Astolfo'
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
@@ -61,7 +60,6 @@ export default function FemboyList() {
             <a className="text-blue-600 underline" href="https://forms.gle/gesKa6uGRvVvBMZ39" target="_blank">Click here to suggest a femboy~!</a>
 
             <ViewTracker />
-            <Astolfo />
             <FemboyFridayVirtualHeadpat />
             <FinalNavbar sel="" />
         </div>
