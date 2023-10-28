@@ -1,8 +1,7 @@
-import Astolfo from "@/components/Astolfo";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Content, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import Head from "next/head";
 import { CSSProperties } from "react";
 import { Button, Carousel, Container, Image } from "react-bootstrap";

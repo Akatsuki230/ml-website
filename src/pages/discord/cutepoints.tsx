@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { Container, Table } from "react-bootstrap";
+import { Container, Image, Table } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +55,7 @@ export default function CutePointsLeaderBoard() {
                         {data.map((x) => (
                             <tr key={x.user_id}>
                                 <td className="px-4">
-                                    <img className="rounded-full" width={64} height={64} src={x.avatar} alt={`avatar of ${x.name}`} />
+                                    <Image roundedCircle width={64} height={64} src={x.avatar} alt={`avatar of ${x.name}`} />
                                 </td>
                                 <td className="px-4">{x.name}</td>
                                 <td className="px-4">{x.cutepoints}</td>

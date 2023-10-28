@@ -19,7 +19,7 @@ export default function AstolfoMod() {
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/Screenshot_20230929_132211.png"
+          content="https://mldkyt.com/kde_astolfos_settings.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
@@ -48,17 +48,17 @@ export default function AstolfoMod() {
             <Accordion.Body>
               <Image
                 style={{ width: "100%" }}
-                src="/Screenshot_20231001_204658.png"
+                src="/kde_astolfos_desktop.webp"
                 alt="AstolfOS"
               />
               <Image
                 style={{ width: "100%" }}
-                src="/Screenshot_20231001_205609.png"
+                src="/kde_astolfos_settings.webp"
                 alt="AstolfOS"
               />
               <Image
                 style={{ width: "100%" }}
-                src="/Screenshot_20231001_205725.png"
+                src="/kde_astolfos_neofetch.webp"
                 alt="AstolfOS"
               />
             </Accordion.Body>

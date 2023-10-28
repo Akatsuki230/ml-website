@@ -19,7 +19,7 @@ export default function AstolfoMod() {
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/2023-10-06_21.34.58.png"
+          content="https://mldkyt.com/astolfomod_crowd.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
@@ -58,12 +58,12 @@ export default function AstolfoMod() {
           <Accordion.Item eventKey="0">
             <Accordion.Header>Images</Accordion.Header>
             <Accordion.Body>
-              <Image style={{width: '100%'}} src="/2023-10-06_21.34.58.png" />
-              <Image style={{width: '100%'}} src="/Screenshot_20230929_132211.png" />
-              <Image style={{width: '100%'}} src="/Screenshot_20230929_202606.png" />
-              <Image style={{width: '100%'}} src="/Screenshot_20230929_202616.png" />
-              <Image style={{width: '100%'}} src="/Screenshot_20230929_202626.png" />
-              <Image style={{width: '100%'}} src="/Screenshot_20230929_202633.png" />
+              <Image style={{width: '100%'}} src="/astolfomod_crowd.webp" />
+              <Image style={{width: '100%'}} src="/astolfomod_biome.webp" />
+              <Image style={{width: '100%'}} src="/astolfomod_casual.webp" />
+              <Image style={{width: '100%'}} src="/astolfomod_armor.webp" />
+              <Image style={{width: '100%'}} src="/astolfomod_schoolgirl.webp" />
+              <Image style={{width: '100%'}} src="/astolfomod_astolfoflower.webp" />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">

@@ -19,7 +19,7 @@ export default function AstolfoIsComingForYou() {
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/VirtualBoxVM_lCURwn9Xdd.png"
+          content="https://mldkyt.com/astolfoiscomingforyou_safe_1.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
@@ -48,9 +48,9 @@ export default function AstolfoIsComingForYou() {
               <br />
               <br />
               <h4>Pictures</h4>
-              <Image rounded src="/VirtualBoxVM_lCURwn9Xdd.png" alt="Astolfo is cute <3"></Image>
+              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_safe_1.webp" alt="Coming for you"></Image>
               <br />
-              <Image rounded src="/VirtualBoxVM_y4yGiQAs1A.png" alt="Astolfo is cute <3"></Image>
+              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_safe_2.webp" alt="Compliments <3"></Image>
               <br />
             </Accordion.Body>
           </Accordion.Item>
@@ -66,9 +66,9 @@ export default function AstolfoIsComingForYou() {
               <br />
               <br />
               <h4>Pictures</h4>
-              <Image rounded src="/VirtualBoxVM_R7Oo1N36h9.png" alt="Astolfo is cute <3"></Image>
+              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_evil_1.webp" alt="Coming for you, angry >:3"></Image>
               <br />
-              <Image rounded src="/VirtualBoxVM_cRDIvd1bG6.png" alt="Astolfo is cute <3"></Image>
+              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_evil_2.webp" alt="Shutting down your PC >:3"></Image>
               <br />
             </Accordion.Body>
           </Accordion.Item>

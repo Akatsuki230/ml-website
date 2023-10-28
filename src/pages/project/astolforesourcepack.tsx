@@ -24,7 +24,7 @@ export default function AstolfoResourcePack() {
         />
         <meta
           name="og:image"
-          content="https://mldkyt.com/javaw_9CTZlO2WlC.png"
+          content="https://mldkyt.com/astolforp_menu.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
@@ -52,17 +52,17 @@ export default function AstolfoResourcePack() {
             <Accordion.Body>
               <Image
                 className="mx-2 rounded-md"
-                src="/javaw_XU7cPPUNy2.png"
+                src="/astolforp_loading.webp"
                 alt="Astolfo Resource Pack"
               />
               <Image
                 className="mx-2 rounded-md"
-                src="/javaw_9CTZlO2WlC.png"
+                src="/astolforp_menu.webp"
                 alt="Astolfo Resource Pack"
               />
               <Image
                 className="mx-2 rounded-md"
-                src="/javaw_fcqiaAZDlS.png"
+                src="/astolforp_ending.webp"
                 alt="Astolfo Resource Pack"
               />
             </Accordion.Body>

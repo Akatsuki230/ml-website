@@ -153,9 +153,18 @@ export default function Home() {
           <Accordion.Item eventKey="2">
             <Accordion.Header>Socials</Accordion.Header>
             <Accordion.Body>
-              <p>
-                Socials are <a href="/social">here</a>.
-              </p>
+              <h2>TikTok</h2>
+              <Button as="a" href="https://tiktok.com/@mldkyt">
+                View my TikTok profile
+              </Button>
+              <h2>YouTube</h2>
+              <Button as="a" href="https://youtube.com/@mldkyt">
+                View my TikTok profile
+              </Button>
+              <h2>Others</h2>
+              <Button as="a" href="/social">
+                View all my socials
+              </Button>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

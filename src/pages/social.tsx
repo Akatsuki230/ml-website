@@ -4,7 +4,7 @@ import ViewTracker from "@/components/ViewTracker";
 import {Inter} from "next/font/google";
 import Head from "next/head";
 import {CSSProperties} from "react";
-import { Button, Container, ListGroup } from "react-bootstrap";
+import { Badge, Button, Container, ListGroup } from "react-bootstrap";
 
 const itemStyle: CSSProperties = {
   width: "calc(100% - 45px)",
@@ -83,8 +83,63 @@ export default function Social() {
               View my NexusMods profile
             </Button>
           </ListGroup.Item>
+          <ListGroup.Item>
+            <h2>Reddit</h2>
+            <p>
+              My reddit user and subreddit.
+            </p>
+            <Button as="a" href="https://old.reddit.com/u/mldkyt">
+              View user
+            </Button>
+            <Button style={{marginLeft: '1rem'}} as="a" href="https://old.reddit.com/r/mldkyt">
+              View subreddit
+            </Button>
+          </ListGroup.Item>
         </ListGroup>
         <br />
+        <h1>Older Social Links</h1>
+        <p>
+          My older identities and socials that I no longer use.
+        </p>
+        <ListGroup>
+          <ListGroup.Item>
+            <h2>
+              Twitter
+              <small>
+                <Badge style={{marginLeft: '1rem'}} pill bg="danger">Deleted</Badge>
+              </small>
+            </h2>
+            <p>
+              I used to have a Twitter account, but I deleted it.
+            </p>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <h2>
+              Instagram
+              <small>
+                <Badge style={{marginLeft: '1rem'}} pill bg="danger">Deleted</Badge>
+              </small>
+            </h2>
+            <p>
+              I used to have an Instagram account, but I deleted it.
+            </p>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <h2>
+              Old Reddit accounts
+            </h2>
+            <p>
+              These are my other Reddit accounts that I no longer use.
+            </p>
+            <Button as="a" href="https://old.reddit.com/u/Astolph0">
+              Astolph0
+            </Button>
+            <Button style={{marginLeft: '1rem'}} as="a" href="https://old.reddit.com/u/ProgrammerAstolfo">
+              ProgrammerAstolfo
+            </Button>
+          </ListGroup.Item>
+        </ListGroup>
+        <br/>
         <ViewTracker />
       </Container>
     </div>

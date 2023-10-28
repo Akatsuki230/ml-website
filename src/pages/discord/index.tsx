@@ -85,8 +85,108 @@ export default function Discord() {
                 You can view the leaderboard for <a className="text-blue-600 underline" href="/discord/chatpoints">ChatPoints</a> and <a className="text-blue-600 underline" href="/discord/cutepoints">CutePoints</a> respectively.
               </p>
               <Image
-                src="/Discord_LHPOzTvDUC.png"
+                style={{ width: '100%' }}
+                src="/discord_bot.webp"
                 alt="Discord bot"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Requisha instance</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                This server has an active Requisha instance, which is a bot.
+              </p>
+              <p>
+                Requisha has mainly NSFW commands, requiring NSFW access.
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Special channels</Accordion.Header>
+            <Accordion.Body>
+              <h2>#OwO</h2>
+              <p>
+                A channel for only "owo" and "uwu" messages.
+              </p>
+              <Image
+                style={{ width: '100%' }}
+                src="/owo_channel_list.webp"
+                alt="OwO channel in channel list"
+              />
+              <br />
+              <br />
+              <Image
+                style={{ width: '100%' }}
+                src="/owo_channel_2.webp"
+                alt="OwO channel"
+              />
+
+              <br />
+              <br />
+              <h2>#nya</h2>
+              <p>
+                A channel for only meowing.
+              </p>
+              <Image
+                style={{ width: '100%' }}
+                src="/nya_channel_list.webp"
+                alt="Nya channel in channel list"
+              />
+              <br />
+              <br />
+              <Image
+                style={{ width: '100%' }}
+                src="/nya_channel_2.webp"
+                alt="Nya channel"
+              />
+
+              <br />
+              <br />
+              <h2>#:3</h2>
+              <p>
+                A channel for only ":3" messages.
+              </p>
+              <Image
+                style={{ width: '100%' }}
+                src="/3_channel_list.webp"
+                alt=":3 channel in channel list"
+              />
+              <br />
+              <br />
+              <Image
+                style={{ width: '100%' }}
+                src="/3_channel_2.webp"
+                alt=":3 channel"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Quality Announcements</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                We have amazing admins and mods which make amazing announcements.
+              </p>
+              <Image
+                style={{ width: '100%' }}
+                src="/announcement_1.webp"
+                alt="Quality announcement"
+              />
+              <p>
+                <small>This is just an example.</small>
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>Minecraft Server</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                We have a channel with an up-to-date IP for the Minecraft server.
+              </p>
+              <Image
+                style={{ width: '100%' }}
+                src="/minecraft_server.webp"
+                alt="Minecraft Server"
               />
             </Accordion.Body>
           </Accordion.Item>
