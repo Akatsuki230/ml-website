@@ -112,6 +112,10 @@ export default function Social() {
             <p>
               I used to have a Twitter account, but I deleted it.
             </p>
+            <p>
+              <strong>Reason of deletion:</strong>
+              <span>No longer in use.</span>
+            </p>
           </ListGroup.Item>
           <ListGroup.Item>
             <h2>
@@ -122,6 +126,10 @@ export default function Social() {
             </h2>
             <p>
               I used to have an Instagram account, but I deleted it.
+            </p>
+            <p>
+              <strong>Reason of deletion:</strong>
+              <span>No longer in use.</span>
             </p>
           </ListGroup.Item>
           <ListGroup.Item>

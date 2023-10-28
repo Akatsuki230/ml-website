@@ -46,7 +46,7 @@ export default function FinalNavbar(props: { sel: string }) {
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <small>b10282023</small>
+            <small>b10282023_1</small>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
