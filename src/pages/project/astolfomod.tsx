@@ -3,9 +3,9 @@ import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { Accordion, Container, Image } from "react-bootstrap";
+import { Accordion, Button, Container, Image } from "react-bootstrap";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AstolfoMod() {
   return (
@@ -29,21 +29,20 @@ export default function AstolfoMod() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-
-      <FinalNavbar sel="project" />
+      <FinalNavbar />
 
       <Container>
         <FemboyFridayVirtualHeadpat />
 
-        <h1>
-          Astolfo Forge Mod
-        </h1>
+        <h1>Astolfo Forge Mod</h1>
 
         <h2>Feature list</h2>
         <ul className="text-white">
           <li className="mx-4">Femboy Biome</li>
           <li className="mx-4">Astolfo in 4 outfits</li>
-          <li className="mx-4">Astolfo flower, which spawns a lot of Astolfo when destroyed</li>
+          <li className="mx-4">
+            Astolfo flower, which spawns a lot of Astolfo when destroyed
+          </li>
           <li className="mx-4">Felix</li>
           <li className="mx-4">Astolfo Sword</li>
           <li className="mx-4">Hideri</li>
@@ -52,18 +51,26 @@ export default function AstolfoMod() {
           <li className="mx-4">Nagisa</li>
           <li className="mx-4">Sieg</li>
           <li className="mx-4">Bridget</li>
-          <li className="mx-4">/duplicate_cuties command for more cuteness &lt;3</li>
+          <li className="mx-4">
+            /duplicate_cuties command for more cuteness &lt;3
+          </li>
         </ul>
         <Accordion defaultActiveKey="2">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Images</Accordion.Header>
             <Accordion.Body>
-              <Image style={{width: '100%'}} src="/astolfomod_crowd.webp" />
-              <Image style={{width: '100%'}} src="/astolfomod_biome.webp" />
-              <Image style={{width: '100%'}} src="/astolfomod_casual.webp" />
-              <Image style={{width: '100%'}} src="/astolfomod_armor.webp" />
-              <Image style={{width: '100%'}} src="/astolfomod_schoolgirl.webp" />
-              <Image style={{width: '100%'}} src="/astolfomod_astolfoflower.webp" />
+              <Image style={{ width: "100%" }} src="/astolfomod_crowd.webp" />
+              <Image style={{ width: "100%" }} src="/astolfomod_biome.webp" />
+              <Image style={{ width: "100%" }} src="/astolfomod_casual.webp" />
+              <Image style={{ width: "100%" }} src="/astolfomod_armor.webp" />
+              <Image
+                style={{ width: "100%" }}
+                src="/astolfomod_schoolgirl.webp"
+              />
+              <Image
+                style={{ width: "100%" }}
+                src="/astolfomod_astolfoflower.webp"
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -97,18 +104,17 @@ export default function AstolfoMod() {
           <Accordion.Item eventKey="2">
             <Accordion.Header>Download</Accordion.Header>
             <Accordion.Body>
-              <p>
-                <a href="/tracker/downloads/astolfomod">Download the mod from GitHub</a>
-              </p>
+              <Button as="a" href="/tracker/downloads/astolfomod">
+                Download the mod from GitHub
+              </Button>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
         <br />
         <p className="mx-2 text-gray-500 text-sm">Made using MCreator.</p>
-        
+
         <ViewTracker />
       </Container>
-
     </div>
-  )
+  );
 }

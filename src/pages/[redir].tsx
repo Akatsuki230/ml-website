@@ -52,11 +52,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-function renderRedirect(
-  url: string,
-  label: string,
-  redirTime: number
-) {
+function renderRedirect(url: string, label: string, redirTime: number) {
   return (
     <>
       <div>
@@ -70,9 +66,7 @@ function renderRedirect(
 function renderImage(url: string, label: string) {
   return (
     <>
-      <h1>
-        {label}
-      </h1>
+      <h1>{label}</h1>
       <img
         src={url}
         alt={label}
@@ -94,9 +88,7 @@ function renderFile(url: string, label: string) {
 
   return (
     <>
-      <h1>
-        {label}
-      </h1>
+      <h1>{label}</h1>
       <br />
       <button onClick={f} className="bg-blue-600 rounded-lg px-2 py-1">
         Download
@@ -183,10 +175,7 @@ export default function Redirect(props: { data: any }) {
         {props.data.type == "file" && (
           <>
             <title>File shared by mldkyt</title>
-            <meta
-              name="og:title"
-              content="mldkyt has shared a file with you"
-            />
+            <meta name="og:title" content="mldkyt has shared a file with you" />
             <meta name="description" content={`File ${props.data.label}`} />
             <meta name="theme-color" content="#FF77FF" />
             <meta name="author" content="mldkyt" />
@@ -202,7 +191,9 @@ export default function Redirect(props: { data: any }) {
           </>
         )}
       </Head>
-      <FinalNavbar sel="" />
+
+      <FinalNavbar />
+
       {!props.data.error && (
         <>
           {props.data.themeType == "colour" && (
@@ -236,9 +227,7 @@ export default function Redirect(props: { data: any }) {
 
       <Container>
         <FemboyFridayVirtualHeadpat />
-        <h1>
-          mldkyt has shared something with you:
-        </h1>
+        <h1>mldkyt has shared something with you:</h1>
         <div
           className="text-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
@@ -250,21 +239,11 @@ export default function Redirect(props: { data: any }) {
           ) : (
             <>
               {props.data.type == "redirect" &&
-                renderRedirect(
-                  props.data.url,
-                  props.data.label,
-                  redirectTime
-                )}
+                renderRedirect(props.data.url, props.data.label, redirectTime)}
               {props.data.type == "image" &&
-                renderImage(
-                  props.data.url,
-                  props.data.label
-                )}
+                renderImage(props.data.url, props.data.label)}
               {props.data.type == "file" &&
-                renderFile(
-                  props.data.url,
-                  props.data.label
-                )}
+                renderFile(props.data.url, props.data.label)}
             </>
           )}
           {props.data.error || (
@@ -279,7 +258,6 @@ export default function Redirect(props: { data: any }) {
           )}
         </div>
       </Container>
-      
     </div>
   );
 }

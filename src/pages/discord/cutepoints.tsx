@@ -36,8 +36,7 @@ export default function CutePointsLeaderBoard() {
                 crossOrigin="anonymous"
                 ></script>
             </Head>
-
-            <FinalNavbar sel="" />
+            <FinalNavbar />
             <Container>
                 <h1 className="text-3xl font-bold">The Cutepoint Leaderboard</h1>
                 <a href="/discord">

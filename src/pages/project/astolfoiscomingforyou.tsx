@@ -29,8 +29,8 @@ export default function AstolfoIsComingForYou() {
           crossOrigin="anonymous"
         ></script>
       </Head>
+      <FinalNavbar />
       
-      <FinalNavbar sel="project" />
       <Container>
         <FemboyFridayVirtualHeadpat />
         <h1>Astolfo is coming for you</h1>

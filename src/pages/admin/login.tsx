@@ -15,7 +15,6 @@ export default function AdminLogin() {
 
   return (
     <div className={`${inter.className} text-white`}>
-      <FinalNavbar sel="" />
       <Container>
         <h1 className="text-5xl m-2 font-bold text-center">Administrator Login</h1>
         <p className="m-2 text-xl font-bold">Enter the password below: </p>

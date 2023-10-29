@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import { Accordion, Button, Container } from "react-bootstrap";
 import ViewTracker from "@/components/ViewTracker";
+import ZensDiscordBan from "@/components/ZensDiscordBan";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,10 +39,12 @@ export default function Home() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <FinalNavbar sel="home" />
+
+      <FinalNavbar />
 
       <Container>
         <FemboyFridayVirtualHeadpat />
+        <ZensDiscordBan />
         <h1>mldkyt's website</h1>
         <p>Welcome to mldkyt's website! Start scrolling down to find out more about me :3</p>
         <ViewTracker />

@@ -57,7 +57,6 @@ export default function AdminCustompagesPageDelete(props: { id: string }) {
       >
         Cancel
       </button>
-      <FinalNavbar sel="" />
     </div>
   );
 }

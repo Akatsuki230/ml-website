@@ -34,8 +34,8 @@ export default function AstolfoResourcePack() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-
-      <FinalNavbar sel="project" />
+      <FinalNavbar />
+      
       <Container>
         <FemboyFridayVirtualHeadpat />
 

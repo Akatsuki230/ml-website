@@ -29,8 +29,8 @@ export default function AstolfoMod() {
           crossOrigin="anonymous"
         ></script>
       </Head>
+      <FinalNavbar />
 
-      <FinalNavbar sel="project" />
       <Container>
         <FemboyFridayVirtualHeadpat />
 

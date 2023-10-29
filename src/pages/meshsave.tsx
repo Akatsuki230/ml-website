@@ -37,7 +37,7 @@ export default function Meshsave() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <FinalNavbar sel="meshsave" />
+      <FinalNavbar />
 
       <Container>
         <FemboyFridayVirtualHeadpat />

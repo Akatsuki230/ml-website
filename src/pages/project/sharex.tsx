@@ -20,8 +20,8 @@ export default function ShareX() {
                 crossOrigin="anonymous"
                 ></script>
             </Head>
+            <FinalNavbar />
 
-            <FinalNavbar sel="project" />
             <Container>
                 <h1>mldkyt's ShareX settings</h1>
                 <p>

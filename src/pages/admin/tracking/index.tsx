@@ -40,7 +40,6 @@ export default function Tracking() {
                 </tbody>
             </table>
 
-            <FinalNavbar sel="" />
         </>
     )
 }

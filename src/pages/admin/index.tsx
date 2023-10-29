@@ -24,7 +24,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Admin() {
   return (
     <div className={inter.className}>
-      <FinalNavbar sel="" />
       <Container>
         <h1 className="text-3xl m-2 font-bold text-white">Welcome to the admin page, mldkyt!</h1>
         <a href="/admin/custompages">

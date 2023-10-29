@@ -1,4 +1,7 @@
+import FinalFooter from '@/components/Footer'
+import FinalNavbar from '@/components/NavBar'
 import { Html, Head, Main, NextScript } from 'next/document'
+
 
 
 export default function Document() {
@@ -7,6 +10,7 @@ export default function Document() {
       <Head />
       <body>
         <Main />
+        <FinalFooter />
         <NextScript />
       </body>
     </Html>

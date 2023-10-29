@@ -52,7 +52,6 @@ function flatten(object: object) {
 export default function PageViews(props: Props) {
     return (
         <>
-            <FinalNavbar sel={""} />
             <Container>
                 <h1 className='text-white text-3xl m-2'>Page Views</h1>
                 <Table className="text-white">

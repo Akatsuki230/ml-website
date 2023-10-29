@@ -91,7 +91,6 @@ export default function AdminCustompages_Create() {
       <button className="bg-blue-600 p-1 m-2 rounded-md" onClick={create}>
         Create
       </button>
-      <FinalNavbar sel="" />
     </div>
   );
 }

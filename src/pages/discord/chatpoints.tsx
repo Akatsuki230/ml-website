@@ -37,8 +37,7 @@ export default function ChatPointsLeaderBoard() {
                 ></script>
             </Head>
 
-            <FinalNavbar sel="" />
-
+            <FinalNavbar />
             <Container>
                 <h1 className="text-3xl font-bold">The Chatpoint Leaderboard</h1>
                 <a href="/discord">

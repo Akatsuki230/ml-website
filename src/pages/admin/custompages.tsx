@@ -67,7 +67,6 @@ export default function AdminCustompages(props: { customPages: CustomPageWithID[
 
   return (
     <div className={inter.className}>
-      <FinalNavbar sel="" />
       <Container>
         <button
           className="bg-blue-600 p-1 px-2 m-1 rounded-md text-white"

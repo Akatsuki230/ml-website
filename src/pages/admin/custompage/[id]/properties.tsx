@@ -124,7 +124,6 @@ export default function AdminCustompagesIdProperties(props: {
       >
         Return
       </button>
-      <FinalNavbar sel="" />
     </div>
   );
 }

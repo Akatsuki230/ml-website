@@ -42,8 +42,7 @@ export default function Discord() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-
-      <FinalNavbar sel="discord" />
+      <FinalNavbar />
       <Container>
         <FemboyFridayVirtualHeadpat />
         <h1>mldkyt's Discord server</h1>

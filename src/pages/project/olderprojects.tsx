@@ -20,8 +20,8 @@ export default function OlderProjects() {
           crossOrigin="anonymous"
         ></script>
       </Head>
+      <FinalNavbar />
 
-      <FinalNavbar sel="project" />
       <Container>
         <h1>Older Projects</h1>
         <p>mldkyt's older projects.</p>
