@@ -26,6 +26,8 @@ export default function Discord() {
       });
   }, [setMembers, setOnlineMembers, setLoadedStats, hasRan]);
 
+  // TODO: Add a warning modal when clicking to join the server 
+
   return (
     <div className={inter.className}>
       <Head>
