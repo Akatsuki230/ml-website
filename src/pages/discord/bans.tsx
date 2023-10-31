@@ -1,1 +1,0 @@
-// TODO: Add a simple form where you can look up a username and it will check ban state and reason
