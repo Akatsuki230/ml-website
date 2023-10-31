@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/discord/bans.jsx", "src/pages/discord/[user]/index.jsx"],
   "exclude": ["node_modules"]
 }

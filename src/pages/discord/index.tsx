@@ -26,8 +26,6 @@ export default function Discord() {
       });
   }, [setMembers, setOnlineMembers, setLoadedStats, hasRan]);
 
-  // TODO: Add a warning modal when clicking to join the server 
-
   return (
     <div className={inter.className}>
       <Head>
@@ -48,12 +46,12 @@ export default function Discord() {
       <Container>
         <FemboyFridayVirtualHeadpat />
         <h1>mldkyt's Discord server</h1>
-        <p>The official Discord server for mldkyt, named "mldkyt's bedroom"</p>
+        <p>The official Discord server for mldkyt, named "mldkyt's and Brimo's bedroom"</p>
         <Button as="a" href="https://discord.gg/JgFNmSwYME">
           Join now
         </Button>
-        <Button style={{marginLeft: '15px'}} as="a" href="https://forms.gle/aXEzprRZxqs5Co86A" variant="secondary">
-          Ban appeal
+        <Button style={{marginLeft: '15px'}} as="a" href="/discord/bans" variant="secondary">
+          I think I'm banned
         </Button>
         
         <br />
