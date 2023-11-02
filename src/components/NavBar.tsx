@@ -25,7 +25,7 @@ export default function FinalNavbar() {
               <Nav.Link href="/meshsave">Meshsave</Nav.Link>
               <NavDropdown title="Projects">
                 <NavDropdown.Item href="/zensdiscord">
-                  <span style={{color: 'red'}}>Help me get unbanned on Zen's Discord!</span>
+                  <span style={{color: 'red'}}>Help me get unbanned on Zen's Discord</span>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/femboy">

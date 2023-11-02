@@ -62,15 +62,15 @@ export default function ZensDiscordBan() {
         <ul>
           <li>
             <p>Astolfo is coming for you</p>
-            <Image src="/astolfoiscomingforyou_safe_1.webp" />
+            <Image style={{width: "100%"}} src="/astolfoiscomingforyou_safe_1.webp" />
           </li>
           <li>
             <p>Astolfo Resource Pack</p>
-            <Image src="/astolforp_menu.webp" />
+            <Image style={{width: "100%"}} src="/astolforp_menu.webp" />
           </li>
         </ul>
         <p>On 2/9/2023, I got banned for "N/A"</p>
-        <Image src="/zenban.webp" />
+        <Image style={{width: '100%'}} src="/zenban.webp" />
         <small>(English is not my first language.)</small>
         <h2>Vote</h2>
         <ButtonGroup>
