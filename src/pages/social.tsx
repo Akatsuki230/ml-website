@@ -117,15 +117,11 @@ export default function Social() {
               Instagram
               <small>
                 <Badge style={{ marginLeft: "1rem" }} pill bg="danger">
-                  Deleted
+                  Private
                 </Badge>
               </small>
             </h2>
-            <p>I used to have an Instagram account, but I deleted it.</p>
-            <p>
-              <strong>Reason of deletion:</strong>
-              <span>No longer in use.</span>
-            </p>
+            <p>I have an Instagram account, but it's set as private.</p>
           </ListGroup.Item>
           <ListGroup.Item>
             <h2>Old Reddit accounts</h2>
