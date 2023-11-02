@@ -66,7 +66,7 @@ export default function Home() {
               </ul>
               <p>..and many more!</p>
               <h3>Discover mldkyt's projects</h3>
-              <p>Scroll down to explore their latest and greatest creations.</p>
+              <p>Click on projects below to view my creations.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">

@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/discord/bans.jsx", "src/pages/discord/[user]/index.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/discord/bans.jsx", "src/pages/discord/[user]/index.jsx", "src/pages/zensdiscord.jsx", "src/pages/admin/custompage/[id]/delete.jsx", "src/pages/admin/custompage/create.jsx", "src/pages/api/custompages/create.js", "src/pages/api/custompages/update.tjs", "src/pages/admin/custompage/[id]/properties.jsx", "src/pages/admin/custompages.jsx", "src/pages/[redir].jsx"],
   "exclude": ["node_modules"]
 }
