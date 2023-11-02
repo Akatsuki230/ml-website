@@ -16,7 +16,7 @@ export default function FinalNavbar() {
               height="30"
               className="d-inline-block align-top"
               style={{ borderRadius: "50%" }}
-              alt="Astolfo's PFP"
+              alt="mldkyt's PFP"
             />
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -25,7 +25,7 @@ export default function FinalNavbar() {
               <Nav.Link href="/meshsave">Meshsave</Nav.Link>
               <NavDropdown title="Projects">
                 <NavDropdown.Item href="/zensdiscord">
-                  <span style={{color: 'red'}}>Help me get unbanned on Zen's Discord!</span>
+                  <span style={{color: 'red'}}>Help me get unbanned on Zen's Discord</span>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/femboy">
