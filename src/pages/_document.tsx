@@ -1,5 +1,4 @@
 import FinalFooter from '@/components/Footer'
-import FinalNavbar from '@/components/NavBar'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 
