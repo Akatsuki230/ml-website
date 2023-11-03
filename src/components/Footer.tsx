@@ -13,7 +13,7 @@ export default function FinalFooter() {
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <small>v102923</small>
+              <small>v11032023</small>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

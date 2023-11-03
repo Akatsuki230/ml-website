@@ -41,6 +41,7 @@ export default function FemboyList() {
     <div className={inter.className}>
       <FinalNavbar />
       <Container>
+        <FemboyFridayVirtualHeadpat />
         <h1 className="text-3xl">The Femboy List</h1>
         {error && (
           <p>There was an error trying to load data, try again later.</p>
@@ -106,7 +107,6 @@ export default function FemboyList() {
         <ViewTracker />
       </Container>
 
-      <FemboyFridayVirtualHeadpat />
     </div>
   );
 }
