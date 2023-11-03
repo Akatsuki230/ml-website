@@ -195,7 +195,6 @@ export default function Discord() {
             <Accordion.Header>Stickers</Accordion.Header>
             <Accordion.Body>
               {stickers.map((x) => <Image style={{width: '16em', height: '16em', margin: '0.5em'}} src={x} alt="sticker" rounded />)}
-              
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
