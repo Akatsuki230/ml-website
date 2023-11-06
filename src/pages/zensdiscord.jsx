@@ -14,6 +14,7 @@ import {
   InputGroup,
   Spinner,
 } from "react-bootstrap";
+import Head from "next/head";
 
 export default function ZensDiscordBan() {
   const [unbanVotes, setUnbanVotes] = useState(0);
@@ -50,6 +51,26 @@ export default function ZensDiscordBan() {
 
   return (
     <>
+      <Head>
+        <title>Zen's Discord Status</title>
+        {/* meta */}
+        <meta
+          name="og:title"
+          content="Help mldkyt get unbanned on Zen's Discord!"
+        />
+        <meta
+          name="description"
+          content="Help mldkyt get unbanned on Zen's Discord!"
+        />
+        <meta name="keywords" content="mldkyt, zen, zenbooda, zenbooda1" />
+        <meta name="author" content="mldkyt" />
+        <meta name="theme-color" content="#FF77FF" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <FinalNavbar />
       <Container>
         <FemboyFridayVirtualHeadpat />
