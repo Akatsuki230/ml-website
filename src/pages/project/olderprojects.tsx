@@ -67,7 +67,7 @@ export default function OlderProjects() {
           <Accordion.Item eventKey="2">
             <Accordion.Header>Asphalt Roads</Accordion.Header>
             <Accordion.Body>
-              <p>
+              {/* <p>
                 Asphalt Roads was a mod for My Summer Car that changed the dirt
                 roads to asphalt.
               </p>
@@ -76,7 +76,10 @@ export default function OlderProjects() {
                 href="https://www.nexusmods.com/mysummercar/mods/3670"
               >
                 Download
-              </Button>
+              </Button> */}
+              <Alert variant="warning">
+                <p>This mod is temporarily down, I uploaded the wrong file to NexusMods and it got taken down.</p>
+              </Alert>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">

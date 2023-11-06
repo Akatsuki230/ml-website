@@ -198,15 +198,6 @@ export default function Discord() {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>Requisha instance</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                This server has an active Requisha instance, which is a bot.
-              </p>
-              <p>Requisha has mainly NSFW commands, requiring NSFW access.</p>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
             <Accordion.Header>Special channels</Accordion.Header>
             <Accordion.Body>
               <h2>#OwO</h2>
@@ -259,7 +250,7 @@ export default function Discord() {
               />
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="5">
+          <Accordion.Item eventKey="4">
             <Accordion.Header>Quality Announcements</Accordion.Header>
             <Accordion.Body>
               <p>
@@ -276,7 +267,7 @@ export default function Discord() {
               </p>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="6">
+          <Accordion.Item eventKey="5">
             <Accordion.Header>Minecraft Server</Accordion.Header>
             <Accordion.Body>
               <p>
