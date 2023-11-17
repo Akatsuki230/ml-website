@@ -22,38 +22,35 @@ export default function FinalNavbar() {
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <Nav.Link href="/meshsave">Meshsave</Nav.Link>
+              <Nav.Link href="https://programmerastolfo.github.io/meshsave">Meshsave</Nav.Link>
               <NavDropdown title="Projects">
-                <NavDropdown.Item href="/zensdiscord">
-                  <span style={{color: 'red'}}>Help me get unbanned on Zen's Discord</span>
-                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/femboy">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/femboy">
                   Femboy List
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/project/astolfoiscomingforyou">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfoiscomingforyou">
                   Astolfo is Coming For You
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/project/astolfomod">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfomod">
                   Astolfo Forge Mod
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/project/astolforesourcepack">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolforesourcepack">
                   Astolfo Resource Pack
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/project/astolfos">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfos">
                   AstolfOS
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/project/sharex">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/sharex">
                   ShareX Settings
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/project/olderprojects">
+                <NavDropdown.Item href="https://programmerastolfo.github.io/project/olderprojects">
                   Older Projects
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/social">Socials</Nav.Link>
-              <Nav.Link href="/discord">Discord</Nav.Link>
+              <Nav.Link href="https://programmerastolfo.github.io/social">Socials</Nav.Link>
+              <Nav.Link href="https://programmerastolfo.github.io/discord">Discord</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
