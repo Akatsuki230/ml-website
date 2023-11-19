@@ -24,7 +24,6 @@ export default function FinalNavbar() {
             <Nav className="me-auto">
               <Nav.Link href="https://programmerastolfo.github.io/meshsave">Meshsave</Nav.Link>
               <NavDropdown title="Projects">
-                <NavDropdown.Divider />
                 <NavDropdown.Item href="https://programmerastolfo.github.io/femboy">
                   Femboy List
                 </NavDropdown.Item>
