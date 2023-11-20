@@ -2,32 +2,31 @@ import { useState } from "react";
 import { Alert, Button, CloseButton } from "react-bootstrap";
 
 export default function FemboyFridayVirtualHeadpat() {
-  const isFriday = new Date().getDay() === 5;
+  const isFriday = new Date().getUTCDay() === 5;
 
   const [show, setShow] = useState(isFriday);
   const [sending, setSending] = useState(false);
-  const [alreadySent, setAlreadySent] = useState(false);
   const [notFridayOnServer, setNotFridayOnServer] = useState(false);
   const [count, setCount] = useState(0);
 
   const sendVirtualHeadpat = () => {
     setSending(true);
-    fetch("/api/headpats/send", {
-      method: "POST",
-    })
-      .then((x) => x.json())
-      .then((x) => {
+    (async() => {
+      const a = await fetch(`/api/headpats/send`, {
+        method: "POST",
+      })
+      if (a.status != 200) {
+        const x = await a.json() as { error?: string };
+        if (!x.error)
+          x.error = 'Unknown error';
+        setNotFridayOnServer(true);
         setSending(false);
-        setCount(x.count);
-        if (!x.success) {
-          if (x.message == 'Not friday') {
-            setNotFridayOnServer(true);
-          }
-          if (x.message == 'Already voted') {
-            setAlreadySent(true);
-          }
-        }
-      });
+        return
+      }
+      const b = await a.json() as { headpats: number };
+      setCount(b.headpats);
+      setSending(false);
+    })
   };
 
   return show ? (
@@ -40,7 +39,7 @@ export default function FemboyFridayVirtualHeadpat() {
           margin: '1rem'
         }} onClick={() => setShow(false)} />
         <br />
-        {!sending && !alreadySent && count === 0 && (
+        {!sending && !notFridayOnServer && count === 0 && (
           <Button
             onClick={sendVirtualHeadpat}
           >
@@ -51,14 +50,6 @@ export default function FemboyFridayVirtualHeadpat() {
           <span>
             Sending...
           </span>
-        )}
-        {!sending && alreadySent && (
-          <>
-            <span>
-              You already sent a virtual headpat today :3
-            </span>
-            <br />
-          </>
         )}
         {!sending && count !== 0 && (
           <>

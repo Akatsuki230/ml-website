@@ -1,0 +1,25 @@
+.center {
+    text-align: center;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardcontainer > .cardstyle {
+    width: 300px;
+    margin: 4px;
+}
+
+.invitebtn {
+    letter-spacing: 5px;
+}
+
+.greentext {
+    color: lime;
+}
+
+.redtext {
+    color: red;
+}

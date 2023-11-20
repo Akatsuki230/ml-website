@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import React from "react";
-import { Container, Nav, NavDropdown, Navbar, Image } from "react-bootstrap";
+import { Container, Nav, NavDropdown, Navbar, Image, Breadcrumb, Badge } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,40 +16,40 @@ export default function FinalNavbar() {
               height="30"
               className="d-inline-block align-top"
               style={{ borderRadius: "50%" }}
-              alt="mldkyt's PFP"
+              alt="Astolfo's PFP"
             />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <Nav.Link href="https://programmerastolfo.github.io/meshsave">Meshsave</Nav.Link>
+              <Nav.Link href="/meshsave">Meshsave</Nav.Link>
               <NavDropdown title="Projects">
-                <NavDropdown.Item href="https://programmerastolfo.github.io/femboy">
+                <NavDropdown.Item href="/femboy">
                   Femboy List
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfoiscomingforyou">
+                <NavDropdown.Item href="/project/astolfoiscomingforyou">
                   Astolfo is Coming For You
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfomod">
+                <NavDropdown.Item href="/project/astolfomod">
                   Astolfo Forge Mod
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolforesourcepack">
+                <NavDropdown.Item href="/project/astolforesourcepack">
                   Astolfo Resource Pack
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/astolfos">
+                <NavDropdown.Item href="/project/astolfos">
                   AstolfOS
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/sharex">
+                <NavDropdown.Item href="/project/sharex">
                   ShareX Settings
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="https://programmerastolfo.github.io/project/olderprojects">
+                <NavDropdown.Item href="/project/olderprojects">
                   Older Projects
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="https://programmerastolfo.github.io/social">Socials</Nav.Link>
-              <Nav.Link href="https://programmerastolfo.github.io/discord">Discord</Nav.Link>
+              <Nav.Link href="/social">Socials</Nav.Link>
+              <Nav.Link href="/discord">Discord</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
