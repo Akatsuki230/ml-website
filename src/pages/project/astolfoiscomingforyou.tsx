@@ -19,7 +19,7 @@ export default function AstolfoIsComingForYou() {
         />
         <meta
           name="og:image"
-          content="https://programmerastolfo.github.io/astolfoiscomingforyou_safe_1.webp"
+          content="https://mldkyt.com/astolfoiscomingforyou_safe_1.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />

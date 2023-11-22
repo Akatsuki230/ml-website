@@ -19,7 +19,7 @@ export default function AstolfoMod() {
         />
         <meta
           name="og:image"
-          content="https://programmerastolfo.github.io/astolfomod_crowd.webp"
+          content="https://mldkyt.com/astolfomod_crowd.webp"
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
