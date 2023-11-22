@@ -23,58 +23,85 @@ export default function AstolfoIsComingForYou() {
         />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
-     crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <FinalNavbar />
-      
+
       <Container>
         <FemboyFridayVirtualHeadpat />
         <h1>Astolfo is coming for you</h1>
 
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>The safe variant</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                The safe variant has a countdown from 100 to 0 and then Astolfo gives you a lot of compliments &lt;3
-              </p>
-              <Button as="a" href="https://github.com/mldkyt/AstolfoIsComingForYou/releases">
-                Download
-              </Button>
-              <br />
-              <br />
-              <h4>Pictures</h4>
-              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_safe_1.webp" alt="Coming for you"></Image>
-              <br />
-              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_safe_2.webp" alt="Compliments <3"></Image>
-              <br />
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>The evil variant</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                The evil variant has a countdown from 100 to 0 and then Astolfo shuts down your PC.
-              </p>
-              <Button as="a" href="https://github.com/mldkyt/AstolfoIsComingForYou/releases">
-                Download
-              </Button>
-              <br />
-              <br />
-              <h4>Pictures</h4>
-              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_evil_1.webp" alt="Coming for you, angry >:3"></Image>
-              <br />
-              <Image style={{width: '100%'}} rounded src="/astolfoiscomingforyou_evil_2.webp" alt="Shutting down your PC >:3"></Image>
-              <br />
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+        <h2>The safe variant</h2>
+        <p>
+          The safe variant has a countdown from 100 to 0 and then Astolfo gives
+          you a lot of compliments &lt;3
+        </p>
+        <Button
+          as="a"
+          href="https://github.com/mldkyt/AstolfoIsComingForYou/releases"
+        >
+          Download
+        </Button>
+        <br />
+        <br />
+        <details>
+          <summary>Pictures</summary>
+
+          <Image
+            style={{ width: "100%" }}
+            rounded
+            src="/astolfoiscomingforyou_safe_1.webp"
+            alt="Coming for you"
+          ></Image>
+          <br />
+          <Image
+            style={{ width: "100%" }}
+            rounded
+            src="/astolfoiscomingforyou_safe_2.webp"
+            alt="Compliments <3"
+          ></Image>
+          <br />
+        </details>
+        <br />
+
+        <h2>The evil variant</h2>
+
+        <p>
+          The evil variant has a countdown from 100 to 0 and then Astolfo shuts
+          down your PC.
+        </p>
+        <Button
+          as="a"
+          href="https://github.com/mldkyt/AstolfoIsComingForYou/releases"
+        >
+          Download
+        </Button>
+        <br />
+        <br />
+        <details>
+          <summary>Pictures</summary>
+          <Image
+            style={{ width: "100%" }}
+            rounded
+            src="/astolfoiscomingforyou_evil_1.webp"
+            alt="Coming for you, angry >:3"
+          ></Image>
+          <br />
+          <Image
+            style={{ width: "100%" }}
+            rounded
+            src="/astolfoiscomingforyou_evil_2.webp"
+            alt="Shutting down your PC >:3"
+          ></Image>
+          <br />
+        </details>
         <br />
         <ViewTracker />
       </Container>
-
-      
     </div>
   );
 }

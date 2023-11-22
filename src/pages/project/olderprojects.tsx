@@ -14,8 +14,11 @@ export default function OlderProjects() {
         <meta name="description" content="mldkyt's older projects." />
         <meta name="theme-color" content="#FF77FF" />
         <meta name="author" content="mldkyt" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
-     crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <FinalNavbar />
 
@@ -29,69 +32,50 @@ export default function OlderProjects() {
             All of the projects below are deprecated and no longer maintained.
           </p>
         </Alert>
+        <h2>OldCarSounds</h2>
 
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>Old Car Sounds</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                Old Car Sounds was a mod for My Summer Car that added old car
-                sounds from older versions of the game.
-              </p>
-              <Button
-                as="a"
-                href="https://www.nexusmods.com/mysummercar/mods/3666"
-              >
-                Download
-              </Button>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>MSC Tweaks</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                MSC Tweaks (also known as My Summer Car Tweaks) was a mod for My
-                Summer Car that tweaked some of the game mechanics.
-              </p>
-              <Button
-                as="a"
-                href="https://www.nexusmods.com/mysummercar/mods/3665"
-              >
-                Download
-              </Button>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>Asphalt Roads</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                Asphalt Roads was a mod for My Summer Car that changed the dirt
-                roads to asphalt.
-              </p>
-              <Button
-                as="a"
-                href="https://www.nexusmods.com/mysummercar/mods/3670"
-              >
-                Download
-              </Button>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>Kekmet More Gears</Accordion.Header>
-            <Accordion.Body>
-              <p>
-                Kekmet More Gears was a mod for My Summer Car that added more
-                gears to the Kekmet.
-              </p>
-              <Button
-                as="a"
-                href="https://www.nexusmods.com/mysummercar/mods/3888"
-              >
-                Download
-              </Button>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+        <p>
+          Old Car Sounds was a mod for My Summer Car that added old car sounds
+          from older versions of the game.
+        </p>
+        <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/3666">
+          Download
+        </Button>
+<br/>
+<br/>
+        <h2>MSC Tweaks</h2>
+
+        <p>
+          MSC Tweaks (also known as My Summer Car Tweaks) was a mod for My
+          Summer Car that tweaked some of the game mechanics.
+        </p>
+        <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/3665">
+          Download
+        </Button>
+
+<br/>
+        <br/>
+        <h2>Asphalt Roads</h2>
+
+        <p>
+          Asphalt Roads was a mod for My Summer Car that changed the dirt roads
+          to asphalt.
+        </p>
+        <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/3670">
+          Download
+        </Button>
+
+        <br/>
+<br/>
+        <h2>Kekmet More Gears</h2>
+
+        <p>
+          Kekmet More Gears was a mod for My Summer Car that added more gears to
+          the Kekmet.
+        </p>
+        <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/3888">
+          Download
+        </Button>
       </Container>
     </div>
   );
