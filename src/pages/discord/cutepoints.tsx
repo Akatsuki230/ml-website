@@ -8,7 +8,7 @@ import { Alert, Container, Image, Table } from "react-bootstrap";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function CutePointsLeaderBoard() {
-    const [data, setData] = useState([] as {name: string, avatar: string, cutepoints: number, user_id: number}[]);
+    const [data, setData] = useState([] as { name: string; avatar: string; cutepoints: number; user_id: number }[]);
     const hasRan = useRef(false);
     const [error, setError] = useState(false);
 
@@ -71,12 +71,9 @@ export default function CutePointsLeaderBoard() {
                         <Alert.Heading>There was an error loading the leaderboard</Alert.Heading>
                     </Alert>
                 )}
-                <p>
-                    It can take upwards of 24 hours for this leaderboard to update. If you changed your nickname, it will update within 24 hours on the leaderboard.
-                </p>
+                <p>It can take upwards of 24 hours for this leaderboard to update. If you changed your nickname, it will update within 24 hours on the leaderboard.</p>
                 <ViewTracker />
             </Container>
         </div>
-    )
-
+    );
 }
