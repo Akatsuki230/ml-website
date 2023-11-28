@@ -1,6 +1,6 @@
 import FinalNavbar from "@/components/NavBar";
 import { Button, Card, Container } from "react-bootstrap";
-import styles from "@/styles/FemBot.module.css";
+import styles from "@/styles/fembot.module.css";
 import { Inter } from "next/font/google";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
