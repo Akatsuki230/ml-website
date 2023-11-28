@@ -30,7 +30,7 @@ export default function Social() {
                 <p>This is a list of mldkyt's social links.</p>
                 <Alert variant="primary">
                     <h4>FemBot - A Discord bot by mldkyt!</h4>
-                    <Button as="a" href="/FemBot">
+                    <Button as="a" href="/fembot">
                         See more info
                     </Button>
                 </Alert>

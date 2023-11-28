@@ -41,7 +41,7 @@ export default function Home() {
 
                 <Alert variant="primary">
                     <h4>FemBot - A Discord bot by mldkyt!</h4>
-                    <Button as="a" href="/FemBot">
+                    <Button as="a" href="/fembot">
                         See more info
                     </Button>
                 </Alert>
@@ -72,7 +72,7 @@ export default function Home() {
                 <div style={{ marginLeft: "8px" }}>
                     <p>A bot made by mldkyt.</p>
                     <p>Features that are currently implemnted and that will be added are on the project's page.</p>
-                    <Button as="a" href="/FemBot">
+                    <Button as="a" href="/fembot">
                         Learn more
                     </Button>
                     <br />

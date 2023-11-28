@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            content: suggestion + "\n\nSuggest on https://mldkyt.com/FemBot/"
+            content: suggestion + "\n\nSuggest on https://mldkyt.com/fembot/"
         })
     });
     res.status(200).send("Success");
