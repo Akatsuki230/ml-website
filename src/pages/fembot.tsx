@@ -1,18 +1,19 @@
 import FinalNavbar from "@/components/NavBar";
 import { Button, Card, Container } from "react-bootstrap";
-import styles from "@/styles/femboybot.module.css";
+import styles from "@/styles/FemBot.module.css";
 import { Inter } from "next/font/google";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
+import FemBotSuggestion from "@/components/FemBotSuggestion";
 
 const inter = Inter({ subsets: ["latin"] });
-export default function FemboyBot() {
+export default function FemBot() {
     return (
         <div className={inter.className}>
             <Head>
-                {/* meta title tag "FemboyBot", description and pink color */}
-                <title>FemboyBot</title>
-                <meta name="title" content="FemboyBot" />
+                {/* meta title tag "FemBot", description and pink color */}
+                <title>FemBot</title>
+                <meta name="title" content="FemBot" />
                 <meta name="author" content="mldkyt" />
                 <meta name="description" content="A Discord bot by mldkyt" />
                 <meta name="theme-color" content="#FF77FF" />
@@ -23,14 +24,14 @@ export default function FemboyBot() {
 
             <Container>
                 <div className={styles.center}>
-                    <h1>FemboyBot</h1>
+                    <h1>FemBot</h1>
                     <h2>A Discord bot by mldkyt</h2>
                     <Button variant="secondary" disabled>
                         Not available for inviting yet
                     </Button>
                     <br />
                     <Button style={{ marginTop: "1rem" }} as="a" href="https://discord.gg/456zRGz75j">
-                        Join the FemboyBot Discord
+                        Join the FemBot Discord
                     </Button>
                 </div>
 
@@ -56,9 +57,6 @@ export default function FemboyBot() {
                             <Card.Text>This bot has advanced logging allowing you to see who made an edit to a role, channel or member and see what exactly they have changed.</Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
-                <h2>Planned Features</h2>
-                <div className={styles.cardcontainer}>
                     <Card className={styles.cardstyle}>
                         <Card.Body>
                             <Card.Title>Moderation</Card.Title>
@@ -78,6 +76,8 @@ export default function FemboyBot() {
                 <p>
                     Or, you can suggest features using the bot! Use <code>/feedback suggest</code> to suggest and <code>/feedback bug</code> to report a bug.
                 </p>
+
+                <FemBotSuggestion />
 
                 <br />
                 <br />

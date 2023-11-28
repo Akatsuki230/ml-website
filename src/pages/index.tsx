@@ -40,8 +40,8 @@ export default function Home() {
                 <ViewTracker />
 
                 <Alert variant="primary">
-                    <h4>FemboyBot - A Discord bot by mldkyt!</h4>
-                    <Button as="a" href="/femboybot">
+                    <h4>FemBot - A Discord bot by mldkyt!</h4>
+                    <Button as="a" href="/FemBot">
                         See more info
                     </Button>
                 </Alert>
@@ -68,11 +68,11 @@ export default function Home() {
                 <p>..and many more!</p>
                 <h2>Projects</h2>
                 <hr />
-                <h3>FemboyBot</h3>
+                <h3>FemBot</h3>
                 <div style={{ marginLeft: "8px" }}>
                     <p>A bot made by mldkyt.</p>
                     <p>Features that are currently implemnted and that will be added are on the project's page.</p>
-                    <Button as="a" href="/femboybot">
+                    <Button as="a" href="/FemBot">
                         Learn more
                     </Button>
                     <br />

@@ -17,7 +17,7 @@ export default function FinalNavbar() {
                         <Nav className="me-auto">
                             <Nav.Link href="/meshsave">Meshsave</Nav.Link>
                             <NavDropdown title="Projects">
-                                <NavDropdown.Item href="/femboybot">FemboyBot</NavDropdown.Item>
+                                <NavDropdown.Item href="/FemBot">FemBot</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
                                 <NavDropdown.Divider />
