@@ -55,7 +55,7 @@ export default function Discord() {
                 <h1>mldkyt's Discord server</h1>
                 <p>The official Discord server for mldkyt, named "mldkyt's bedroom"</p>
                 <Button onClick={() => setJoinWarningShown(true)}>Join now</Button>
-                <Button style={{ marginLeft: "15px" }} as="a" href="/discord/banned" variant="secondary">
+                <Button style={{ marginLeft: "15px" }} as="a" href="https://bit.ly/411oEUV" variant="secondary">
                     I'm banned
                 </Button>
 
