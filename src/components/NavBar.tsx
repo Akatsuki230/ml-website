@@ -30,7 +30,6 @@ export default function FinalNavbar() {
                                 <NavDropdown.Item href="/project/olderprojects">Older Projects</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="/social">Socials</Nav.Link>
-                            <Nav.Link href="/discord">Discord</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

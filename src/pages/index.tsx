@@ -45,12 +45,6 @@ export default function Home() {
                         See more info
                     </Button>
                 </Alert>
-                <Alert variant="secondary">
-                    <h4>I have a Discord server! Hop in for some fun!</h4>
-                    <Button as="a" href="/discord">
-                        Join the Discord
-                    </Button>
-                </Alert>
 
                 <h1>About me</h1>
                 <p>mldkyt is a femboy programmer and is an addict to astolfo please don't kill me tysm &lt;3</p>
@@ -115,16 +109,6 @@ export default function Home() {
                     <p>It supports (I think) every Linux distro if you install it manually.</p>
                     <p>Ubuntu has an automatic installer available.</p>
                     <Button as="a" href="/project/astolfos">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
-                <h3>Discord Bot</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>A Discord bot that does many things.</p>
-                    <p>It's currently in development, but it's still usable.</p>
-                    <Button as="a" href="/discord">
                         Learn more
                     </Button>
                     <br />
