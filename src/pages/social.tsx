@@ -28,6 +28,7 @@ export default function Social() {
                 <FemboyFridayVirtualHeadpat />
                 <h1>mldkyt's social links</h1>
                 <p>This is a list of mldkyt's social links.</p>
+                <p>I do not have many social accounts, but here are the ones that I have and actually use.</p>
                 <Alert variant="primary">
                     <h4>FemBot - A Discord bot by mldkyt!</h4>
                     <Button as="a" href="/fembot">
@@ -54,30 +55,6 @@ export default function Social() {
                         <p>On GitHub I put all my project's source code. Almost all my projects are open source.</p>
                         <Button as="a" href="https://github.com/mldkyt">
                             View my GitHub profile
-                        </Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                        <h2>Steam</h2>
-                        <p>This is my Steam profile. I rarely play games on Steam, but I do have a few games. You can add me if you want, but I probably won't accept it.</p>
-                        <Button as="a" href="https://steamcommunity.com/id/mldkyt">
-                            View my Steam profile
-                        </Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                        <h2>NexusMods</h2>
-                        <p>Although I do not make mods anymore, I still have a NexusMods account. You can download my old mods from there.</p>
-                        <Button as="a" href="https://www.nexusmods.com/users/57424716">
-                            View my NexusMods profile
-                        </Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                        <h2>Reddit</h2>
-                        <p>My reddit user and subreddit.</p>
-                        <Button as="a" href="https://old.reddit.com/u/mldkyt">
-                            View user
-                        </Button>
-                        <Button style={{ marginLeft: "1rem" }} as="a" href="https://old.reddit.com/r/mldkyt">
-                            View subreddit
                         </Button>
                     </ListGroup.Item>
                 </ListGroup>
