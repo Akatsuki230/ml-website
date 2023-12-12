@@ -46,6 +46,13 @@ export default function Home() {
                     </Button>
                 </Alert>
 
+                <Alert variant="secondary">
+                    <h4>I have a Discord server! Hop in for some fun!</h4>
+                    <Button as="a" href="/discord">
+                        Join the Discord
+                    </Button>
+                </Alert>
+
                 <h1>About me</h1>
                 <p>mldkyt is a femboy programmer and is an addict to astolfo please don't kill me tysm &lt;3</p>
                 <h3>Preferred languages</h3>
