@@ -68,7 +68,6 @@ export default function Home() {
                 </ul>
                 <p>..and many more!</p>
                 <h2>Projects</h2>
-                <hr />
                 <h3>FemBot</h3>
                 <div style={{ marginLeft: "8px" }}>
                     <p>A bot made by mldkyt.</p>
@@ -122,7 +121,6 @@ export default function Home() {
                     <br />
                 </div>
                 <h1>Socials</h1>
-                <hr />
                 <br />
                 <h2>TikTok</h2>
                 <Button as="a" href="https://tiktok.com/@mldkyt">

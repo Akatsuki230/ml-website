@@ -71,6 +71,12 @@ export default function FemBot() {
                             <Card.Text>Prevent a lot of changes to the server in a short period of time, spam @everyone pings and more.</Card.Text>
                         </Card.Body>
                     </Card>
+                    <Card className={styles.cardstyle}>
+                        <Card.Body>
+                            <Card.Title>Chat Streaks</Card.Title>
+                            <Card.Text>The bot counts how many days a member had sent messages daily in a row, and notifies them when their streak increases, or when they lose the streak.</Card.Text>
+                        </Card.Body>
+                    </Card>
                 </div>
                 <p>More features are coming soon, when I come up with some.</p>
                 <p>
