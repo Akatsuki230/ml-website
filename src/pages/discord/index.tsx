@@ -71,27 +71,10 @@ export default function Discord() {
                     <p>{statsError ? <>There was an error loading the stats</> : <>Loading member stats...</>}</p>
                 )}
 
-                <Alert variant="warning">
-                    <h4>NOTE</h4>
-                    <p>I am not the official owner of this Discord server, but it is/was Mine</p>
-                    <p>
-                        A member going by the name of <strong>brimoflafi</strong> (which is also very cute) is the new
-                        owner of the server.
-                    </p>
-                    <p>The reason behind this is that I do not have time to maintain a server, let alone be an owner of
-                        a server.</p>
-                    <p>This doesn't mean I'm quitting or anything, when I get free time, I might be active for a
-                        while.</p>
-                    <small>
-                        <i>This might change in the future when I may get more free time</i>
-                    </small>
-                </Alert>
-
                 <h2>Features of this Discord server</h2>
                 <h3>Custom Discord Bot</h3>
 
                 <p>This server has a custom Discord bot which has ChatPoints, CutePoints and more.</p>
-                <Alert variant="warning">This bot is in very slow development and isn't updated much.</Alert>
                 <p>
                     You can view the leaderboard for{" "}
                     <a className="text-blue-600 underline" href="/discord/chatpoints">
@@ -103,25 +86,25 @@ export default function Discord() {
                     </a>{" "}
                     respectively.
                 </p>
-                <Image style={{width: "100%"}} src="/discord_bot.webp" alt="Discord bot"/>
+                <Image style={{maxWidth: "100%"}} src="/discord_bot.webp" alt="Discord bot"/>
 
                 <h3>Only the best channels</h3>
 
                 <h4>#OwO</h4>
                 <p>A channel for only "owo" and "uwu" messages.</p>
-                <Image style={{width: "100%"}} src="/owo_channel_list.webp" alt="OwO channel in channel list"/>
+                <Image style={{maxWidth: "100%"}} src="/owo_channel_list.webp" alt="OwO channel in channel list"/>
                 <br/>
                 <br/>
-                <Image style={{width: "100%"}} src="/owo_channel_2.webp" alt="OwO channel"/>
+                <Image style={{maxWidth: "100%"}} src="/owo_channel_2.webp" alt="OwO channel"/>
 
                 <br/>
                 <br/>
                 <h2>#nya</h2>
                 <p>A channel for only meowing.</p>
-                <Image style={{width: "100%"}} src="/nya_channel_list.webp" alt="Nya channel in channel list"/>
+                <Image style={{maxWidth: "100%"}} src="/nya_channel_list.webp" alt="Nya channel in channel list"/>
                 <br/>
                 <br/>
-                <Image style={{width: "100%"}} src="/nya_channel_2.webp" alt="Nya channel"/>
+                <Image style={{maxWidth: "100%"}} src="/nya_channel_2.webp" alt="Nya channel"/>
                 <h3>Discord Bot</h3>
                 <div style={{marginLeft: "8px"}}>
                     <p>A Discord bot that does many things.</p>
@@ -136,15 +119,15 @@ export default function Discord() {
                 <br/>
                 <h4>#:3</h4>
                 <p>A channel for only ":3" messages.</p>
-                <Image style={{width: "100%"}} src="/3_channel_list.webp" alt=":3 channel in channel list"/>
+                <Image style={{maxWidth: "100%"}} src="/3_channel_list.webp" alt=":3 channel in channel list"/>
                 <br/>
                 <br/>
-                <Image style={{width: "100%"}} src="/3_channel_2.webp" alt=":3 channel"/>
+                <Image style={{maxWidth: "100%"}} src="/3_channel_2.webp" alt=":3 channel"/>
 
                 <h3>Quality Announcemnets</h3>
 
                 <p>We have amazing admins and mods which make amazing announcements.</p>
-                <Image style={{width: "100%"}} src="/announcement_1.webp" alt="Quality announcement"/>
+                <Image style={{maxWidth: "100%"}} src="/announcement_1.webp" alt="Quality announcement"/>
                 <p>
                     <small>This is just an example.</small>
                 </p>
