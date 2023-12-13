@@ -17,16 +17,20 @@ export default function FinalNavbar() {
                         <Nav className="me-auto">
                             <Nav.Link href="/meshsave">Meshsave</Nav.Link>
                             <NavDropdown title="Projects">
+                                <small style={{marginLeft: '0.4em', color: 'grey', fontSize: '70%'}}>Online services</small>
+                                <NavDropdown.Item href="/article/newest">Newest articles</NavDropdown.Item>
                                 <NavDropdown.Item href="/fembot">FemBot</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For You</NavDropdown.Item>
+                                <small style={{marginLeft: '0.4em', color: 'grey', fontSize: '70%'}}>Smaller
+                                    projects</small>
+                                <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For
+                                    You</NavDropdown.Item>
                                 <NavDropdown.Item href="/project/astolfomod">Astolfo Forge Mod</NavDropdown.Item>
-                                <NavDropdown.Item href="/project/astolforesourcepack">Astolfo Resource Pack</NavDropdown.Item>
+                                <NavDropdown.Item href="/project/astolforesourcepack">Astolfo Resource
+                                    Pack</NavDropdown.Item>
                                 <NavDropdown.Item href="/project/astolfos">AstolfOS</NavDropdown.Item>
                                 <NavDropdown.Item href="/project/sharex">ShareX Settings</NavDropdown.Item>
-                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
+                                <small style={{marginLeft: '0.4em', color: 'grey', fontSize: '70%'}}>Older</small>
                                 <NavDropdown.Item href="/project/olderprojects">Older Projects</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="/social">Socials</Nav.Link>
