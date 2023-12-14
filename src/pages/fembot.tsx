@@ -26,8 +26,8 @@ export default function FemBot() {
                 <div className={styles.center}>
                     <h1>FemBot</h1>
                     <h2>A Discord bot by mldkyt</h2>
-                    <Button variant="secondary" disabled>
-                        Not available for inviting yet
+                    <Button variant="primary" as="a" href="https://discord.com/api/oauth2/authorize?client_id=1172922944033411243&permissions=2048&scope=bot">
+                        Invite the bot into your server
                     </Button>
                     <br />
                     <Button style={{ marginTop: "1rem" }} as="a" href="https://discord.gg/456zRGz75j">
