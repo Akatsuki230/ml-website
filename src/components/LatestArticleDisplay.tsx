@@ -27,7 +27,7 @@ export default function LatestArticleDisplay() {
                 <Alert variant="primary">
                     <h4>{article.title}</h4>
                     <p>{article.paragraphs[0]}...</p>
-                    <Button as="a" href={`/article/${article.id}`}>
+                    <Button as="a" href={`/article/${article.postYear}/${article.postMonth}/${article.id}`}>
                         Read more
                     </Button>
                 </Alert>

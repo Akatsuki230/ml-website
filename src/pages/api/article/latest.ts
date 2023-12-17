@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             x.timeOrdering = (x.postYear - 2020) * 365 + x.postMonth * 28 + x.postDay;
             return x;
         })
-        .sort((a, b) => b.timeOrdering - a.timeOrdering);
+        .sort((a, b) => a.timeOrdering - b.timeOrdering);
 
     let takeOnly25 = [] as ArticleExtended[];
     for (let i = 0; i < Math.min(articlesWithTimestamps.length, 25); i++) {

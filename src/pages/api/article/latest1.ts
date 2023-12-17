@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             x.timeOrdering = (x.postYear - 2020) * 365 + x.postMonth * 28 + x.postDay;
             return x;
         })
-        .sort((a, b) => a.timeOrdering - b.timeOrdering)
+        .sort((a, b) => b.timeOrdering - a.timeOrdering)
         [0];
 
     res.json(newestArticleWithTimestamp);
