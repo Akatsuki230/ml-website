@@ -36,6 +36,7 @@ export default function FinalNavbar() {
                             <Nav.Link href="/social">Socials</Nav.Link>
                             <Nav.Link href="/discord">Discord</Nav.Link>
                             <Nav.Link href="/pronouns">Pronouns</Nav.Link>
+                            <Nav.Link href="/ideas">Send Ideas</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
