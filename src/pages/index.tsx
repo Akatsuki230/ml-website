@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import { Alert, Button, Container } from "react-bootstrap";
 import ViewTracker from "@/components/ViewTracker";
+import LatestArticleDisplay from "@/components/LatestArticleDisplay";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +55,7 @@ export default function Home() {
                 </Alert>
 
                 <h1>About me</h1>
-                <p>mldkyt is a femboy programmer and is an addict to astolfo please don't kill me tysm &lt;3</p>
+                <p>mldkyt is a 🏳️‍⚧️ programmer who is very good at programming! &lt;3</p>
                 <h3>Preferred languages</h3>
                 <ul>
                     <li>C#</li>
@@ -68,74 +69,13 @@ export default function Home() {
                 </ul>
                 <p>..and many more!</p>
                 <h2>Projects</h2>
-                <h3>FemBot</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>A bot made by mldkyt.</p>
-                    <p>Features that are currently implemnted and that will be added are on the project's page.</p>
-                    <Button as="a" href="/fembot">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
-                <h3>Astolfo is Coming For You</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>A Windows application that causes Astolfo to come for you.</p>
-                    <p>There's a safe version available, where Astolfo comes to compliment you &lt;3</p>
-                    <p>The evil version causes your PC to shut down after Astolfo comes for you.</p>
-                    <Button as="a" href="/project/astolfoiscomingforyou">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
-                <h3>Astolfo Forge Mod</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>A Minecraft Forge mod that adds Astolfo to Minecraft.</p>
-                    <p>Supports version 1.20.1 of Minecraft.</p>
-                    <Button as="a" href="/project/astolfoforgemod">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
-                <h3>Astolfo Resource Pack</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>A Minecraft resource pack that adds Astolfo to Minecraft.</p>
-                    <p>Supports version 1.20.1 of Minecraft.</p>
-                    <Button as="a" href="/project/astolforesourcepack">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
-                <h3>AstolfOS</h3>
-                <div style={{ marginLeft: "8px" }}>
-                    <p>AstolfOS is an operating system based on Linux.</p>
-                    <p>It supports (I think) every Linux distro if you install it manually.</p>
-                    <p>Ubuntu has an automatic installer available.</p>
-                    <Button as="a" href="/project/astolfos">
-                        Learn more
-                    </Button>
-                    <br />
-                    <br />
-                </div>
+                <p>View my projects from the dropdown menu at the top of my page!</p>
                 <h1>Socials</h1>
-                <br />
-                <h2>TikTok</h2>
-                <Button as="a" href="https://tiktok.com/@mldkyt">
-                    View my TikTok profile
-                </Button>
-                <br />
-                <h2>YouTube</h2>
-                <Button as="a" href="https://youtube.com/@mldkyt">
-                    View my YouTube channel
-                </Button>
-                <br />
-                <h2>Others</h2>
-                <Button as="a" href="/social">
-                    View all my socials
-                </Button>
+                <Button as="a" href="/social">Socials are listed here</Button>
+                <br/>
+                <br/>
+                <h1>Read some more</h1>
+                <LatestArticleDisplay />
             </Container>
         </div>
     );
