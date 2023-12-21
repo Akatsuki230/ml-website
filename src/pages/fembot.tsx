@@ -48,7 +48,7 @@ export default function FemBot() {
                     <Card className={styles.cardstyle}>
                         <Card.Body>
                             <Card.Title>Leveling</Card.Title>
-                            <Card.Text>The bot can track user's messages and give them levels.</Card.Text>
+                            <Card.Text>The bot can track user's messages and give them levels. It can also reward members for reaching a specific level.</Card.Text>
                         </Card.Body>
                     </Card>
                     <Card className={styles.cardstyle}>
@@ -75,6 +75,12 @@ export default function FemBot() {
                         <Card.Body>
                             <Card.Title>Chat Streaks</Card.Title>
                             <Card.Text>The bot counts how many days a member had sent messages daily in a row, and notifies them when their streak increases, or when they lose the streak.</Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card className={styles.cardstyle}>
+                        <Card.Body>
+                            <Card.Title>Chat Revival</Card.Title>
+                            <Card.Text>The bot revives a channel from inactivity when the chat is inactive. The bot won't repeat the message if the channel is still inactive to avoid annoyance.</Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
