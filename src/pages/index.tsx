@@ -69,7 +69,9 @@ export default function Home() {
                 <p>Her most successful mod as of now is Asphalt roads, getting over 10k downloads within the first week
                     and having over 30k downloads till this day. The mod had one update, improving the behaviour of the
                     roads, as well as adding the ability to convert more roads to asphalt.</p>
+
                 <h2>Currently active projects</h2>
+
                 <ListGroup>
                     <ListGroup.Item>
                         <h3>FemBot</h3>
@@ -77,7 +79,9 @@ export default function Home() {
                         <Button as="a" href="/fembot">Invite, more information and feature suggestion here!</Button>
                     </ListGroup.Item>
                 </ListGroup>
+
                 <h2>Inactive projects (supported, not actively updated)</h2>
+
                 <ListGroup>
                     <ListGroup.Item>
                         <h3>Astolfo is coming for you</h3>
@@ -106,7 +110,9 @@ export default function Home() {
                         <Button as="a" href="/femboy">View it here</Button>
                     </ListGroup.Item>
                 </ListGroup>
+
                 <h2>Unmaintained projects</h2>
+
                 <Button as="a" href="/project/olderprojects">View unmaintained projects</Button>
             </Container>
         </div>

@@ -83,6 +83,12 @@ export default function FemBot() {
                             <Card.Text>The bot revives a channel from inactivity when the chat is inactive. The bot won't repeat the message if the channel is still inactive to avoid annoyance.</Card.Text>
                         </Card.Body>
                     </Card>
+                    <Card className={styles.cardstyle}>
+                        <Card.Body>
+                            <Card.Title>Chat Summary</Card.Title>
+                            <Card.Text>The bot will count messages in a channel, alongside "owo", "uwu", ":3" and a few others and every day it will send a message about how many messages were sent. </Card.Text>
+                        </Card.Body>
+                    </Card>
                 </div>
                 <p>More features are coming soon, when I come up with some.</p>
                 <p>
