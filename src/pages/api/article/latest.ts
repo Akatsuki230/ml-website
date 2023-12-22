@@ -4,7 +4,7 @@ import { ArticleBase, ArticleExtended } from "@/types/articles";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const response = await fetch(`${process.env.FIREBASE_URL}/articles.json`);
     const articles = (await response.json()) as ArticleBase[];
-    const articlesWithTimestamps = articles.map((x: ArticleExtended) => {
+    let articlesWithTimestamps = articles.map((x: ArticleExtended) => {
         x.timeOrdering = (x.postYear - 2020) * 365 + x.postMonth * 28 + x.postDay;
         return x;
     });
