@@ -1,18 +1,52 @@
 import {Inter} from "next/font/google";
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import {Button, Container, Image, ListGroup} from "react-bootstrap";
+import {Alert, Button, Container, Image, ListGroup} from "react-bootstrap";
 
 const inter = Inter({subsets: ["latin"]});
 
+function friendlyTime(ms: number): string {
+    if (ms < 1000) {
+        return Math.round(ms) + " ms";
+    }
+
+    if (ms < 1000 * 60) {
+        return Math.round(ms / 1000) + " s";
+    }
+
+    if (ms < 1000 * 60 * 60) {
+        return Math.round(ms / (1000 * 60)) + " m";
+    }
+
+    return Math.round(ms / (1000 * 60 * 60 * 24)) + " days";
+}
+
 export default function Home() {
+    const [christmasCountdown, setChristmasCountdown] = useState(0);
+    const [newYearCountdown, setNewYearCountdown] = useState(0);
+
     const hasRan = useRef(false);
 
     useEffect(() => {
         if (hasRan.current) return;
         hasRan.current = true;
+
+        const date = new Date();
+        const christmas = new Date(date.getFullYear(), 11, 24, 0, 0, 0, 0);
+        const christmasDiff = christmas.getTime() - date.getTime();
+
+        const newYear = new Date(date.getFullYear() + 1, 0, 1, 0, 0, 0, 0);
+        const newYearDiff = newYear.getTime() - date.getTime();
+
+        if (christmasDiff < 1000 * 3600 * 24 * 30 && christmasDiff > 1000 * 3600) {
+            setChristmasCountdown(christmasDiff);
+        }
+
+        if (newYearDiff < 1000 * 3600 * 7 * 30 && newYearDiff > 1000) {
+            setNewYearCountdown(newYearDiff);
+        }
 
         window.scrollTo(0, 0);
         setTimeout(() => {
@@ -49,6 +83,20 @@ export default function Home() {
                         textAlign: "center"
                     }}>mldkyt</h1>
                 </div>
+
+                {christmasCountdown !== 0 && (
+                    <Alert>
+                        <span>{friendlyTime(christmasCountdown)}</span>
+                        <span> until christmas!!</span>
+                    </Alert>
+                )}
+                {newYearCountdown !== 0 && (
+                    <Alert>
+                        <span>{friendlyTime(newYearCountdown)}</span>
+                        <span> until new year!!</span>
+                    </Alert>
+                )}
+
                 <p style={{
                     fontSize: '18px',
                     fontWeight: 'bold'
