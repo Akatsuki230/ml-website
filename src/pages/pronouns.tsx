@@ -2,10 +2,27 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import {Container} from "react-bootstrap";
 import FinalNavbar from "@/components/NavBar";
+import { useEffect, useRef, useState } from "react";
 
 const inter = Inter({subsets: ["latin"]});
 
 export default function Projects() {
+    const [timeout, _setTimeout] = useState(5);
+    const hasRan = useRef(false);
+    useEffect(() => {
+        if (hasRan.current) return;
+        hasRan.current = true;
+
+        let cooldown = 4;
+        setInterval(() => {
+            _setTimeout(cooldown);
+            cooldown--;
+            if (cooldown === 0) {
+                location.href = 'https://en.pronouns.page/@mldkyt';
+            }
+        }, 1000);
+    })
+
     return (
         <div className={inter.className}>
             <Head>
@@ -21,32 +38,8 @@ export default function Projects() {
             <FinalNavbar />
 
             <Container>
-                <h1>
-                    Programmer Astolfo's pronouns
-                </h1>
-                <h2>Calling me</h2>
-                <ul>
-                    <li>❤️ mldkyt</li>
-                    <li>❤️ mld</li>
-                    <li>👍 mldk</li>
-                </ul>
-                <h2>Pronouns</h2>
-                {/*<p>❤️ she/her 🏳️‍⚧️</p>*/}
-                {/*<p>👍 he/him</p>*/}
-                {/*<p>👍 they/them</p>*/}
-                <ul>
-                    <li>❤️ she/her 🏳️‍⚧️</li>
-                    <li>👎 he/him</li>
-                    <li>👎 they/them</li>
-                </ul>
-
-                <h2>Meaning of these icons: </h2>
-
-                <ul>
-                    <li>❤️ Preferable</li>
-                    <li>👍 OK</li>
-                    <li>👎 no</li>
-                </ul>
+                <h1>Pronouns</h1>
+                <p>My pronouns page has moved to <a href="https://en.pronouns.page/@mldkyt">pronouns.page</a>. Redirecting in {timeout} seconds</p>
             </Container>
 
         </div>
