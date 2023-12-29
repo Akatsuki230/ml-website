@@ -1,8 +1,11 @@
+import { Inter } from "next/font/google";
 import { Button, Modal } from "react-bootstrap";
+
+const inter = Inter({subsets: ['latin']});
 
 export default function ChatRevivalHelpModal(props: { show: boolean, onHide: () => void}) {
 
-    return <Modal show={props.show} onHide={props.onHide}>
+    return <Modal show={props.show} onHide={props.onHide} className={inter.className}>
         <Modal.Header>Chat Revive</Modal.Header>
         <Modal.Body>
             <h1>About</h1>
