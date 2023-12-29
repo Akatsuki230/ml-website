@@ -87,13 +87,13 @@ export default function Home() {
                 {christmasCountdown !== 0 && (
                     <Alert>
                         <span>{friendlyTime(christmasCountdown)}</span>
-                        <span> until christmas!!</span>
+                        <span> until Christmas!!</span>
                     </Alert>
                 )}
                 {newYearCountdown !== 0 && (
                     <Alert>
                         <span>{friendlyTime(newYearCountdown)}</span>
-                        <span> until new year!!</span>
+                        <span> until New Year!!</span>
                     </Alert>
                 )}
 
