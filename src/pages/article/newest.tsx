@@ -2,6 +2,9 @@ import NavBar from "@/components/NavBar";
 import { Container, ListGroup, Spinner } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { ArticleExtended } from "@/types/articles";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Newest() {
     const [articles, setArticles] = useState([] as ArticleExtended[]);
@@ -19,9 +22,9 @@ export default function Newest() {
     function makeListGroup(articles: ArticleExtended[]) {
         return (
             <ListGroup>
-                {articles.map((x) => {
+                {articles.map((x, i) => {
                     return (
-                        <ListGroup.Item>
+                        <ListGroup.Item key={i}>
                             <h3>
                                 <a href={`/article/${x.postYear}/${x.postMonth}/${x.id}`}>{x.title}</a>
                             </h3>
@@ -172,7 +175,7 @@ export default function Newest() {
     return (
         <>
             <NavBar />
-            <Container>
+            <Container className={inter.className}>
                 <h1>Newest articles</h1>
                 {loading ? (
                     <>
