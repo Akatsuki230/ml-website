@@ -163,6 +163,64 @@ export default function Article(props: Readonly<{ article: ArticleResponse }>) {
         }
     };
 
+    const renderArticle = () => {
+        return (
+            <>
+                {props.article.paragraphs.map((par, ind) => {
+                    if (par.startsWith("h1:")) {
+                        return <h1 key={ind}>{par.slice(3)}</h1>;
+                    } else if (par.startsWith("h2:")) {
+                        return <h2 key={ind}>{par.slice(3)}</h2>;
+                    } else if (par.startsWith("h3:")) {
+                        return <h3 key={ind}>{par.slice(3)}</h3>;
+                    } else if (par.startsWith("h4:")) {
+                        return <h4 key={ind}>{par.slice(3)}</h4>;
+                    } else if (par.startsWith("h5:")) {
+                        return <h5 key={ind}>{par.slice(3)}</h5>;
+                    } else if (par.startsWith("h6:")) {
+                        return <h6 key={ind}>{par.slice(3)}</h6>;
+                    } else if (par.startsWith("ul")) {
+                        const elementsUnder = Array.from(props.article.paragraphs);
+                        elementsUnder.splice(0, ind + 1);
+                        let elements = [];
+                        for (const element of elementsUnder) {
+                            if (!element.startsWith("li")) break;
+                            elements.push(element);
+                        }
+
+                        return (
+                            <ul>
+                                {elements.map((element, index) => {
+                                    return <li key={index}>{element.slice(3)}</li>;
+                                })}
+                            </ul>
+                        );
+                    } else if (par.startsWith("ol")) {
+                        const elementsUnder = Array.from(props.article.paragraphs);
+                        elementsUnder.splice(0, ind + 1);
+                        let elements = [];
+                        for (const element of elementsUnder) {
+                            if (!element.startsWith("li")) break;
+                            elements.push(element);
+                        }
+
+                        return (
+                            <ol>
+                                {elements.map((element, index) => {
+                                    return <li key={index}>{element.slice(3)}</li>;
+                                })}
+                            </ol>
+                        );
+                    } else if (par.startsWith("li:")) {
+                        return <></>;
+                    } else {
+                        return <p key={ind}>{par}</p>;
+                    }
+                })}
+            </>
+        );
+    };
+
     return (
         <>
             <FinalNavbar />
@@ -171,9 +229,7 @@ export default function Article(props: Readonly<{ article: ArticleResponse }>) {
                 <p>
                     <small>Posted on {fullDate}</small>
                 </p>
-                {props.article.paragraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                ))}
+                {renderArticle()}
                 <p>Likes: {props.article.likes}</p>
                 {renderLikes()}
                 <h2>Comments</h2>
