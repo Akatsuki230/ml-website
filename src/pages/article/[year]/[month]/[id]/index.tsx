@@ -1,4 +1,3 @@
-import FinalFooter from "@/components/Footer";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { ArticleBase } from "@/types/articles";
