@@ -1,11 +1,11 @@
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
-import {Alert, Button, Container, Image, ListGroup} from "react-bootstrap";
+import { Alert, Button, Container, Image, ListGroup } from "react-bootstrap";
 
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 function friendlyTime(ms: number): string {
     if (ms < 1000) {
@@ -58,26 +58,26 @@ export default function Home() {
         <div className={inter.className}>
             <Head>
                 <title>mldkyt's website</title>
-                <meta name="description" content="Welcome to mldkyt's website!"/>
-                <meta name="author" content="mldkyt"/>
-                <meta name="theme-color" content="#FF77FF"/>
+                <meta name="description" content="Welcome to mldkyt's website!" />
+                <meta name="author" content="mldkyt" />
+                <meta name="theme-color" content="#FF77FF" />
                 <script async
-                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
-                        crossOrigin="anonymous"></script>
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                    crossOrigin="anonymous"></script>
             </Head>
 
-            <FinalNavbar/>
+            <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat/>
+                <FemboyFridayVirtualHeadpat />
                 <div>
                     <Image src="/pfp.webp" width="100" height="100"
-                           style={{
-                               borderRadius: "50%",
-                               position: 'relative',
-                               left: '50%',
-                               transform: 'translateX(-50%)'
-                           }} alt="mldkyt's PFP"/>
+                        style={{
+                            borderRadius: "50%",
+                            position: 'relative',
+                            left: '50%',
+                            transform: 'translateX(-50%)'
+                        }} alt="mldkyt's PFP" />
                     <h1 style={{
                         fontSize: '48px',
                         textAlign: "center"
@@ -135,17 +135,6 @@ export default function Home() {
                         <h3>Astolfo is coming for you</h3>
                         <p>A program where Astolfo comes for you. Good and evil versions are available.</p>
                         <Button as="a" href="/project/astolfoiscomingforyou">Download here!</Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                        <h3>Astolfo Forge Mod</h3>
-                        <p>A Minecraft mod that adds Astolfo, Felix, Rimuru, Hideri, Bridget and many more into the
-                            game.</p>
-                        <Button as="a" href="/project/astolfomod">Download here!</Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                        <h3>Astolfo Resource Pack</h3>
-                        <p>A resource pack that changes a few things to Astolfo.</p>
-                        <Button as="a" href="/project/astolforesourcepack">Download here!</Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
                         <h3>AstolfOS</h3>

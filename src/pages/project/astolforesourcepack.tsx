@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import ViewTracker from "@/components/ViewTracker";
-import { Button, Container, Image } from "react-bootstrap";
+import { Badge, Button, Container, Image } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export default function AstolfoResourcePack() {
             <Container>
                 <FemboyFridayVirtualHeadpat />
 
-                <h1>Astolfo Resource Pack</h1>
+                <h1>Astolfo Resource Pack <Badge bg="warning">Archive</Badge></h1>
                 <p>Minecraft :3 edition let's gooo</p>
                 <p>This resource pack changes the Minecraft loading screen, logo, totem of undying and ending screen to be more Astolfo themed.</p>
 

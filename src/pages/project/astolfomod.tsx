@@ -3,7 +3,7 @@ import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { Button, Container, Image } from "react-bootstrap";
+import { Badge, Button, Container, Image } from "react-bootstrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export default function AstolfoMod() {
             <Container>
                 <FemboyFridayVirtualHeadpat />
 
-                <h1>Astolfo Forge Mod</h1>
+                <h1>Astolfo Forge Mod <Badge bg="warning">Archive</Badge></h1>
 
                 <h2>Feature list</h2>
                 <ul className="text-white">
