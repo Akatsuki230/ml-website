@@ -1,4 +1,3 @@
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
@@ -22,7 +21,6 @@ export default function AstolfoIsComingForYou() {
             <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat />
                 <h1>Astolfo is coming for you</h1>
 
                 <h2>The safe variant</h2>

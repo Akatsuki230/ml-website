@@ -1,7 +1,6 @@
 import FinalNavbar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import ViewTracker from "@/components/ViewTracker";
 import { Badge, Button, Container, Image } from "react-bootstrap";
 
@@ -22,7 +21,6 @@ export default function AstolfoResourcePack() {
             <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat />
 
                 <h1>Astolfo Resource Pack <Badge bg="warning">Archive</Badge></h1>
                 <p>Minecraft :3 edition let's gooo</p>

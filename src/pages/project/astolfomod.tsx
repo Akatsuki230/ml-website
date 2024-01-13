@@ -1,4 +1,3 @@
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
@@ -22,7 +21,6 @@ export default function AstolfoMod() {
             <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat />
 
                 <h1>Astolfo Forge Mod <Badge bg="warning">Archive</Badge></h1>
 

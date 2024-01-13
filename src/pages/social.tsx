@@ -1,4 +1,3 @@
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
@@ -70,7 +69,6 @@ export default function Social() {
 
             <FinalNavbar />
             <Container>
-                <FemboyFridayVirtualHeadpat />
                 <h1>mldkyt's social links</h1>
                 <p>This is a list of mldkyt's social links.</p>
                 <p>I do not have many social accounts, but here are the ones that I have and actually use.</p>

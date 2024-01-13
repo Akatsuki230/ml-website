@@ -1,4 +1,3 @@
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
@@ -24,7 +23,6 @@ export default function Meshsave() {
             <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat />
                 <h1>mldkyt's meshsave</h1>
                 <p>In my save, the car looks like it has been through a war zone. The car's body is badly damaged and has been crashed at high speed multiple times. The mesh of the car is severely damaged and it looks like it has been pieced back together.</p>
 

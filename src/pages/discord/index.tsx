@@ -1,4 +1,3 @@
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { Inter } from "next/font/google";
@@ -80,7 +79,6 @@ export default function Discord() {
             </Head>
             <FinalNavbar />
             <Container>
-                <FemboyFridayVirtualHeadpat />
                 <div
                     style={{
                         textAlign: "center"

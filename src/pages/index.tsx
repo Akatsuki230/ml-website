@@ -2,8 +2,8 @@ import { Inter } from "next/font/google";
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
-import FemboyFridayVirtualHeadpat from "@/components/FemboyFridayVirtualHeadpat";
 import { Alert, Button, Container, Image, ListGroup } from "react-bootstrap";
+import ViewTracker from "@/components/ViewTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,7 +69,6 @@ export default function Home() {
             <FinalNavbar />
 
             <Container>
-                <FemboyFridayVirtualHeadpat />
                 <div>
                     <Image src="/pfp.webp" width="100" height="100"
                         style={{
@@ -100,30 +99,30 @@ export default function Home() {
                 <p style={{
                     fontSize: '18px',
                     fontWeight: 'bold'
-                }}>A transgender programmer from the Czech Republic.</p>
-                <p>Writes in a lot of languages, such as C#, C++, HTML, CSS, JavaScript, Python, Rust, Go, Batch, Bash,
-                    PHP, Lua (ComputerCraft), ...</p>
+                }}>Nyaa~! A twansgendew pwogwammew, nya~! That's awesome, kawaii, and inspiwational, uwu!</p>
+                <p>Writes in a wot of wanguages, such as C#, C++, HTML, CSS, JavaScript, Python, Rust, Go, Batch, Bash,
+                    PHP, Lua (ComputerCraft), nya~! Meow, isn't that a pawsome array of languages, uwu? OwO, so kawaii! Nya~!</p>
                 <h2>History of mldkyt</h2>
-                <p>Mldkyt's first appearance is on <a href="https://www.youtube.com/watch?v=pil1bYc7foI">YouTube</a>,
-                    dating back to 11/26/2019. She started posting content on YouTube primarily about My Summer Car. In
-                    2021, she expanded to making My Summer Car mods as well, alongside posting videos about existing
-                    mods.</p>
-                <p>Her first mod was <a href="https://www.nexusmods.com/mysummercar/mods/3666">posted on
-                    NexusMods <i>(reupload)</i></a> on 30th December 2020. The mod was coded so well that it's first
-                    version would work in the latest version of My Summer Car. She has updated this mod many times,
-                    adding more features to the mod, such as: Assembly sounds, sound improvements, old dashboard,
-                    disable door sounds, walking sounds and knob sounds, just like in the old versions of My Summer Car.
+                <p>Mldkyt's fiwst appeawance is on <a href="https://www.youtube.com/watch?v=pil1bYc7foI">YouTube</a>,
+                    dating back to 11/26/2019. She stawted posting content on YouTube pwimawily about My Summew Car. In
+                    2021, she expanded to making My Summew Car mods as well, alongside posting videos about existing
+                    mods. Nyaa~!</p>
+                <p>Hew fiwst mod was <a href="https://www.nexusmods.com/mysummercar/mods/3666">posted on
+                    NexusMods <i>(weupload)</i></a> on 30th Decembew 2020. The mod was coded so well that it's fiwst
+                    vewsion would wowk in the latest vewsion of My Summew Car. She has updated this mod many times,
+                    adding mowe featuwes to the mod, such as: Assembly sounds, sound impwovements, old dashboawd,
+                    disable doow sounds, walking sounds and knob sounds, just wike in the old vewsions of My Summew Car. Nyaa~!
                 </p>
-                <p>Her most successful mod as of now is Asphalt roads, getting over 10k downloads within the first week
-                    and having over 30k downloads till this day. The mod had one update, improving the behaviour of the
-                    roads, as well as adding the ability to convert more roads to asphalt.</p>
+                <p>Hew most successful mod as of nyow is Asphalt roads, getting ovew 10k downwoads within the fiwst week
+                    and having ovew 30k downwoads till this day. The mod had one update, impwoving the behaviouw of the
+                    roads, as well as adding the ability to convewt mowe roads to asphalt. Nyaa~! </p>
 
                 <h2>Currently active projects</h2>
 
                 <ListGroup>
                     <ListGroup.Item>
                         <h3>FemBot</h3>
-                        <p>A Discord bot made by mldkyt.</p>
+                        <p>A Discord bot made by mldkyt, nya~! It's pwobably the most kawaii bot in the whole sewvew, uwu!</p>
                         <Button as="a" href="/fembot">Invite, more information and feature suggestion here!</Button>
                     </ListGroup.Item>
                 </ListGroup>
@@ -133,17 +132,17 @@ export default function Home() {
                 <ListGroup>
                     <ListGroup.Item>
                         <h3>Astolfo is coming for you</h3>
-                        <p>A program where Astolfo comes for you. Good and evil versions are available.</p>
+                        <p>OwO, a pwogram where Astolfo comes fow you, nya~! That sounds like an adventuwe filled with kyaatastic excitement!</p>
                         <Button as="a" href="/project/astolfoiscomingforyou">Download here!</Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
                         <h3>AstolfOS</h3>
-                        <p>An operating system which has Astolfo in a lot of places.</p>
+                        <p>Nyaa~! An opewating system with Astolfo in a lot of places, nya~! That sounds like a puwrrfectly kawaii and magical OS, uwu!</p>
                         <Button as="a" href="/project/astolfos">Download here!</Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
                         <h3>Femboy List</h3>
-                        <p>A femboy list.</p>
+                        <p>Nyaa~! A femboy wist, nya~! That sounds like a cute and diverse compilation of femboy characters ow individuals, uwu!</p>
                         <Button as="a" href="/femboy">View it here</Button>
                     </ListGroup.Item>
                 </ListGroup>
@@ -151,6 +150,10 @@ export default function Home() {
                 <h2>Unmaintained projects</h2>
 
                 <Button as="a" href="/project/olderprojects">View unmaintained projects</Button>
+
+                <br />
+                <br />
+                <ViewTracker />
             </Container>
         </div>
     );
