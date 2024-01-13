@@ -5,14 +5,13 @@ import { Container, Nav, NavDropdown, Navbar, Image, Badge } from "react-bootstr
 const inter = Inter({ subsets: ["latin"] });
 
 const days = [
-    "",
+    "Senpai Sunday",
     "Mlm Monday",
     "Tomboy Tuesday",
     "Wlw Wednesday",
     "Trans Thursday",
     "Femboy Friday",
-    "Straight Saturday",
-    "Senpai Sunday"
+    "Straight Saturday"
 ]
 
 export default function FinalNavbar() {
