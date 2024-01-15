@@ -1,4 +1,5 @@
 import FinalNavbar from "@/components/NavBar";
+import ViewTracker from "@/components/ViewTracker";
 import { useEffect, useRef, useState } from "react";
 import { Alert, Button, Card, Container, FormControl, Image, Modal, Nav, Tabs } from "react-bootstrap";
 
@@ -193,6 +194,8 @@ export default function MSCPrideFlags() {
                 {key === 'images' && <Images />}
                 {key === 'comments' && <Comments />}
                 {key === 'bug-reports' && <BugReports />}
+
+                <ViewTracker />
             </Container>
         </>
     )
