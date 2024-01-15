@@ -62,6 +62,7 @@ export default function FinalNavbar() {
                                     <NavDropdown.Item href="/tools/catgirl">CatGirl Nonsence Generator</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Smaller
                                         projects</small>
+                                    <NavDropdown.Item href="/project/msclgbtprideflags">My Summer Car LGBT Pride Flags mod</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For
                                         You</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfos">AstolfOS</NavDropdown.Item>
