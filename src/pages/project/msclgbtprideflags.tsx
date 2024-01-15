@@ -177,13 +177,13 @@ export default function MSCPrideFlags() {
             <Container>
                 <Head>
                     <title>My Summer Car LGBT Pride Flags mod</title>
-                    <script async
-                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
-                        crossOrigin="anonymous"></script>
-                    <meta name="og:title">LGBT Pride Flags mod for My Summer Car</meta>
+                    <meta name="og:title" content="LGBT Pride Flags mod for My Summer Car"></meta>
                     <meta name="description" content="This mod adds LGBT pride flags to My Summer Car. It is a mod for the game My Summer Car by..." />
                     <meta name="author" content="mldkyt" />
                     <meta name="theme-color" content="#FF77FF" />
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                        crossOrigin="anonymous"></script>
                 </Head>
 
                 <h1>LGBT Pride Flags mod</h1>
