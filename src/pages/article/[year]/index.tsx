@@ -1,6 +1,5 @@
 import FinalNavbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
-import { Inter } from "next/font/google";
 import { Container, ListGroup } from "react-bootstrap";
 
 interface ArticleType {
@@ -11,8 +10,6 @@ interface ArticleType {
     title: string;
     paragraphs: string[];
 }
-
-const inter = Inter({ subsets: ["latin"] });
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     if (isNaN(Number(ctx.params.year))) {
@@ -41,7 +38,7 @@ export default function YearList(props: { articles: ArticleType[]; year: string 
         <>
             <FinalNavbar />
 
-            <Container className={inter.className}>
+            <Container>
                 <h1>List of articles for {props.year}</h1>
                 <ListGroup>
                     {props.articles.map((article, index) => (

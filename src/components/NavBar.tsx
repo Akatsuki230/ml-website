@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import React from "react";
 import { Container, Nav, NavDropdown, Navbar, Image, Badge } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
 
 const days = [
     "Senpai Sunday",
@@ -32,12 +30,12 @@ export default function FinalNavbar() {
                 fontSize: '13px',
                 fontWeight: 'bold',
                 textAlign: 'center'
-            }} className={inter.className}>
+            }}>
                 <Container>
                     Today is {days[new Date().getDay()]}~! :3
                 </Container>
             </div>
-            <div className={inter.className}>
+            <div>
                 <Navbar>
                     <Container>
                         <Navbar.Brand href="/">

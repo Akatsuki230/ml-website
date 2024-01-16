@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Projects() {
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's projects</title>
                 <meta name="og:title" content="mldkyt's projects" />

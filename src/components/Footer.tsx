@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import { Container, Navbar } from "react-bootstrap";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function FinalFooter() {
     return (
-        <div className={inter.className}>
+        <div>
             <Navbar>
                 <Container>
                     <Navbar.Collapse>

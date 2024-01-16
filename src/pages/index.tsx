@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import { Alert, Button, Container, Image, ListGroup } from "react-bootstrap";
 import ViewTracker from "@/components/ViewTracker";
-
-const inter = Inter({ subsets: ["latin"] });
 
 function friendlyTime(ms: number): string {
     if (ms < 1000) {
@@ -55,7 +52,7 @@ export default function Home() {
     });
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's website</title>
                 <meta name="description" content="Welcome to mldkyt's website!" />

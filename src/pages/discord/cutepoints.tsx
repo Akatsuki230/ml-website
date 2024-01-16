@@ -2,10 +2,7 @@ import FinalNavbar from "@/components/NavBar";
 import { useState, useRef, useEffect } from "react";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import { Alert, Container, Image, Table } from "react-bootstrap";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function CutePointsLeaderBoard() {
     const [data, setData] = useState([] as { name: string; avatar: string; cutepoints: number; user_id: number }[]);
@@ -33,7 +30,7 @@ export default function CutePointsLeaderBoard() {
     }, []);
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <meta name="description" content="The cutepoint leaderboard for mldkyt's Discord server" />
                 <meta name="author" content="mldkyt" />

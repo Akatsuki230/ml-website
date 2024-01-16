@@ -2,9 +2,6 @@ import React from "react";
 import ViewTracker from "@/components/ViewTracker";
 import FinalNavbar from "@/components/NavBar";
 import { Button, Container, Image, Table } from "react-bootstrap";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function FemboyList() {
     const [data, setData] = React.useState(
@@ -36,7 +33,7 @@ export default function FemboyList() {
     });
 
     return (
-        <div className={inter.className}>
+        <div>
             <FinalNavbar />
             <Container>
                 <h1 className="text-3xl">The Femboy List</h1>

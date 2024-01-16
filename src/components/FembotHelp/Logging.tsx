@@ -1,9 +1,7 @@
 import { Button, Modal } from "react-bootstrap";
-import { Inter } from "next/font/google";
-const inter = Inter({subsets: ['latin']});
 export default function LoggingHelpModal(props: { show: boolean, onHide: () => void}) {
 
-    return <Modal show={props.show} onHide={props.onHide} className={inter.className}>
+    return <Modal show={props.show} onHide={props.onHide}>
         <Modal.Header>Logging</Modal.Header>
         <Modal.Body>
             <h1>About</h1>

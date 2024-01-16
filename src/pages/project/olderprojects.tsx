@@ -1,13 +1,10 @@
 import FinalNavbar from "@/components/NavBar";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import { Alert, Button, Container } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function OlderProjects() {
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>Older Projects | mldkyt's website</title>
                 <meta name="og:title" content="Older Projects" />

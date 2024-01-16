@@ -1,11 +1,8 @@
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import React, { useState } from "react";
 import { Alert, Button, Container, FormControl, Image, Modal } from "react-bootstrap";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Discord() {
     const [members, setMembers] = React.useState(0);
@@ -69,7 +66,7 @@ export default function Discord() {
     }
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's Discord server</title>
                 <meta name="description" content="Join mldkyt's Discord server!" />

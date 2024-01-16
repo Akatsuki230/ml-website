@@ -67,8 +67,7 @@ function Comments() {
         comment: string
     }[]);
 
-    const [acknowledged, setAcknowledged] = useState(false);
-
+    const [commentModalRulesOpen, setCommentModalRulesOpen] = useState(false);
     const [commentModalOpen, setCommentModalOpen] = useState(false);
 
     const hasRan = useRef(false)
@@ -125,10 +124,21 @@ function Comments() {
         })
     }
 
+    function acceptRules() {
+        setCommentModalRulesOpen(false)
+        setCommentModalOpen(true)
+    }
+
     return <>
         <h2>Comments</h2>
         <p>
-            <Button onClick={() => setCommentModalOpen(true)}>Leave a comment</Button>
+            <Alert>
+                <p>Comments are available on NexusMods as well.</p>
+                <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/4581?tab=posts" target="_blank">View on NexusMods</Button>
+            </Alert>
+        </p>
+        <p>
+            <Button onClick={() => setCommentModalRulesOpen(true)}>Leave a comment</Button>
         </p>
         {comments.map((x, i) => {
             return <Card style={{
@@ -141,43 +151,45 @@ function Comments() {
             </Card>
         })}
 
+        <Modal show={commentModalRulesOpen} onHide={() => setCommentModalRulesOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title>Comment Rules</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>
+                    Please follow the following rules while commenting:
+                </p>
+                <ul>
+                    <li>No homophobia/transphobia</li>
+                    <li>No toxicity</li>
+                    <li>If you hate this mod, simply don't download it</li>
+                </ul>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={acceptRules}>I agree</Button>
+                <Button variant="secondary" onClick={() => setCommentModalRulesOpen(false)}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+
         <Modal show={commentModalOpen} onHide={() => setCommentModalOpen(false)}>
             <Modal.Header closeButton>
                 <Modal.Title>Leave a comment</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div>
-                    <Alert variant="danger">
-                        <h1>WARNING</h1>
-                        <p>Leaving negative comments <strong>WILL RESULT FROM A BAN FROM THE ENTIRE WEBSITE!</strong></p>
-                    </Alert>
-                    <Alert variant="info">
-                        Your comment will not appear on the website until mldkyt approves it.
-                    </Alert>
-                    {commentError === "" || <Alert variant="danger">
-                        <h2>Error</h2>
-                        <p>{commentError}</p>
-                    </Alert>}
+                    <FormControl disabled={commentAdding} type="text" placeholder="Name" value={commentName} onChange={x => setCommentName(x.currentTarget.value)}></FormControl>
                 </div>
-                {acknowledged ? <>
-                    <div>
-                        <FormControl disabled={commentAdding} type="text" placeholder="Name" value={commentName} onChange={x => setCommentName(x.currentTarget.value)}></FormControl>
-                    </div>
-                    <div style={{
-                        marginTop: '1em'
-                    }}>
-                        <FormControl disabled={commentAdding} as="textarea" rows={3} placeholder="Comment" value={commentComment} onChange={x => setCommentComment(x.currentTarget.value)}></FormControl>
-                    </div>
-                </> : <>
-                    <h2>I READ THE MESSAGE ABOVE AND WANT TO COMMENT.</h2>
-                    <Button onClick={() => setAcknowledged(true)}>I understand</Button>
-                    <Button variant="secondary" onClick={() => setCommentModalOpen(false)} style={{
-                        marginLeft: '1em'
-                    }}>I don't understand</Button>
-                </>}
+                <div style={{
+                    marginTop: '1em'
+                }}>
+                    <FormControl disabled={commentAdding} as="textarea" rows={3} placeholder="Comment" value={commentComment} onChange={x => setCommentComment(x.currentTarget.value)}></FormControl>
+                </div>
+                {commentError && <Alert style={{
+                    marginTop: '1em'
+                }} variant="danger">{commentError}</Alert>}
             </Modal.Body>
             <Modal.Footer>
-                {acknowledged && <Button disabled={commentAdding} onClick={leaveComment}>Submit comment</Button>}
+                <Button disabled={commentAdding} onClick={leaveComment}>Submit comment</Button>
                 <Button variant="secondary" onClick={() => setCommentModalOpen(false)}>Close</Button>
             </Modal.Footer>
         </Modal>

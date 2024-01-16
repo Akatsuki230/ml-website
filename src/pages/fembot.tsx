@@ -1,7 +1,6 @@
 import FinalNavbar from "@/components/NavBar";
 import { Alert, Button, Card, Container } from "react-bootstrap";
 import styles from "@/styles/fembot.module.css";
-import { Inter } from "next/font/google";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
 import FemBotSuggestion from "@/components/FemBotSuggestion";
@@ -16,7 +15,6 @@ import ChatRevivalHelpModal from "@/components/FembotHelp/ChatRevival";
 import ChatSummaryHelpModal from "@/components/FembotHelp/ChatSummary";
 import ReactionRolesHelpModal from "@/components/FembotHelp/ReactionRoles";
 
-const inter = Inter({ subsets: ["latin"] });
 export default function FemBot() {
     const [showWelcomeGoodbyeModal, setShowWelcomeGoodbyeModal] = useState(false);
     const [showLevelingModal, setShowLevelingModal] = useState(false);
@@ -29,7 +27,7 @@ export default function FemBot() {
     const [showReactionRolesModal, setShowReactionRolesModal] = useState(false);
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 {/* meta title tag "FemBot", description and pink color */}
                 <title>FemBot</title>

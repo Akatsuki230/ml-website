@@ -1,6 +1,5 @@
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { Alert, Button, Container, ListGroup } from "react-bootstrap";
@@ -8,8 +7,6 @@ import { Alert, Button, Container, ListGroup } from "react-bootstrap";
 const itemStyle: CSSProperties = {
     width: "calc(100% - 45px)"
 };
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Social() {
     const [trackingGitHub, setTrackingGitHub] = useState("loading" as number | "loading" | "error loading");
@@ -58,7 +55,7 @@ export default function Social() {
     }, []);
 
     return (
-        <div className={`${inter.className} text-white`}>
+        <div className="text-white">
             <Head>
                 <title>mldkyt's social links</title>
                 <meta name="og:title" content="mldkyt's social links" />

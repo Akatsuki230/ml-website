@@ -1,14 +1,11 @@
 import FinalNavbar from "@/components/NavBar";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import ViewTracker from "@/components/ViewTracker";
 import { Badge, Button, Container, Image } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function AstolfoResourcePack() {
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>Astolfo Resource Pack | mldkyt's website</title>
                 <meta name="og:title" content="Astolfo Resource Pack" />
