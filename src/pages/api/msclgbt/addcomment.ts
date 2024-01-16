@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const { name, comment } = req.body as CommentType;
-    const ip = req.headers["x-real-ip"]?.toString() || req.socket.remoteAddress.toString();
+    const ip = req.headers["cf-connnecting-ip"]?.toString() || req.headers["x-forwarded-for"]?.toString() || req.headers["x-real-ip"]?.toString() || req.socket.remoteAddress.toString();
 
     let comments = (await (await fetch(`${process.env.FIREBASE_URL}/msclgbt/commentstoapprove.json`)).json()) as CommentType[] | null;
     if (comments === null) {
