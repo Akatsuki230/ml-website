@@ -69,7 +69,7 @@ function Comments() {
 
     const [acknowledged, setAcknowledged] = useState(false);
 
-    const [commandModalOpen, setCommandModalOpen] = useState(false);
+    const [commentModalOpen, setCommentModalOpen] = useState(false);
 
     const hasRan = useRef(false)
 
@@ -87,28 +87,48 @@ function Comments() {
     const [commentName, setCommentName] = useState("");
     const [commentComment, setCommentComment] = useState("");
     const [commentAdding, setCommentAdding] = useState(false);
+    const [commentError, setCommentError] = useState("");
 
     function leaveComment() {
         setCommentAdding(true)
-        fetch('/api/msclgbt/addcomment', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: commentName,
-                comment: commentComment
+        fetch('https://api.ipify.org').then(x => {
+            if (!x.ok) {
+                alert('Internal error, cannot comment right now.');
+                setCommentModalOpen(false);
+                setCommentAdding(false);
+                return
+            }
+
+            x.text().then(y => {
+                fetch('/api/msclgbt/addcomment', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: commentName,
+                        comment: commentComment,
+                        ip: y.trim()
+                    })
+                }).then(x => {
+                    if (!x.ok) {
+                        x.json().then(z => {
+                            setCommentError(z.error)
+                            setCommentAdding(false)
+                        })
+                        return
+                    }
+                    setCommentModalOpen(false)
+                    setCommentAdding(false)
+                })
             })
-        }).then(x => {
-            setCommandModalOpen(false)
-            setCommentAdding(false)
         })
     }
 
     return <>
         <h2>Comments</h2>
         <p>
-            <Button onClick={() => setCommandModalOpen(true)}>Leave a comment</Button>
+            <Button onClick={() => setCommentModalOpen(true)}>Leave a comment</Button>
         </p>
         {comments.map((x, i) => {
             return <Card style={{
@@ -121,7 +141,7 @@ function Comments() {
             </Card>
         })}
 
-        <Modal show={commandModalOpen} onHide={() => setCommandModalOpen(false)}>
+        <Modal show={commentModalOpen} onHide={() => setCommentModalOpen(false)}>
             <Modal.Header closeButton>
                 <Modal.Title>Leave a comment</Modal.Title>
             </Modal.Header>
@@ -134,6 +154,10 @@ function Comments() {
                     <Alert variant="info">
                         Your comment will not appear on the website until mldkyt approves it.
                     </Alert>
+                    {commentError === "" || <Alert variant="danger">
+                        <h2>Error</h2>
+                        <p>{commentError}</p>
+                    </Alert>}
                 </div>
                 {acknowledged ? <>
                     <div>
@@ -147,14 +171,14 @@ function Comments() {
                 </> : <>
                     <h2>I READ THE MESSAGE ABOVE AND WANT TO COMMENT.</h2>
                     <Button onClick={() => setAcknowledged(true)}>I understand</Button>
-                    <Button variant="secondary" onClick={() => setCommandModalOpen(false)} style={{
+                    <Button variant="secondary" onClick={() => setCommentModalOpen(false)} style={{
                         marginLeft: '1em'
                     }}>I don't understand</Button>
                 </>}
             </Modal.Body>
             <Modal.Footer>
                 {acknowledged && <Button disabled={commentAdding} onClick={leaveComment}>Submit comment</Button>}
-                <Button variant="secondary" onClick={() => setCommandModalOpen(false)}>Close</Button>
+                <Button variant="secondary" onClick={() => setCommentModalOpen(false)}>Close</Button>
             </Modal.Footer>
         </Modal>
     </>

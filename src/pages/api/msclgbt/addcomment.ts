@@ -12,8 +12,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return;
     }
 
-    const { name, comment } = req.body as CommentType;
-    const ip = req.headers["cf-connnecting-ip"]?.toString() || req.headers["x-forwarded-for"]?.toString() || req.headers["x-real-ip"]?.toString() || req.socket.remoteAddress.toString();
+    const { name, comment, ip } = req.body as CommentType;
+
+    if (!name || !comment || !ip) {
+        res.status(400).json({ error: "Missing parameters" });
+        return;
+    }
+
+    const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
+    if (!ipRegex.test(ip)) {
+        res.status(400).json({ error: "Invalid request" });
+        return;
+    }
+
+    if (name.length < 3 || name.length > 32) {
+        res.status(400).json({ error: "Name has to be longer than 3 letters and shorter than 32 letters" });
+        return;
+    }
+
+    if (comment.length < 5 || comment.length > 1024) {
+        res.status(400).json({ error: "Description has to be longer than 5 letters and shorter than 1024" });
+        return;
+    }
 
     let comments = (await (await fetch(`${process.env.FIREBASE_URL}/msclgbt/commentstoapprove.json`)).json()) as CommentType[] | null;
     if (comments === null) {
