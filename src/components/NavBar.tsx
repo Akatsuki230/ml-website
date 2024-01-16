@@ -64,6 +64,9 @@ export default function FinalNavbar() {
                                     <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For
                                         You</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfos">AstolfOS</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/asphaltroads">Asphalt Roads</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/oldcarsounds">Old Car Sounds</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/msctweaks">MSC Tweaks</NavDropdown.Item>
                                     <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Older</small>
                                     <NavDropdown.Item href="/project/astolfomod">
@@ -74,7 +77,7 @@ export default function FinalNavbar() {
                                         Pack
                                         <Badge bg="warning">Archive</Badge>
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/project/olderprojects">Older Projects</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/kekmetmoregears">Kekmet More Gears</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
