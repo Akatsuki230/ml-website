@@ -9,7 +9,7 @@ git push --set-upstream origin staging
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 30
 git push --set-upstream gitlab staging
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 40
-git switch -M master
+git branch -M master
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 50
 git merge gitlab/staging
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 60
@@ -17,7 +17,7 @@ git push --set-upstream origin master
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 70
 git push --set-upstream gitlab master
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 80
-git switch -M staging
+git branch -M staging
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 90
 git fetch
 Write-Progress -Activity "Committing" -Status "Committing changes to git" -PercentComplete 100
