@@ -55,7 +55,8 @@ type CatgirlSettings = {
     actions: boolean,
     keysmash: boolean,
     screaming: boolean,
-    scrunkly: boolean
+    scrunkly: boolean,
+    araAra: boolean
 }
 
 
@@ -65,7 +66,7 @@ function generate(length: number, settings: CatgirlSettings): string {
     let lastSelection = 0;
 
     while (result.length < length) {
-        let selection = Math.floor(Math.random() * 9);
+        let selection = Math.floor(Math.random() * 10);
         if (selection == lastSelection) continue;
 
         switch (selection) {
@@ -113,6 +114,12 @@ function generate(length: number, settings: CatgirlSettings): string {
                     result += "aww " + keysmash;
                 }
                 break;
+            case 9:
+                // TODO: ara ara~ implementation
+                if (settings.araAra) {
+                    result += "ara ara~";
+                }
+                break;
         }
 
         result += " ";
@@ -133,7 +140,8 @@ export default function Catgirl() {
         'actions': true,
         'keysmash': true,
         'screaming': true,
-        'scrunkly': true
+        'scrunkly': true,
+        'araAra': true
     } as CatgirlSettings)
     const [result, setResult] = useState("");
 
@@ -162,6 +170,7 @@ export default function Catgirl() {
                 <Form.Check type="checkbox" label="Keysmashing" checked={settings.keysmash} onChange={x => setSettings({ ...settings, keysmash: x.currentTarget.checked })} />
                 <Form.Check type="checkbox" label="screaming" checked={settings.screaming} onChange={x => setSettings({ ...settings, screaming: x.currentTarget.checked })} />
                 <Form.Check type="checkbox" label="aww the scrunkly" checked={settings.scrunkly} onChange={x => setSettings({ ...settings, scrunkly: x.currentTarget.checked })} />
+                <Form.Check type="checkbox" label="ara ara~" checked={settings.araAra} onChange={x => setSettings({ ...settings, araAra: x.currentTarget.checked })} />
 
                 <br />
                 <p>Your browser might freeze while generating if your length is very long.</p>
