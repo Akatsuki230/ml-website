@@ -20,7 +20,8 @@ function Description() {
             <li>Trans Flag</li>
             <li>Intersex Flag</li>
             <li>Asexual Flag</li>
-            <li>Pansexual Flag</li>
+            <li>(added in 1.1) Pansexual Flag</li>
+            <li>(added in 1.2) Nonbinary Flag</li>
         </ul>
         <p>
             It also has the ability to save the flags and duplicate the flags.
@@ -196,11 +197,17 @@ function Comments() {
     </>
 }
 
-function BugReports() {
-    return <>
-        <h2>Bug reports are available on Nexus Mods.</h2>
-        <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/4581?tab=bugs">Open Nexus Mods</Button>
-    </>
+function Downloads() {
+    return (
+        <>
+            <h1>Downloads</h1>
+            <p>You can download this mod on NexusMods</p>
+            <Button href="https://www.nexusmods.com/mysummercar/mods/4581?tab=files">Download</Button>
+            <p>You can also build it from source on GitLab</p>
+            <Button href="https://gitlab.com/MySummerCarPrideFlags">Get started</Button>
+            <p>You'll need to build both the asset bundle and the mod itself for this to work.</p>
+        </>
+    )
 }
 
 export default function MSCPrideFlags() {
@@ -234,14 +241,14 @@ export default function MSCPrideFlags() {
                         <Nav.Link eventKey="comments">Comments</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="bug-reports">Bug Reports / Suggestions</Nav.Link>
+                        <Nav.Link eventKey="downloads">Downloads</Nav.Link>
                     </Nav.Item>
                 </Nav>
 
                 {key === 'description' && <Description />}
                 {key === 'images' && <Images />}
                 {key === 'comments' && <Comments />}
-                {key === 'bug-reports' && <BugReports />}
+                {key === 'downloads' && <Downloads />}
 
                 <ViewTracker />
             </Container>

@@ -47,21 +47,31 @@ export default function Discord() {
     function validateBanReason() {
         setBannedLoading(true);
         setBannedRan(false);
-        fetch(`/api/discord/ban?username=${bannedUsername}`).then((x) => {
-            if (!x.ok) {
+        fetch('https://api.ipify.org/').then(ipr => {
+            if (!ipr.ok) {
                 alert("Something went wrong.");
                 setBannedLoading(false);
                 return;
             }
 
-            x.json().then((y: { banned: boolean; reason: string | undefined }) => {
-                setBannedRan(true);
-                setBannedBanned(y.banned);
-                setBannedLoading(false);
-                if (y.banned && y.reason) {
-                    setBannedReason(y.reason);
-                }
-            });
+            ipr.text().then(ip => { 
+                fetch(`/api/discord/ban?username=${bannedUsername}&ip=${ip.trim()}`).then((x) => {
+                    if (!x.ok) {
+                        alert("Something went wrong.");
+                        setBannedLoading(false);
+                        return;
+                    }
+
+                    x.json().then((y: { banned: boolean; reason: string | undefined }) => {
+                        setBannedRan(true);
+                        setBannedBanned(y.banned);
+                        setBannedLoading(false);
+                        if (y.banned && y.reason) {
+                            setBannedReason(y.reason);
+                        }
+                    });
+                });
+            })
         });
     }
 
