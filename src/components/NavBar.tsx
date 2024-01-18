@@ -56,7 +56,7 @@ export default function FinalNavbar() {
                                 <NavDropdown title="Projects">
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Online
                                         services</small>
-                                    <NavDropdown.Item href="/fembot">FemBot</NavDropdown.Item>
+                                    <NavDropdown.Item href="/femboybot">FemboyBot</NavDropdown.Item>
                                     <NavDropdown.Item href="/tools/catgirl">CatGirl Nonsence Generator</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Smaller
                                         projects</small>

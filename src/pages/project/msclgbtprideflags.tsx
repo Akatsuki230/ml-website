@@ -59,6 +59,12 @@ function Images() {
         <Image src="/lgbtprideflags/bi.webp" alt="Bisexual Flag" style={{
             width: '100%'
         }} />
+        <Image src="/lgbtprideflags/pansexual.webp" alt="Pansexual Flag" style={{
+            width: '100%'
+        }} />
+        <Image src="/lgbtprideflags/nonbinary.webp" alt="Nonbinary Flag" style={{
+            width: '100%'
+        }} />
     </>
 }
 

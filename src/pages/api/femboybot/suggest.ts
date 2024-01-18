@@ -21,11 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return;
     }
 
-    if (await checkRequest("fembotsuggest", ip as string)) {
+    if (await checkRequest("femboybotsuggest", ip as string)) {
         res.status(429).send("You are being ratelimited");
         return;
     }
-    await registerRequest("fembotsuggest", ip as string, 30000);
+    await registerRequest("femboybotsuggest", ip as string, 30000);
 
     // webhook: https://discordapp.com/api/webhooks/1172944361793802372/qry9agTq4nKmudTAmxAr9TcRrePjRRM6YqhuzZ7GYcZnofUvIyIfCXto6yXGWO2QqPFz
     // code
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            content: suggestion + "\n\nSuggest on https://mldkyt.com/fembot/"
+            content: suggestion + "\n\nSuggest on https://mldkyt.com/femboybot/"
         })
     });
     res.status(200).send("Success");

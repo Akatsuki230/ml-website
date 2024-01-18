@@ -118,9 +118,9 @@ export default function Home() {
 
                 <ListGroup>
                     <ListGroup.Item>
-                        <h3>FemBot</h3>
+                        <h3>FemboyBot</h3>
                         <p>A Discord bot made by mldkyt, nya~! It's pwobably the most kawaii bot in the whole sewvew, uwu!</p>
-                        <Button as="a" href="/fembot">Invite, more information and feature suggestion here!</Button>
+                        <Button as="a" href="/femboybot">Invite, more information and feature suggestion here!</Button>
                     </ListGroup.Item>
                 </ListGroup>
 
