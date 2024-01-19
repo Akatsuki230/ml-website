@@ -2,7 +2,6 @@ import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
 import { ArticleBase } from "@/types/articles";
 import { GetServerSidePropsContext } from "next";
-import { Inter } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import { Alert, Button, Container, FormControl, Modal } from "react-bootstrap";
 
@@ -15,8 +14,6 @@ interface ArticleResponse {
     paragraphs: string[];
     likes: number;
 }
-
-const inter = Inter({ subsets: ["latin"] });
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     let data = (await (await fetch(`${process.env.FIREBASE_URL}/articles.json`)).json()) as ArticleBase[];
@@ -223,7 +220,7 @@ export default function Article(props: Readonly<{ article: ArticleResponse }>) {
     return (
         <>
             <FinalNavbar />
-            <Container className={inter.className}>
+            <Container>
                 <h1>{props.article.title}</h1>
                 <p>
                     <small>Posted on {fullDate}</small>

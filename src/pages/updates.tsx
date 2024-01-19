@@ -2,9 +2,6 @@ import NavBar from "@/components/NavBar";
 import { Container, ListGroup, Spinner } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { ArticleExtended } from "@/types/articles";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Newest() {
     const [articles, setArticles] = useState([] as ArticleExtended[]);
@@ -185,7 +182,7 @@ export default function Newest() {
     return (
         <>
             <NavBar />
-            <Container className={inter.className}>
+            <Container>
                 <h1>Newest updates</h1>
                 {loading ? (
                     <>

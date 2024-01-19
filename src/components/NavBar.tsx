@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import React from "react";
 import { Container, Nav, NavDropdown, Navbar, Image, Badge } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
 
 const days = [
     "Senpai Sunday",
@@ -32,12 +30,12 @@ export default function FinalNavbar() {
                 fontSize: '13px',
                 fontWeight: 'bold',
                 textAlign: 'center'
-            }} className={inter.className}>
+            }}>
                 <Container>
                     Today is {days[new Date().getDay()]}~! :3
                 </Container>
             </div>
-            <div className={inter.className}>
+            <div>
                 <Navbar>
                     <Container>
                         <Navbar.Brand href="/">
@@ -58,13 +56,17 @@ export default function FinalNavbar() {
                                 <NavDropdown title="Projects">
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Online
                                         services</small>
-                                    <NavDropdown.Item href="/fembot">FemBot</NavDropdown.Item>
+                                    <NavDropdown.Item href="/femboybot">FemboyBot</NavDropdown.Item>
                                     <NavDropdown.Item href="/tools/catgirl">CatGirl Nonsence Generator</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Smaller
                                         projects</small>
+                                    <NavDropdown.Item href="/project/msclgbtprideflags">My Summer Car LGBT Pride Flags mod</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For
                                         You</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfos">AstolfOS</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/asphaltroads">Asphalt Roads</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/oldcarsounds">Old Car Sounds</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/msctweaks">MSC Tweaks</NavDropdown.Item>
                                     <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Older</small>
                                     <NavDropdown.Item href="/project/astolfomod">
@@ -75,7 +77,7 @@ export default function FinalNavbar() {
                                         Pack
                                         <Badge bg="warning">Archive</Badge>
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/project/olderprojects">Older Projects</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/kekmetmoregears">Kekmet More Gears</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>

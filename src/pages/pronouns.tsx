@@ -1,10 +1,8 @@
-import {Inter} from "next/font/google";
 import Head from "next/head";
 import {Container} from "react-bootstrap";
 import FinalNavbar from "@/components/NavBar";
 import { useEffect, useRef, useState } from "react";
 
-const inter = Inter({subsets: ["latin"]});
 
 export default function Projects() {
     const [timeout, _setTimeout] = useState(5);
@@ -24,7 +22,7 @@ export default function Projects() {
     })
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's pronouns</title>
                 <meta name="og:title" content="mldkyt's pronouns"/>

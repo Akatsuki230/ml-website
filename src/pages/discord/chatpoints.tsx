@@ -3,9 +3,6 @@ import { useState, useRef, useEffect } from "react";
 import ViewTracker from "@/components/ViewTracker";
 import Head from "next/head";
 import { Alert, Container, Image, Table } from "react-bootstrap";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function ChatPointsLeaderBoard() {
     const [data, setData] = useState([] as { name: string; avatar: string; chatpoints: number; user_id: number }[]);
@@ -34,7 +31,7 @@ export default function ChatPointsLeaderBoard() {
     }, []);
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <meta name="description" content="The chatpoint leaderboard for mldkyt's Discord server" />
                 <meta name="author" content="mldkyt" />

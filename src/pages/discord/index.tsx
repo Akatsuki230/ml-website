@@ -1,11 +1,8 @@
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import React, { useState } from "react";
 import { Alert, Button, Container, FormControl, Image, Modal } from "react-bootstrap";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Discord() {
     const [members, setMembers] = React.useState(0);
@@ -50,26 +47,36 @@ export default function Discord() {
     function validateBanReason() {
         setBannedLoading(true);
         setBannedRan(false);
-        fetch(`/api/discord/ban?username=${bannedUsername}`).then((x) => {
-            if (!x.ok) {
+        fetch('https://api.ipify.org/').then(ipr => {
+            if (!ipr.ok) {
                 alert("Something went wrong.");
                 setBannedLoading(false);
                 return;
             }
 
-            x.json().then((y: { banned: boolean; reason: string | undefined }) => {
-                setBannedRan(true);
-                setBannedBanned(y.banned);
-                setBannedLoading(false);
-                if (y.banned && y.reason) {
-                    setBannedReason(y.reason);
-                }
-            });
+            ipr.text().then(ip => { 
+                fetch(`/api/discord/ban?username=${bannedUsername}&ip=${ip.trim()}`).then((x) => {
+                    if (!x.ok) {
+                        alert("Something went wrong.");
+                        setBannedLoading(false);
+                        return;
+                    }
+
+                    x.json().then((y: { banned: boolean; reason: string | undefined }) => {
+                        setBannedRan(true);
+                        setBannedBanned(y.banned);
+                        setBannedLoading(false);
+                        if (y.banned && y.reason) {
+                            setBannedReason(y.reason);
+                        }
+                    });
+                });
+            })
         });
     }
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's Discord server</title>
                 <meta name="description" content="Join mldkyt's Discord server!" />

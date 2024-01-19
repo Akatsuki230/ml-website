@@ -1,14 +1,11 @@
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import { Badge, Button, Container, Image } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function AstolfoMod() {
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>Astolfo Forge Mod | mldkyt's website</title>
                 <meta name="og:title" content="Astolfo Forge mod" />
@@ -79,7 +76,7 @@ export default function AstolfoMod() {
 
                 <br />
                 <h2>Download</h2>
-                <Button as="a" href="/tracker/downloads/astolfomod">
+                <Button as="a" href="https://github.com/mldkyt/AstolfoForge/releases/latest">
                     Download the mod from GitHub
                 </Button>
                 <br />

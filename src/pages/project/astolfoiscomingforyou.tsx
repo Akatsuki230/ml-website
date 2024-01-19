@@ -1,14 +1,11 @@
 import FinalNavbar from "@/components/NavBar";
 import ViewTracker from "@/components/ViewTracker";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import { Button, Container, Image } from "react-bootstrap";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function AstolfoIsComingForYou() {
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>Astolfo Is Coming For You | mldkyt's website</title>
                 <meta name="og:title" content="Astolfo Is Coming For You" />

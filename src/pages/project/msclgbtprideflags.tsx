@@ -1,6 +1,8 @@
 import FinalNavbar from "@/components/NavBar";
-import { useState } from "react";
-import { Container, Image, Nav, Tabs } from "react-bootstrap";
+import Head from "next/head";
+import ViewTracker from "@/components/ViewTracker";
+import { useEffect, useRef, useState } from "react";
+import { Alert, Button, Card, Container, FormControl, Image, Modal, Nav, Tabs } from "react-bootstrap";
 
 function Description() {
     return <>
@@ -18,7 +20,8 @@ function Description() {
             <li>Trans Flag</li>
             <li>Intersex Flag</li>
             <li>Asexual Flag</li>
-            <li>Pansexual Flag</li>
+            <li>(added in 1.1) Pansexual Flag</li>
+            <li>(added in 1.2) Nonbinary Flag</li>
         </ul>
         <p>
             It also has the ability to save the flags and duplicate the flags.
@@ -56,7 +59,161 @@ function Images() {
         <Image src="/lgbtprideflags/bi.webp" alt="Bisexual Flag" style={{
             width: '100%'
         }} />
+        <Image src="/lgbtprideflags/pansexual.webp" alt="Pansexual Flag" style={{
+            width: '100%'
+        }} />
+        <Image src="/lgbtprideflags/nonbinary.webp" alt="Nonbinary Flag" style={{
+            width: '100%'
+        }} />
     </>
+}
+
+function Comments() {
+    const [comments, setComments] = useState([] as {
+        name: string,
+        comment: string
+    }[]);
+
+    const [commentModalRulesOpen, setCommentModalRulesOpen] = useState(false);
+    const [commentModalOpen, setCommentModalOpen] = useState(false);
+
+    const hasRan = useRef(false)
+
+    useEffect(() => {
+        if (hasRan.current) return
+        hasRan.current = true
+
+        fetch('/api/msclgbt/getcomments').then(x => {
+            x.json().then(y => {
+                setComments(y as { name: string, comment: string }[])
+            })
+        })
+    }, []);
+
+    const [commentName, setCommentName] = useState("");
+    const [commentComment, setCommentComment] = useState("");
+    const [commentAdding, setCommentAdding] = useState(false);
+    const [commentError, setCommentError] = useState("");
+
+    function leaveComment() {
+        setCommentAdding(true)
+        fetch('https://api.ipify.org').then(x => {
+            if (!x.ok) {
+                alert('Internal error, cannot comment right now.');
+                setCommentModalOpen(false);
+                setCommentAdding(false);
+                return
+            }
+
+            x.text().then(y => {
+                fetch('/api/msclgbt/addcomment', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: commentName,
+                        comment: commentComment,
+                        ip: y.trim()
+                    })
+                }).then(x => {
+                    if (!x.ok) {
+                        x.json().then(z => {
+                            setCommentError(z.error)
+                            setCommentAdding(false)
+                        })
+                        return
+                    }
+                    setCommentModalOpen(false)
+                    setCommentAdding(false)
+                })
+            })
+        })
+    }
+
+    function acceptRules() {
+        setCommentModalRulesOpen(false)
+        setCommentModalOpen(true)
+    }
+
+    return <>
+        <h2>Comments</h2>
+        <p>
+            <Alert>
+                <p>Comments are available on NexusMods as well.</p>
+                <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/4581?tab=posts" target="_blank">View on NexusMods</Button>
+            </Alert>
+        </p>
+        <p>
+            <Button onClick={() => setCommentModalRulesOpen(true)}>Leave a comment</Button>
+        </p>
+        {comments.map((x, i) => {
+            return <Card style={{
+                marginBottom: '1em'
+            }} key={i}>
+                <Card.Header>{x.name}</Card.Header>
+                <Card.Body>
+                    <Card.Text>{x.comment}</Card.Text>
+                </Card.Body>
+            </Card>
+        })}
+
+        <Modal show={commentModalRulesOpen} onHide={() => setCommentModalRulesOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title>Comment Rules</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>
+                    Please follow the following rules while commenting:
+                </p>
+                <ul>
+                    <li>No homophobia/transphobia</li>
+                    <li>No toxicity</li>
+                    <li>If you hate this mod, simply don't download it</li>
+                </ul>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={acceptRules}>I agree</Button>
+                <Button variant="secondary" onClick={() => setCommentModalRulesOpen(false)}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+
+        <Modal show={commentModalOpen} onHide={() => setCommentModalOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title>Leave a comment</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <div>
+                    <FormControl disabled={commentAdding} type="text" placeholder="Name" value={commentName} onChange={x => setCommentName(x.currentTarget.value)}></FormControl>
+                </div>
+                <div style={{
+                    marginTop: '1em'
+                }}>
+                    <FormControl disabled={commentAdding} as="textarea" rows={3} placeholder="Comment" value={commentComment} onChange={x => setCommentComment(x.currentTarget.value)}></FormControl>
+                </div>
+                {commentError && <Alert style={{
+                    marginTop: '1em'
+                }} variant="danger">{commentError}</Alert>}
+            </Modal.Body>
+            <Modal.Footer>
+                <Button disabled={commentAdding} onClick={leaveComment}>Submit comment</Button>
+                <Button variant="secondary" onClick={() => setCommentModalOpen(false)}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    </>
+}
+
+function Downloads() {
+    return (
+        <>
+            <h1>Downloads</h1>
+            <p>You can download this mod on NexusMods</p>
+            <Button href="https://www.nexusmods.com/mysummercar/mods/4581?tab=files">Download</Button>
+            <p>You can also build it from source on GitLab</p>
+            <Button href="https://gitlab.com/MySummerCarPrideFlags">Get started</Button>
+            <p>You'll need to build both the asset bundle and the mod itself for this to work.</p>
+        </>
+    )
 }
 
 export default function MSCPrideFlags() {
@@ -67,6 +224,17 @@ export default function MSCPrideFlags() {
         <>
             <FinalNavbar />
             <Container>
+                <Head>
+                    <title>My Summer Car LGBT Pride Flags mod</title>
+                    <meta name="og:title" content="LGBT Pride Flags mod for My Summer Car"></meta>
+                    <meta name="description" content="This mod adds LGBT pride flags to My Summer Car. It is a mod for the game My Summer Car by..." />
+                    <meta name="author" content="mldkyt" />
+                    <meta name="theme-color" content="#FF77FF" />
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021488147419187"
+                        crossOrigin="anonymous"></script>
+                </Head>
+
                 <h1>LGBT Pride Flags mod</h1>
                 <Nav variant="tabs" defaultActiveKey="description" onSelect={x => setKey(x)} activeKey={key}>
                     <Nav.Item>
@@ -79,12 +247,16 @@ export default function MSCPrideFlags() {
                         <Nav.Link eventKey="comments">Comments</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="bug-reports">Bug Reports</Nav.Link>
+                        <Nav.Link eventKey="downloads">Downloads</Nav.Link>
                     </Nav.Item>
                 </Nav>
 
                 {key === 'description' && <Description />}
                 {key === 'images' && <Images />}
+                {key === 'comments' && <Comments />}
+                {key === 'downloads' && <Downloads />}
+
+                <ViewTracker />
             </Container>
         </>
     )

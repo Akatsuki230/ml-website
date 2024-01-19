@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
 import { Button, Modal } from "react-bootstrap";
 
-const inter = Inter({subsets: ['latin']});
 
 export default function AntiRaidHelpModal(props: { show: boolean, onHide: () => void}) {
 
-    return <Modal show={props.show} onHide={props.onHide} className={inter.className}>
+    return <Modal show={props.show} onHide={props.onHide}>
         <Modal.Header>Anti-Raid</Modal.Header>
         <Modal.Body>
             <h1>About</h1>

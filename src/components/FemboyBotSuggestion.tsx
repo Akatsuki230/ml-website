@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-export default function FemBotSuggestion() {
+export default function FemboyBotSuggestion() {
     const [disabled, setDisabled] = useState(false);
     const [suggestion, setSuggestion] = useState("");
     const [status, setStatus] = useState("" as "" | "success" | "error");
 
     const sendSuggestion = async () => {
         setDisabled(true);
-        const response = await fetch("/api/fembot/suggest", {
+        const response = await fetch("/api/femboybot/suggest", {
             method: "POST",
             body: JSON.stringify({
                 suggestion

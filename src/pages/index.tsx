@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import { Alert, Button, Container, Image, ListGroup } from "react-bootstrap";
 import ViewTracker from "@/components/ViewTracker";
-
-const inter = Inter({ subsets: ["latin"] });
 
 function friendlyTime(ms: number): string {
     if (ms < 1000) {
@@ -55,7 +52,7 @@ export default function Home() {
     });
 
     return (
-        <div className={inter.className}>
+        <div>
             <Head>
                 <title>mldkyt's website</title>
                 <meta name="description" content="Welcome to mldkyt's website!" />
@@ -121,9 +118,9 @@ export default function Home() {
 
                 <ListGroup>
                     <ListGroup.Item>
-                        <h3>FemBot</h3>
+                        <h3>FemboyBot</h3>
                         <p>A Discord bot made by mldkyt, nya~! It's pwobably the most kawaii bot in the whole sewvew, uwu!</p>
-                        <Button as="a" href="/fembot">Invite, more information and feature suggestion here!</Button>
+                        <Button as="a" href="/femboybot">Invite, more information and feature suggestion here!</Button>
                     </ListGroup.Item>
                 </ListGroup>
 

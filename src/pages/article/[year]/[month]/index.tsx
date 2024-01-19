@@ -1,6 +1,5 @@
 import FinalNavbar from "@/components/NavBar";
 import { GetServerSidePropsContext } from "next";
-import { Inter } from "next/font/google";
 import { Container, ListGroup, Table } from "react-bootstrap";
 
 interface ArticleType {
@@ -11,8 +10,6 @@ interface ArticleType {
     title: string;
     paragraphs: string[];
 }
-
-const inter = Inter({ subsets: ["latin"] });
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     let data = (await (await fetch(`${process.env.FIREBASE_URL}/articles.json`)).json()) as ArticleType[];
@@ -35,7 +32,7 @@ export default function MonthList(props: { articles: ArticleType[]; year: string
         <>
             <FinalNavbar />
 
-            <Container className={inter.className}>
+            <Container>
                 <h1>
                     List of articles for {props.year}/{props.month}
                 </h1>
