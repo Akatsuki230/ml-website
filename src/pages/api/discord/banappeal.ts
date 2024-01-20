@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { isBanned } from "@/utils/ban";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log('method banappeal', req.method)
     if (req.method !== 'POST') {
         res.status(405).end();
         return
@@ -24,9 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const response = await fetch(`${process.env.FIREBASE_URL}/discordstats/bans.json`);
     const array = await response.json();
     for (let i = 0; i < array.length; i++) {
-        console.log(array[i].user, body.username)
         if (array[i].user == body.username) {
-            console.log('banned')
             banned = true;
             break;
         }

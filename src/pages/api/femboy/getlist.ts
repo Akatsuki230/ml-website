@@ -3,7 +3,6 @@ import { isBanned } from "../../../utils/ban";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-    console.log('method addban', req.method)
     if (req.method !== 'GET') {
         res.status(405).end();
         return

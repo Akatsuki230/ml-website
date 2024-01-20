@@ -3,7 +3,6 @@ import { checkRequest, registerRequest } from "../../../utils/cooldown";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log("method suggestbot", req.method);
     if (req.method !== "POST") {
         res.status(405).end();
         return;

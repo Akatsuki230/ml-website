@@ -13,6 +13,7 @@ export default function Social() {
     const [trackingTikTok, setTrackingTikTok] = useState("loading" as number | "loading" | "error loading");
     const [trackingTwitch, setTrackingTwitch] = useState("loading" as number | "loading" | "error loading");
     const [trackingYouTube, setTrackingYouTube] = useState("loading" as number | "loading" | "error loading");
+    const [trackingPatreon, setTrackingPatreon] = useState("loading" as number | "loading" | "error loading");
 
     const hasRan = useRef(false);
 
@@ -50,6 +51,11 @@ export default function Social() {
                 } else {
                     setTrackingYouTube("error loading");
                 }
+                if (data.patreon) {
+                    setTrackingPatreon(data.patreon);
+                } else {
+                    setTrackingPatreon("error loading");
+                }
             });
         });
     }, []);
@@ -76,6 +82,14 @@ export default function Social() {
                     </Button>
                 </Alert>
                 <ListGroup>
+                    <ListGroup.Item>
+                        <h2>Patreon</h2>
+                        <p>This is where I post updates.</p>
+                        <Button as="a" href="/tracking/social/patreon">
+                            Open Patreon
+                        </Button>
+                        <span> {trackingPatreon} visits</span>
+                    </ListGroup.Item>
                     <ListGroup.Item>
                         <h2>YouTube</h2>
                         <p>This is where I mainly upload videos.</p>

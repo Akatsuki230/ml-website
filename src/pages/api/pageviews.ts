@@ -2,9 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { isBanned } from "../../utils/ban";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log('method', req.method)
     if (req.method !== 'POST') {
-        console.log('Handler method')
         res.status(405).end();
         return
     }
@@ -16,7 +14,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     if (!req.body) {
-        console.log('Handler body')
         res.status(400).send({ message: 'Bad body' });
         return
     }
@@ -24,13 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let path = req.body["page"];
 
     if (path === undefined || path === null) {
-        console.log('Handler path existance')
         res.status(400).send({ message: 'Bad body' });
         return
     }
 
     if (!path.match(/^[a-z0-9\/_\-.]+$/)) {
-        console.log('Regex')
         res.status(400).send({ message: 'Regex on parameter failed' });
         return
     }
