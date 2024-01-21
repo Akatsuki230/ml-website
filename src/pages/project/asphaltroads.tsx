@@ -18,8 +18,9 @@ export default function AsphaltRoads() {
             <h1>Asphalt Roads</h1>
 
             <p>Asphalt roads is a mod for My Summer Car that replaces dirt roads with asphalt Roads into My Summer Car.</p>
-            <p>Replaces dirt roads with asphalt roads</p>
-            <p>Supports:</p>
+            <p>Replaces dirt roads with asphalt roads.</p>
+            <p><small>The roads are bumpy though... But they're made out of asphalt.</small></p>
+            <p>Features:</p>
             <ul>
                 <li>Replace main dirt road</li>
                 <li>Replace side roads</li>
