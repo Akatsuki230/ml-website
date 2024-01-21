@@ -31,9 +31,17 @@ export default function MSCTweaks() {
                 </Button>
             </Alert>
 
-            <p>MSC Tweaks is a mod that adds a few tweaks into My Summer Car.</p>
-            <p>It does a bunch of cool stuff like disabling the green car, yellow car, or the skoda car. Plus, it saves the Shitsuma temperature and makes sure you won't kick the bucket from urine (phew!). You can also force enable the console and add a bit of fall damage (although that part might be a tad buggy). Oh, and it speeds up your windows too!
-                Hope you find these tweaks handy! 😄</p>
+            <p>This mod adds a few tweaks to My Summer Car, some of the most notable of them are:</p>
+            <ul>
+                <li>Disable Pena (the green car)</li>
+                <li>Disable Kyläjäni (the yellow car)</li>
+                <li>Disable Amis2 (the Skoda)</li>
+                <li>Saving of Satsuma's temperature</li>
+                <li>Player can't die from Urine (realism)</li>
+                <li>Enable console in all scenarios</li>
+                <li>Add fall damage into the game</li>
+                <li>Better Window Handles (Speed up Window rolling up and down)</li>
+            </ul>
 
             <Button as="a" href="https://www.nexusmods.com/mysummercar/mods/3665">
                 Download

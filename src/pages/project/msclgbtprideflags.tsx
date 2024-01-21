@@ -2,7 +2,8 @@ import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
 import ViewTracker from "@/components/ViewTracker";
 import { useEffect, useRef, useState } from "react";
-import { Alert, Button, Card, Container, FormControl, Image, Modal, Nav, Tabs } from "react-bootstrap";
+import { Alert, Button, Card, Container, FormControl, Image, Modal, Nav } from "react-bootstrap";
+import styles from '@/styles/msclgbtprideflags.module.css';
 
 function Description() {
     return <>
@@ -22,6 +23,7 @@ function Description() {
             <li>Asexual Flag</li>
             <li>(added in 1.1) Pansexual Flag</li>
             <li>(added in 1.2) Nonbinary Flag</li>
+            <li>(added in 1.3) Aromantic Flag</li>
         </ul>
         <p>
             It also has the ability to save the flags and duplicate the flags.
@@ -34,37 +36,40 @@ function Images() {
         <h2>Images</h2>
         <Image src="/lgbtprideflags/all.webp" alt="All the flags :3" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/lesbian.webp" alt="Lesbian flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/gay.webp" alt="LGBT/Gay flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/bi.webp" alt="Bi Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/trans.webp" alt="Trans Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/intersex.webp" alt="Intersex Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <br />
         <Image src="/lgbtprideflags/bi.webp" alt="Bisexual Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <Image src="/lgbtprideflags/pansexual.webp" alt="Pansexual Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
         <Image src="/lgbtprideflags/nonbinary.webp" alt="Nonbinary Flag" style={{
             width: '100%'
-        }} />
+        }} className={styles.image} />
+        <Image src="/lgbtprideflags/aromantic.webp" alt="Aromantic Flag" style={{
+            width: '100%'
+        }} className={styles.image} />
     </>
 }
 

@@ -67,6 +67,8 @@ export default function FinalNavbar() {
                                     <NavDropdown.Item href="/project/asphaltroads">Asphalt Roads</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/oldcarsounds">Old Car Sounds</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/msctweaks">MSC Tweaks</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/oldhayosiko">Old Hayosiko</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/oldtruck">Old Truck Sounds</NavDropdown.Item>
                                     <NavDropdown.Item href="/femboy">Femboy List</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Older</small>
                                     <NavDropdown.Item href="/project/astolfomod">
