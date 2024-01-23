@@ -7,6 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         github: data.githubClicks,
         twitch: data.twitchClicks,
         tiktok: data.tiktokClicks,
-        youtube: data.ytClicks
+        youtube: data.ytClicks,
+        patreon: data.patreonClicks
     });
 }
