@@ -4,10 +4,10 @@ import Head from "next/head";
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     let data = await (await fetch(`${process.env.FIREBASE_URL}/ml-website/socialbuttons.json`)).json();
     if (data === null) data = {};
-    if (!data.patreonClick) {
-        data.patreonClick = 1;
+    if (!data.patreonClicks) {
+        data.patreonClicks = 1;
     } else {
-        data.patreonClick++;
+        data.patreonClicks++;
     }
 
     await fetch(`${process.env.FIREBASE_URL}/ml-website/socialbuttons.json`, {
