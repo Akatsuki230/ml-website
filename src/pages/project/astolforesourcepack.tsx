@@ -1,7 +1,7 @@
 import FinalNavbar from "@/components/NavBar";
 import Head from "next/head";
 import ViewTracker from "@/components/ViewTracker";
-import { Badge, Button, Container, Image } from "react-bootstrap";
+import { Alert, Badge, Container, Image } from "react-bootstrap";
 
 export default function AstolfoResourcePack() {
     return (
@@ -26,9 +26,9 @@ export default function AstolfoResourcePack() {
                 <details>
                     <summary>Images</summary>
 
-                    <Image className="mx-2 rounded-md" src="/astolforp_loading.webp" alt="Astolfo Resource Pack" />
-                    <Image className="mx-2 rounded-md" src="/astolforp_menu.webp" alt="Astolfo Resource Pack" />
-                    <Image className="mx-2 rounded-md" src="/astolforp_ending.webp" alt="Astolfo Resource Pack" />
+                    <Image style={{ maxWidth: '100%' }} src="/astolforp_loading.webp" alt="Astolfo Resource Pack" />
+                    <Image style={{ maxWidth: '100%' }} className="mx-2 rounded-md" src="/astolforp_menu.webp" alt="Astolfo Resource Pack" />
+                    <Image style={{ maxWidth: '100%' }} className="mx-2 rounded-md" src="/astolforp_ending.webp" alt="Astolfo Resource Pack" />
                 </details>
 
                 <details>
@@ -44,14 +44,11 @@ export default function AstolfoResourcePack() {
 
                 <h2>Download</h2>
 
-                <Button as="a" href="https://github.com/mldkyt/AstolfoResourcePackInstaller/releases/download/release-1.0/AstolfoResourcePackInstaller.exe">
-                    Download installer (recommended!)
-                </Button>
-                <br />
-                <br />
-                <Button as="a" href="https://github.com/mldkyt/AstolfoResourcePack/releases/tag/releases" variant="secondary">
-                    Manual installation instructions
-                </Button>
+                <Alert variant="warning">
+                    <p style={{ fontSize: '150%', fontWeight: 'bold' }}>Download is unavailable</p>
+                    <p>The download was automatically taken down on by the website builder script for the following reason: <strong>ZenBooda1 or references to ZenBooda1</strong>.</p>
+                </Alert>
+
                 <br />
                 <ViewTracker />
             </Container>
