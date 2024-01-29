@@ -1,4 +1,5 @@
 import FinalNavbar from "@/components/NavBar";
+import Head from "next/head";
 import { useRef, useState } from "react";
 import { Button, Container } from "react-bootstrap";
 
@@ -118,6 +119,12 @@ export default function CatgirlGPT() {
 
     return (
         <>
+            <Head>
+                <title>CatgirlGPT</title>
+                <meta name="og:title" content="CatgirlGPT"></meta>
+                <meta name="description" content="The revolutionary GPT model with low system requirements that runs anywhere." />
+                <meta name="author" content="mldkyt" />
+            </Head>
             <FinalNavbar />
 
             <Container>
