@@ -7,6 +7,7 @@ import Profile from "@/components/IndexPage/Profile";
 import AboutMe from "@/components/IndexPage/AboutMe";
 import Projects from "@/components/IndexPage/Projects";
 import SocialLinks from "@/components/IndexPage/SocialLinks";
+import styles from '@/styles/index.module.scss';
 
 function friendlyTime(ms: number): string {
     if (ms < 1000) {
@@ -90,7 +91,7 @@ export default function Home() {
 
                 <h1 style={{
                     marginTop: '0.5em'
-                }}>Socials</h1>
+                }} className={styles.heading}>Socials</h1>
                 <SocialLinks />
 
                 <br />

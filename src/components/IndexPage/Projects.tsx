@@ -4,7 +4,7 @@ import styles from '@/styles/projects.module.scss';
 export default function Projects() {
     return (
         <>
-            <h1>Projects</h1>
+            <h1 className={styles.heading}>Projects</h1>
 
             <Card>
                 <Card.Body>

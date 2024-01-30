@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Alert } from "react-bootstrap";
 
 type TrackingStatus = number | "loading" | "error loading";
 
@@ -72,6 +72,9 @@ export default function SocialLinks() {
             <Card.Body>
                 <h2>YouTube</h2>
                 <p>This is where I mainly upload videos.</p>
+                <Alert variant="secondary">
+                    On YouTube I use my old logo, since it's my oldest account and I want to keep it the same forever.
+                </Alert>
                 <Button as="a" href="/tracking/social/youtube">
                     View my YouTube channel
                 </Button>
