@@ -58,12 +58,14 @@ export default function FinalNavbar() {
                                         services</small>
                                     <NavDropdown.Item href="/femboybot">FemboyBot</NavDropdown.Item>
                                     <NavDropdown.Item href="/tools/catgirl">CatGirl Nonsence Generator</NavDropdown.Item>
+                                    <NavDropdown.Item href="/tools/catgirlgpt">CatGirlGPT (revolutionary)</NavDropdown.Item>
                                     <small style={{ marginLeft: '0.4em', color: 'grey', fontSize: '70%' }}>Smaller
                                         projects</small>
                                     <NavDropdown.Item href="/project/msclgbtprideflags">My Summer Car LGBT Pride Flags mod</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfoiscomingforyou">Astolfo is Coming For
                                         You</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/astolfos">AstolfOS</NavDropdown.Item>
+                                    <NavDropdown.Item href="/project/astolforesourcepack">Astolfo Resource Pack</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/asphaltroads">Asphalt Roads</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/oldcarsounds">Old Car Sounds</NavDropdown.Item>
                                     <NavDropdown.Item href="/project/msctweaks">MSC Tweaks</NavDropdown.Item>
