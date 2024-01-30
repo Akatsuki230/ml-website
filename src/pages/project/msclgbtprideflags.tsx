@@ -80,6 +80,7 @@ function Comments() {
     }[]);
 
     const [commentModalRulesOpen, setCommentModalRulesOpen] = useState(false);
+    const [commentModalPrivacyOpen, setCommentModalPrivacyOpen] = useState(false);
     const [commentModalOpen, setCommentModalOpen] = useState(false);
 
     const hasRan = useRef(false)
@@ -138,6 +139,11 @@ function Comments() {
 
     function acceptRules() {
         setCommentModalRulesOpen(false)
+        setCommentModalPrivacyOpen(true)
+    }
+
+    function acceptPrivacy() {
+        setCommentModalPrivacyOpen(false)
         setCommentModalOpen(true)
     }
 
@@ -179,6 +185,20 @@ function Comments() {
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={acceptRules}>I agree</Button>
+                <Button variant="secondary" onClick={() => setCommentModalRulesOpen(false)}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+
+        <Modal show={commentModalPrivacyOpen} onHide={() => setCommentModalPrivacyOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title>Comment Rules</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h2>Your privacy when submitting this form</h2>
+                <p>By submitting this form, you agree that mldkyt is going to be able to read your comment and your username, before the comment gets approved. Your IP will be associated with the request to prevent spam. The IP will be deleted from mldkyt's database if the comment gets approved, or it will be used to block you off the website if your comment is negative. Your comment might not get published and no action towards banning will be taken if your comment is not negative, but not good to post on the website.</p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={acceptPrivacy}>I agree</Button>
                 <Button variant="secondary" onClick={() => setCommentModalRulesOpen(false)}>Close</Button>
             </Modal.Footer>
         </Modal>

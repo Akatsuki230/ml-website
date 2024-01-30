@@ -1,3 +1,12 @@
 .firsttitle {
     margin-top: 10px;
 }
+
+.heading {
+    text-align: center;
+}
+
+.headingfirst {
+    @extend .heading;
+    @extend .firsttitle;
+}

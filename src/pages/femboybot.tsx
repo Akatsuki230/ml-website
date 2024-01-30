@@ -72,6 +72,11 @@ export default function FemboyBot() {
             <FinalNavbar />
 
             <Container>
+                <Alert variant="warning">
+                    <h2>Overhauling</h2>
+                    <span>An overhaul of the bot is in works behind the scenes. The bot won't receive new features, but after the overhaul is finished, it will be even better, faster, more stable and more reliable.</span>
+                </Alert>
+
                 <div className={styles.center}>
                     <h1>FemboyBot</h1>
                     <h2>A Discord bot by mldkyt</h2>
